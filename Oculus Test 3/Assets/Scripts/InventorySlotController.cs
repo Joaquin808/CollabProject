@@ -20,6 +20,10 @@ public class InventorySlotController : MonoBehaviour
         {
             DisplayText.text = Item.Title;
         }
+        else
+        {
+            DisplayText.text = "";
+        }
     }
 
    public void Use()
