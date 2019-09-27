@@ -26,7 +26,7 @@ public class Inventory : MonoBehaviour
             else
             {
                 Slot.Item = null;
-                Destroy(Slot.Item);
+                Slot.transform.parent = null;
             }
 
             Slot.UpdateInfo();
@@ -58,14 +58,7 @@ public class Inventory : MonoBehaviour
 
     public void Remove(InventoryItem Item)
     {
-        Transform child = InventoryPanel.transform;
-        if (Item.RemoveFromInventory)
-        {
-            List.Remove(Item);
-        }
-
-        //Item.ItemWasSpawned = false;
-        //Destroy(Item);
+        List.Remove(Item);
         UpdatePanelSlots();
     }
 }
