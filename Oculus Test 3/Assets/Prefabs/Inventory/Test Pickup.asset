@@ -10,12 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1a6bce555a5d52d4eaa0c7dcb79539c0, type: 3}
-  m_Name: Wrench
+  m_Name: Test Pickup
   m_EditorClassIdentifier: 
-  Title: Wrench
+  Title: Test Pickup
   Description: 
-  RemoveFromInventory: 0
-  ItemWasSpawned: 0
-  ObjectToSpawn: {fileID: 96256320999732956, guid: 4d757332c176f4245a147226e761743b,
-    type: 3}
-  Hand: {fileID: 0}
+  ObjectToSpawn: {fileID: 100000, guid: dfd14d25717789f4796c172f0155c366, type: 3}
+  Hand: {fileID: 195418, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
