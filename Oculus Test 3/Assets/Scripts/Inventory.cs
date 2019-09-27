@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public GameObject InventoryPanel;
     public int NumberOfInventorySlots = 1;
     public static Inventory Instance;
+    public GameObject InventoryPrefab;
 
     void UpdatePanelSlots()
     {
@@ -25,6 +26,7 @@ public class Inventory : MonoBehaviour
             else
             {
                 Slot.Item = null;
+                Destroy(Slot.Item);
             }
 
             Slot.UpdateInfo();
@@ -41,23 +43,29 @@ public class Inventory : MonoBehaviour
 
     public void Add(InventoryItem Item)
     {
-        if (List.Count < NumberOfInventorySlots)
+        if (List.Contains(Item))
+        {
+            return;
+        }
+        else
         {
             List.Add(Item);
         }
 
+        Instantiate(InventoryPrefab, InventoryPanel.transform);
         UpdatePanelSlots();
     }
 
     public void Remove(InventoryItem Item)
     {
-        List.Remove(Item);
-        UpdatePanelSlots();
-    }
+        Transform child = InventoryPanel.transform;
+        if (Item.RemoveFromInventory)
+        {
+            List.Remove(Item);
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        //Item.ItemWasSpawned = false;
+        //Destroy(Item);
+        UpdatePanelSlots();
     }
 }
