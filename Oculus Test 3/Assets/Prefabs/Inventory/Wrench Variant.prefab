@@ -47,7 +47,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints:
   - {fileID: -6271489118729174001}
---- !u!114 &4996119791884894325
+--- !u!114 &5234138685838649309
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,7 +60,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryItemRef: {fileID: 11400000, guid: e3751d99efeb8a94883790ba353edfee, type: 2}
-  Floor: {fileID: 317758512485483633, guid: 0b257a2d38f1bf64ab9d710dcbe78258, type: 3}
 --- !u!114 &8954996676054107501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,18 +70,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab2c9b3a118dca8409df5e5859b5e508, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &-828393953566102901
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96256320999732956}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ae6dfc435ee18941b5b75e7ece9bc38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &8247240505484406741
@@ -100,7 +87,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}

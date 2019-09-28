@@ -22,7 +22,7 @@ public class InventorySlotController : MonoBehaviour
         }
         else
         {
-            DisplayText.text = "";
+            DisplayText.text = "Null";
         }
     }
 
@@ -31,7 +31,6 @@ public class InventorySlotController : MonoBehaviour
         if (Item)
         {
             Item.Use();
-            Debug.Log("You clicked " + Item.Title);
         }
    }
 }

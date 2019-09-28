@@ -15,8 +15,5 @@ public class Pickup : InventoryItem
         GameObject watch = GameObject.FindGameObjectWithTag("Watch");
         GameObject spawned = Instantiate(ObjectToSpawn, watch.transform.position, Quaternion.identity);
         Inventory.Instance.Remove(this);
-        Debug.Log("Use");
     }
-
-
 }
