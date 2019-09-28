@@ -7,7 +7,8 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> List = new List<InventoryItem>();
 
     public GameObject Player;
-    public GameObject InventoryPanel;
+    public GameObject InventoryPanelConsumable;
+    public GameObject InventoryPanelTools;
     public int NumberOfInventorySlots = 1;
     public static Inventory Instance;
     public GameObject InventoryPrefab;
@@ -15,7 +16,25 @@ public class Inventory : MonoBehaviour
     void UpdatePanelSlots()
     {
         int index = 0;
-        foreach (Transform child in InventoryPanel.transform)
+        foreach (Transform child in InventoryPanelConsumable.transform)
+        {
+            InventorySlotController Slot = child.GetComponent<InventorySlotController>();
+
+            if (index < List.Count)
+            {
+                Slot.Item = List[index];
+            }
+            else
+            {
+                Slot.Item = null;
+                Slot.transform.parent = null;
+            }
+
+            Slot.UpdateInfo();
+            index++;
+        }
+
+        foreach (Transform child in InventoryPanelTools.transform)
         {
             InventorySlotController Slot = child.GetComponent<InventorySlotController>();
 
@@ -49,11 +68,21 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            List.Add(Item);
-        }
+            if (Item.ItemType == "Tool")
+            {
+                List.Add(Item);
+                Instantiate(InventoryPrefab, InventoryPanelTools.transform);
+                UpdatePanelSlots();
+            }
 
-        Instantiate(InventoryPrefab, InventoryPanel.transform);
-        UpdatePanelSlots();
+            if (Item.ItemType == "Consumable")
+            {
+                List.Add(Item);
+                Instantiate(InventoryPrefab, InventoryPanelConsumable.transform);
+                UpdatePanelSlots();
+            }
+
+        }
     }
 
     public void Remove(InventoryItem Item)
