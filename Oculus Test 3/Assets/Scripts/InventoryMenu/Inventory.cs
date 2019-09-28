@@ -10,8 +10,8 @@ public class Inventory : MonoBehaviour
 
     public GameObject Player;
     public GameObject InventoryPanel;
-    public GameObject InventoryPanelConsumable;
     public GameObject InventoryPanelTools;
+    public GameObject InventoryPanelConsumable;
     public int NumberOfInventorySlots = 1;
     public static Inventory Instance;
     public GameObject InventoryPrefab;
@@ -42,25 +42,6 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            int ConsumableIndex = 0;
-            foreach (Transform child in InventoryPanelConsumable.transform)
-            {
-                InventorySlotController Slot = child.GetComponent<InventorySlotController>();
-
-                if (ConsumableIndex < ConsumableList.Count)
-                {
-                    Slot.Item = ConsumableList[ConsumableIndex];
-                }
-                else
-                {
-                    Slot.Item = null;
-                    Slot.transform.parent = null;
-                }
-
-                Slot.UpdateInfo();
-                ConsumableIndex++;
-            }
-
             int ToolIndex = 0;
             foreach (Transform child in InventoryPanelTools.transform)
             {
@@ -79,6 +60,25 @@ public class Inventory : MonoBehaviour
                 Slot.UpdateInfo();
                 ToolIndex++;
             }
+
+            int ConsumableIndex = 0;
+            foreach (Transform child in InventoryPanelConsumable.transform)
+            {
+                InventorySlotController Slot = child.GetComponent<InventorySlotController>();
+
+                if (ConsumableIndex < ConsumableList.Count)
+                {
+                    Slot.Item = ConsumableList[ConsumableIndex];
+                }
+                else
+                {
+                    Slot.Item = null;
+                    Slot.transform.parent = null;
+                }
+
+                Slot.UpdateInfo();
+                ConsumableIndex++;
+            }         
         }
     }
 
