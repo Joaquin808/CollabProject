@@ -7,14 +7,19 @@ using UnityEngine;
 public class TemperatureSlider : MonoBehaviour
 {
     public bool isStopped;
-    Vector3 pos1 = new Vector3(5,0,0);
-    Vector3 pos2 = new Vector3(5, -1, 0);
+    public GameObject slider; //Used to call gameobject used for sliding puzzle
+    float x, z;
+    Vector3 pos1, pos2;
+    
     public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        x = slider.transform.position.x;
+        z = slider.transform.position.z;
+        pos1 = new Vector3(x, 0, z);  //Gets position of object for slider
+        pos2 = new Vector3(x, -1, z); //Gets second position for sliding object
     }
 
     // Update is called once per frame
@@ -28,7 +33,12 @@ public class TemperatureSlider : MonoBehaviour
     {
         if (isStopped == false)
         {
-            transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
+            slider.transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
         }
+
+    }
+    void StopSlider()
+    {
+
     }
 }
