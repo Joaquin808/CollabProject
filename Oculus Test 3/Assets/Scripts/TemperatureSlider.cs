@@ -37,8 +37,11 @@ public class TemperatureSlider : MonoBehaviour
         }
 
     }
-    void StopSlider()
+    void OnTriggerEnter(Collider other)
     {
-
+        if (other.tag == "Button")
+        {
+            isStopped = true;
+        }
     }
 }
