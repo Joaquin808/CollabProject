@@ -10,7 +10,9 @@ public class TemperatureSlider : MonoBehaviour
     public GameObject slider; //Used to call gameobject used for sliding puzzle
     float x, z;
     Vector3 pos1, pos2;
-    
+    public float correctValue1, correctValue2;
+    float stoppedValue;
+    private Renderer sliderRenderer;
     public float speed;
 
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class TemperatureSlider : MonoBehaviour
         z = slider.transform.position.z;
         pos1 = new Vector3(x, 0, z);  //Gets position of object for slider
         pos2 = new Vector3(x, -1, z); //Gets second position for sliding object
+        sliderRenderer = slider.GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -41,7 +44,15 @@ public class TemperatureSlider : MonoBehaviour
     {
         if (other.tag == "Button")
         {
-            isStopped = true;
+            stoppedValue = slider.transform.position.y;
+            if (stoppedValue >= correctValue1 && stoppedValue <= correctValue2)
+            {
+                isStopped = true;
+                sliderRenderer.material.SetColor("_Color", Color.green);
+            }else
+            {
+                Debug.Log("Incorrect value");
+            }
         }
     }
 }
