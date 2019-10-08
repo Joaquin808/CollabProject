@@ -5,40 +5,54 @@ using System.Collections.Generic;
 public class ObjectVisibility : MonoBehaviour
 {
     List<string> collisionList = new List<string>();
+    bool isVisible = false;
+    Renderer rend;
 
     // Use this for initialization
     void Start()
     {
-        
-        GetComponent<Renderer>().enabled = false;
+        rend = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        rend.enabled = isVisible;
+
 
     }
 
-    void OnCollisionEnter(Collision collision)
+
+    void PrintList()
+    {
+        for (int i = 0; i < collisionList.Count; i++)
+        {
+            print(collisionList[i]);
+        }
+    }
+
+    void OnTriggerEnter(Collider collision)
     {
         if (!collisionList.Contains(collision.gameObject.tag))
         {
             collisionList.Add(collision.gameObject.tag);
         }
-      
+        PrintList();
+
         if (collisionList.Contains("GhostPipe") && collisionList.Contains("Tool"))
-            { 
-            GetComponent<Renderer>().enabled = true;
+        {
+            isVisible = true;
             collisionList.Remove("GhostPipe");
             collisionList.Remove("Tool");
             if (collision.gameObject.tag == "GhostPipe")
-                {
+            {
                 Destroy(collision.gameObject);
-                }
             }
         }
+        PrintList();
+    }
 
-    void OnCollisionExit(Collision collision)
+    void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "GhostPipe")
         {
@@ -46,11 +60,10 @@ public class ObjectVisibility : MonoBehaviour
 
         }
 
-       if (collision.gameObject.tag == "Tool")
+        if (collision.gameObject.tag == "Tool")
         {
             collisionList.Remove("Tool");
         }
     }
-     
 }
 
