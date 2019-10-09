@@ -40,6 +40,8 @@ public class TemperatureSlider : MonoBehaviour
         }
 
     }
+   
+    //Detects if button is pushed to stop slider
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Button")
