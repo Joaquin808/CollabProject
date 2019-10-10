@@ -7,6 +7,7 @@ public class ObjectVisibility : MonoBehaviour
     List<string> collisionList = new List<string>();
     bool isVisible = false;
     Renderer rend;
+    public string String;
 
     // Use this for initialization
     void Start()
@@ -22,48 +23,103 @@ public class ObjectVisibility : MonoBehaviour
 
     }
 
-
-    void PrintList()
+    /*
+    //void PrintList()
     {
         for (int i = 0; i < collisionList.Count; i++)
         {
             print(collisionList[i]);
         }
     }
-
+    */
     void OnTriggerEnter(Collider collision)
     {
         if (!collisionList.Contains(collision.gameObject.tag))
         {
             collisionList.Add(collision.gameObject.tag);
         }
-        PrintList();
 
-        if (collisionList.Contains("GhostPipe") && collisionList.Contains("Tool"))
+        if (collisionList.Contains(String) && collisionList.Contains("Welder"))
         {
+           
             isVisible = true;
-            collisionList.Remove("GhostPipe");
-            collisionList.Remove("Tool");
-            if (collision.gameObject.tag == "GhostPipe")
+            collisionList.Remove(String);
+            collisionList.Remove("Welder");
+            if (collision.gameObject.tag == String)
             {
                 Destroy(collision.gameObject);
             }
         }
-        PrintList();
-    }
 
+        // PrintList();
+        /** if (this.gameObject.tag == "Pipe_Curved")
+         {
+
+             if (collisionList.Contains("gPipe_Curved") && collisionList.Contains("Welder"))
+             {
+                 isVisible = true;
+                 collisionList.Remove("gPipe_Curved");
+                 collisionList.Remove("Welder");
+                 if (collision.gameObject.tag == "gPipe_Curved")
+                 {
+                     Destroy(collision.gameObject);
+                 }
+             }
+         }
+         if (this.gameObject.tag == "Pipe_Straight")
+         {
+             if (collisionList.Contains("gPipe_Straight") && collisionList.Contains("Welder"))
+             {
+                 isVisible = true;
+                 collisionList.Remove("gPipe_Straight");
+                 collisionList.Remove("Welder");
+                 if (collision.gameObject.tag == "gPipe_Straight")
+                 {
+                     Destroy(collision.gameObject);
+                 }
+             }
+         }
+         if (this.gameObject.tag == "Pipe_Crooked")
+         {
+             if (collisionList.Contains("gPipe_Crooked") && collisionList.Contains("Welder"))
+             {
+                 isVisible = true;
+                 collisionList.Remove("gPipe_Crooked");
+                 collisionList.Remove("Welder");
+                 if (collision.gameObject.tag == "gPipe_Crooked")
+                 {
+                     Destroy(collision.gameObject);
+                 }
+             }
+         }
+         if (this.gameObject.tag == "Pipe_Half")
+         {
+             if (collisionList.Contains("gPipe_Half") && collisionList.Contains("Welder"))
+             {
+                 isVisible = true;
+                 collisionList.Remove("gPipe_Half");
+                 collisionList.Remove("Welder");
+                 if (collision.gameObject.tag == "gPipe_Half")
+                 {
+                     Destroy(collision.gameObject);
+                 }
+             }
+             //  PrintList();
+         }**/
+    }
     void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.tag == "GhostPipe")
+        if (collision.gameObject.tag == String)
         {
-            collisionList.Remove("GhostPipe");
+            collisionList.Remove(String);
 
         }
 
-        if (collision.gameObject.tag == "Tool")
+        if (collision.gameObject.tag == "Welder")
         {
-            collisionList.Remove("Tool");
+            collisionList.Remove("Welder");
         }
+
     }
-}
 
+}
