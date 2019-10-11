@@ -6,89 +6,78 @@ using UnityEngine.UI;
 public class Alerts : MonoBehaviour
 {
     public Text AlertTypeText;
-    public Slider TimerSlider;
-    public Canvas AlertCanvas;
-    int i = 0;
-    bool IsAlertActive = false;
     public GameObject AlertSection;
-    public Image Background;
-    public Text AlertSectionText;
-    bool IsAlertInMenu = false;
+    bool IsAlertActive = false;
     public Text Timer;
     float TimerSeconds = 0f;
     float TimerMinutes = 5f;
+    int AlertType;
+    public GameObject FoodBar;
+    public GameObject WaterBar;
+    public GameObject AirBar;
+    public GameObject Indicator;
+    float time = 0;
+    bool visible = false;
+    public OpenInventory Inventory;
+    public AudioSource AlertSound;
 
     // Start is called before the first frame update
     void Start()
     {
-        AlertCanvas.gameObject.SetActive(false);
-        TimerSlider.value = 1.0f;
+        // sets the color of each status bar to green at the beginning
+        FoodBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+        WaterBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+        AirBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+
+        Indicator.SetActive(false);
         AlertSection.SetActive(false);
+        AlertType = Random.Range(0, 2);
+        ActivateAlert("Your Air is going bad");
     }
 
     // Update is called once per frame
     void Update()
     {
-        i++;
-
-        if (i >= 600)
-        {
-            i = 0;
-            float ii = Random.Range(1, 3);
-            string String = null;
-            if (ii == 1)
-            {
-                String = "You need water";
-            }
-            else if (ii == 2)
-            {
-                String = "Your food source is on fire";
-            }
-            else if (ii == 3)
-            {
-                String = "Your air quality is declining";
-            }
-            UpdateAlertTypeText(String);
-
-        }
-
         if (IsAlertActive)
         {
-            DecreaseSliderValue();
-        }
-
-        if (IsAlertInMenu)
-        {
-            FlashBackgroundImage();
+            time += Time.deltaTime;
+            if (time >= 1)
+            {
+                FlashIndicator();
+                time = 0;
+            }
+            
             TimerSeconds -= Time.deltaTime;
+            Timer.text = "Time Left To Fix: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
             ReduceTimer();
+
+            if (Inventory.IsActive)
+            {
+                Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 1f);
+            }
+            else
+            {
+                Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
+            }
         }
     }
 
-    void UpdateAlertTypeText(string AlertText)
+    void ActivateAlert(string AlertText)
     {
+        switch (AlertType)
+        {
+            case 0:
+            case 1:
+                TimerMinutes = 10;
+                break;
+            case 2:
+                TimerMinutes = 5;
+                break;
+        }
         IsAlertActive = true;
         AlertTypeText.text = AlertText;
-        AlertCanvas.gameObject.SetActive(true);
-        AlertSectionText.text = AlertText;
-    }
-
-    void DecreaseSliderValue()
-    {
-        TimerSlider.value -= 0.001f;
-        if (TimerSlider.value == 0f)
-        {
-            IsAlertActive = false;
-            AlertCanvas.gameObject.SetActive(false);
-            IsAlertInMenu = true;
-            DisplayOnInventoryMenu();
-        }
-    }
-
-    void DisplayOnInventoryMenu()
-    {
         AlertSection.SetActive(true);
-        Timer.text = "Time Left To Fix: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
+        SetAlertType();
     }
 
     void ReduceTimer()
@@ -97,21 +86,69 @@ public class Alerts : MonoBehaviour
         {
             TimerMinutes -= 1f;
             TimerSeconds = 59;
+            if (TimerMinutes <= 2 && TimerSeconds <= 0)
+            {
+                switch(AlertType)
+                {
+                    // changes the corresponding status bar to red when the timer gets to 2 minutes to indicate that the player has little time to fix the issue
+                    case 0:
+                        FoodBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                        break;
+                    case 1:
+                        WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                        break;
+                    case 2:
+                        AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                        break;
+                }
+            }
+
+            if (TimerMinutes <= 2 && TimerSeconds <= 0)
+            {
+                // ends the game when time is out
+                EndGame();
+            }
         }
     }
 
-    void FlashBackgroundImage()
+    void FlashIndicator()
     {
-        bool Visibile = false;
-        if (Visibile)
+       // flashes the red light to indicate that something is wrong
+        if (!visible)
         {
-            Background.color = new Color(1f, 0f, 0f, 0f);
-            Visibile = true;
+            Indicator.SetActive(true);
+            visible = true;
         }
         else
         {
-            Background.color = new Color(1f, 0f, 0f, 1f);
-            Visibile = false;
+            Indicator.SetActive(false);
+            visible = false;
         }
+    }
+
+    void SetAlertType()
+    {
+        // play sound
+        AlertSound.GetComponent<AudioSource>();
+        AlertSound.Play(0);
+
+        // when an alert becomes active, the corresponding bar turns yellow
+        switch (AlertType)
+        {
+            case 0:
+                FoodBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                break;
+            case 1:
+                WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                break;
+            case 2:
+                AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                break;
+        }
+    }
+
+    void EndGame()
+    {
+        // put in the code to end the game or end day, whatever the design team wants me to do if a player doesn't fix the issue before the time runs out of if they mess up trying to fix it
     }
 }
