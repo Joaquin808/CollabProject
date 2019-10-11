@@ -7,7 +7,6 @@ using UnityEngine;
 public class Pickup : InventoryItem
 {
     public GameObject ObjectToSpawn;
-    public GameObject Hand;
 
     public override void Use()
     {

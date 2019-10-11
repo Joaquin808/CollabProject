@@ -5,12 +5,17 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<InventoryItem> ToolList = new List<InventoryItem>();
-    public List<InventoryItem> ConsumableList = new List<InventoryItem>();
+    public List<InventoryItem> ResourceList = new List<InventoryItem>();
+    public List<InventoryItem> JournalList = new List<InventoryItem>();
+    public List<InventoryItem> KeysList = new List<InventoryItem>();
+    public List<InventoryItem> MiscList = new List<InventoryItem>();
 
-    public GameObject Player;
     public GameObject InventoryPanelTools;
-    public GameObject InventoryPanelConsumable;
-    public int NumberOfInventorySlots = 1;
+    public GameObject InventoryPanelResources;
+    public GameObject InventoryPanelJournalEntries;
+    public GameObject InventoryPanelKeys;
+    public GameObject InventoryPanelMisc;
+
     public static Inventory Instance;
     public GameObject InventoryPrefab;
 
@@ -35,14 +40,14 @@ public class Inventory : MonoBehaviour
             ToolIndex++;
         }
 
-        int ConsumableIndex = 0;
-        foreach (Transform child in InventoryPanelConsumable.transform)
+        int ResourceIndex = 0;
+        foreach (Transform child in InventoryPanelResources.transform)
         {
             InventorySlotController Slot = child.GetComponent<InventorySlotController>();
 
-            if (ConsumableIndex < ConsumableList.Count)
+            if (ResourceIndex < ResourceList.Count)
             {
-                Slot.Item = ConsumableList[ConsumableIndex];
+                Slot.Item = ResourceList[ResourceIndex];
             }
             else
             {
@@ -51,7 +56,64 @@ public class Inventory : MonoBehaviour
             }
 
             Slot.UpdateInfo();
-            ConsumableIndex++;
+            ResourceIndex++;
+        }
+
+        int JournalIndex = 0;
+        foreach (Transform child in InventoryPanelJournalEntries.transform)
+        {
+            InventorySlotController Slot = child.GetComponent<InventorySlotController>();
+
+            if (JournalIndex < JournalList.Count)
+            {
+                Slot.Item = JournalList[JournalIndex];
+            }
+            else
+            {
+                Slot.Item = null;
+                Slot.transform.parent = null;
+            }
+
+            Slot.UpdateInfo();
+            JournalIndex++;
+        }
+
+        int KeysIndex = 0;
+        foreach (Transform child in InventoryPanelKeys.transform)
+        {
+            InventorySlotController Slot = child.GetComponent<InventorySlotController>();
+
+            if (KeysIndex < KeysList.Count)
+            {
+                Slot.Item = KeysList[KeysIndex];
+            }
+            else
+            {
+                Slot.Item = null;
+                Slot.transform.parent = null;
+            }
+
+            Slot.UpdateInfo();
+            KeysIndex++;
+        }
+
+        int MiscIndex = 0;
+        foreach (Transform child in InventoryPanelMisc.transform)
+        {
+            InventorySlotController Slot = child.GetComponent<InventorySlotController>();
+
+            if (MiscIndex < MiscList.Count)
+            {
+                Slot.Item = MiscList[MiscIndex];
+            }
+            else
+            {
+                Slot.Item = null;
+                Slot.transform.parent = null;
+            }
+
+            Slot.UpdateInfo();
+            MiscIndex++;
         }
     }
 
@@ -76,15 +138,51 @@ public class Inventory : MonoBehaviour
             UpdatePanelSlots();
         }
 
-        if (Item.ItemType == "Consumable")
+        if (Item.ItemType == "Resource")
         {
-            if (ConsumableList.Contains(Item))
+            if (ResourceList.Contains(Item))
             {
                 return;
             }
 
-            ConsumableList.Add(Item);
-            Instantiate(InventoryPrefab, InventoryPanelConsumable.transform);
+            ResourceList.Add(Item);
+            Instantiate(InventoryPrefab, InventoryPanelResources.transform);
+            UpdatePanelSlots();
+        }
+
+        if (Item.ItemType == "Journal")
+        {
+            if (JournalList.Contains(Item))
+            {
+                return;
+            }
+
+            JournalList.Add(Item);
+            Instantiate(InventoryPrefab, InventoryPanelJournalEntries.transform);
+            UpdatePanelSlots();
+        }
+
+        if (Item.ItemType == "Key")
+        {
+            if (KeysList.Contains(Item))
+            {
+                return;
+            }
+
+            KeysList.Add(Item);
+            Instantiate(InventoryPrefab, InventoryPanelKeys.transform);
+            UpdatePanelSlots();
+        }
+
+        if (Item.ItemType == "Misc")
+        {
+            if (MiscList.Contains(Item))
+            {
+                return;
+            }
+
+            MiscList.Add(Item);
+            Instantiate(InventoryPrefab, InventoryPanelMisc.transform);
             UpdatePanelSlots();
         }
     }
@@ -96,9 +194,24 @@ public class Inventory : MonoBehaviour
             ToolList.Remove(Item);
         }
 
-        if (Item.ItemType == "Consumable")
+        if (Item.ItemType == "Resource")
         {
-            ConsumableList.Remove(Item);
+            ResourceList.Remove(Item);
+        }
+
+        if (Item.ItemType == "Journal")
+        {
+            JournalList.Remove(Item);
+        }
+
+        if (Item.ItemType == "Key")
+        {
+            KeysList.Remove(Item);
+        }
+
+        if (Item.ItemType == "Misc")
+        {
+            MiscList.Remove(Item);
         }
 
         UpdatePanelSlots();

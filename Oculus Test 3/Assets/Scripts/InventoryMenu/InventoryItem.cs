@@ -6,11 +6,11 @@ using UnityEngine.UI;
 public class InventoryItem : ScriptableObject
 {
     public string Title;
-    public string Description;
+    public string JournalEntry;
     public string ItemType;
 
     public virtual void Use()
-   {
-     
-   }
+    {
+
+    }
 }
