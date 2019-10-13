@@ -34,7 +34,7 @@ public class ObjectVisibility : MonoBehaviour
     */
     void OnTriggerEnter(Collider collision)
     {
-        if (!collisionList.Contains(collision.gameObject.tag))
+     /*   if (!collisionList.Contains(collision.gameObject.tag))
         {
             collisionList.Add(collision.gameObject.tag);
         }
@@ -49,10 +49,10 @@ public class ObjectVisibility : MonoBehaviour
             {
                 Destroy(collision.gameObject);
             }
-        }
-
+        }*/
+        
         // PrintList();
-        /** if (this.gameObject.tag == "Pipe_Curved")
+         if (this.gameObject.tag == "Pipe_Curved")
          {
 
              if (collisionList.Contains("gPipe_Curved") && collisionList.Contains("Welder"))
@@ -105,7 +105,7 @@ public class ObjectVisibility : MonoBehaviour
                  }
              }
              //  PrintList();
-         }**/
+         }
     }
     void OnTriggerExit(Collider collision)
     {
