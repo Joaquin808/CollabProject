@@ -15,6 +15,7 @@ public class Alerts : MonoBehaviour
     public GameObject FoodBar;
     public GameObject WaterBar;
     public GameObject AirBar;
+    public GameObject TempBar;
     public GameObject Indicator;
     float time = 0;
     bool visible = false;
@@ -28,10 +29,11 @@ public class Alerts : MonoBehaviour
         FoodBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
         WaterBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
         AirBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+        TempBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
 
         Indicator.SetActive(false);
         AlertSection.SetActive(false);
-        AlertType = Random.Range(0, 2);
+        AlertType = Random.Range(0, 3);
         ActivateAlert("Your Air is going bad");
     }
 
@@ -71,6 +73,7 @@ public class Alerts : MonoBehaviour
                 TimerMinutes = 10;
                 break;
             case 2:
+            case 3:
                 TimerMinutes = 5;
                 break;
         }
@@ -100,10 +103,13 @@ public class Alerts : MonoBehaviour
                     case 2:
                         AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
                         break;
+                    case 3:
+                        TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                        break;
                 }
             }
 
-            if (TimerMinutes <= 2 && TimerSeconds <= 0)
+            if (TimerMinutes <= 0 && TimerSeconds <= 0)
             {
                 // ends the game when time is out
                 EndGame();
@@ -144,11 +150,14 @@ public class Alerts : MonoBehaviour
             case 2:
                 AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
                 break;
+            case 3:
+                TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                break;
         }
     }
 
     void EndGame()
     {
-        // put in the code to end the game or end day, whatever the design team wants me to do if a player doesn't fix the issue before the time runs out of if they mess up trying to fix it
+        // put in the code to restart the day
     }
 }
