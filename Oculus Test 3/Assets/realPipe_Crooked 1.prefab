@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5790165425864691442
+--- !u!1 &5658579018541052916
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6540718281834900039}
-  - component: {fileID: 5263940656711817335}
-  - component: {fileID: 824779913503011911}
-  - component: {fileID: 4338416424003271841}
-  - component: {fileID: 7269712950361289124}
-  - component: {fileID: 8085339353147700257}
+  - component: {fileID: 2399383282229097867}
+  - component: {fileID: 3988006881848227138}
+  - component: {fileID: 3473694684678741470}
+  - component: {fileID: 2327398692904501684}
+  - component: {fileID: 415311104911773805}
   m_Layer: 9
-  m_Name: realPipe_Straight
-  m_TagString: Pipe_Straight
+  m_Name: realPipe_Crooked 1
+  m_TagString: Pipe_Crooked
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6540718281834900039
+--- !u!4 &2399383282229097867
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5790165425864691442}
+  m_GameObject: {fileID: 5658579018541052916}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.467553, y: -2.39, z: -6.760142}
+  m_LocalPosition: {x: 12.483, y: -1.819, z: -4.879}
   m_LocalScale: {x: 20, y: 20, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5263940656711817335
+--- !u!33 &3988006881848227138
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5790165425864691442}
-  m_Mesh: {fileID: 4908777034537452869, guid: aaead840367d57a4693c50126301ec8d, type: 3}
---- !u!23 &824779913503011911
+  m_GameObject: {fileID: 5658579018541052916}
+  m_Mesh: {fileID: 8010443535547720319, guid: aaead840367d57a4693c50126301ec8d, type: 3}
+--- !u!23 &3473694684678741470
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5790165425864691442}
+  m_GameObject: {fileID: 5658579018541052916}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -82,47 +81,30 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &4338416424003271841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5790165425864691442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e89d18e8ed7b7b4bac1609f014c7ad1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  String: gPipe_Straight
---- !u!64 &7269712950361289124
+--- !u!64 &2327398692904501684
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5790165425864691442}
+  m_GameObject: {fileID: 5658579018541052916}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 4908777034537452869, guid: aaead840367d57a4693c50126301ec8d, type: 3}
---- !u!114 &8085339353147700257
+  m_Mesh: {fileID: 8010443535547720319, guid: aaead840367d57a4693c50126301ec8d, type: 3}
+--- !u!114 &415311104911773805
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5790165425864691442}
+  m_GameObject: {fileID: 5658579018541052916}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e89d18e8ed7b7b4bac1609f014c7ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
+  String: gPipe_Crooked1
