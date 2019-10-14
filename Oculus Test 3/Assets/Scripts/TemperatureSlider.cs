@@ -6,23 +6,32 @@ using UnityEngine;
 
 public class TemperatureSlider : MonoBehaviour
 {
-    public bool isStopped;
-    public GameObject slider; //Used to call gameobject used for sliding puzzle
+    private bool isStopped;
+    public bool puzzleComplete = false;
+    
     float x, z;
-    Vector3 pos1, pos2;
     public float correctValue1, correctValue2;
     float stoppedValue;
-    private Renderer sliderRenderer;
     public float speed;
+
+    private Renderer sliderRenderer;
+    public GameObject slider; //Used to call gameobject used for sliding puzzle
+    Vector3 pos1, pos2;
+    public Alerts alerts;
+
 
     // Start is called before the first frame update
     void Start()
     {
         x = slider.transform.position.x;
         z = slider.transform.position.z;
-        pos1 = new Vector3(x, 0, z);  //Gets position of object for slider
-        pos2 = new Vector3(x, -1, z); //Gets second position for sliding object
+        pos1 = new Vector3(x, 0, z);  //Gets max position of object for slider
+        pos2 = new Vector3(x, -1, z); //Gets min position for sliding object
         sliderRenderer = slider.GetComponent<Renderer>();
+
+        //GameObject statusAlert = GameObject.Find("Inventory/MenuCanvas"); //GameObject to access Alerts script
+        //alerts = statusAlert.GetComponent<Alerts>();
+
     }
 
     // Update is called once per frame
@@ -51,10 +60,13 @@ public class TemperatureSlider : MonoBehaviour
             {
                 isStopped = true;
                 sliderRenderer.material.SetColor("_Color", Color.green);
-            }else
+                alerts.IsAlertActive = false;
+            }
+            /*else
             {
                 Debug.Log("Incorrect value");
-            }
+            }*/
+            //Use to check if lever is working
         }
     }
 }

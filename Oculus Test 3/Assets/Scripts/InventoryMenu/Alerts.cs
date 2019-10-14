@@ -7,11 +7,11 @@ public class Alerts : MonoBehaviour
 {
     public Text AlertTypeText;
     public GameObject AlertSection;
-    bool IsAlertActive = false;
+    public bool IsAlertActive = false;
     public Text Timer;
     float TimerSeconds = 0f;
     float TimerMinutes = 5f;
-    int AlertType;
+    public int AlertType;
     public GameObject FoodBar;
     public GameObject WaterBar;
     public GameObject AirBar;

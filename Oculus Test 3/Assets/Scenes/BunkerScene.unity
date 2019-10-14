@@ -6742,11 +6742,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd54bfb73f69d134cbf3788986fdb326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isStopped: 0
-  slider: {fileID: 547460796}
+  puzzleComplete: 0
   correctValue1: -0.8
   correctValue2: -0.75
   speed: 1
+  slider: {fileID: 547460796}
+  alerts: {fileID: 1998064378}
 --- !u!54 &765200886
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -18072,7 +18073,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AlertTypeText: {fileID: 772537253}
   AlertSection: {fileID: 204529501}
+  IsAlertActive: 0
   Timer: {fileID: 388856160}
+  AlertType: 0
   FoodBar: {fileID: 2089988588}
   WaterBar: {fileID: 1341601978}
   AirBar: {fileID: 733137163}
