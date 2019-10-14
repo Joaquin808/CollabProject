@@ -313,6 +313,80 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1001 &55944716
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5790165425864691442, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_Name
+      value: gPipe_Straight2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.132294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -5.568
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602185983553888962, guid: 4131abf20345c7843a46ccce2b3c55bb,
+        type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4131abf20345c7843a46ccce2b3c55bb, type: 3}
 --- !u!1001 &57257103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -614,7 +688,7 @@ PrefabInstance:
     - target: {fileID: 5790165425864691442, guid: 4131abf20345c7843a46ccce2b3c55bb,
         type: 3}
       propertyPath: m_Name
-      value: gPipe_Straight
+      value: gPipe_Straight1
       objectReference: {fileID: 0}
     - target: {fileID: 6540718281834900039, guid: 4131abf20345c7843a46ccce2b3c55bb,
         type: 3}
@@ -5927,7 +6001,7 @@ PrefabInstance:
     - target: {fileID: 7857015789944442772, guid: a82c8d59d6622d14da2159c0f65d1765,
         type: 3}
       propertyPath: m_Name
-      value: gPipe_Crooked
+      value: gPipe_Crooked1
       objectReference: {fileID: 0}
     - target: {fileID: 198906023168084459, guid: a82c8d59d6622d14da2159c0f65d1765,
         type: 3}
@@ -8343,7 +8417,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 2760018995637824525, guid: efe721c8e874ed147adfebb98b578252,
+        type: 3}
+      propertyPath: String
+      value: gPipe_Crooked1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3466393149869000672, guid: efe721c8e874ed147adfebb98b578252, type: 3}
+    - {fileID: 2687063823012183378, guid: efe721c8e874ed147adfebb98b578252, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: efe721c8e874ed147adfebb98b578252, type: 3}
 --- !u!1 &954220976
 GameObject:
@@ -10981,7 +11062,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1739653812845790053, guid: 8f7946d17a526304cae22e260699fb18,
+        type: 3}
+      propertyPath: String
+      value: gPipe_Curved1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8288650807335034576, guid: 8f7946d17a526304cae22e260699fb18, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8f7946d17a526304cae22e260699fb18, type: 3}
 --- !u!1 &1292502742
 GameObject:
@@ -13232,7 +13319,7 @@ PrefabInstance:
     - target: {fileID: 7345859559989350862, guid: c533803eb75763d41b24c794838746f0,
         type: 3}
       propertyPath: m_Name
-      value: gPipe_Curved
+      value: gPipe_Curved1
       objectReference: {fileID: 0}
     - target: {fileID: 5951029071480312346, guid: c533803eb75763d41b24c794838746f0,
         type: 3}
@@ -16914,7 +17001,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4338416424003271841, guid: 90b96d1346844d54cba82043ab12eb40,
+        type: 3}
+      propertyPath: String
+      value: gPipe_Straight1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 8085339353147700257, guid: 90b96d1346844d54cba82043ab12eb40, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 90b96d1346844d54cba82043ab12eb40, type: 3}
 --- !u!1 &1868635585
 GameObject:
@@ -19774,7 +19867,7 @@ PrefabInstance:
     - target: {fileID: 96256320999732956, guid: 4d757332c176f4245a147226e761743b,
         type: 3}
       propertyPath: m_Name
-      value: Wrench Variant (1)
+      value: Welder
       objectReference: {fileID: 0}
     - target: {fileID: 96256320999732956, guid: 4d757332c176f4245a147226e761743b,
         type: 3}
