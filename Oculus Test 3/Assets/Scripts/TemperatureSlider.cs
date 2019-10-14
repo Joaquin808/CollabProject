@@ -41,7 +41,7 @@ public class TemperatureSlider : MonoBehaviour
 
     }
    
-    //Detects if button is pushed to stop slider
+    //Detects if lever is triggered to stop slider
     void OnTriggerEnter(Collider other)
     {
         if (other.tag == "Button")
