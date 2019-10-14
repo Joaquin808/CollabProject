@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &-4377536985948415028
+--- !u!54 &4845835049272044435
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96256320999732956}
+  m_GameObject: {fileID: 4458930343418687439}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -16,26 +16,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!65 &-6271489118729174001
+--- !u!65 &2951882917564773456
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96256320999732956}
+  m_GameObject: {fileID: 4458930343418687439}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.03952143, y: 0.008384884, z: 0.17792752}
   m_Center: {x: 0, y: 0.004192442, z: 0.021036237}
---- !u!114 &-4112098945904218463
+--- !u!114 &5111273091729235710
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96256320999732956}
+  m_GameObject: {fileID: 4458930343418687439}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
@@ -46,33 +46,33 @@ MonoBehaviour:
   m_snapOrientation: 1
   m_snapOffset: {fileID: 0}
   m_grabPoints:
-  - {fileID: -6271489118729174001}
---- !u!114 &5234138685838649309
+  - {fileID: 2951882917564773456}
+--- !u!114 &5234138686267627394
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96256320999732956}
+  m_GameObject: {fileID: 4458930343418687439}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 10438b1b98278e048bfe56e612fef8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryItemRef: {fileID: 11400000, guid: e3751d99efeb8a94883790ba353edfee, type: 2}
---- !u!114 &8954996676054107501
+--- !u!114 &8954996678177600818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96256320999732956}
+  m_GameObject: {fileID: 4458930343418687439}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab2c9b3a118dca8409df5e5859b5e508, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &8247240505484406741
+--- !u!1001 &5674712086721148614
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -82,32 +82,32 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}
       propertyPath: m_Name
-      value: Wrench Variant
+      value: Welder
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 5ba7656cea0f8b5418e57b61213c0d92,
+        type: 3}
+      propertyPath: m_TagString
+      value: Welder
       objectReference: {fileID: 0}
     - target: {fileID: -927199367670048503, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: -927199367670048503, guid: 5ba7656cea0f8b5418e57b61213c0d92,
-        type: 3}
-      propertyPath: m_TagString
-      value: Tool
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 11.088
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.39
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -5.238
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 5ba7656cea0f8b5418e57b61213c0d92,
         type: 3}
@@ -166,9 +166,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ba7656cea0f8b5418e57b61213c0d92, type: 3}
---- !u!1 &96256320999732956 stripped
+--- !u!1 &4458930343418687439 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 5ba7656cea0f8b5418e57b61213c0d92,
     type: 3}
-  m_PrefabInstance: {fileID: 8247240505484406741}
+  m_PrefabInstance: {fileID: 5674712086721148614}
   m_PrefabAsset: {fileID: 0}
