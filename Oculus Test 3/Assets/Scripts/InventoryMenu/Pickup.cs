@@ -14,17 +14,17 @@ public class Pickup : InventoryItem
         base.Use();
         if (ItemType == "Journal")
         {
-            GameObject JournalContentPanel = GameObject.Find("JournalContent");
+            //GameObject JournalContentPanel = GameObject.Find("JournalContent");
             GameObject JournalCanvas = GameObject.FindGameObjectWithTag("JournalCanvas");
             GameObject spawn = Instantiate(ObjectToSpawn, JournalCanvas.transform);
-            foreach (GameObject Child in JournalContentPanel.transform)
+           /* foreach (GameObject Child in JournalContentPanel.transform)
             {
                 if (Child.gameObject.tag != "JournalEntry")
                 {
                     Child.SetActive(false);
 
                 }
-            }
+            }*/
             // play journal entry sound
             return;
         }

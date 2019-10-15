@@ -6235,6 +6235,7 @@ Transform:
   m_LocalScale: {x: 0.12697367, y: 0.12697364, z: 0.12697364}
   m_Children:
   - {fileID: 1998064377}
+  - {fileID: 990732022}
   m_Father: {fileID: 1415615971}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8327,7 +8328,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1666525638}
-  - {fileID: 990732022}
   m_Father: {fileID: 1692823767}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8833,7 +8833,7 @@ GameObject:
   - component: {fileID: 990732023}
   m_Layer: 0
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: JournalCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8849,7 +8849,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 897213258}
+  m_Father: {fileID: 668582613}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14649,7 +14649,7 @@ GameObject:
   - component: {fileID: 1666525639}
   m_Layer: 0
   m_Name: JournalContent
-  m_TagString: JournalCanvas
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
