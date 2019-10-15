@@ -64,8 +64,10 @@ public class Alerts : MonoBehaviour
         }
     }
 
-    void ActivateAlert(string AlertText)
+    public void ActivateAlert(string AlertText, int TypeOfAlert)
     {
+        AlertType = TypeOfAlert;
+
         switch (AlertType)
         {
             case 0:
@@ -159,5 +161,10 @@ public class Alerts : MonoBehaviour
     void EndGame()
     {
         // put in the code to restart the day
+    }
+
+    public void DeactivateAlert(int TypeOfAlert)
+    {
+
     }
 }
