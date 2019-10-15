@@ -34,8 +34,10 @@ public class Alerts : MonoBehaviour
         Indicator.SetActive(false);
         AlertSection.SetActive(false);
         AlertType = Random.Range(0, 3);
-        
-ActivateAlert("Your Air is going bad.", AlertType);
+
+
+        ActivateAlert("Your Air is going bad.", AlertType);
+
     }
 
     // Update is called once per frame
@@ -49,7 +51,7 @@ ActivateAlert("Your Air is going bad.", AlertType);
                 FlashIndicator();
                 time = 0;
             }
-            
+
             TimerSeconds -= Time.deltaTime;
             Timer.text = "Time Left To Fix: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
             ReduceTimer();
@@ -71,12 +73,12 @@ ActivateAlert("Your Air is going bad.", AlertType);
 
         switch (AlertType)
         {
-            case 0:
-            case 1:
+            case 0://food
+            case 1://water
                 TimerMinutes = 10;
                 break;
-            case 2:
-            case 3:
+            case 2://air
+            case 3://temperature
                 TimerMinutes = 5;
                 break;
         }
@@ -94,7 +96,7 @@ ActivateAlert("Your Air is going bad.", AlertType);
             TimerSeconds = 59;
             if (TimerMinutes <= 2 && TimerSeconds <= 0)
             {
-                switch(AlertType)
+                switch (AlertType)
                 {
                     // changes the corresponding status bar to red when the timer gets to 2 minutes to indicate that the player has little time to fix the issue
                     case 0:
@@ -122,7 +124,7 @@ ActivateAlert("Your Air is going bad.", AlertType);
 
     void FlashIndicator()
     {
-       // flashes the red light to indicate that something is wrong
+        // flashes the red light to indicate that something is wrong
         if (!visible)
         {
             Indicator.SetActive(true);
