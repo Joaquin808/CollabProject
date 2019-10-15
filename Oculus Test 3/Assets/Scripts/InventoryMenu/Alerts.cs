@@ -34,7 +34,7 @@ public class Alerts : MonoBehaviour
         Indicator.SetActive(false);
         AlertSection.SetActive(false);
         AlertType = Random.Range(0, 3);
-        ActivateAlert("Your Air is going bad");
+        ActivateAlert("Your Air is going bad", 2);
     }
 
     // Update is called once per frame
@@ -70,12 +70,12 @@ public class Alerts : MonoBehaviour
 
         switch (AlertType)
         {
-            case 0:
-            case 1:
+            case 0://food
+            case 1://water
                 TimerMinutes = 10;
                 break;
-            case 2:
-            case 3:
+            case 2://air
+            case 3://temperature
                 TimerMinutes = 5;
                 break;
         }

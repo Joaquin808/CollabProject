@@ -68,6 +68,6 @@ public class ObjectVisibility : MonoBehaviour
 
     }
 
-    void onBreak()
+
  
 }
