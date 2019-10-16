@@ -7,25 +7,18 @@ using UnityEngine;
 public class Pickup : InventoryItem
 {
     public GameObject ObjectToSpawn;
-    public GameObject InventoryPanelJournals;
+    public AudioSource JournalAudio;
 
     public override void Use()
     {
         base.Use();
         if (ItemType == "Journal")
         {
-            //GameObject JournalContentPanel = GameObject.Find("JournalContent");
             GameObject JournalCanvas = GameObject.FindGameObjectWithTag("JournalCanvas");
             GameObject spawn = Instantiate(ObjectToSpawn, JournalCanvas.transform);
-           /* foreach (GameObject Child in JournalContentPanel.transform)
-            {
-                if (Child.gameObject.tag != "JournalEntry")
-                {
-                    Child.SetActive(false);
-
-                }
-            }*/
             // play journal entry sound
+            //JournalAudio.GetComponent<AudioSource>();
+            //JournalAudio.Play(0);
             return;
         }
         GameObject watch = GameObject.FindGameObjectWithTag("Watch");

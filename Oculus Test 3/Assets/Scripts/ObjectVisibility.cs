@@ -9,7 +9,13 @@ public class ObjectVisibility : MonoBehaviour
     Renderer rend;
     public string String;
     private GameObject destroyedPipe;
-    
+    public GameObject curvedPipeSpawn;
+    public GameObject straightPipeSpawn;
+    public GameObject crookedPipeSpawn;
+    public GameObject spawnLoc;
+    public int pipesFixed = 0;
+    public Alerts AlertSystem;
+    int TypeOfAlert = 1;
 
     // Use this for initialization
     void Start()
@@ -48,6 +54,11 @@ public class ObjectVisibility : MonoBehaviour
             collisionList.Remove("Welder");
             destroyedPipe = GameObject.Find(String);
             Destroy(destroyedPipe);
+            pipesFixed++;
+            if(pipesFixed == 6)
+            {
+                AlertSystem.DeactivateAlert(TypeOfAlert);
+            }
         }
     }
 
@@ -68,6 +79,13 @@ public class ObjectVisibility : MonoBehaviour
 
     }
 
+    public void spawnPipes()
+    {
 
- 
+        Instantiate(curvedPipeSpawn, spawnLoc.transform);
+        Instantiate(straightPipeSpawn, spawnLoc.transform);
+        Instantiate(crookedPipeSpawn, spawnLoc.transform);
+
+    }
+
 }
