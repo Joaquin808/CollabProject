@@ -3,7 +3,12 @@ guid: 9bb92f5ca56f24d48baa544c8f84e1f8
 ModelImporter:
   serializedVersion: 28
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: books_lambert3SG1
+    second: {fileID: 2100000, guid: bcec354ea98a17c4ca1d41867cc75238, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

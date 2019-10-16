@@ -3,7 +3,12 @@ guid: c521218a8e6b4754882498f84baf9791
 ModelImporter:
   serializedVersion: 28
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: radio_lambert3SG1
+    second: {fileID: 2100000, guid: 2aa923fc7982d5c4db25ce827b238a50, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
