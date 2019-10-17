@@ -51,7 +51,7 @@ public class DialPuzzle : MonoBehaviour
         {
             x = x + 360.0f;
         }
-        rb.transform.EulerAngles = new Vector3(x, 0, 0);
+        //rb.transform.eulerAngles = new Vector3(x, 0, 0);
     }
 
     /*void OnBreak

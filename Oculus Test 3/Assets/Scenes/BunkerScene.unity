@@ -6030,7 +6030,7 @@ BoxCollider:
   m_GameObject: {fileID: 630540097}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -6089,7 +6089,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 630540097}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.716427, y: 0.918, z: -7.924}
+  m_LocalPosition: {x: 12.69, y: 0.918, z: -6.62}
   m_LocalScale: {x: 0.15548, y: 0.15548, z: 0.15548}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6188,7 +6188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeft: 1
-  solutionX: 0
+  solutionX1: 0
+  solutionX2: 0
 --- !u!1 &653911834
 GameObject:
   m_ObjectHideFlags: 0
@@ -8382,7 +8383,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLeft: 0
-  solutionX: 0
+  solutionX1: 0
+  solutionX2: 0
 --- !u!1 &856562733
 GameObject:
   m_ObjectHideFlags: 0
