@@ -29,7 +29,6 @@ public class DialPuzzle : MonoBehaviour
         //2nd 8th would be between 22.5 and 67.5; 3rd: 67.5 and 112.5; 4th: 112.5 and 157.5; 5th: 157.5 and 202.5
         //6th: 202.5 and 247.5; 7th: 247.5 and 292.5; 8th: 292.5 and 337.5
     }
-<<<<<<< HEAD
 
     void CheckRotation()
     {
@@ -48,6 +47,4 @@ public class DialPuzzle : MonoBehaviour
     {
 
     }*/
-=======
->>>>>>> beb2520484b69e8335dd8c35e77997590af7b617
 }
