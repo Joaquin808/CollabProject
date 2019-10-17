@@ -24,7 +24,7 @@ public class PipesPuzzleBreak : MonoBehaviour
 
     void onBreak()
     {
-
+        objViz.pipesFixed = 3;
         AlertSystem.ActivateAlert(AlertString, AlertType);
         objViz.isVisible = false;
 

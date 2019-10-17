@@ -8,6 +8,7 @@ public class OpenInventory : MonoBehaviour
     public GameObject Inventory;
     public GameObject InventoryCollider;
     public bool IsActive = false;
+    public GameObject JournalCanvas;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,7 @@ public class OpenInventory : MonoBehaviour
         {
             Inventory.SetActive(true);
             IsActive = true;
+            JournalCanvas.SetActive(true);
         }
     }
 
@@ -31,6 +33,7 @@ public class OpenInventory : MonoBehaviour
         {
             Inventory.SetActive(false);
             IsActive = false;
+            JournalCanvas.SetActive(false);
         }
     }
 }
