@@ -22,6 +22,7 @@ public class ObjectVisibility : MonoBehaviour
     {
         
         rend = GetComponent<Renderer>();
+        
     }
 
     // Update is called once per frame
@@ -81,7 +82,6 @@ public class ObjectVisibility : MonoBehaviour
 
     public void spawnPipes()
     {
-
         Instantiate(curvedPipeSpawn, spawnLoc.transform);
         Instantiate(straightPipeSpawn, spawnLoc.transform);
         Instantiate(crookedPipeSpawn, spawnLoc.transform);
