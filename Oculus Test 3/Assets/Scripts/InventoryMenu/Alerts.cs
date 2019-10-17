@@ -21,6 +21,7 @@ public class Alerts : MonoBehaviour
     bool visible = false;
     public OpenInventory Inventory;
     public AudioSource AlertSound;
+    public SkyboxUpdater DayCycle;
 
     // Start is called before the first frame update
     void Start()
@@ -34,15 +35,17 @@ public class Alerts : MonoBehaviour
         Indicator.SetActive(false);
         AlertSection.SetActive(false);
         AlertType = Random.Range(0, 3);
-
-
         ActivateAlert("Your Air is going bad.", AlertType);
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (DayCycle.EndOfDay)
+        {
+            ActivateAlert("Get your ass to sleep", 4);
+        }
+
         if (IsAlertActive)
         {
             time += Time.deltaTime;
@@ -81,7 +84,14 @@ public class Alerts : MonoBehaviour
             case 3://temperature
                 TimerMinutes = 5;
                 break;
+            case 4://bed time
+                // Flash lights
+                // AI tells you to get your ass to sleep
+                // Set two minute timer for player to go to bed, if they don't, they die 
+                TimerMinutes = 2;
+                break;
         }
+
         IsAlertActive = true;
         AlertTypeText.text = AlertText;
         AlertSection.SetActive(true);
@@ -168,6 +178,6 @@ public class Alerts : MonoBehaviour
 
     public void DeactivateAlert(int TypeOfAlert)
     {
-
+        // stop the flashing lights and alert sounds
     }
 }

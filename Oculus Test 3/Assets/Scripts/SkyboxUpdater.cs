@@ -11,8 +11,9 @@ public class SkyboxUpdater : MonoBehaviour
 {
 
     public float dayTime = 0f;  //startTime
-    public float maxTime = 60f; //60seconds
+    public float maxTime = 600f; //60seconds
     public int dayTrack = 1;    //current day
+    public bool EndOfDay = false;
 
     //Skybox References
     public Material skyOne;		//skybox 1
