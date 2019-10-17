@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6bce555a5d52d4eaa0c7dcb79539c0, type: 3}
+  m_Name: JournalEntry_09
+  m_EditorClassIdentifier: 
+  Title: JournalEntry_09
+  JournalEntry: "By 2101 all life not within some sort of bunker had been destroyed. 
+    The surface of the Earth became superheated and barren, clean water was impossible
+    to find.  Not only this but noxious gases filled the troposphere, meaning that
+    even if we could venture out into the wastes with protective gear, we\u2019d
+    need a rebreather, and we could only do it for a brief period of time.  Beyond
+    this, extreme weather such as tornadoes, wildfires, and even hurricanes (yes
+    in Wyoming) were a common occurrence."
+  ItemType: Journal
+  ObjectToSpawn: {fileID: 6169067519179826170, guid: a304564240a476644b2a1e4f82a20749,
+    type: 3}
+  JournalAudio: {fileID: 0}
