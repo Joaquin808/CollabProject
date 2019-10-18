@@ -14,10 +14,12 @@ public class TemperatureSlider : MonoBehaviour
     float stoppedValue;
     public float speed;
 
+    int TypeofAlert;
+
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
     Vector3 pos1, pos2;
-    public Alerts alerts;
+    public Alerts alerts; //call to alerts script
 
 
     // Start is called before the first frame update
@@ -53,6 +55,7 @@ public class TemperatureSlider : MonoBehaviour
     //Detects if lever is triggered to stop slider
     void OnTriggerEnter(Collider other)
     {
+
         if (other.tag == "Button")
         {
             stoppedValue = slider.transform.position.y;
@@ -69,4 +72,6 @@ public class TemperatureSlider : MonoBehaviour
             //Use to check if lever is working
         }
     }
+
+
 }
