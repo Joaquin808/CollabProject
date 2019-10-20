@@ -13,8 +13,8 @@ public class FollowPhysicsSlider : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        rb.MovePosition(target.transform.position);
+        rb.MovePosition(target.transform.position); //Allows handle to follow position of grabbable handle
     }
 }

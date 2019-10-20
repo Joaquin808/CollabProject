@@ -9,8 +9,6 @@ public class TemperatureSlider : MonoBehaviour
     private bool isStopped;
     public bool puzzleComplete = false;
 
-    public string leverName;
-
     float x, z;
     public float correctValue1, correctValue2;
     float stoppedValue;
@@ -18,8 +16,11 @@ public class TemperatureSlider : MonoBehaviour
 
     int TypeofAlert;
 
+    //public string leverName;
+
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
+    public GameObject handle; //Call to Handle gameobject to check if switch is down
     Vector3 pos1, pos2;
     public Alerts alerts; //call to alerts script
 
@@ -58,7 +59,7 @@ public class TemperatureSlider : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
 
-        if (other.name == leverName)
+        if (other)
         {
             stoppedValue = slider.transform.position.y;
             if (stoppedValue >= correctValue1 && stoppedValue <= correctValue2)
