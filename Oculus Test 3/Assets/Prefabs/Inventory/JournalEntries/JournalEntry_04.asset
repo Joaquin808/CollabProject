@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a6bce555a5d52d4eaa0c7dcb79539c0, type: 3}
+  m_Name: JournalEntry_04
+  m_EditorClassIdentifier: 
+  Title: JournalEntry_04
+  JournalEntry: 'The bunker was initially created as a precaution, but due to the
+    trends amongst the multiple fossil fuel industries despite the lobbying of me
+    and my wife, it became more and more apparent that the bunker would be a necessity. 
+    Me and my team knew that they would need to build more of these bunkers.  Many
+    more.  We pleaded with the United States government and its most prominent individuals
+    to grant funding for mass construction, but to no avail. '
+  ItemType: Journal
+  ObjectToSpawn: {fileID: 4468176796794547202, guid: 0ab89eaef57260d4ea3d752846be341a,
+    type: 3}
+  JournalAudio: {fileID: 0}

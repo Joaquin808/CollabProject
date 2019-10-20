@@ -8,16 +8,20 @@ public class TemperatureSlider : MonoBehaviour
 {
     private bool isStopped;
     public bool puzzleComplete = false;
-    
+
+    public string leverName;
+
     float x, z;
     public float correctValue1, correctValue2;
     float stoppedValue;
     public float speed;
 
+    int TypeofAlert;
+
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
     Vector3 pos1, pos2;
-    public Alerts alerts;
+    public Alerts alerts; //call to alerts script
 
 
     // Start is called before the first frame update
@@ -25,8 +29,8 @@ public class TemperatureSlider : MonoBehaviour
     {
         x = slider.transform.position.x;
         z = slider.transform.position.z;
-        pos1 = new Vector3(x, 0, z);  //Gets max position of object for slider
-        pos2 = new Vector3(x, -1, z); //Gets min position for sliding object
+        pos1 = new Vector3(x, 1, z);  //Gets max position of object for slider
+        pos2 = new Vector3(x, 0, z); //Gets min position for sliding object
         sliderRenderer = slider.GetComponent<Renderer>();
 
         //GameObject statusAlert = GameObject.Find("Inventory/MenuCanvas"); //GameObject to access Alerts script
@@ -53,7 +57,8 @@ public class TemperatureSlider : MonoBehaviour
     //Detects if lever is triggered to stop slider
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Button")
+
+        if (other.name == leverName)
         {
             stoppedValue = slider.transform.position.y;
             if (stoppedValue >= correctValue1 && stoppedValue <= correctValue2)
@@ -62,11 +67,13 @@ public class TemperatureSlider : MonoBehaviour
                 sliderRenderer.material.SetColor("_Color", Color.green);
                 alerts.IsAlertActive = false;
             }
-            /*else
+            else
             {
                 Debug.Log("Incorrect value");
-            }*/
+            }
             //Use to check if lever is working
         }
     }
+
+
 }
