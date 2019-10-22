@@ -93,7 +93,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e89d18e8ed7b7b4bac1609f014c7ad1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isVisible: 0
   String: gPipe_Straight1
+  curvedPipeSpawn: {fileID: 0}
+  straightPipeSpawn: {fileID: 0}
+  crookedPipeSpawn: {fileID: 0}
+  spawnLoc: {fileID: 0}
+  pipesFixed: 0
+  AlertSystem: {fileID: 0}
+  pipeClick: {fileID: 0}
 --- !u!64 &1385847719631601257
 MeshCollider:
   m_ObjectHideFlags: 0

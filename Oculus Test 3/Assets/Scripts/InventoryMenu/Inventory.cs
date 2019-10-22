@@ -122,6 +122,7 @@ public class Inventory : MonoBehaviour
     {
         Instance = this;
         UpdatePanelSlots();
+        
     }
 
     public void Add(InventoryItem Item)

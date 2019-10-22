@@ -7477,6 +7477,7 @@ MonoBehaviour:
   spawnLoc: {fileID: 630540097}
   pipesFixed: 0
   AlertSystem: {fileID: 1998064378}
+  pipeClick: {fileID: 0}
 --- !u!114 &708543995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22992,6 +22993,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5471194605407253356, guid: 701577aa68aca124fab736862fcc2610,
+        type: 3}
+      propertyPath: pipeClick
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 701577aa68aca124fab736862fcc2610, type: 3}
