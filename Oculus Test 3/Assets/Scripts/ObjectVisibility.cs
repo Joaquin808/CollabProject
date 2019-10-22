@@ -16,12 +16,15 @@ public class ObjectVisibility : MonoBehaviour
     public int pipesFixed = 0;
     public Alerts AlertSystem;
     int TypeOfAlert = 1;
+   // public AudioSource pipeClick;
+
 
     // Use this for initialization
     void Start()
     {
         
         rend = GetComponent<Renderer>();
+        pipeClick = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -55,6 +58,7 @@ public class ObjectVisibility : MonoBehaviour
             destroyedPipe = GameObject.Find(String);
             Destroy(destroyedPipe);
             pipesFixed++;
+          //  pipeClick.Play(0);
             if(pipesFixed == 6)
             {
                 AlertSystem.DeactivateAlert(TypeOfAlert);
