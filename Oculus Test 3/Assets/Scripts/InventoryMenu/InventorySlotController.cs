@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class InventorySlotController : MonoBehaviour
 {
     public InventoryItem Item;
+    public AudioSource InventoryPing;
 
     private void Start()
     {
         UpdateInfo();
+        InventoryPing = GetComponent<AudioSource>();
     }
 
     public void UpdateInfo()
@@ -31,6 +33,7 @@ public class InventorySlotController : MonoBehaviour
         if (Item)
         {
             Item.Use();
+            InventoryPing.Play(0);
         }
    }
 }

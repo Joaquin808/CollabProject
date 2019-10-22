@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2385949919207597600}
+  - component: {fileID: -2917580683990887658}
   m_Layer: 0
   m_Name: Dog Bone
   m_TagString: Untagged
@@ -31,6 +32,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-2917580683990887658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677521692989805619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10438b1b98278e048bfe56e612fef8cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InventoryItemRef: {fileID: 11400000, guid: d7d483b17d2a1684b9273484e0b4c155, type: 2}
+  CanAddToInventory: 0
 --- !u!1 &4534128282606750266
 GameObject:
   m_ObjectHideFlags: 0
