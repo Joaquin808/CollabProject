@@ -18,7 +18,7 @@ public class DialPuzzle : MonoBehaviour
     void Update()
     {
         x = rb.transform.eulerAngles.x;
-        print(x);
+        //print(x);
         if (solutionX == x)
         {
 
