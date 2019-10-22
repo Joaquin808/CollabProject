@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2791797042311064526}
   - component: {fileID: 8610249820094409809}
   - component: {fileID: 436482594324256871}
+  - component: {fileID: 5606754020807560728}
   m_Layer: 0
   m_Name: group10_sink_Sink:pCube30
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5606754020807560728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5334102562616364819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 228.55724, y: 62.83174, z: 154.11736}
+  m_Center: {x: -1094.2592, y: 280.73016, z: -314.64462}
 --- !u!1 &5932771824180369517
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +105,7 @@ GameObject:
   - component: {fileID: 1877232192440703908}
   - component: {fileID: 716280046898438050}
   - component: {fileID: 7184018024666056351}
+  - component: {fileID: 529811695511619885}
   m_Layer: 0
   m_Name: Sink:pCube29_group10_sink
   m_TagString: Untagged
@@ -158,6 +174,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &529811695511619885
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5932771824180369517}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 228.55736, y: 62.83174, z: 154.11736}
+  m_Center: {x: -732.5855, y: 280.73016, z: -314.64462}
 --- !u!1 &6037961219135419623
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +199,7 @@ GameObject:
   - component: {fileID: 6906309060328315986}
   - component: {fileID: 2916269825813688186}
   - component: {fileID: 8347611318337067267}
+  - component: {fileID: 8953239393262730685}
   m_Layer: 0
   m_Name: group10_sink_Sink:pCube22
   m_TagString: Untagged
@@ -237,6 +268,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8953239393262730685
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6037961219135419623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 670.5833, y: 253.69891, z: 246.82027}
+  m_Center: {x: -915.29285, y: 125.0916, z: -312.21323}
 --- !u!1 &6687247764366279749
 GameObject:
   m_ObjectHideFlags: 0
