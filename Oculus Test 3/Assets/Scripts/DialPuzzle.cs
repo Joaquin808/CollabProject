@@ -6,45 +6,64 @@ public class DialPuzzle : MonoBehaviour
 {
     public bool isLeft;
     Rigidbody rb;
-    float x;
-    public float solutionX;
+    float currentX, intialX;
+    public int sineHeight, sineWidth, solutionOne, solutionTwo;
+    int sineX;
+    //public float solutionX1, solutionX2;
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        intialX = rb.transform.eulerAngles.x;
+        sineX = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        x = rb.transform.eulerAngles.x;
-        //print(x);
-        if (solutionX == x)
-        {
-
-        }
-
-
-        //in theory, if i divide the dial into 8 segments segment the first one would be between 22.5 and 337.5; as it would be the top 8th
-        //2nd 8th would be between 22.5 and 67.5; 3rd: 67.5 and 112.5; 4th: 112.5 and 157.5; 5th: 157.5 and 202.5
-        //6th: 202.5 and 247.5; 7th: 247.5 and 292.5; 8th: 292.5 and 337.5
+        currentX = rb.transform.eulerAngles.x;
+        IncreasingOrDecreasing();
+        //CheckSolution(solutionOne, solutionTwo); 
+        //Check comments down in other functions 
     }
 
-    void CheckRotation()
+    void IncreasingOrDecreasing()
     {
-        if(x >= 360)
+
+        if (currentX > intialX + .5f)
         {
-            x = x - 360.0f;
+            sineX = sineX - 1;
         }
-        if(x < 0)
+        if (currentX < intialX - .5f)
         {
-            x = x + 360.0f;
+            sineX = sineX + 1;
         }
-        //rb.transform.eulerAngles = new Vector3(x, 0, 0);
+        CheckLeft();
+        intialX = currentX;
     }
 
-    /*void OnBreak
+    void CheckLeft()
     {
+        if (isLeft)
+        {
+            sineHeight = sineX;
+        }
+        else
+        {
+            sineWidth = sineX;
+        }
+    }
+    //This should probably be used for the actual sine wave script
+   /* void CheckSolution(int x, int y)
+    {
+        if (sineHeight == x && sineWidth == y)
+        {
 
+        }
     }*/
+
+    void OnBreak()
+    {
+        rb.transform.eulerAngles = new Vector3(0, 0, 0);
+    }
 }
