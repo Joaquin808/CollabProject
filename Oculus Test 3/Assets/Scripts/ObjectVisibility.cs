@@ -5,14 +5,22 @@ using System.Collections.Generic;
 public class ObjectVisibility : MonoBehaviour
 {
     List<string> collisionList = new List<string>();
-    bool isVisible = false;
+    public bool isVisible = false;
     Renderer rend;
     public string String;
     private GameObject destroyedPipe;
+    public GameObject curvedPipeSpawn;
+    public GameObject straightPipeSpawn;
+    public GameObject crookedPipeSpawn;
+    public GameObject spawnLoc;
+    public int pipesFixed = 0;
+    public Alerts AlertSystem;
+    int TypeOfAlert = 1;
 
     // Use this for initialization
     void Start()
     {
+        
         rend = GetComponent<Renderer>();
     }
 
@@ -20,7 +28,6 @@ public class ObjectVisibility : MonoBehaviour
     void Update()
     {
         rend.enabled = isVisible;
-
 
     }
 
@@ -47,67 +54,14 @@ public class ObjectVisibility : MonoBehaviour
             collisionList.Remove("Welder");
             destroyedPipe = GameObject.Find(String);
             Destroy(destroyedPipe);
+            pipesFixed++;
+            if(pipesFixed == 6)
+            {
+                AlertSystem.DeactivateAlert(TypeOfAlert);
+            }
         }
     }
 
-    // PrintList();
-    /*   if (!collisionList.Contains(collision.gameObject.name))
-       {
-           collisionList.Add(collision.gameObject.name);
-           PrintList();
-       }
-
-       if (this.gameObject.tag == "Pipe_Curved")
-        {
-
-            if (collisionList.Contains("gPipe_Curved") && collisionList.Contains("Welder"))
-            {
-                isVisible = true;
-                collisionList.Remove("gPipe_Curved");
-                collisionList.Remove("Welder");
-                if (collision.gameObject.tag == "gPipe_Curved")
-                {
-                    Destroy(collision.gameObject);
-                }
-            }
-        }
-        if (this.gameObject.tag == "Pipe_Straight")
-        {
-            if (collisionList.Contains("gPipe_Straight") && collisionList.Contains("Welder"))
-            {
-                isVisible = true;
-                collisionList.Remove("gPipe_Straight");
-                collisionList.Remove("Welder");
-                destroyedPipe = GameObject.Find("gPipe_Straight1");
-                Destroy(destroyedPipe);
-           }
-        }
-        if (this.gameObject.tag == "Pipe_Crooked")
-        {
-            if (collisionList.Contains("gPipe_Crooked") && collisionList.Contains("Welder"))
-            {
-                isVisible = true;
-                collisionList.Remove("gPipe_Crooked");
-                collisionList.Remove("Welder");
-                if (collision.gameObject.tag == "gPipe_Crooked")
-                {
-                    Destroy(collision.gameObject);
-                }
-            }
-        }
-        if (this.gameObject.tag == "Pipe_Half")
-        {
-            if (collisionList.Contains("gPipe_Half") && collisionList.Contains("Welder"))
-            {
-                isVisible = true;
-                collisionList.Remove("gPipe_Half");
-                collisionList.Remove("Welder");
-                if (collision.gameObject.tag == "gPipe_Half")
-                {
-                    Destroy(collision.gameObject);
-                }
-            }*/
-    //  PrintList();
 
 
     void OnTriggerExit(Collider collision)
@@ -122,6 +76,15 @@ public class ObjectVisibility : MonoBehaviour
         {
             collisionList.Remove("Welder");
         }
+
+    }
+
+    public void spawnPipes()
+    {
+
+        Instantiate(curvedPipeSpawn, spawnLoc.transform);
+        Instantiate(straightPipeSpawn, spawnLoc.transform);
+        Instantiate(crookedPipeSpawn, spawnLoc.transform);
 
     }
 
