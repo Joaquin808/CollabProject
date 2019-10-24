@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5765070467916178337}
   - component: {fileID: 233391548903382872}
   - component: {fileID: 2073024798131698938}
+  - component: {fileID: -5386878970804982131}
   m_Layer: 0
   m_Name: Sliding Door
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946111856710314884}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -13.4, y: 0.24, z: -2.21}
-  m_LocalScale: {x: 19.795456, y: 19.795456, z: 19.795456}
+  m_LocalPosition: {x: -13.42, y: 0.24, z: -2.21}
+  m_LocalScale: {x: 13.285324, y: 19.795456, z: 19.795456}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,3 +94,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.10957815, y: 0.24699849, z: 0.009807976}
   m_Center: {x: -0.0030312408, y: 0.119260356, z: -0.0033185573}
+--- !u!114 &-5386878970804982131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946111856710314884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac0101519a6a164d9184b2d3e97a933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
