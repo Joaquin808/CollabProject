@@ -38,14 +38,12 @@ public class DialPuzzle : MonoBehaviour
         {
             sineX = sineX + 1;
         }
-        //Checls if the left bool is true
         CheckLeft();
         intialX = currentX;
     }
 
     void CheckLeft()
     {
-        //If true it will make sineHeight equal to the value of sineX
         if (isLeft)
         {
             sineHeight = sineX;
