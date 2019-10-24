@@ -5,6 +5,7 @@ using UnityEngine;
 public class Base_Locker_Collision_Script : MonoBehaviour
 {
     public GameObject panel;
+    string cubeName = "pCube10_powerpuzzle";
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,7 @@ public class Base_Locker_Collision_Script : MonoBehaviour
             Debug.Log("That seems to fit...");
             panel.transform.position = this.transform.position;
             panel.GetComponent<Rigidbody>().useGravity = false;
-            panel.Find("pCube10_powerpuzzle").GetComponent(OVR Grabbable).enabled = false;
+            GameObject.Find(cubeName).GetComponent<OVRGrabbable>().enabled = false;
         }
     }
 }
