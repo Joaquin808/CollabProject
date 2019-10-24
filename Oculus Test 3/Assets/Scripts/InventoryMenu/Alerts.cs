@@ -21,7 +21,7 @@ public class Alerts : MonoBehaviour
     bool visible = false;
     public OpenInventory Inventory;
     public AudioSource AlertSound;
-    public SkyboxUpdater DayCycle;
+    public DayNightSystem DayCycle;
 
     // Start is called before the first frame update
     void Start()
@@ -41,7 +41,7 @@ public class Alerts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DayCycle.EndOfDay)
+        if (DayCycle.endOfDay)
         {
             ActivateAlert("Get your ass to sleep", 4);
         }

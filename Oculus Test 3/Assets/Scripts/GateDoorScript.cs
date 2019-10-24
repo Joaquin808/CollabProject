@@ -24,14 +24,17 @@ public class GateDoorScript : MonoBehaviour
     {
         if (LeftDoor.transform.rotation.y >= LeftDoorStartPosition.transform.rotation.y)
         {
-            LeftDoorMoveDirection = Vector3.left;
+            LeftDoorMoveDirection = new Vector3(0, -6, 0);
+            Debug.Log("Left");
         }
-        else if (LeftDoor.transform.rotation.y <= LeftDoorStartPosition.transform.rotation.y - 5.5)
+        else if (LeftDoor.transform.rotation.y <= - 0.5)
         {
             LeftDoorMoveDirection = Vector3.right;
+            Debug.Log("Right");
         }
 
-        LeftDoor.transform.Rotate(new Vector3(0,5,0),Space.World);
+        LeftDoor.transform.Rotate(LeftDoorMoveDirection,Space.World);
+        Debug.Log(LeftDoor.transform.rotation.y);
 
         if (RightDoor.transform.rotation.y >= RightDoorStartPosition.rotation.x)
         {
