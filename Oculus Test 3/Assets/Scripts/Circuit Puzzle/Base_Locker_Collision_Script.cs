@@ -6,6 +6,8 @@ public class Base_Locker_Collision_Script : MonoBehaviour
 {
     public GameObject panel;
     public string cubeName = "pCube10_powerpuzzle";
+    Rigidbody rb;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class Base_Locker_Collision_Script : MonoBehaviour
         
     }
 
-    public void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name == "panel-locker")
         {
@@ -26,6 +28,7 @@ public class Base_Locker_Collision_Script : MonoBehaviour
             panel.transform.position = this.transform.position;
             panel.GetComponent<Rigidbody>().useGravity = false;
             GameObject.Find(cubeName).GetComponent<OVRGrabbable>().enabled = false;
+            //Look into force release from the OVRGrabbable script
         }
     }
 }

@@ -34,7 +34,7 @@ public class GateDoorScript : MonoBehaviour
         }
 
         LeftDoor.transform.Rotate(LeftDoorMoveDirection,Space.World);
-        Debug.Log(LeftDoor.transform.rotation.y);
+        //Debug.Log(LeftDoor.transform.rotation.y);
 
         if (RightDoor.transform.rotation.y >= RightDoorStartPosition.rotation.x)
         {
