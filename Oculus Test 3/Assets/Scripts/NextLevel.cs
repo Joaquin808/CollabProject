@@ -1,25 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NextLevel : MonoBehaviour
 {
-    public GameObject cube;
-    public GameObject spawn;
 
-    // Start is called before the first frame update
-    void Start()
+    public void ChangeScene()
     {
-        Transform transform = spawn.GetComponent<Transform>();
+        SceneManager.LoadScene("ProbuilderWalls");
     }
 
-    public void SpawnCubes()
-    {
-        Instantiate(cube, transform);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
