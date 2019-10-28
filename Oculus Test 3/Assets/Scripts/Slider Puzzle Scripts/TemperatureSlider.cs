@@ -19,6 +19,7 @@ public class TemperatureSlider : MonoBehaviour
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
     public GameObject lever; //Used to call for Lever gameobject to stop slider
+    public GameObject needle;
     Vector3 pos1, pos2;
     public Alerts alerts; //call to alerts script
     public AudioSource leverClick; //Used to get audio source for lever click
@@ -75,6 +76,13 @@ public class TemperatureSlider : MonoBehaviour
             }
             //Use to check if lever is working
         }
+    }
+
+    void OnBreak()
+    {
+        /*alerts.AlertType = 3;
+        alerts.ActivateAlert("Temperature critical!", alerts.AlertType);
+        Instantiate(needle,spawnpoint);*/
     }
 
 
