@@ -9,7 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943520247667788050}
-  m_Layer: 0
+  - component: {fileID: 2383318216659634678}
+  - component: {fileID: 504057492410550000}
+  m_Layer: 9
   m_Name: Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31,6 +33,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &2383318216659634678
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4270353020949527297}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &504057492410550000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4270353020949527297}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &6695376093812300783
 GameObject:
   m_ObjectHideFlags: 0
@@ -43,7 +78,7 @@ GameObject:
   - component: {fileID: 8648626876233912245}
   - component: {fileID: 1993728738405723796}
   - component: {fileID: 7017520574458556167}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cup:Cup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

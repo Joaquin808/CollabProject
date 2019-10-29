@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4676420819449041913}
   - component: {fileID: 7460666531147605585}
   - component: {fileID: 9137146900297158839}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fish_Ca1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,9 @@ GameObject:
   m_Component:
   - component: {fileID: 775315963944201324}
   - component: {fileID: 4964285372880349775}
-  m_Layer: 0
+  - component: {fileID: 667406225343546075}
+  - component: {fileID: 1563888525153188599}
+  m_Layer: 9
   m_Name: Can 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -124,6 +126,39 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4180979, y: 0.10547238, z: 0.2588535}
   m_Center: {x: 0.017657727, y: 0.06595758, z: 0.07864316}
+--- !u!54 &667406225343546075
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366556609820991103}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1563888525153188599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4366556609820991103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_allowOffhandGrab: 1
+  m_snapPosition: 0
+  m_snapOrientation: 0
+  m_snapOffset: {fileID: 0}
+  m_grabPoints: []
 --- !u!1 &5726674556320857936
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,7 +170,7 @@ GameObject:
   - component: {fileID: 3387866685723267068}
   - component: {fileID: 2898117208765547082}
   - component: {fileID: 8331093712088820791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FishCan_Main
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -212,7 +247,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4839677934046531890}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: group3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
