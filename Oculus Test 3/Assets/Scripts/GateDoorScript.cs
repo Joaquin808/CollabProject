@@ -23,8 +23,19 @@ public class GateDoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-        
+        /*if (!IsDoorOpen)
+        {
+            LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
+            RightDoor.transform.Rotate(new Vector3(0, 90, 0));
+            //IsDoorOpen = true;
+        }
+        else if (IsDoorOpen)
+        {
+            LeftDoor.transform.Rotate(new Vector3(0, 0, 0));
+            RightDoor.transform.Rotate(new Vector3(0, 0, 0));
+            //IsDoorOpen = false;
+        }*/
+
         /*if (LeftDoor.transform.rotation.y != LeftDoorStartPosition.transform.rotation.y)
         {
             LeftDoorMoveDirection = new Vector3(0, -90, 0);
@@ -54,21 +65,50 @@ public class GateDoorScript : MonoBehaviour
     
     void OnTriggerEnter(Collider collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            if (!IsDoorOpen)
+            {
+                LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
+                RightDoor.transform.Rotate(new Vector3(0, 90, 0));
+                IsDoorOpen = true;
+            }
+        }
+        
+    }
+
+    /*private void OnCollisionEnter(Collision collision)
+    {
+       
         if (!IsDoorOpen)
         {
             LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
             RightDoor.transform.Rotate(new Vector3(0, 90, 0));
             IsDoorOpen = true;
         }
-    }
+    }*/
 
     void OnTriggerExit(Collider collision)
     {
-       if (IsDoorOpen)
+        if (collision.gameObject.tag == "Player")
+        {
+            if (IsDoorOpen)
+            {
+                LeftDoor.transform.Rotate(new Vector3(0, 0, 0));
+                RightDoor.transform.Rotate(new Vector3(0, 0, 0));
+                IsDoorOpen = false;
+            }
+        }
+       
+    }
+
+    /*private void OnCollisionExit(Collision collision)
+    {
+        if (IsDoorOpen)
         {
             LeftDoor.transform.Rotate(new Vector3(0, 0, 0));
             RightDoor.transform.Rotate(new Vector3(0, 0, 0));
             IsDoorOpen = false;
         }
-    }
+    }*/
 }
