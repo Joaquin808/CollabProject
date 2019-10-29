@@ -19,49 +19,6 @@ public class GateDoorScript : MonoBehaviour
         LeftDoorStartPosition = LeftDoor.transform;
         RightDoorStartPosition = RightDoor.transform;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        /*if (!IsDoorOpen)
-        {
-            LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
-            RightDoor.transform.Rotate(new Vector3(0, 90, 0));
-            //IsDoorOpen = true;
-        }
-        else if (IsDoorOpen)
-        {
-            LeftDoor.transform.Rotate(new Vector3(0, 0, 0));
-            RightDoor.transform.Rotate(new Vector3(0, 0, 0));
-            //IsDoorOpen = false;
-        }*/
-
-        /*if (LeftDoor.transform.rotation.y != LeftDoorStartPosition.transform.rotation.y)
-        {
-            LeftDoorMoveDirection = new Vector3(0, -90, 0);
-            Debug.Log("Left");
-        }
-        else if (LeftDoor.transform.rotation.y <= LeftDoorStartPosition.transform.rotation.y - 90)
-        {
-            LeftDoorMoveDirection = new Vector3(0, 90, 0);
-            Debug.Log("Right");
-        }*/
-
-        //LeftDoor.transform.Rotate(LeftDoorMoveDirection, Space.World);
-        //Debug.Log(LeftDoor.transform.rotation.y);
-
-        /*if (RightDoor.transform.rotation.y >= RightDoorStartPosition.rotation.x)
-        {
-            RightDoorMoveDirection = Vector3.right;
-        }
-        else if (RightDoor.transform.rotation.y <= RightDoorStartPosition.rotation.x - 5.5)
-        {
-            LeftDoorMoveDirection = Vector3.left;
-        }
-
-        RightDoor.transform.Translate(RightDoorMoveDirection * Time.deltaTime * liftSpeed);*/
-
-    }
     
     void OnTriggerEnter(Collider collision)
     {
@@ -77,17 +34,6 @@ public class GateDoorScript : MonoBehaviour
         
     }
 
-    /*private void OnCollisionEnter(Collision collision)
-    {
-       
-        if (!IsDoorOpen)
-        {
-            LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
-            RightDoor.transform.Rotate(new Vector3(0, 90, 0));
-            IsDoorOpen = true;
-        }
-    }*/
-
     void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -101,14 +47,4 @@ public class GateDoorScript : MonoBehaviour
         }
        
     }
-
-    /*private void OnCollisionExit(Collision collision)
-    {
-        if (IsDoorOpen)
-        {
-            LeftDoor.transform.Rotate(new Vector3(0, 0, 0));
-            RightDoor.transform.Rotate(new Vector3(0, 0, 0));
-            IsDoorOpen = false;
-        }
-    }*/
 }
