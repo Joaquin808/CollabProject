@@ -27605,7 +27605,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7e154c5f3b5253459027123efc89233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canMove: 1
+  canMove: 0
+  isWait: 1
+  waitTime: 3
 --- !u!65 &1601207156
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27674,8 +27676,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601207154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.789, y: -1.414746, z: 14.097}
-  m_LocalScale: {x: 2.097819, y: 0.17481825, z: 2.097819}
+  m_LocalPosition: {x: 13.856, y: -1.414746, z: 14.189}
+  m_LocalScale: {x: 2.097819, y: 0.17481825, z: 2.6818519}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 86
