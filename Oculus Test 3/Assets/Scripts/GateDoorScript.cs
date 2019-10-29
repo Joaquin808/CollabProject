@@ -94,8 +94,8 @@ public class GateDoorScript : MonoBehaviour
         {
             if (IsDoorOpen)
             {
-                LeftDoor.transform.Rotate(new Vector3(0, 0, 0));
-                RightDoor.transform.Rotate(new Vector3(0, 0, 0));
+                LeftDoor.transform.Rotate(new Vector3(0, 90, 0));
+                RightDoor.transform.Rotate(new Vector3(0, -90, 0));
                 IsDoorOpen = false;
             }
         }
