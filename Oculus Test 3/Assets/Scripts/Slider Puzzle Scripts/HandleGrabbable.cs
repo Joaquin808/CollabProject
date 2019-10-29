@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HandleGrabbable : OVRGrabbable
 {
-        
     public Transform handle;
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
@@ -24,11 +23,10 @@ public class HandleGrabbable : OVRGrabbable
     private void Update()
     {
         //If statement causes grabbable handle to snap back to handle if it gets too far away
-        if (Vector3.Distance(handle.position, transform.position) > 0.05f)
+        if (Vector3.Distance(handle.position,transform.position) > 0.05f)
         {
             grabbedBy.ForceRelease(this);
         }
 
     }
 }
-
