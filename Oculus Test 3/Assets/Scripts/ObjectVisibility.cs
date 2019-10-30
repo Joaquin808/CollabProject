@@ -39,6 +39,7 @@ public class ObjectVisibility : MonoBehaviour
             print(collisionList[i]);
         }
     }
+
     void OnTriggerEnter(Collider collision)
     {
         if (!collisionList.Contains(collision.gameObject.name))
