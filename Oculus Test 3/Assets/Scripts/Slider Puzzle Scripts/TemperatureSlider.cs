@@ -9,7 +9,7 @@ public class TemperatureSlider : MonoBehaviour
     private bool isStopped;
     public bool puzzleComplete = false;
 
-    float x, z;
+    float x, y, z;
     public float correctValue1, correctValue2;
     float stoppedValue;
     public float speed;
@@ -28,10 +28,11 @@ public class TemperatureSlider : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        x = slider.transform.position.x;
-        z = slider.transform.position.z;
-        pos1 = new Vector3(x, .5f, z);  //Gets max position of object for slider
-        pos2 = new Vector3(x, -0.5f, z); //Gets min position for sliding object
+        x = slider.transform.localPosition.x;
+        y = slider.transform.localPosition.y;
+        z = slider.transform.localPosition.z;
+        pos1 = new Vector3(x + 145, y, z);  //Gets max position of object for slider
+        pos2 = new Vector3(x, y, z); //Gets min position for sliding object
         sliderRenderer = slider.GetComponent<Renderer>();
 
         leverClick.GetComponent<AudioSource>();
@@ -52,7 +53,7 @@ public class TemperatureSlider : MonoBehaviour
     {
         if (isStopped == false)
         {
-            slider.transform.position = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
+            slider.transform.localPosition = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
         }
 
     }
@@ -63,7 +64,7 @@ public class TemperatureSlider : MonoBehaviour
         leverClick.Play(0);
         if (other.gameObject.tag == "Lever")
         {
-            stoppedValue = slider.transform.position.y;
+            stoppedValue = slider.transform.localPosition.x;
             if (stoppedValue >= correctValue1 && stoppedValue <= correctValue2)
             {
                 isStopped = true;
