@@ -68,12 +68,12 @@ public class Elevator : MonoBehaviour
 						if (currentFloor == 0)
 						{
 							playerRef.transform.position = housePos;
-							currentFloor == 1;
+							currentFloor = 1;
 						} 
 						else 
 						{
 							playerRef.transform.position = bunkerPos;
-							currentFloor == 0;
+							currentFloor = 0;
 						}
 						
 						isWait = true;
@@ -84,18 +84,18 @@ public class Elevator : MonoBehaviour
 	}
 
 	//When player enters elevator
-	void OnTriggerEnter(Collision other) {
+	void OnTriggerEnter(Collider other) {
 		if (other.gameObject.tag == "Player")
 		{
-			playerOn == true;
+			playerOn = true;
 		}
 	}
 	
 	//When player leaves elevator
-	void OnTriggerExit(Collision other) {
+	void OnTriggerExit(Collider other) {
 		if (other.gameObject.tag == "Player")
 		{
-			playerOn == false;
+			playerOn = false;
 		}
 	}
 
