@@ -9,7 +9,9 @@ public class TemperatureSlider : MonoBehaviour
     private bool isStopped;
     public bool puzzleComplete = false;
 
-    float x, y, z;
+    float x, y, z, rotx, roty, rotz;
+    float needleRotation;
+    float maxNeedleRotation = 0f;
     public float correctValue1, correctValue2;
     float stoppedValue;
     public float speed;
@@ -18,7 +20,9 @@ public class TemperatureSlider : MonoBehaviour
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
     public GameObject lever; //Used to call for Lever gameobject to stop slider
-    Vector3 pos1, pos2;
+    public GameObject needle; //Used to call needle for visual aspect of puzzle
+
+    Vector3 pos1, pos2, rotationStartPos;
     public AudioSource leverClick; //Used to get audio source for lever click
 
 
@@ -28,6 +32,10 @@ public class TemperatureSlider : MonoBehaviour
         x = slider.transform.localPosition.x;
         y = slider.transform.localPosition.y;
         z = slider.transform.localPosition.z;
+        rotx = needle.transform.localRotation.x;
+        roty = needle.transform.localRotation.y;
+        rotz = needle.transform.localRotation.z;
+        rotationStartPos = new Vector3(rotx, roty, rotz);
         pos1 = new Vector3(x + 145, y, z);  //Gets max position of object for slider
         pos2 = new Vector3(x, y, z); //Gets min position for sliding object
 
@@ -65,9 +73,12 @@ public class TemperatureSlider : MonoBehaviour
         if (other.gameObject.tag == "Lever")
         {
             stoppedValue = slider.transform.localPosition.x;
-            if (stoppedValue >= correctValue1 && stoppedValue <= correctValue2)
+            if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
             {
                 isStopped = true;
+                puzzleCompleteCheck++;
+                needle.transform.localRotation = Quaternion.Euler(0, 180, needle.transform.localRotation.z + 30);
+
             }
             else
             {
