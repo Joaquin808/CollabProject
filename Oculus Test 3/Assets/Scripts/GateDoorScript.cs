@@ -77,17 +77,6 @@ public class GateDoorScript : MonoBehaviour
         
     }
 
-    /*private void OnCollisionEnter(Collision collision)
-    {
-       
-        if (!IsDoorOpen)
-        {
-            LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
-            RightDoor.transform.Rotate(new Vector3(0, 90, 0));
-            IsDoorOpen = true;
-        }
-    }*/
-
     void OnTriggerExit(Collider collision)
     {
         if (collision.gameObject.tag == "Player")
@@ -101,14 +90,4 @@ public class GateDoorScript : MonoBehaviour
         }
        
     }
-
-    /*private void OnCollisionExit(Collision collision)
-    {
-        if (IsDoorOpen)
-        {
-            LeftDoor.transform.Rotate(new Vector3(0, 0, 0));
-            RightDoor.transform.Rotate(new Vector3(0, 0, 0));
-            IsDoorOpen = false;
-        }
-    }*/
 }
