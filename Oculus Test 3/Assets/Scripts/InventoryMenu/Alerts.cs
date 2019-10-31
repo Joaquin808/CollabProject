@@ -16,7 +16,7 @@ public class Alerts : MonoBehaviour
     public GameObject WaterBar;
     public GameObject AirBar;
     public GameObject TempBar;
-    public GameObject Indicator;
+    GameObject[] Indicator;
     float time = 0;
     bool visible = false;
     public OpenInventory Inventory;
@@ -32,7 +32,12 @@ public class Alerts : MonoBehaviour
         AirBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
         TempBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
 
-        Indicator.SetActive(false);
+        Indicator = GameObject.FindGameObjectsWithTag("AlarmLight");
+        for (int i = 0; i < Indicator.Length; i++ )
+        {
+            Indicator[i].SetActive(false);
+        }
+       
         AlertSection.SetActive(false);
         AlertType = Random.Range(0, 3);
         ActivateAlert("Your Air is going bad.", AlertType);
@@ -137,12 +142,20 @@ public class Alerts : MonoBehaviour
         // flashes the red light to indicate that something is wrong
         if (!visible)
         {
-            Indicator.SetActive(true);
+            for (int i = 0; i < Indicator.Length; i++)
+            {
+                Indicator[i].SetActive(true);
+            }
             visible = true;
+
         }
         else
         {
-            Indicator.SetActive(false);
+            for (int i = 0; i < Indicator.Length; i++)
+            {
+                Indicator[i].SetActive(false);
+            }
+
             visible = false;
         }
     }
