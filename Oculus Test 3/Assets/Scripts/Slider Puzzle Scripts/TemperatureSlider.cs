@@ -9,8 +9,7 @@ public class TemperatureSlider : MonoBehaviour
     private bool isStopped;
     public bool puzzleComplete = false;
 
-    float x, y, z, rotx, roty, rotz;
-    float needleRotation;
+    float x, y, z;
     float maxNeedleRotation = 0f;
     public float correctValue1, correctValue2;
     float stoppedValue;
@@ -22,7 +21,7 @@ public class TemperatureSlider : MonoBehaviour
     public GameObject lever; //Used to call for Lever gameobject to stop slider
     public GameObject needle; //Used to call needle for visual aspect of puzzle
 
-    Vector3 pos1, pos2, rotationStartPos;
+    Vector3 pos1, pos2, rotation;
     public AudioSource leverClick; //Used to get audio source for lever click
 
 
@@ -32,12 +31,9 @@ public class TemperatureSlider : MonoBehaviour
         x = slider.transform.localPosition.x;
         y = slider.transform.localPosition.y;
         z = slider.transform.localPosition.z;
-        rotx = needle.transform.localRotation.x;
-        roty = needle.transform.localRotation.y;
-        rotz = needle.transform.localRotation.z;
-        rotationStartPos = new Vector3(rotx, roty, rotz);
         pos1 = new Vector3(x + 145, y, z);  //Gets max position of object for slider
         pos2 = new Vector3(x, y, z); //Gets min position for sliding object
+        rotation = new Vector3(0, 0, -40);
 
         leverClick.GetComponent<AudioSource>();
 
@@ -77,8 +73,10 @@ public class TemperatureSlider : MonoBehaviour
             {
                 isStopped = true;
                 puzzleCompleteCheck++;
-                needle.transform.localRotation = Quaternion.Euler(0, 180, needle.transform.localRotation.z + 30);
-
+                if(needle.transform.localRotation.z >= maxNeedleRotation)
+                {
+                    needle.transform.Rotate(rotation, Space.Self);
+                }
             }
             else
             {
