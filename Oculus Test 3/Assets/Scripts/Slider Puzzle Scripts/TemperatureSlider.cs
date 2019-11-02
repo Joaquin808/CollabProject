@@ -55,7 +55,7 @@ public class TemperatureSlider : MonoBehaviour
         {
             slider.transform.localPosition = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
         }
-        if (puzzleCompleteCheck >= 3)
+        if (puzzleCompleteCheck == 3)
         {
             puzzleComplete = true;
         }
@@ -65,21 +65,18 @@ public class TemperatureSlider : MonoBehaviour
     //Detects if lever is triggered to stop slider
     void OnTriggerEnter(Collider other)
     {
+        leverClick.Play(0);
         if (other.gameObject.tag == "Lever")
         {
-            leverClick.Play(0);
             stoppedValue = slider.transform.localPosition.x;
             if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
             {
                 isStopped = true;
                 puzzleCompleteCheck++;
-                Debug.Log(puzzleCompleteCheck);
-
-                needle.transform.Rotate(rotation, Space.Self);
-                /*if (needle.transform.localRotation.z >= maxNeedleRotation)
+                if(needle.transform.localRotation.z >= maxNeedleRotation)
                 {
-                    
-                }*/
+                    needle.transform.Rotate(rotation, Space.Self);
+                }
             }
             else
             {

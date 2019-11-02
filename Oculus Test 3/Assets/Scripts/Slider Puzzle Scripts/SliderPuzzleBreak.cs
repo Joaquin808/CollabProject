@@ -8,8 +8,7 @@ public class SliderPuzzleBreak : MonoBehaviour
 
     public Alerts alerts; //call to alerts script
     public GameObject needle;
-    public GameObject player;
-    public GameObject spawnpoint; //Used to get needle and spawn it on the system breaking
+    public Transform spawnpoint; //Used to get needle and spawn it on the system breaking
 
     // Start is called before the first frame update
     void Start()
@@ -17,18 +16,19 @@ public class SliderPuzzleBreak : MonoBehaviour
         
     }
 
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("It broke!");
+            OnBreak();
+        }
+    }
+
     void OnBreak()
     {
         alerts.ActivateAlert("Temperature critical!", AlertType);
-        Instantiate(needle, spawnpoint.transform);
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject == player)
-        {
-            Debug.Log("Trigger Works");
-            OnBreak();
-        }
+        Instantiate(needle, spawnpoint);
     }
 }
