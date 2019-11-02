@@ -5,9 +5,10 @@ using UnityEngine;
 public class SlidingDoor : MonoBehaviour
 {
     Vector3 moveDirection = Vector3.down;   //Door starts up
-    float moveSpeed = 5;
+    float moveSpeed = 4.5f;
     bool isOpen = false;                    //door starts closed
     bool isMoving = false;                  //is door in motion
+    public bool isLocked = false;           //Is Key Owned by Player
     Vector3 startPos;
     Vector3 endPos;
 
@@ -15,51 +16,54 @@ public class SlidingDoor : MonoBehaviour
     void Start()
     {
         startPos = this.transform.position;
-        endPos = startPos - new Vector3(0, 20, 0);
+        endPos = startPos - new Vector3(0, 8, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isOpen)
+        if (!isLocked)
         {
-            if (this.transform.position.y > endPos.y)
+            if (isOpen)
             {
-                moveDirection = Vector3.down;
-                isMoving = true;
+                if (this.transform.position.y > endPos.y)
+                {
+                    moveDirection = Vector3.down;
+                    isMoving = true;
+                }
+                else
+                {
+                    this.transform.position = endPos;
+                    isMoving = false;
+                }
             }
             else
             {
-                this.transform.position = endPos;
-                isMoving = false;
+                if (this.transform.position.y < startPos.y)
+                {
+                    moveDirection = Vector3.up;
+                    isMoving = true;
+                }
+                else
+                {
+                    this.transform.position = startPos;
+                    isMoving = false;
+                }
             }
-        }
-        else
-        {
-            if (this.transform.position.y < startPos.y)
-            {
-                moveDirection = Vector3.up;
-                isMoving = true;
-            }
-            else
-            {
-                this.transform.position = startPos;
-                isMoving = false;
-            }
-        }
 
-        //Move Door
-        if (isMoving)
-        {
-            transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
-        }
+            //Move Door
+            if (isMoving)
+            {
+                transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
+            }
 
+        }
     }
 
     //Player Detection Trigger
     void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
             isOpen = true;
         }
@@ -67,7 +71,7 @@ public class SlidingDoor : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.tag == "player")
+        if (other.gameObject.tag == "Player")
         {
             isOpen = false;
         }
