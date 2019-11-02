@@ -154,7 +154,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206722441}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.441142, y: -0.009128079, z: -1.1468776}
+  m_LocalPosition: {x: -2.441142, y: 1.375, z: -1.1468776}
   m_LocalScale: {x: 1.0026999, y: 0.4324207, z: 0.31229448}
   m_Children: []
   m_Father: {fileID: 1901350481647986157}
@@ -233,13 +233,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   puzzleComplete: 0
-  correctValue1: -0.25
-  correctValue2: 0.25
-  speed: 2
+  correctValue1: -800
+  correctValue2: -825
+  speed: 1
   slider: {fileID: 0}
   lever: {fileID: 915694056}
   needle: {fileID: 0}
-  alerts: {fileID: 0}
   leverClick: {fileID: 1206722443}
 --- !u!82 &1206722443
 AudioSource:
@@ -388,7 +387,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1437082338}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -431,7 +430,7 @@ Rigidbody:
   m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -513,7 +512,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1599275662}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -556,7 +555,7 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
@@ -854,7 +853,7 @@ Transform:
   m_GameObject: {fileID: 3186769425897592830}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.899, y: 2.929, z: 4.122}
-  m_LocalScale: {x: 0.11734021, y: 0.11734021, z: 0.11734021}
+  m_LocalScale: {x: 43.044216, y: 43.044216, z: 43.044216}
   m_Children:
   - {fileID: 1142340797368626331}
   - {fileID: 6852298296151102863}
@@ -1267,10 +1266,10 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6852298296151102862}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 20
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
+  m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -1286,7 +1285,7 @@ HingeJoint:
   m_Anchor: {x: 0, y: 0, z: 0}
   m_Axis: {x: 1, y: 0, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 0.6098737, y: 3.0097299, z: 3.9600706}
+  m_ConnectedAnchor: {x: 6.991773, y: 1.5819919, z: -9.009615}
   m_UseSpring: 0
   m_Spring:
     spring: 0
