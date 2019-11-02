@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: df7339a2527645442816849860d3ca3e
+guid: a4640546cd13acd40b8dd6b9409368d2
 ModelImporter:
   serializedVersion: 28
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candle2_Candles_Candle1pCylinder3Mat
+    second: {fileID: 2100000, guid: bcec354ea98a17c4ca1d41867cc75238, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Candles_pCylinder4Candle1_Candle2Mat
+    second: {fileID: 2100000, guid: bcec354ea98a17c4ca1d41867cc75238, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
