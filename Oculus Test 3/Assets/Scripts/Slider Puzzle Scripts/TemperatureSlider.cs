@@ -10,7 +10,7 @@ public class TemperatureSlider : MonoBehaviour
     public bool puzzleComplete = false;
 
     float x, y, z;
-    float maxNeedleRotation = 0f;
+    //float maxNeedleRotation = 0f;
     public float correctValue1, correctValue2;
     float stoppedValue;
     public float speed;
