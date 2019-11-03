@@ -7,6 +7,8 @@ public class ObjectVisibilityCircuit : MonoBehaviour
     public GameObject grabbableCircuit;
     Renderer rend;
 
+    public PowerOn powerScript;
+
     bool powerOn;
 
     // Start is called before the first frame update
@@ -22,6 +24,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         {
             rend.enabled = true;
             Destroy(other.gameObject);
+            powerScript.circuitsConnected++;
         }
     }
 }

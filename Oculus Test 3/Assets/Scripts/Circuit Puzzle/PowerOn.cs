@@ -5,23 +5,25 @@ using UnityEngine;
 public class PowerOn : MonoBehaviour
 {
     public int circuitsConnected;
-    // Start is called before the first frame update
+    public AudioSource leverClick;
+
+
+    public bool powerOn = false;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        leverClick.GetComponent<AudioSource>();
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (circuitsConnected >= 8)
+        if (other.gameObject.tag == "Lever")
         {
-
+            leverClick.Play(0);
+            if (circuitsConnected >= 8)
+            {
+                powerOn = true;
+            }
         }
     }
 }
