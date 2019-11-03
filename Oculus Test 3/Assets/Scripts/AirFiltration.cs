@@ -9,6 +9,7 @@ public class AirFiltration : MonoBehaviour
     float solutionOne, solutionTwo, dialPointed, timer;
     AudioSource wind;
     public bool solved;
+    public Alerts AlertSystem;
     //int seconds;
 
     
@@ -61,6 +62,7 @@ public class AirFiltration : MonoBehaviour
 
     void OnBreak()
     {
+        AlertSystem.ActivateAlert("Thing you want the alert to say", 2);
         RandomSolution();
         rb.freezeRotation = false;
         wind.Stop();
