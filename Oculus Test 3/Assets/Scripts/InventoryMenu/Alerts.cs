@@ -40,7 +40,7 @@ public class Alerts : MonoBehaviour
        
         AlertSection.SetActive(false);
         AlertType = Random.Range(0, 3);
-        ActivateAlert("Your Air is going bad.", AlertType);
+        //ActivateAlert("Your Air is going bad.", AlertType); Turned off to stop alarm noise at start
     }
 
     // Update is called once per frame

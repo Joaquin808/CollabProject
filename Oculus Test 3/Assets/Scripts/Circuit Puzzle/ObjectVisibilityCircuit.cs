@@ -7,6 +7,8 @@ public class ObjectVisibilityCircuit : MonoBehaviour
     public GameObject grabbableCircuit;
     Renderer rend;
 
+    bool powerOn;
+
     // Start is called before the first frame update
     void Start()
     {

@@ -15,6 +15,7 @@ public class TemperatureSlider : MonoBehaviour
     float stoppedValue;
     public float speed;
     int puzzleCompleteCheck;
+    int alertType = 3;
 
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
@@ -23,7 +24,7 @@ public class TemperatureSlider : MonoBehaviour
 
     Vector3 pos1, pos2, rotation;
     public AudioSource leverClick; //Used to get audio source for lever click
-
+    public Alerts alerts;
 
     // Start is called before the first frame update
     void Start()
@@ -57,7 +58,7 @@ public class TemperatureSlider : MonoBehaviour
         }
         if (puzzleCompleteCheck >= 3)
         {
-            puzzleComplete = true;
+            alerts.DeactivateAlert(alertType);
         }
 
     }
