@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Alerts : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class Alerts : MonoBehaviour
     public OpenInventory Inventory;
     public AudioSource AlertSound;
     public DayNightSystem DayCycle;
+    public OVRScreenFade ScreenFadeScript;
+    public Text EndGameText;
+    bool GameOver = false;
+    float GameOverCounter = 15.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -71,6 +76,15 @@ public class Alerts : MonoBehaviour
             else
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
+            }
+        }
+
+        if (GameOver)
+        {
+            GameOverCounter -= Time.deltaTime;
+            if (GameOverCounter <= 0.0f)
+            {
+                FadeToTitleScreen();
             }
         }
     }
@@ -186,13 +200,24 @@ public class Alerts : MonoBehaviour
 
     void EndGame()
     {
-        // put in the code to restart the day
+        // display game over text and start the timer to fade to title screen
+        IsAlertActive = false;
+        EndGameText.text = "Game Over!";
+        GameOver = true;
+    }
+
+    void FadeToTitleScreen()
+    {
+        ScreenFadeScript.FadeOut();
+        SceneManager.LoadScene("TitleScreen");
     }
 
     public void DeactivateAlert(int TypeOfAlert)
     {
         // stop the flashing lights and alert sounds
         IsAlertActive = false;
+        AlertTypeText.text = "";
+        AlertSection.SetActive(false);
         for (int i = 0; i < Indicator.Length; i++)
         {
             Indicator[i].SetActive(false);

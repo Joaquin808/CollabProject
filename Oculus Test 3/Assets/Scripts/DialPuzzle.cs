@@ -14,8 +14,6 @@ public class DialPuzzle : MonoBehaviour
     Vector3[] positions = new Vector3[12];
     Vector3[] intialPositions;
 
-
-
     // Start is called before the first frame update
     void Start()
     {
