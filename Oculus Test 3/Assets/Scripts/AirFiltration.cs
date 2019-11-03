@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AirFiltration : MonoBehaviour
 {
-    public GameObject dial;
+    public GameObject dial, airFilt;
     Rigidbody rb;
     float solutionOne, solutionTwo, dialPointed, timer;
-    public AudioSource wind;
+    AudioSource wind;
     //int seconds;
 
     
@@ -16,7 +16,7 @@ public class AirFiltration : MonoBehaviour
     {
         rb = dial.GetComponent<Rigidbody>();
         RandomSolution();
-        wind.loop = true;
+        wind = airFilt.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
