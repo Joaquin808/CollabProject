@@ -8,6 +8,7 @@ public class AirFiltration : MonoBehaviour
     Rigidbody rb;
     float solutionOne, solutionTwo, dialPointed, timer;
     AudioSource wind;
+    public bool solved;
     //int seconds;
 
     
@@ -48,6 +49,7 @@ public class AirFiltration : MonoBehaviour
             if (timer >= 5)
             {
                 rb.freezeRotation = true;
+                solved = true;
             }
         }
         else if (timer < 5)
@@ -63,5 +65,6 @@ public class AirFiltration : MonoBehaviour
         rb.freezeRotation = false;
         wind.Stop();
         rb.transform.eulerAngles = new Vector3(0, 0, 0);
+        solved = false;
     }
 }
