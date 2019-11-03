@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7488324533974528838}
   - component: {fileID: 5128083642892764094}
   - component: {fileID: 2414224287925083282}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!138 &5128083642892764094
 FixedJoint:
@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 2713867332315553022}
   - component: {fileID: 6441468643616730741}
   - component: {fileID: 7701681188145666808}
+  - component: {fileID: 8420881378778471125}
   m_Layer: 10
   m_Name: Grabbable
   m_TagString: Untagged
@@ -175,7 +176,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2387637632602614402}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -238,6 +239,22 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   handle: {fileID: 5419466609771549470}
+--- !u!54 &8420881378778471125
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387637632602614402}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
 --- !u!1 &4228000929111607510
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,7 +265,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4228000929111607506}
   - component: {fileID: 1446583414934874639}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: TESTHouseDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +309,7 @@ GameObject:
   - component: {fileID: 8025528372943708703}
   - component: {fileID: 583486018366739185}
   - component: {fileID: 1212176512621157424}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +405,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 4
   m_CollisionDetection: 0
 --- !u!59 &1212176512621157424
 HingeJoint:
