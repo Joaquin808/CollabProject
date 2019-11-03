@@ -9,8 +9,6 @@ public class ObjectVisibilityCircuit : MonoBehaviour
 
     public PowerOn powerScript;
 
-    bool powerOn;
-
     // Start is called before the first frame update
     void Start()
     {

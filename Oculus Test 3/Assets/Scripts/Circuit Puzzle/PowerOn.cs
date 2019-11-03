@@ -22,7 +22,7 @@ public class PowerOn : MonoBehaviour
             leverClick.Play(0);
             if (circuitsConnected >= 8)
             {
-                powerOn = true;
+                //Lights come on
             }
         }
     }
