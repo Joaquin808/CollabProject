@@ -48445,15 +48445,15 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.z
       value: 18.517809
       objectReference: {fileID: 0}
+    - target: {fileID: 915694062, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
+      propertyPath: m_Mass
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1206722443, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: Spatialize
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1761833921, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
-      propertyPath: m_Mass
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 915694062, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Mass
       value: 8
       objectReference: {fileID: 0}
@@ -57784,7 +57784,7 @@ PrefabInstance:
     - target: {fileID: 4458930343418687439, guid: e51a91a66ad658b47b5c27b5cb7d3a42,
         type: 3}
       propertyPath: m_Name
-      value: Welder (1)
+      value: Welder
       objectReference: {fileID: 0}
     - target: {fileID: 845010270592474588, guid: e51a91a66ad658b47b5c27b5cb7d3a42,
         type: 3}
