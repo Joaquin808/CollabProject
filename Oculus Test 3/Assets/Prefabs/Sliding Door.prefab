@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 233391548903382872}
   - component: {fileID: 2073024798131698938}
   - component: {fileID: -5386878970804982131}
+  - component: {fileID: 3839977135793732658}
   m_Layer: 0
   m_Name: Sliding Door
   m_TagString: Untagged
@@ -89,11 +90,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946111856710314884}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.10957815, y: 0.24699849, z: 0.009807976}
-  m_Center: {x: -0.0030312408, y: 0.119260356, z: -0.0033185573}
+  m_Size: {x: 0.115626276, y: 0.5, z: 0.125}
+  m_Center: {x: -0.0060195136, y: 0.245, z: 0}
 --- !u!114 &-5386878970804982131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -106,3 +107,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac0101519a6a164d9184b2d3e97a933, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLocked: 0
+--- !u!65 &3839977135793732658
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946111856710314884}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.10957814, y: 0.24699849, z: 0.009807976}
+  m_Center: {x: -0.0030312405, y: 0.119260356, z: -0.0033185573}

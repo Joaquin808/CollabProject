@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Alerts : MonoBehaviour
 {
@@ -22,6 +23,10 @@ public class Alerts : MonoBehaviour
     public OpenInventory Inventory;
     public AudioSource AlertSound;
     public DayNightSystem DayCycle;
+    bool IsGameOver = false;
+    public OVRScreenFade ScreenFadeScript;
+    float GameOverTimer = 15.0f;
+    public Text GameOverText;
 
     // Start is called before the first frame update
     void Start()
@@ -40,7 +45,7 @@ public class Alerts : MonoBehaviour
        
         AlertSection.SetActive(false);
         AlertType = Random.Range(0, 3);
-        ActivateAlert("Your Air is going bad.", AlertType);
+        //ActivateAlert("Check the Air Ventilation System.", AlertType); Turned off to stop alarm noise at start
     }
 
     // Update is called once per frame
@@ -48,7 +53,7 @@ public class Alerts : MonoBehaviour
     {
         if (DayCycle.endOfDay)
         {
-            ActivateAlert("Get your ass to sleep", 4);
+            ActivateAlert("Time for bed", 4);
         }
 
         if (IsAlertActive)
@@ -61,7 +66,7 @@ public class Alerts : MonoBehaviour
             }
 
             TimerSeconds -= Time.deltaTime;
-            Timer.text = "Time Left To Fix: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
+            Timer.text = "Time Left: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
             ReduceTimer();
 
             if (Inventory.IsActive)
@@ -71,6 +76,15 @@ public class Alerts : MonoBehaviour
             else
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
+            }
+        }
+
+        if (IsGameOver)
+        {
+            GameOverTimer -= Time.deltaTime;
+            if (GameOverTimer <= 0.0f)
+            {
+                FadeToTitleScreen();
             }
         }
     }
@@ -146,6 +160,7 @@ public class Alerts : MonoBehaviour
             {
                 Indicator[i].SetActive(true);
             }
+
             visible = true;
 
         }
@@ -186,11 +201,42 @@ public class Alerts : MonoBehaviour
 
     void EndGame()
     {
-        // put in the code to restart the day
+        IsAlertActive = false;
+        IsGameOver = true;
+        GameOverText.text = "Game Over!";
+    }
+
+    void FadeToTitleScreen()
+    {
+        ScreenFadeScript.FadeOut();
+        SceneManager.LoadScene("TitleScreen");
     }
 
     public void DeactivateAlert(int TypeOfAlert)
     {
         // stop the flashing lights and alert sounds
+        IsAlertActive = false;
+        AlertTypeText.text = "";
+        AlertSection.SetActive(false);
+        for (int i = 0; i < Indicator.Length; i++)
+        {
+            Indicator[i].SetActive(false);
+        }
+
+        switch (TypeOfAlert)
+        {
+            case 0:
+                FoodBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                break;
+            case 1:
+                WaterBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                break;
+            case 2:
+                AirBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                break;
+            case 3:
+                TempBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                break;
+        }
     }
 }

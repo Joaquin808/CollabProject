@@ -10,17 +10,21 @@ public class TemperatureSlider : MonoBehaviour
     public bool puzzleComplete = false;
 
     float x, y, z;
+    //float maxNeedleRotation = 0f;
     public float correctValue1, correctValue2;
     float stoppedValue;
     public float speed;
     int puzzleCompleteCheck;
+    int alertType = 3;
 
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
     public GameObject lever; //Used to call for Lever gameobject to stop slider
-    Vector3 pos1, pos2;
-    public AudioSource leverClick; //Used to get audio source for lever click
+    public GameObject needle; //Used to call needle for visual aspect of puzzle
 
+    Vector3 pos1, pos2, rotation;
+    public AudioSource leverClick; //Used to get audio source for lever click
+    public Alerts alerts;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +34,7 @@ public class TemperatureSlider : MonoBehaviour
         z = slider.transform.localPosition.z;
         pos1 = new Vector3(x + 145, y, z);  //Gets max position of object for slider
         pos2 = new Vector3(x, y, z); //Gets min position for sliding object
+        rotation = new Vector3(0, 0, -40);
 
         leverClick.GetComponent<AudioSource>();
 
@@ -51,9 +56,9 @@ public class TemperatureSlider : MonoBehaviour
         {
             slider.transform.localPosition = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
         }
-        if (puzzleCompleteCheck == 3)
+        if (puzzleCompleteCheck >= 3)
         {
-            puzzleComplete = true;
+            alerts.DeactivateAlert(alertType);
         }
 
     }
@@ -61,13 +66,16 @@ public class TemperatureSlider : MonoBehaviour
     //Detects if lever is triggered to stop slider
     void OnTriggerEnter(Collider other)
     {
-        leverClick.Play(0);
+        
         if (other.gameObject.tag == "Lever")
         {
+            leverClick.Play(0);
             stoppedValue = slider.transform.localPosition.x;
-            if (stoppedValue >= correctValue1 && stoppedValue <= correctValue2)
+            if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
             {
                 isStopped = true;
+                puzzleCompleteCheck++;
+                needle.transform.Rotate(rotation, Space.Self);
             }
             else
             {

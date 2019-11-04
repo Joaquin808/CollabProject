@@ -4,39 +4,77 @@ using UnityEngine;
 
 public class SlidingDoor : MonoBehaviour
 {
-    Vector3 moveDirection = Vector3.up; //elevator starts down
-    float liftSpeed = 5;
+    Vector3 moveDirection = Vector3.down;   //Door starts up
+    float moveSpeed = 4.5f;
+    bool isOpen = false;                    //door starts closed
+    bool isMoving = false;                  //is door in motion
+    public bool isLocked = false;           //Is Key Owned by Player
     Vector3 startPos;
+    Vector3 endPos;
 
     // Start is called before the first frame update
     void Start()
     {
-        startPos = transform.position;
+        startPos = this.transform.position;
+        endPos = startPos - new Vector3(0, 8, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-    }
-
-    void OnTriggerEnter(Collider collision)
-    {
-        if (transform.position.y >= startPos.y)
+        if (!isLocked)
         {
-            moveDirection = Vector3.down;
-        }
+            if (isOpen)
+            {
+                if (this.transform.position.y > endPos.y)
+                {
+                    moveDirection = Vector3.down;
+                    isMoving = true;
+                }
+                else
+                {
+                    this.transform.position = endPos;
+                    isMoving = false;
+                }
+            }
+            else
+            {
+                if (this.transform.position.y < startPos.y)
+                {
+                    moveDirection = Vector3.up;
+                    isMoving = true;
+                }
+                else
+                {
+                    this.transform.position = startPos;
+                    isMoving = false;
+                }
+            }
 
-        transform.Translate(moveDirection * Time.deltaTime * liftSpeed);
+            //Move Door
+            if (isMoving)
+            {
+                transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
+            }
+
+        }
     }
 
-    void OnTriggerExit(Collider collision)
+    //Player Detection Trigger
+    void OnTriggerEnter(Collider other)
     {
-        if (transform.position.y <= startPos.y - 5.5)
+        if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
         {
-            moveDirection = Vector3.up;
+            isOpen = true;
         }
-
-        transform.Translate(moveDirection * Time.deltaTime * liftSpeed);
     }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
+        {
+            isOpen = false;
+        }
+    }
+
 }
