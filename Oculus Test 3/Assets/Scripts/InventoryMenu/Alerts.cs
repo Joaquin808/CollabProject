@@ -45,7 +45,7 @@ public class Alerts : MonoBehaviour
        
         AlertSection.SetActive(false);
         AlertType = Random.Range(0, 3);
-        //ActivateAlert("Your Air is going bad.", AlertType); Turned off to stop alarm noise at start
+        //ActivateAlert("Check the Air Ventilation System.", AlertType); Turned off to stop alarm noise at start
     }
 
     // Update is called once per frame
@@ -53,7 +53,7 @@ public class Alerts : MonoBehaviour
     {
         if (DayCycle.endOfDay)
         {
-            ActivateAlert("Get your ass to sleep", 4);
+            ActivateAlert("Time for bed", 4);
         }
 
         if (IsAlertActive)
