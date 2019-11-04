@@ -22341,7 +22341,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRef: {fileID: 1591232124}
   elevatorSound: {fileID: 0}
-  isEnabled: 0
+  isEnabled: 1
   waitTime: 3
   elevatorTime: 5
 --- !u!65 &299706905
@@ -25555,7 +25555,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 555533554}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -39762,7 +39762,7 @@ Transform:
   m_LocalScale: {x: 0.40357882, y: 0.40357882, z: 0.40357882}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 146
+  m_RootOrder: 147
   m_LocalEulerAnglesHint: {x: 0, y: 74.93, z: 0}
 --- !u!1001 &1562192579
 PrefabInstance:
