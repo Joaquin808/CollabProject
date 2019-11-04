@@ -8,7 +8,7 @@ public class SlidingDoorKey : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -17,9 +17,9 @@ public class SlidingDoorKey : MonoBehaviour
         
     }
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Hand")
+        if (other.gameObject.name == "PlayerBedroomDoor")
         {
             target.GetComponent<SlidingDoor>().isLocked = false;
         }

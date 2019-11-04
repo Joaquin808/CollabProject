@@ -14,17 +14,14 @@ public class PowerPuzzlePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isOpen)
-        {
-            Destroy(this);
-        }
+
     }
 
     void OnTriggerEnter (Collider other)
     {
-        if(other.gameObject.tag == "Wrench")
+        if(other.gameObject.name == "Wrench")
         {
-            isOpen = true;
+            Destroy(gameObject);
         }
     }
 }

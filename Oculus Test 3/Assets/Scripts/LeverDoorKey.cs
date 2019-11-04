@@ -17,8 +17,9 @@ public class LeverDoorKey : MonoBehaviour
         
     }
 
-    void onTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.name == "Lever Cue")
         {
             target.GetComponent<SlidingDoor>().isLocked = false;

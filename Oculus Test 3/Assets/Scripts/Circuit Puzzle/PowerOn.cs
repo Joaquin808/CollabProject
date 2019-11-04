@@ -6,6 +6,7 @@ public class PowerOn : MonoBehaviour
 {
     public int circuitsConnected;
     public AudioSource leverClick;
+    public bool isBroken = true;
 
 
     public bool powerOn = false;
@@ -23,6 +24,7 @@ public class PowerOn : MonoBehaviour
             if (circuitsConnected >= 8)
             {
                 //Lights come on
+                isBroken = false;
             }
         }
     }
