@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GateDoorScript : MonoBehaviour
 {
-    float liftSpeed = 0.5f;
+    float moveSpeed = 0.5f;
     public GameObject LeftDoor;
     public GameObject RightDoor;
     Transform LeftDoorStartPosition;
@@ -12,6 +12,7 @@ public class GateDoorScript : MonoBehaviour
     Vector3 RightDoorMoveDirection;// = Vector3.right;
     Vector3 LeftDoorMoveDirection;// = Vector3.left;
     public bool IsDoorOpen = false;
+    public bool isLocked = true;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,16 @@ public class GateDoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Is the Power working? Enable door
+        if (GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().powerEnabled == true)
+        {
+            isLocked = false;
+        }
+        else
+        {
+            isLocked = true;
+        }
+
         /*if (!IsDoorOpen)
         {
             LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
@@ -62,32 +73,37 @@ public class GateDoorScript : MonoBehaviour
         RightDoor.transform.Translate(RightDoorMoveDirection * Time.deltaTime * liftSpeed);*/
 
     }
-    
-    void OnTriggerEnter(Collider collision)
+
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (isLocked == false)
         {
-            if (!IsDoorOpen)
+            if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
             {
-                LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
-                RightDoor.transform.Rotate(new Vector3(0, 90, 0));
-                IsDoorOpen = true;
+                if (!IsDoorOpen)
+                {
+                    LeftDoor.transform.Rotate(new Vector3(0, -90, 0));
+                    RightDoor.transform.Rotate(new Vector3(0, 90, 0));
+                    IsDoorOpen = true;
+                }
             }
         }
-        
     }
 
-    void OnTriggerExit(Collider collision)
+    void OnTriggerExit(Collider other)
     {
-        if (collision.gameObject.tag == "Player")
+        if (isLocked == false)
         {
-            if (IsDoorOpen)
+            if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
             {
-                LeftDoor.transform.Rotate(new Vector3(0, 90, 0));
-                RightDoor.transform.Rotate(new Vector3(0, -90, 0));
-                IsDoorOpen = false;
+                if (IsDoorOpen)
+                {
+                    LeftDoor.transform.Rotate(new Vector3(0, 90, 0));
+                    RightDoor.transform.Rotate(new Vector3(0, -90, 0));
+                    IsDoorOpen = false;
+                }
             }
         }
-       
+
     }
 }
