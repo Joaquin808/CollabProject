@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4918073468539667601}
-  - component: {fileID: 88441475692310409}
   m_Layer: 0
   m_Name: Beanbag 2
   m_TagString: Untagged
@@ -32,19 +31,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -178.59901, z: 0}
---- !u!65 &88441475692310409
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8222403158794729090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &9045210483094871270
 GameObject:
   m_ObjectHideFlags: 0
@@ -56,7 +42,7 @@ GameObject:
   - component: {fileID: 3450143815651759984}
   - component: {fileID: 1620500186915022642}
   - component: {fileID: 550294873805238993}
-  - component: {fileID: 4350400892122874645}
+  - component: {fileID: 3161687258313082863}
   m_Layer: 0
   m_Name: beanbag:pSphere4
   m_TagString: Untagged
@@ -125,8 +111,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4350400892122874645
-BoxCollider:
+--- !u!64 &3161687258313082863
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -135,6 +121,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 17.003935, y: 14.470444, z: 17.532818}
-  m_Center: {x: -3.7931263, y: 7.235222, z: -3.193383}
+  serializedVersion: 3
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 1238811341645700482, guid: e71788db33933484bac1a55152c4eb57, type: 3}

@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6310677988389169973
 Transform:
@@ -83,7 +83,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &6872868439374768715
 Transform:
@@ -2358,6 +2358,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Book 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1227343850471629514, guid: b7d848423d2ed5f47b3f736cc04c4b44,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2833678282279997657, guid: b7d848423d2ed5f47b3f736cc04c4b44,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3196,6 +3201,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Book 2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3538014019659816001, guid: a3ce9b846b5544845adda9edf1e67459,
         type: 3}
@@ -4112,6 +4122,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Book 1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227343850471629514, guid: b7d848423d2ed5f47b3f736cc04c4b44,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 2833678282279997657, guid: b7d848423d2ed5f47b3f736cc04c4b44,
         type: 3}

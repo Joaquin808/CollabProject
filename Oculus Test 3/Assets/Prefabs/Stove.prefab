@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 1860577753700772241}
   - component: {fileID: 5315212292880272111}
   - component: {fileID: 7963857890901703973}
-  - component: {fileID: 9122012514927161730}
   m_Layer: 0
   m_Name: Stove1_Stove:pCylinder7
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &9122012514927161730
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3786669497537561306}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0193973, y: 1.0011873, z: 0.5950792}
-  m_Center: {x: -2.1386123, y: 11.158176, z: -3.2700357}
 --- !u!1 &4418309643800661417
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,7 +125,6 @@ GameObject:
   - component: {fileID: 4802941336002890371}
   - component: {fileID: 2150338239541835361}
   - component: {fileID: 4151117020919392134}
-  - component: {fileID: 7575207957650553614}
   m_Layer: 0
   m_Name: Stove1_Stove:pCylinder6
   m_TagString: Untagged
@@ -208,19 +193,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7575207957650553614
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4785359047582671857}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0193974, y: 1.0011883, z: 0.59508014}
-  m_Center: {x: 3.0421526, y: 11.736203, z: -3.4608612}
 --- !u!1 &5567912853698439032
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +204,6 @@ GameObject:
   - component: {fileID: 2611753062954581231}
   - component: {fileID: 4760621438809447486}
   - component: {fileID: 1877820344984730474}
-  - component: {fileID: 2987942734037823870}
   m_Layer: 0
   m_Name: Stove1_Stove:pCylinder8
   m_TagString: Untagged
@@ -301,19 +272,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2987942734037823870
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5567912853698439032}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0193963, y: 1.0011873, z: 0.5950792}
-  m_Center: {x: 2.0312707, y: 11.17663, z: -3.2700357}
 --- !u!1 &7312145475685576477
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +283,6 @@ GameObject:
   - component: {fileID: 4194595137795083954}
   - component: {fileID: 56429121493200661}
   - component: {fileID: 5054368935323461911}
-  - component: {fileID: 6793372332226339662}
   m_Layer: 0
   m_Name: Stove1_Stove:pCylinder5
   m_TagString: Untagged
@@ -394,19 +351,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6793372332226339662
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7312145475685576477}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.0193974, y: 1.0011883, z: 0.59508014}
-  m_Center: {x: -3.0969017, y: 11.736203, z: -3.4608612}
 --- !u!1 &7901205898309551633
 GameObject:
   m_ObjectHideFlags: 0
