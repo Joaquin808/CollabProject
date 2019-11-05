@@ -30576,6 +30576,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BunkerStorageDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 1946111856710314884, guid: 94a581444c777774797aa4147ecaefa2,
+        type: 3}
+      propertyPath: m_TagString
+      value: SlidingDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 3268104476723124631, guid: 94a581444c777774797aa4147ecaefa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39869,6 +39874,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BunkerBathroomDoor
       objectReference: {fileID: 0}
+    - target: {fileID: 1946111856710314884, guid: 94a581444c777774797aa4147ecaefa2,
+        type: 3}
+      propertyPath: m_TagString
+      value: SlidingDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 3268104476723124631, guid: 94a581444c777774797aa4147ecaefa2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -40366,6 +40376,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GrandpasDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946111856710314884, guid: 94a581444c777774797aa4147ecaefa2,
+        type: 3}
+      propertyPath: m_TagString
+      value: SlidingDoor
       objectReference: {fileID: 0}
     - target: {fileID: 3268104476723124631, guid: 94a581444c777774797aa4147ecaefa2,
         type: 3}
@@ -46441,7 +46456,7 @@ PrefabInstance:
     - target: {fileID: 5468775579437668562, guid: 0d200fb40ffb33c44bc5f710666d0e44,
         type: 3}
       propertyPath: m_Name
-      value: PlayerRoomUSB
+      value: PlayerDoorKey
       objectReference: {fileID: 0}
     - target: {fileID: 9061145361579535041, guid: 0d200fb40ffb33c44bc5f710666d0e44,
         type: 3}
@@ -47149,6 +47164,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlayerBedroomDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946111856710314884, guid: 94a581444c777774797aa4147ecaefa2,
+        type: 3}
+      propertyPath: m_TagString
+      value: SlidingDoor
       objectReference: {fileID: 0}
     - target: {fileID: 3268104476723124631, guid: 94a581444c777774797aa4147ecaefa2,
         type: 3}
@@ -63185,7 +63205,7 @@ PrefabInstance:
     - target: {fileID: 5468775579437668562, guid: 0d200fb40ffb33c44bc5f710666d0e44,
         type: 3}
       propertyPath: m_Name
-      value: DoorKey
+      value: GrandpasDoorKey
       objectReference: {fileID: 0}
     - target: {fileID: 9061145361579535041, guid: 0d200fb40ffb33c44bc5f710666d0e44,
         type: 3}
@@ -64237,7 +64257,12 @@ PrefabInstance:
     - target: {fileID: 1946111856710314884, guid: 94a581444c777774797aa4147ecaefa2,
         type: 3}
       propertyPath: m_Name
-      value: MainBunkerDoor
+      value: BunkerPowerDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946111856710314884, guid: 94a581444c777774797aa4147ecaefa2,
+        type: 3}
+      propertyPath: m_TagString
+      value: SlidingDoor
       objectReference: {fileID: 0}
     - target: {fileID: 3268104476723124631, guid: 94a581444c777774797aa4147ecaefa2,
         type: 3}
@@ -69591,14 +69616,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 0
   dayLength: 600
-  currentSleep: 0
-  sleepTime: 120
-  dayCount: 1
-  dayOneComplete: 0
-  daySevenComplete: 0
-  endOfDay: 0
-  canDayPass: 1
-  awakeMarker: {fileID: 0}
   skyOne: {fileID: 2100000, guid: 0a8d19ce63d885243a53f6c73c94c1a8, type: 2}
   skyTwo: {fileID: 2100000, guid: 216d795a731a87a49a0d39d5988061fa, type: 2}
   skyThree: {fileID: 2100000, guid: bf91353befb7f2544852f717fe3357a8, type: 2}
