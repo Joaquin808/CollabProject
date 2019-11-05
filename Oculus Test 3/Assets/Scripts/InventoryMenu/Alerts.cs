@@ -51,10 +51,6 @@ public class Alerts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (DayCycle.endOfDay)
-        {
-            ActivateAlert("Time for bed", 4);
-        }
 
         if (IsAlertActive)
         {
