@@ -16,6 +16,9 @@ public class ObjectVisibility : MonoBehaviour
     public int pipesFixed = 0;
     public Alerts AlertSystem;
     int TypeOfAlert = 1;
+    //DestroyAndAddToInventory watchScript;
+    public Pickup InventoryItemRef;
+    public bool CanAddToInventory;
 
     // Use this for initialization
     void Start()
@@ -89,4 +92,12 @@ public class ObjectVisibility : MonoBehaviour
 
     }
 
+    public void OnTriggerEnter(Collision other)
+    {
+        if (other.gameObject.tag == "WatchChip")
+        {
+            Inventory.Instance.Add(InventoryItemRef);
+            Destroy(other.gameObject);
+        }
+    }
 }
