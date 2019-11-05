@@ -8,16 +8,16 @@ public class DestroyAndAddToInventory : MonoBehaviour
     public bool CanAddToInventory;
 
 
-    private void OnTriggerEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-            if (collision.gameObject.tag == "ChipCollider")
+            if (other.gameObject.tag == "ChipCollider")
             {
                 Inventory.Instance.Add(InventoryItemRef);
                 Destroy(gameObject);
                 return;
             }
 
-        if (collision.gameObject.tag == "Floor")
+        if (other.gameObject.tag == "Floor")
         {
             if (InventoryItemRef.ItemType == "Bone")
             {
