@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1047560532}
   - component: {fileID: 1047560531}
   - component: {fileID: 8902146338443146529}
+  - component: {fileID: 5437761039083913408}
   m_Layer: 0
   m_Name: GateDoorLeft
   m_TagString: Untagged
@@ -29,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170123341227961163}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.35201, y: 5.5955024, z: -1.2092911}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 65.06444, y: 65.06444, z: 65.06444}
   m_Children: []
   m_Father: {fileID: 3404000258948363943}
@@ -109,7 +110,7 @@ HingeJoint:
   m_Anchor: {x: -0.1, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 42.845573, y: 5.595503, z: -1.2092911}
+  m_ConnectedAnchor: {x: -34.25595, y: 0.46629602, z: 0.82}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -146,6 +147,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.08922223, y: 0.18498257, z: 0.007057734}
   m_Center: {x: -0.0645085, y: 0.000000029802326, z: -0.0037865825}
+--- !u!208 &5437761039083913408
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170123341227961163}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.045, y: 0.09200001, z: 0.004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.065000005, y: 0, z: -0.004}
+  m_TimeToStationary: 0.5
 --- !u!1 &1830196390658213044
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +226,7 @@ GameObject:
   - component: {fileID: 1047560530}
   - component: {fileID: 1047560529}
   - component: {fileID: 320766985106266185}
+  - component: {fileID: 8863800958204809478}
   m_Layer: 0
   m_Name: GateDoorRight
   m_TagString: Untagged
@@ -224,7 +242,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5763031507158402894}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 49.35201, y: 5.5955024, z: -1.2092911}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 65.06444, y: 65.06444, z: 65.06444}
   m_Children: []
   m_Father: {fileID: 3404000258948363943}
@@ -304,7 +322,7 @@ HingeJoint:
   m_Anchor: {x: 0.1, y: 0, z: 0}
   m_Axis: {x: 0, y: 1, z: 0}
   m_AutoConfigureConnectedAnchor: 1
-  m_ConnectedAnchor: {x: 55.858456, y: 5.595503, z: -1.2092911}
+  m_ConnectedAnchor: {x: -31.224054, y: 0.46629602, z: 0.82}
   m_UseSpring: 0
   m_Spring:
     spring: 0
@@ -341,3 +359,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.089222096, y: 0.18498257, z: 0.007057734}
   m_Center: {x: 0.059827834, y: -0.000000014901165, z: -0.0037865825}
+--- !u!208 &8863800958204809478
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5763031507158402894}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.045, y: 0.09200001, z: 0.004}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0.060000002, y: 0, z: -0.004}
+  m_TimeToStationary: 0.5

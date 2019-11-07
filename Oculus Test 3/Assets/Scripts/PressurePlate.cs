@@ -24,7 +24,7 @@ public class PressurePlate : MonoBehaviour
     {
 
         //All  Basic Doors
-        if (isOpen)
+        if (isStanding)
         {
             if (this.transform.position.y > endPos.y)
             {
@@ -59,15 +59,15 @@ public class PressurePlate : MonoBehaviour
 
     }
 
-    //Player Detection Trigger
+    //Player/Dog Detection Trigger
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
         {
-            if (target.GetComponent<SlidingDoor>().isLocked == true)
+            /*if (target.GetComponent<SlidingDoor>().isLocked == true)
             {
                 target.GetComponent<SlidingDoor>().isLocked = false;
-            }
+            }*/
             isStanding = true;
 
         }

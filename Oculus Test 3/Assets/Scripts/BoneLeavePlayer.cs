@@ -13,14 +13,10 @@ public class BoneLeavePlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    void OnCollisionExit(Collision other)
-    {
-        if(other.gameObject.tag == "Hand")
+        if (this.GetComponent<OVRGrabbable>().isGrabbed == false)
         {
             GameObject.Find("Dog").GetComponent<DogAi>().boneHeldPlayer = false;
         }
     }
+
 }

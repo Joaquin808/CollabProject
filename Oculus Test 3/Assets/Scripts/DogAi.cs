@@ -22,10 +22,12 @@ public class DogAi : MonoBehaviour
     private float runSpeed;                         //RunSpeed based on WalkSpeed
     private float crawlSpeed;		                //CrawlSpeed based on WalkSpeed
     private Vector3 boneLocation;                   //Bone Location
+    private Vector3 playerLocation;                 //Player Location
 
     void Start()
     {
-        boneLocation = bone.transform.position;     //Set Bone Location
+        boneLocation = bone.transform.position;             //Set Bone Location
+        playerLocation = playerRef.transform.position;      //Set Player Location
         runSpeed = walkSpeed * 2;
         crawlSpeed = walkSpeed / 2;
         boneHeld = true;
@@ -34,6 +36,20 @@ public class DogAi : MonoBehaviour
 
     void Update()
     {
+        //Update Player & Bone Location
+        boneLocation = bone.transform.position;
+        playerLocation = playerRef.transform.position;
+
+        //Bone Location to dog if boneHeld
+        if (boneHeld == true)
+        {
+            BoneDog();
+        } else
+        {
+            Drop();
+        }
+
+
         //If bone NOT held && NOT Player held
         if (boneHeld == false && boneHeldPlayer == false)
         {
@@ -51,7 +67,7 @@ public class DogAi : MonoBehaviour
             }
 
             //If near bone grab bone
-            if (Vector3.Distance(this.transform.position, boneLocation) <= agent.stoppingDistance)
+            if (Vector3.Distance(this.transform.position, boneLocation) <= agent.stoppingDistance && boneHeldPlayer == false)
             {
                 CurrentState = DogState.GRAB;
             }
@@ -72,7 +88,7 @@ public class DogAi : MonoBehaviour
         else
         {
             //If near player drop bone
-            if (Vector3.Distance(this.transform.position, playerRef.transform.position) <= agent.stoppingDistance)
+            if (Vector3.Distance(this.transform.position, playerLocation) <= agent.stoppingDistance)
             {
                 CurrentState = DogState.DROP;
             }
@@ -120,7 +136,7 @@ public class DogAi : MonoBehaviour
         }
         else
         {
-            agent.SetDestination(playerRef.transform.position);
+            agent.SetDestination(playerLocation);
         }
     }
 
@@ -194,13 +210,19 @@ public class DogAi : MonoBehaviour
     void AttachBone()
     {
         //Attach Bone to DogMouth
-        bone.transform.parent = dogMouth;
-        bone.transform.localPosition = Vector3.zero;
+        BoneDog();
         bone.GetComponent<Rigidbody>().useGravity = false;
-        bone.transform.localRotation = Quaternion.Euler(this.transform.position.x + 90, this.transform.position.y, this.transform.position.z);
+
         //Mark Bone as Held
         boneHeld = true;
         MoveTo();
+    }
+
+    void BoneDog()
+    {
+        bone.transform.parent = dogMouth;
+        bone.transform.localPosition = Vector3.zero;
+        bone.transform.localRotation = Quaternion.identity;
     }
 
     void Drop()
@@ -213,6 +235,7 @@ public class DogAi : MonoBehaviour
         bone.transform.parent = null;
         boneHeld = false;
         bone.GetComponent<Rigidbody>().useGravity = true;
+        bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
         boneHeldPlayer = true;
     }
 
