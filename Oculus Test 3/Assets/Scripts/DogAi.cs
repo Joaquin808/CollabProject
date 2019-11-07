@@ -17,7 +17,7 @@ public class DogAi : MonoBehaviour
     public float boneResetTime = 10.0f;             //Time on ground to reset Bone
 
     private int animState = 0;                      //AnimState Controller
-    private float walkSpeed = 5f;                   //WalkSpeed
+    private float walkSpeed = 2.5f;                 //WalkSpeed
     private float runDistance = 10f;                //Distance to Run instead of Walk
     private float runSpeed;                         //RunSpeed based on WalkSpeed
     private float crawlSpeed;		                //CrawlSpeed based on WalkSpeed
