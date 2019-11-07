@@ -130,12 +130,6 @@ public class OVRGrabbable : MonoBehaviour
         rb.angularVelocity = angularVelocity;
         m_grabbedBy = null;
         m_grabbedCollider = null;
-
-        //Bone Released by Player
-        if (this.gameObject.tag == "Bone")
-        {
-            //GameObject.Find("Dog").GetComponent<DogAi>().boneHeldPlayer = false;
-        }
     }
 
     void Awake()
