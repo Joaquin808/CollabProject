@@ -34,10 +34,6 @@ public class DogAi : MonoBehaviour
 
     void Update()
     {
-        //Update AnimStateController to match local value
-        anim.SetInteger("AnimState",animState);
-
-
         //If bone NOT held && NOT Player held
         if (boneHeld == false && boneHeldPlayer == false)
         {
@@ -132,6 +128,8 @@ public class DogAi : MonoBehaviour
     void Idle()
     {
         animState = 0;
+        anim.SetInteger("AnimState", animState);
+
         agent.isStopped = true;
         agent.ResetPath();
     }
@@ -154,6 +152,8 @@ public class DogAi : MonoBehaviour
     {
         //Set Animation & MoveTo
         animState = 2;
+        anim.SetInteger("AnimState", animState);
+
         agent.speed = runSpeed;
         MoveTo();
     }
@@ -163,6 +163,8 @@ public class DogAi : MonoBehaviour
     {
         //Set Animation & MoveTo
         animState = 1;
+        anim.SetInteger("AnimState", animState);
+
         agent.speed = walkSpeed;
         MoveTo();
     }
@@ -172,6 +174,8 @@ public class DogAi : MonoBehaviour
     {
         //Set Animation & MoveTo
         animState = 3;
+        anim.SetInteger("AnimState", animState);
+
         agent.speed = crawlSpeed;
         MoveTo();
     }
@@ -181,6 +185,8 @@ public class DogAi : MonoBehaviour
     {
         //Set Animation
         animState = 4;
+        anim.SetInteger("AnimState", animState);
+
         //Attach Bone to DogMouth
         AttachBone();
     }
@@ -200,6 +206,8 @@ public class DogAi : MonoBehaviour
     void Drop()
     {
         animState = 5;
+        anim.SetInteger("AnimState", animState);
+
         agent.isStopped = true;
         agent.ResetPath();
         bone.transform.parent = null;
