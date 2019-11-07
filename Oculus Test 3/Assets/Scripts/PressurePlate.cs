@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class PressurePlate : MonoBehaviour
 {
-    public GameObject target;
+    public GameObject target;               //Target GameObject to unlock
     Vector3 moveDirection = Vector3.down;   //Door starts up
-    float moveSpeed = 4.5f;
-    bool isStanding = false;                    //door starts closed
+    float moveSpeed = 1.0f;
+    bool isStanding = false;                //door starts closed
     bool isMoving = false;                  //is door in motion
     Vector3 startPos;
     Vector3 endPos;
