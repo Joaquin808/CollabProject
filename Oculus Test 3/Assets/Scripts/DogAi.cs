@@ -43,7 +43,7 @@ public class DogAi : MonoBehaviour
         //Bone Location to dog if boneHeld
         if (boneHeld == true)
         {
-            BoneDog();
+            AttachBone();
         } else
         {
             Drop();
@@ -210,19 +210,14 @@ public class DogAi : MonoBehaviour
     void AttachBone()
     {
         //Attach Bone to DogMouth
-        BoneDog();
+        bone.transform.parent = dogMouth;
+        bone.transform.localPosition = Vector3.zero;
+        bone.transform.localRotation = Quaternion.identity;
         bone.GetComponent<Rigidbody>().useGravity = false;
 
         //Mark Bone as Held
         boneHeld = true;
         MoveTo();
-    }
-
-    void BoneDog()
-    {
-        bone.transform.parent = dogMouth;
-        bone.transform.localPosition = Vector3.zero;
-        bone.transform.localRotation = Quaternion.identity;
     }
 
     void Drop()
@@ -235,14 +230,14 @@ public class DogAi : MonoBehaviour
         bone.transform.parent = null;
         boneHeld = false;
         bone.GetComponent<Rigidbody>().useGravity = true;
-        bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        //bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
         boneHeldPlayer = true;
     }
 
     //Crawl Back Trigger
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == "CrouchWall")
+        if (col.gameObject.name == "CrouchWall")
         {
             CurrentState = DogState.CRAWL;
         }
@@ -251,7 +246,7 @@ public class DogAi : MonoBehaviour
     //Crawl Back Trigger Exit
     void OnTriggerExit(Collider col)
     {
-        if (col.gameObject.tag == "CrouchWall")
+        if (col.gameObject.name == "CrouchWall")
         {
             RunOrWalk();
         }
