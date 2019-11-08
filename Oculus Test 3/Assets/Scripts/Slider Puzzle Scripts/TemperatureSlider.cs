@@ -19,7 +19,7 @@ public class TemperatureSlider : MonoBehaviour
 
     private Renderer sliderRenderer;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
-    public GameObject lever; //Used to call for Lever gameobject to stop slider
+    public GameObject lever, leverSwitch; //Used to call for Lever gameobject to stop slider
     public GameObject needle; //Used to call needle for visual aspect of puzzle
 
     Vector3 pos1, pos2, rotation;
@@ -76,6 +76,7 @@ public class TemperatureSlider : MonoBehaviour
                 isStopped = true;
                 puzzleCompleteCheck++;
                 needle.transform.Rotate(rotation, Space.Self);
+                leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
             }
             else
             {

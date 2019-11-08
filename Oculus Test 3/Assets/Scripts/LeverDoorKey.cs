@@ -5,6 +5,7 @@ using UnityEngine;
 public class LeverDoorKey : MonoBehaviour
 {
     public GameObject target;
+    public GameObject lever;
 
     void OnTriggerEnter(Collider other)
     {
@@ -12,6 +13,7 @@ public class LeverDoorKey : MonoBehaviour
         if (other.gameObject.name == "Lever Cue")
         {
             target.GetComponent<SlidingDoor>().isLocked = false;
+            lever.GetComponent<Rigidbody>().isKinematic = true;
         }
     }
 }

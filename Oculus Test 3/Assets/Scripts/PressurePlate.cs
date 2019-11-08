@@ -64,10 +64,10 @@ public class PressurePlate : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
         {
-            /*if (target.GetComponent<SlidingDoor>().isLocked == true)
+            if (target.GetComponent<Rigidbody>().isKinematic == true)
             {
-                target.GetComponent<SlidingDoor>().isLocked = false;
-            }*/
+                target.GetComponent<Rigidbody>().isKinematic = false;
+            }
             isStanding = true;
 
         }
