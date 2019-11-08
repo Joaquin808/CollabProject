@@ -211,7 +211,7 @@ public class DogAi : MonoBehaviour
     void AttachBone()
     {
         //Attach Bone to DogMouth
-        bone.transform.parent = dogMouth;
+        bone.transform.SetParent(dogMouth);
         bone.transform.localPosition = new Vector3(-.0201f,-.009f, -0.0278f);
         bone.transform.localRotation = Quaternion.Euler(0,90,0);
         bone.GetComponent<Rigidbody>().useGravity = false;
@@ -228,7 +228,7 @@ public class DogAi : MonoBehaviour
 
         agent.isStopped = true;
         agent.ResetPath();
-        bone.transform.parent = null;
+        bone.transform.SetParent(null);
         boneHeld = false;
         bone.GetComponent<Rigidbody>().useGravity = true;
         //bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
