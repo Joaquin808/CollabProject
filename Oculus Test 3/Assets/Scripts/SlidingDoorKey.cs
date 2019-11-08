@@ -19,7 +19,7 @@ public class SlidingDoorKey : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "SlidingDoor")
+        if (other.gameObject == target)
         {
             target.GetComponent<SlidingDoor>().isLocked = false;
             Destroy(gameObject);
