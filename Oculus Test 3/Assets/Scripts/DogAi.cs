@@ -31,6 +31,7 @@ public class DogAi : MonoBehaviour
         runSpeed = walkSpeed * 2;
         crawlSpeed = walkSpeed / 2;
         boneHeld = true;
+        boneHeldPlayer = false;
         AttachBone();                               //Force Bone to Start in DogMouth
     }
 
@@ -46,7 +47,7 @@ public class DogAi : MonoBehaviour
             AttachBone();
         } else
         {
-            Drop();
+            //Drop();
         }
 
 
@@ -211,8 +212,8 @@ public class DogAi : MonoBehaviour
     {
         //Attach Bone to DogMouth
         bone.transform.parent = dogMouth;
-        bone.transform.localPosition = Vector3.zero;
-        bone.transform.localRotation = Quaternion.identity;
+        bone.transform.localPosition = new Vector3(-.0201f,-.009f, -0.0278f);
+        bone.transform.localRotation = Quaternion.Euler(0,90,0);
         bone.GetComponent<Rigidbody>().useGravity = false;
 
         //Mark Bone as Held
