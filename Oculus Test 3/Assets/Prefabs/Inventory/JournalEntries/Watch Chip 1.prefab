@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 157074329313800886}
   m_Layer: 0
   m_Name: Watch Chip 1
-  m_TagString: Untagged
+  m_TagString: WatchChip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10438b1b98278e048bfe56e612fef8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryItemRef: {fileID: 11400000, guid: 5e8036e8e3c7bbf4186d70160dd1e9e2, type: 2}
+  InventoryItemRef: {fileID: 11400000, guid: 87d36871b807f6c4fa11fd03fe16dee6, type: 2}
   CanAddToInventory: 0
 --- !u!54 &304693106274786135
 Rigidbody:

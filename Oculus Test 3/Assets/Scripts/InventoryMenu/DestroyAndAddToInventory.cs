@@ -10,12 +10,15 @@ public class DestroyAndAddToInventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-            if (other.gameObject.tag == "ChipCollider")
+        if (other.gameObject.tag == "ChipCollider")
+        {
+            if (InventoryItemRef.ItemType == "Journal")
             {
                 Inventory.Instance.Add(InventoryItemRef);
                 Destroy(gameObject);
                 return;
             }
+        }
 
         if (other.gameObject.tag == "Floor")
         {
