@@ -23,6 +23,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
             rend.enabled = true;
             Destroy(other.gameObject);
             powerScript.circuitsConnected++;
+            Debug.Log(powerScript.circuitsConnected);
         }
     }
 }

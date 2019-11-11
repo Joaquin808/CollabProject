@@ -11,6 +11,7 @@ public class AirFiltration : MonoBehaviour
     bool inSpot;
     public bool solved;
     //int seconds;
+    public Alerts AlertSystem;
 
     
     // Start is called before the first frame update
@@ -26,11 +27,11 @@ public class AirFiltration : MonoBehaviour
     {
         dialPointed = rb.transform.rotation.eulerAngles.x;
         dialZ = rb.transform.rotation.eulerAngles.z;
-        Debug.Log("Solution One: " + solutionOne);
-        Debug.Log("Solution Two: " + solutionTwo);
-        Debug.Log("Dial: " + dialPointed);
-        Debug.Log("Dialz: " + dialZ);
-        Debug.Log(solved);
+        //Debug.Log("Solution One: " + solutionOne);
+        //Debug.Log("Solution Two: " + solutionTwo);
+        //Debug.Log("Dial: " + dialPointed);
+        //Debug.Log("Dialz: " + dialZ);
+        //Debug.Log(solved);
         CheckIfSolved();
         
     }
@@ -118,20 +119,25 @@ public class AirFiltration : MonoBehaviour
     {
         if (timer == 0)
         {
-            wind.Play(0);
+            if (!wind.isPlaying)
+            {
+                wind.Play(0);
+            }
         }
         timer += Time.deltaTime;
         if (timer >= 5)
         {
             rb.freezeRotation = true;
             solved = true;
+            AlertSystem.DeactivateAlert(2);
         }
-        Debug.Log("Sewconds: " +timer);
+        Debug.Log("Seconds: " +timer);
     }
       
 
     void OnBreak()
     {
+        AlertSystem.ActivateAlert("Air quality decreasing", 2);
         RandomSolution();
         rb.freezeRotation = false;
         wind.Stop();

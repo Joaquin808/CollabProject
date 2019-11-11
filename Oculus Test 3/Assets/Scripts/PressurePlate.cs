@@ -16,7 +16,7 @@ public class PressurePlate : MonoBehaviour
     void Start()
     {
         startPos = this.transform.position;
-        endPos = startPos - new Vector3(0, 1, 0);
+        endPos = startPos - new Vector3(0, 0.25f, 0);
     }
 
     // Update is called once per frame
@@ -62,7 +62,7 @@ public class PressurePlate : MonoBehaviour
     //Player/Dog Detection Trigger
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Dog")
         {
             if (target.GetComponent<Rigidbody>().isKinematic == true)
             {

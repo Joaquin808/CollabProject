@@ -31,7 +31,7 @@ public class GateDoorScript : MonoBehaviour
         }
         else
         {
-            isLocked = true;
+            //isLocked = true;
         }
 
         /*if (!IsDoorOpen)

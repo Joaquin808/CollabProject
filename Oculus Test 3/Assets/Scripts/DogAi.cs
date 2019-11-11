@@ -220,7 +220,7 @@ public class DogAi : MonoBehaviour
         //bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         //drop bone from mouth
-        bone.GetComponent<Rigidbody>().AddForce(this.transform.forward * 0.1f);
+        //bone.GetComponent<Rigidbody>().AddForce(this.transform.forward * 0.1f);
         boneHeldPlayer = true;
     }
 

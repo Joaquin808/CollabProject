@@ -173,6 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3404000258948363943}
   - component: {fileID: 6382168397253637998}
+  - component: {fileID: 6790379486507109419}
   m_Layer: 0
   m_Name: Gate Door
   m_TagString: Untagged
@@ -212,6 +213,19 @@ MonoBehaviour:
   RightDoor: {fileID: 5763031507158402894}
   IsDoorOpen: 0
   isLocked: 1
+--- !u!65 &6790379486507109419
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830196390658213044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.84767, y: 13.439726, z: 4.181837}
+  m_Center: {x: 0.14776827, y: -0.01222125, z: -0.28799212}
 --- !u!1 &5763031507158402894
 GameObject:
   m_ObjectHideFlags: 0

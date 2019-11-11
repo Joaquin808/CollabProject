@@ -5,6 +5,7 @@ using UnityEngine;
 public class SliderPuzzleBreak : MonoBehaviour
 {
     public int AlertType = 3;
+    public int puzzleCompleteCheck = 0;
 
     public Alerts alerts; //call to alerts script
     public GameObject needle, needle2;
@@ -27,6 +28,10 @@ public class SliderPuzzleBreak : MonoBehaviour
         if (broken)
         {
             OnBreak();
+            if (puzzleCompleteCheck >= 3)
+                {
+                    alerts.DeactivateAlert(AlertType);
+                }
         }
     }
 

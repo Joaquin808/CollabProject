@@ -27,6 +27,10 @@ public class Alerts : MonoBehaviour
     public OVRScreenFade ScreenFadeScript;
     float GameOverTimer = 15.0f;
     public Text GameOverText;
+    bool AnyAlertsActive = false;
+    float BreakTimerSeconds = 60f;
+    float BreakTimerMinutes = 1f;
+    float FlashTimer = 0f;
 
     // Start is called before the first frame update
     void Start()
@@ -38,14 +42,14 @@ public class Alerts : MonoBehaviour
         TempBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
 
         Indicator = GameObject.FindGameObjectsWithTag("AlarmLight");
-        for (int i = 0; i < Indicator.Length; i++ )
+        /*for (int i = 0; i < Indicator.Length; i++ )
         {
             Indicator[i].SetActive(false);
         }
        
-        AlertSection.SetActive(false);
-        AlertType = Random.Range(0, 3);
-        //ActivateAlert("Check the Air Ventilation System.", AlertType); Turned off to stop alarm noise at start
+        AlertSection.SetActive(false);*/
+
+        ActivateAlert("Power critical", 3); 
     }
 
     // Update is called once per frame
@@ -57,13 +61,19 @@ public class Alerts : MonoBehaviour
             time += Time.deltaTime;
             if (time >= 1)
             {
-                FlashIndicator();
                 time = 0;
             }
 
             TimerSeconds -= Time.deltaTime;
             Timer.text = "Time Left: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
             ReduceTimer();
+
+            FlashTimer += Time.deltaTime;
+            if (FlashTimer >= 3f)
+            {
+                FlashIndicator();
+                FlashTimer = 0f;
+            }
 
             /*if (Inventory.IsActive)
             {
@@ -74,6 +84,36 @@ public class Alerts : MonoBehaviour
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
             }*/
         }
+
+        if (!AnyAlertsActive)
+        {
+            BreakTimerSeconds -= Time.deltaTime;
+            if (BreakTimerSeconds <= 0)
+            {
+                BreakTimerSeconds = 60f;
+                BreakTimerMinutes -= 1f;
+                if (BreakTimerMinutes <= 0)
+                {
+                    int TypeOfAlert = Random.Range(1, 3);
+                    string AlertText = "";
+                    switch (TypeOfAlert)
+                    {
+                        case 1:
+                            AlertText = "Your water is going bad";
+                            break;
+                        case 2:
+                            AlertText = "Your air quality is decreasing";
+                            break;
+                        case 3:
+                            AlertText = "Temperature critical";
+                            break;
+                    }
+
+                    ActivateAlert(AlertText, TypeOfAlert);
+                }
+            }
+        }
+            
 
         if (IsGameOver)
         {
@@ -111,6 +151,7 @@ public class Alerts : MonoBehaviour
         AlertTypeText.text = AlertText;
         AlertSection.SetActive(true);
         SetAlertType();
+        AnyAlertsActive = true;
     }
 
     void ReduceTimer()
@@ -214,6 +255,7 @@ public class Alerts : MonoBehaviour
         IsAlertActive = false;
         AlertTypeText.text = "";
         AlertSection.SetActive(false);
+        AnyAlertsActive = false;
         for (int i = 0; i < Indicator.Length; i++)
         {
             Indicator[i].SetActive(false);

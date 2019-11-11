@@ -8,13 +8,11 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> ResourceList = new List<InventoryItem>();
     public List<InventoryItem> JournalList = new List<InventoryItem>();
     public List<InventoryItem> KeysList = new List<InventoryItem>();
-    public List<InventoryItem> MiscList = new List<InventoryItem>();
 
     public GameObject InventoryPanelTools;
     public GameObject InventoryPanelResources;
     public GameObject InventoryPanelJournalEntries;
     public GameObject InventoryPanelKeys;
-    public GameObject InventoryPanelMisc;
 
     public static Inventory Instance;
     public GameObject InventoryPrefab;
@@ -96,25 +94,6 @@ public class Inventory : MonoBehaviour
             Slot.UpdateInfo();
             KeysIndex++;
         }
-
-        int MiscIndex = 0;
-        foreach (Transform child in InventoryPanelMisc.transform)
-        {
-            InventorySlotController Slot = child.GetComponent<InventorySlotController>();
-
-            if (MiscIndex < MiscList.Count)
-            {
-                Slot.Item = MiscList[MiscIndex];
-            }
-            else
-            {
-                Slot.Item = null;
-                Slot.transform.parent = null;
-            }
-
-            Slot.UpdateInfo();
-            MiscIndex++;
-        }
     }
 
     // Start is called before the first frame update
@@ -173,18 +152,6 @@ public class Inventory : MonoBehaviour
             Instantiate(InventoryPrefab, InventoryPanelKeys.transform);
             UpdatePanelSlots();
         }
-
-        if (Item.ItemType == "Misc")
-        {
-            if (MiscList.Contains(Item))
-            {
-                return;
-            }
-
-            MiscList.Add(Item);
-            Instantiate(InventoryPrefab, InventoryPanelMisc.transform);
-            UpdatePanelSlots();
-        }
     }
 
     public void Remove(InventoryItem Item)
@@ -207,11 +174,6 @@ public class Inventory : MonoBehaviour
         if (Item.ItemType == "Key")
         {
             KeysList.Remove(Item);
-        }
-
-        if (Item.ItemType == "Misc")
-        {
-            MiscList.Remove(Item);
         }
 
         UpdatePanelSlots();

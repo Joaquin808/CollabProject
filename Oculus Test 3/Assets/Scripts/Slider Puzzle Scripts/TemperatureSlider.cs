@@ -14,10 +14,11 @@ public class TemperatureSlider : MonoBehaviour
     public float correctValue1, correctValue2;
     float stoppedValue;
     public float speed;
-    int puzzleCompleteCheck;
+
     int alertType = 3;
 
     private Renderer sliderRenderer;
+    public SliderPuzzleBreak sliderBreak;
     public GameObject slider; //Used to call gameobject used for sliding puzzle
     public GameObject lever, leverSwitch; //Used to call for Lever gameobject to stop slider
     public GameObject needle; //Used to call needle for visual aspect of puzzle
@@ -56,10 +57,7 @@ public class TemperatureSlider : MonoBehaviour
         {
             slider.transform.localPosition = Vector3.Lerp(pos1, pos2, Mathf.PingPong(Time.time * speed, 1.0f));
         }
-        if (puzzleCompleteCheck >= 3)
-        {
-            alerts.DeactivateAlert(alertType);
-        }
+
 
     }
    
@@ -74,7 +72,7 @@ public class TemperatureSlider : MonoBehaviour
             if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
             {
                 isStopped = true;
-                puzzleCompleteCheck++;
+                sliderBreak.puzzleCompleteCheck++;
                 needle.transform.Rotate(rotation, Space.Self);
                 leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
             }
