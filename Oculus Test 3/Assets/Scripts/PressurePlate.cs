@@ -16,7 +16,7 @@ public class PressurePlate : MonoBehaviour
     void Start()
     {
         startPos = this.transform.position;
-        endPos = startPos - new Vector3(0, 0.25f, 0);
+        endPos = startPos - new Vector3(0, 0.1f, 0);
     }
 
     // Update is called once per frame

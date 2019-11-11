@@ -24,15 +24,7 @@ public class GateDoorScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Is the Power working? Enable door
-        if (GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().powerEnabled == true)
-        {
-            isLocked = false;
-        }
-        else
-        {
-            //isLocked = true;
-        }
+        isLocked = GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().powerEnabled;
 
         /*if (!IsDoorOpen)
         {
