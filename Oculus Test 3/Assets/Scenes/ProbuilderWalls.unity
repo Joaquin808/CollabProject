@@ -40734,7 +40734,7 @@ PrefabInstance:
     - target: {fileID: 1830196390658213044, guid: 0311ebdc1b63e574fa6e7cf25abfc78d,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3404000258948363943, guid: 0311ebdc1b63e574fa6e7cf25abfc78d,
         type: 3}
@@ -46180,21 +46180,9 @@ PrefabInstance:
       propertyPath: Spatialize
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1761833921, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1761833921, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
-      propertyPath: m_UseGravity
+    - target: {fileID: 1437082338, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
+      propertyPath: m_Layer
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1761833921, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
-      propertyPath: m_IsKinematic
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1437082343, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
-      propertyPath: m_Mass
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1599275663, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_LocalScale.x
@@ -46208,11 +46196,27 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.45317516
       objectReference: {fileID: 0}
-    - target: {fileID: 1437082338, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
-      propertyPath: m_Layer
+    - target: {fileID: 1761833921, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761833921, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
+      propertyPath: m_UseGravity
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761833921, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
+      propertyPath: m_IsKinematic
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1437082341, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1437082343, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599275666, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -46223,10 +46227,6 @@ PrefabInstance:
     - target: {fileID: 1599275665, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Mass
       value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1599275666, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1206722448, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
@@ -59758,6 +59758,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.014399
       objectReference: {fileID: 0}
+    - target: {fileID: 114392411909336904, guid: a9d2de84afb308a4796cc671d3432b4d,
+        type: 3}
+      propertyPath: _laserBeamBehavior
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 120006741097097638, guid: a9d2de84afb308a4796cc671d3432b4d,
         type: 3}
       propertyPath: m_Enabled
@@ -59772,11 +59777,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 114392411909336904, guid: a9d2de84afb308a4796cc671d3432b4d,
-        type: 3}
-      propertyPath: _laserBeamBehavior
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a9d2de84afb308a4796cc671d3432b4d, type: 3}
