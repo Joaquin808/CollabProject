@@ -43,11 +43,11 @@ GameObject:
   - component: {fileID: 7484726139112650545}
   - component: {fileID: 7828654124493621475}
   - component: {fileID: 7307253929367473411}
-  - component: {fileID: 7376134418813691185}
   - component: {fileID: 8755006418044803682}
   - component: {fileID: 3308155088871943138}
+  - component: {fileID: 8970778510449441474}
   m_Layer: 9
-  m_Name: Salt_and_Pepper_Shaker_Salt_and_Pepper_Shakers:Salt_and_Pepper_ShakerspCylinder2
+  m_Name: SaltShaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,20 +114,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &7376134418813691185
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1300338603898122082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.992445
-  m_Height: 7.3925176
-  m_Direction: 1
-  m_Center: {x: 39.147354, y: 3.545398, z: 30.161337}
 --- !u!54 &8755006418044803682
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,6 +147,19 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!65 &8970778510449441474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300338603898122082}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.98489, y: 7.3925176, z: 3.4510155}
+  m_Center: {x: 39.147354, y: 3.545398, z: 30.161337}
 --- !u!1 &8358287208712417004
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,11 +171,11 @@ GameObject:
   - component: {fileID: 6467483459897551187}
   - component: {fileID: 3226033920219395308}
   - component: {fileID: 6936258553943197413}
-  - component: {fileID: 1539913026792142883}
   - component: {fileID: 6586262594078003350}
   - component: {fileID: 7858159646519191702}
+  - component: {fileID: 4378415039995230254}
   m_Layer: 9
-  m_Name: Salt_and_Pepper_Shakers:pCylinder3Salt_and_Pepper_Shakers_Salt_and_Pepper_Shaker
+  m_Name: PepperShaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,20 +242,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &1539913026792142883
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8358287208712417004}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 1.992444
-  m_Height: 7.3925176
-  m_Direction: 1
-  m_Center: {x: 33.143078, y: 3.545398, z: 30.161335}
 --- !u!54 &6586262594078003350
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -290,3 +275,16 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+--- !u!65 &4378415039995230254
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8358287208712417004}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.984888, y: 7.3925176, z: 3.4510155}
+  m_Center: {x: 33.143078, y: 3.545398, z: 30.161335}

@@ -14,7 +14,6 @@ public class DogAi : MonoBehaviour
     public GameObject playerRef;                    //Reference to Player
     public bool boneHeld = true;					//Is Bone Attached
     public bool boneHeldPlayer = false;             //Is Bone Held by Player
-    public float boneResetTime = 10.0f;             //Time on ground to reset Bone
 
     private int animState = 0;                      //AnimState Controller
     private float walkSpeed = 2.5f;                 //WalkSpeed
@@ -32,7 +31,7 @@ public class DogAi : MonoBehaviour
         crawlSpeed = walkSpeed / 2;
         boneHeld = true;
         boneHeldPlayer = false;
-        AttachBone();                               //Force Bone to Start in DogMouth
+        AttachBone();                                       //Force Bone to Start in DogMouth
     }
 
     void Update()
@@ -54,19 +53,6 @@ public class DogAi : MonoBehaviour
         //If bone NOT held && NOT Player held
         if (boneHeld == false && boneHeldPlayer == false)
         {
-            //Bone Reset Timer 
-            boneResetTime -= Time.deltaTime;
-            if (boneResetTime <= 0.0f)
-            {
-                boneHeldPlayer = true;
-                bone.GetComponent<DestroyAndAddToInventory>().CanAddToInventory = true;
-                boneResetTime = 10.0f;
-            }
-            else
-            {
-                bone.GetComponent<DestroyAndAddToInventory>().CanAddToInventory = false;
-            }
-
             //If near bone grab bone
             if (Vector3.Distance(this.transform.position, boneLocation) <= agent.stoppingDistance && boneHeldPlayer == false)
             {
@@ -232,22 +218,25 @@ public class DogAi : MonoBehaviour
         boneHeld = false;
         bone.GetComponent<Rigidbody>().useGravity = true;
         //bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
+
+        //drop bone from mouth
+        bone.GetComponent<Rigidbody>().AddForce(this.transform.forward * 0.1f);
         boneHeldPlayer = true;
     }
 
     //Crawl Back Trigger
-    void OnTriggerEnter(Collider col)
+    void OnTriggerEnter(Collider other)
     {
-        if (col.gameObject.name == "CrouchWall")
+        if (other.gameObject.name == "CrouchWall")
         {
             CurrentState = DogState.CRAWL;
         }
     }
 
     //Crawl Back Trigger Exit
-    void OnTriggerExit(Collider col)
+    void OnTriggerExit(Collider other)
     {
-        if (col.gameObject.name == "CrouchWall")
+        if (other.gameObject.name == "CrouchWall")
         {
             RunOrWalk();
         }

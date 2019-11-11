@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 347935979133704115}
   - component: {fileID: 8597164841940251534}
   - component: {fileID: 7434509443798877405}
-  - component: {fileID: 4382644022874607071}
+  - component: {fileID: 5394475902754143372}
   m_Layer: 0
   m_Name: morerocks:pCube3_rocks
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &4382644022874607071
-MeshCollider:
+--- !u!65 &5394475902754143372
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,10 +90,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 526005570514910340, guid: 3ec9fbfdd6902e6459651cdf894768db, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 128.2572, y: 197.05705, z: 128.25723}
+  m_Center: {x: -492.15076, y: 99.119545, z: 91.150444}
 --- !u!1 &7423590764110897791
 GameObject:
   m_ObjectHideFlags: 0
@@ -137,7 +136,7 @@ GameObject:
   - component: {fileID: 7249922839211782681}
   - component: {fileID: 5889583621598843099}
   - component: {fileID: 4078138729351946817}
-  - component: {fileID: 6685441519637650508}
+  - component: {fileID: 7953534363042378914}
   m_Layer: 0
   m_Name: rocks_morerocks:pCube2
   m_TagString: Untagged
@@ -206,8 +205,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6685441519637650508
-MeshCollider:
+--- !u!65 &7953534363042378914
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -216,7 +215,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2441034939343831381, guid: 3ec9fbfdd6902e6459651cdf894768db, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 128.2572, y: 95.86217, z: 128.25726}
+  m_Center: {x: -492.15076, y: 48.5221, z: -96.83648}

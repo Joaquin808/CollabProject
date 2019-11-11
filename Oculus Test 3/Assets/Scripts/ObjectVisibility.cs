@@ -9,25 +9,18 @@ public class ObjectVisibility : MonoBehaviour
     Renderer rend;
     public string String;
     private GameObject destroyedPipe;
-    public GameObject curvedPipeSpawn;
-    public GameObject straightPipeSpawn;
-    public GameObject crookedPipeSpawn;
+    public GameObject PipeSetPrefab;
     public GameObject spawnLoc;
     public int pipesFixed = 0;
     public Alerts AlertSystem;
     int TypeOfAlert = 1;
-    //DestroyAndAddToInventory watchScript;
     public Pickup InventoryItemRef;
-    public bool CanAddToInventory;
 
-    // Use this for initialization
     void Start()
     {
-        
         rend = GetComponent<Renderer>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         rend.enabled = isVisible;
@@ -59,7 +52,7 @@ public class ObjectVisibility : MonoBehaviour
             destroyedPipe = GameObject.Find(String);
             Destroy(destroyedPipe);
             pipesFixed++;
-            if(pipesFixed == 6)
+            if (pipesFixed == 7)
             {
                 AlertSystem.DeactivateAlert(TypeOfAlert);
             }
@@ -85,19 +78,6 @@ public class ObjectVisibility : MonoBehaviour
 
     public void spawnPipes()
     {
-
-        Instantiate(curvedPipeSpawn, spawnLoc.transform);
-        Instantiate(straightPipeSpawn, spawnLoc.transform);
-        Instantiate(crookedPipeSpawn, spawnLoc.transform);
-
-    }
-
-    public void OnTriggerEnter(Collision other)
-    {
-        if (other.gameObject.tag == "WatchChip")
-        {
-            Inventory.Instance.Add(InventoryItemRef);
-            Destroy(other.gameObject);
-        }
+        Instantiate(PipeSetPrefab, spawnLoc.transform);
     }
 }

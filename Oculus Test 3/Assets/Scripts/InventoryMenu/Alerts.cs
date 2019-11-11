@@ -65,14 +65,14 @@ public class Alerts : MonoBehaviour
             Timer.text = "Time Left: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
             ReduceTimer();
 
-            if (Inventory.IsActive)
+            /*if (Inventory.IsActive)
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 1f);
             }
             else
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
-            }
+            }*/
         }
 
         if (IsGameOver)

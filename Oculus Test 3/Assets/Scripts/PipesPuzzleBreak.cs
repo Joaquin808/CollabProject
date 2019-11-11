@@ -6,7 +6,7 @@ public class PipesPuzzleBreak : MonoBehaviour
 {
 
     public Alerts AlertSystem;
-    string AlertString = "Water blockage! Check the pipes to see what went wrong!";
+    string AlertString = "Water's broken! Check the pipes to see what went wrong!";
     int AlertType = 1;
     ObjectVisibility objViz;
 
@@ -22,11 +22,11 @@ public class PipesPuzzleBreak : MonoBehaviour
 
     }
 
-    void onBreak()
+    public void onBreak()
     {
-        objViz.pipesFixed = 3;
+        objViz.pipesFixed = 0;
         AlertSystem.ActivateAlert(AlertString, AlertType);
         objViz.isVisible = false;
-
+        objViz.spawnPipes();
     }
 }

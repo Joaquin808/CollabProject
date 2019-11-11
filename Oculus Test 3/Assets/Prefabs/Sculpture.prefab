@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 6446294867529667967}
   - component: {fileID: 412892718090569124}
   - component: {fileID: 2542149670576146489}
-  - component: {fileID: 6349451380218773168}
   m_Layer: 0
   m_Name: pCube6_Sculpture_1
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6349451380218773168
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3933995333415740090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.135456, y: 9.739235, z: 8.436893}
-  m_Center: {x: 37.387383, y: 27.768864, z: -36.180084}
 --- !u!1 &7107055939848925118
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,5 +202,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.602791, y: 23.184511, z: 10.602795}
-  m_Center: {x: 37.430607, y: 11.592256, z: -36.6812}
+  m_Size: {x: 10.602792, y: 32.711136, z: 10.602792}
+  m_Center: {x: 37.430607, y: 16.355568, z: -36.6812}

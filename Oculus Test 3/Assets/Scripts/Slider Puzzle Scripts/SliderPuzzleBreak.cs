@@ -8,29 +8,49 @@ public class SliderPuzzleBreak : MonoBehaviour
 
     public Alerts alerts; //call to alerts script
     public GameObject needle, needle2;
-    public GameObject player;
-    public Transform spawnpoint; //Used to get needle and spawn it on the system breaking
-    public bool powerBroken = true;
+    Renderer needle1Rend, needle2Rend;
+
+    bool broken = true;
+    //public GameObject player;
+
+    //public bool powerBroken = true;
+
+    void Start()
+    {
+        needle1Rend = needle.GetComponent<Renderer>();
+        needle2Rend = needle2.GetComponent<Renderer>();
+    }
 
     void Update()
     {
-        powerBroken = GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().isBroken;
+        //powerBroken = GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().isBroken;
+        if (broken)
+        {
+            OnBreak();
+        }
     }
 
+    //Function used to break temperature puzzle
     void OnBreak()
     {
         alerts.ActivateAlert("Temperature critical!", AlertType);
-        //Instantiate(needle, spawnpoint);
+        needle1Rend.enabled = false;
+        needle2Rend.enabled = true;
+        broken = false;
+    }
+
+    //Function to fix temperature puzzle
+    void OnFix()
+    {
+        Destroy(needle2.gameObject);
+        needle1Rend.enabled = true;
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (powerBroken == true)
-        {
-            if (other.gameObject == player)
+            if (other.gameObject == needle2)
             {
-                OnBreak();
+                 OnFix();
             }
-        }
     }
 }

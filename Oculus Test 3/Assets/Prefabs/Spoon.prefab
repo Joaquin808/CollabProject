@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 3699552671644994465}
   - component: {fileID: 2167848286166342384}
   - component: {fileID: 7507945551741638154}
-  - component: {fileID: 6768690854115817064}
   - component: {fileID: 2396870878454065237}
   - component: {fileID: 8117552777262731367}
+  - component: {fileID: 2533962965856013389}
   m_Layer: 9
   m_Name: Spoon:Spoon
   m_TagString: Untagged
@@ -113,20 +113,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &6768690854115817064
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7417774147740356889}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5403388310311049939, guid: b33665e5cc2b7fc498e264dca2a63115, type: 3}
 --- !u!114 &2396870878454065237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +146,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &2533962965856013389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417774147740356889}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.603504, y: 1.562783, z: 21.234676}
+  m_Center: {x: 55.791145, y: 0.63412654, z: 41.427567}

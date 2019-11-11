@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 1450582505021466787}
   - component: {fileID: 3583158967706461503}
   - component: {fileID: 5959171898260090985}
-  - component: {fileID: 2917271640735046749}
+  - component: {fileID: 4682926616207521516}
   m_Layer: 0
   m_Name: Candle2_Candles:Candle1pCylinder3
   m_TagString: Untagged
@@ -113,8 +113,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &2917271640735046749
-MeshCollider:
+--- !u!65 &4682926616207521516
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -123,10 +123,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7864660640304115611, guid: a4640546cd13acd40b8dd6b9409368d2, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 13.646914, y: 54.952187, z: 13.722109}
+  m_Center: {x: 591.2613, y: 171.29442, z: 256.0366}
 --- !u!1 &6595294577828576177
 GameObject:
   m_ObjectHideFlags: 0

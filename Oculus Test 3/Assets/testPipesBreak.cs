@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PowerPuzzlePanel : MonoBehaviour
-{
-    bool isOpen = false;
+public class testPipesBreak : MonoBehaviour
+    {
+
+    public GameObject testSpawn;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,14 +16,11 @@ public class PowerPuzzlePanel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
-    void OnTriggerEnter (Collider other)
+    void OnTriggerEnter()
     {
-        if(other.gameObject.name == "Wrench" || other.gameObject.name == "Wrench(Clone)")
-        {
-            Destroy(gameObject);
-        }
+        testSpawn.GetComponent<PipesPuzzleBreak>().onBreak();
     }
 }

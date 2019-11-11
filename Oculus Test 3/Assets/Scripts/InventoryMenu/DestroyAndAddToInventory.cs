@@ -12,6 +12,8 @@ public class DestroyAndAddToInventory : MonoBehaviour
     {
         if (other.gameObject.tag == "ChipCollider")
         {
+            Inventory.Instance.Add(InventoryItemRef);
+            Destroy(gameObject);
             if (InventoryItemRef.ItemType == "Journal")
             {
                 Inventory.Instance.Add(InventoryItemRef);
@@ -20,19 +22,5 @@ public class DestroyAndAddToInventory : MonoBehaviour
             }
         }
 
-        if (other.gameObject.tag == "Floor")
-        {
-            if (InventoryItemRef.ItemType == "Bone")
-            {
-                if (CanAddToInventory)
-                {
-                    Inventory.Instance.Add(InventoryItemRef);
-                    Destroy(gameObject);
-                    return;
-                }
-            }
-            Inventory.Instance.Add(InventoryItemRef);
-            Destroy(gameObject);
         }
-    }
 }

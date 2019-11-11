@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 7704911966967536467}
   - component: {fileID: 1082364736930732176}
   - component: {fileID: 3539794236228666448}
-  - component: {fileID: 7754543648646156912}
+  - component: {fileID: 2573183919565633086}
   m_Layer: 0
   m_Name: Emergency_Light2_emergency_ligts:Emergency_2pCube1
   m_TagString: Untagged
@@ -367,8 +367,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7754543648646156912
-MeshCollider:
+--- !u!65 &2573183919565633086
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -377,10 +377,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -850235001830936290, guid: 3f8b8cb727740c6428051c7ce70c52b7, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 110.150055, y: 110.00809, z: 44.263855}
+  m_Center: {x: -562.37866, y: 134.33627, z: 580.32947}
 --- !u!1 &5925379318538190821
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,9 +42,9 @@ GameObject:
   - component: {fileID: 2108839172146780494}
   - component: {fileID: 8648626876233912245}
   - component: {fileID: 1993728738405723796}
-  - component: {fileID: 7017520574458556167}
   - component: {fileID: 2436214162488395357}
   - component: {fileID: 1830217939637183229}
+  - component: {fileID: 6553918936681825440}
   m_Layer: 9
   m_Name: Cup:Cup
   m_TagString: Untagged
@@ -113,20 +113,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &7017520574458556167
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6695376093812300783}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -7056703418509445444, guid: 659db1cd7702b3c40a1213329db5b3f2, type: 3}
 --- !u!114 &2436214162488395357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,3 +146,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &6553918936681825440
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6695376093812300783}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12.067659, y: 15.325128, z: 12.06766}
+  m_Center: {x: 8.389916, y: 6.128115, z: 46.151073}
