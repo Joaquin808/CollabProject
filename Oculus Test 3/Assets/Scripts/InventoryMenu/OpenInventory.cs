@@ -9,12 +9,33 @@ public class OpenInventory : MonoBehaviour
     public GameObject InventoryCollider;
     public bool IsActive = false;
     public GameObject JournalCanvas;
+    public GameObject PlayerCamera;
+    RaycastHit Hit;
 
     // Start is called before the first frame update
     void Start()
     {
         Inventory.SetActive(false);
         IsActive = false;
+    }
+
+    void Update()
+    {
+        if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward), out Hit, 10000))
+        {
+            if (Hit.collider.tag == "InventoryCollider")
+            {
+                Inventory.SetActive(true);
+                IsActive = true;
+                JournalCanvas.SetActive(true);
+            }
+        }
+        else
+        {
+            Inventory.SetActive(false);
+            IsActive = false;
+            JournalCanvas.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
