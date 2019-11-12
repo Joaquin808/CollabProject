@@ -20,6 +20,7 @@ public class AirFiltration : MonoBehaviour
         rb = dial.GetComponent<Rigidbody>();
         RandomSolution();
         wind = airFilt.GetComponent<AudioSource>();
+        timer = 0;
     }
 
     // Update is called once per frame
