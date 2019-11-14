@@ -6,7 +6,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
 {
     public Pickup InventoryItemRef;
     public bool CanAddToInventory;
-    public OVRGrabber grabbebObj;
+    public GameObject LeftHand;
 
     void Start()
     {
@@ -18,17 +18,11 @@ public class DestroyAndAddToInventory : MonoBehaviour
         if (other.gameObject.tag == "ChipCollider")
         {
             Inventory.Instance.Add(InventoryItemRef);
-            //Destroy(gameObject);
-            grabbedObj.m_grabbedObj = null;
+            OVRGrabber GrabbedObj = LeftHand.GetComponent<OVRGrabber>();
+            GrabbedObj.m_grabbedObj = null;
             Debug.Log("Fack off");
-            if (InventoryItemRef.ItemType == "Journal")
-            {
-                Inventory.Instance.Add(InventoryItemRef);
-                //Destroy(gameObject);
-                Debug.Log("Fack off");
-                return;
-            }
+            Destroy(gameObject);
         }
 
-        }
+     }
 }

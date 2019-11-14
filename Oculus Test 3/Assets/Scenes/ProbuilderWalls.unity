@@ -38501,6 +38501,11 @@ PrefabInstance:
       propertyPath: CanAddToInventory
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8867970669370519780, guid: 551772ca974c2014d9d37d2362243d69,
+        type: 3}
+      propertyPath: LeftHand
+      value: 
+      objectReference: {fileID: 1153924395}
     - target: {fileID: 4133109660973211114, guid: 551772ca974c2014d9d37d2362243d69,
         type: 3}
       propertyPath: m_TagString
@@ -58521,6 +58526,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryItemRef: {fileID: 11400000, guid: c43b40d909779c045b77a0c24cecab2a, type: 2}
   CanAddToInventory: 1
+  LeftHand: {fileID: 0}
 --- !u!4 &1512969369 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7183157828879859939, guid: 65023a539f9540e49b4b7933f63ea916,
