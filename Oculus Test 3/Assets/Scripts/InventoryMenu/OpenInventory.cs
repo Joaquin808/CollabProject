@@ -23,22 +23,23 @@ public class OpenInventory : MonoBehaviour
     {
         if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward), out Hit, 10000))
         {
+            Debug.DrawLine(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward) * 10000, Color.white, 2.5f);
             if (Hit.collider.tag == "InventoryCollider")
             {
                 Inventory.SetActive(true);
                 IsActive = true;
                 JournalCanvas.SetActive(true);
             }
-        }
-        else
-        {
-            Inventory.SetActive(false);
-            IsActive = false;
-            JournalCanvas.SetActive(false);
+            else
+            {
+                Inventory.SetActive(false);
+                IsActive = false;
+                JournalCanvas.SetActive(false);
+            }
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    /*private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == InventoryCollider)
         {
@@ -56,5 +57,5 @@ public class OpenInventory : MonoBehaviour
             IsActive = false;
             JournalCanvas.SetActive(false);
         }
-    }
+    }*/
 }
