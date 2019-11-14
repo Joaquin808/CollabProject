@@ -47,11 +47,24 @@ public class OpenInventory : MonoBehaviour
 
     void Update()
     {
+        if (OVRInput.Get(OVRInput.Button.Three))
+        {
+            Inventory.SetActive(true);
+            IsActive = true;
+            JournalCanvas.SetActive(true);
+        }
+        else
+        {
+            Inventory.SetActive(false);
+            IsActive = false;
+            JournalCanvas.SetActive(false);
+        }
+        /*
         if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward), out Hit, 10000))
         {
             Debug.DrawLine(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward) * 10000, Color.white, 2.5f);
-            Debug.Log("Rotation: " + LeftHand.transform.rotation.z);
-            if (Hit.collider.tag == "InventoryCollider" && LeftHand.transform.rotation.z >= -30 && LeftHand.transform.rotation.z <= -70)
+            //Debug.Log("Rotation: " + LeftHand.transform.rotation.z);
+            if (Hit.collider.tag == "InventoryCollider") //&& LeftHand.transform.rotation.z >= -30 && LeftHand.transform.rotation.z <= -70)
             {
                 Inventory.SetActive(true);
                 IsActive = true;
@@ -63,7 +76,7 @@ public class OpenInventory : MonoBehaviour
                 IsActive = false;
                 JournalCanvas.SetActive(false);
             }
-        }
+        }*/
     }
 
     /*private void OnTriggerEnter(Collider other)

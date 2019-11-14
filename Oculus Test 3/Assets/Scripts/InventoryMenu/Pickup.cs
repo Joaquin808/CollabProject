@@ -8,6 +8,8 @@ public class Pickup : InventoryItem
 {
     public GameObject ObjectToSpawn;
     public AudioSource JournalAudio;
+    public String ObjectName;
+    GameObject Object;
 
     public override void Use()
     {
@@ -22,7 +24,15 @@ public class Pickup : InventoryItem
             return;
         }
         GameObject watch = GameObject.FindGameObjectWithTag("Watch");
-        GameObject spawned = Instantiate(ObjectToSpawn, watch.transform.position, Quaternion.identity);
+        Object = GameObject.Find(ObjectName);
+        GravityControl grav = Object.GetComponent<GravityControl>();
+        grav.UseGravity = false;
+        Object.transform.position = new Vector3(watch.transform.position.x + 10f, watch.transform.position.y + 10f, watch.transform.position.z);
+        Renderer rend = Object.GetComponentInChildren<Renderer>();
+        rend.enabled = true;
+        Rigidbody rigidBody = Object.GetComponent<Rigidbody>();
+        rigidBody.detectCollisions = true;
+        //GameObject spawned = Instantiate(ObjectToSpawn, watch.transform.position, Quaternion.identity);
         Inventory.Instance.Remove(this);
     }
 }
