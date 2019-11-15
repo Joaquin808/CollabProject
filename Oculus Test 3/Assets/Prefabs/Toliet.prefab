@@ -245,7 +245,6 @@ GameObject:
   - component: {fileID: 1732836184490987753}
   - component: {fileID: 5546604666139729405}
   - component: {fileID: 3319337386200868154}
-  - component: {fileID: 2215957952831270681}
   m_Layer: 0
   m_Name: Toliet:Toliet_Toliet:pCylinder1
   m_TagString: Untagged
@@ -314,17 +313,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &2215957952831270681
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6976731235182038780}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 9.43349
-  m_Height: 18.86699
-  m_Direction: 1
-  m_Center: {x: -230.75333, y: 190.71806, z: 1127.7896}
