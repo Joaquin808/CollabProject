@@ -17,6 +17,5 @@ public class DestroyAndAddToInventory : MonoBehaviour
             Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
             rigid.detectCollisions = false;
         }
-
     }
 }

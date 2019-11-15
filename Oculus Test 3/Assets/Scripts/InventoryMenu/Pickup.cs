@@ -26,12 +26,16 @@ public class Pickup : InventoryItem
         GameObject watch = GameObject.FindGameObjectWithTag("Watch");
         Object = GameObject.Find(ObjectName);
         GravityControl grav = Object.GetComponent<GravityControl>();
+        grav.GravityTimer = 0.0f;
         grav.UseGravity = false;
-        Object.transform.position = new Vector3(watch.transform.position.x + 10f, watch.transform.position.y + 10f, watch.transform.position.z);
+        Vector3 offset = new Vector3(0, 50, 0);
+        Object.transform.position = new Vector3(watch.transform.position.x, watch.transform.position.y, watch.transform.position.z);
+        //Object.transform.position = Object.transform.position + offset;
         Renderer rend = Object.GetComponentInChildren<Renderer>();
         rend.enabled = true;
         Rigidbody rigidBody = Object.GetComponent<Rigidbody>();
         rigidBody.detectCollisions = true;
+        rigidBody.velocity = new Vector3(0, 0, 0);
         //GameObject spawned = Instantiate(ObjectToSpawn, watch.transform.position, Quaternion.identity);
         Inventory.Instance.Remove(this);
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GravityControl : MonoBehaviour
 {
-    float GravityTimer = 0f;
+    public float GravityTimer = 0f;
     public bool UseGravity = false;
 
     // Start is called before the first frame update
