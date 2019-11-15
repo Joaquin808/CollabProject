@@ -7,7 +7,7 @@ public class HandleGrabbable : OVRGrabbable
     public Transform handle;
     public GameObject lever;
 
-    public void GrabBegin()
+    public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         lever.GetComponent<Rigidbody>().useGravity = false;
     }
