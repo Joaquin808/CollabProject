@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 874304774350394181}
   - component: {fileID: 4163975421046391709}
   - component: {fileID: 8266963359970005169}
-  - component: {fileID: 3362023636102517511}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane4
   m_TagString: Untagged
@@ -80,19 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3362023636102517511
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586288593518289579}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 52.330227, y: 31.166616, z: 54.713314}
-  m_Center: {x: 184.80347, y: 69.36677, z: 227.44434}
 --- !u!1 &1189545857234588078
 GameObject:
   m_ObjectHideFlags: 0
@@ -104,7 +90,6 @@ GameObject:
   - component: {fileID: 5494613360254398912}
   - component: {fileID: 1572778444842471085}
   - component: {fileID: 6166705080009659247}
-  - component: {fileID: 2674943271987821771}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane3
   m_TagString: Untagged
@@ -173,19 +158,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2674943271987821771
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1189545857234588078}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 68.15801, y: 33.656948, z: 67.94564}
-  m_Center: {x: 233.18806, y: 99.55254, z: 235.88303}
 --- !u!1 &1206619678367125329
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,7 +169,6 @@ GameObject:
   - component: {fileID: 7086650000909383585}
   - component: {fileID: 4121218812968337355}
   - component: {fileID: 1957334716209615759}
-  - component: {fileID: 4946072840912761449}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane1
   m_TagString: Untagged
@@ -266,19 +237,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &4946072840912761449
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1206619678367125329}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 31.371016, y: 23.226133, z: 38.4801}
-  m_Center: {x: 171.45393, y: 79.287315, z: 232.84457}
 --- !u!1 &1451532494414577122
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,7 +293,6 @@ GameObject:
   - component: {fileID: 1069254883072529502}
   - component: {fileID: 841249676050656049}
   - component: {fileID: 3114786473974999175}
-  - component: {fileID: 3001183600448343752}
   m_Layer: 0
   m_Name: bonsaitree:pPlane10group2_Bonsai_Tree
   m_TagString: Untagged
@@ -404,19 +361,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3001183600448343752
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2018084037911160525}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 27.445326, y: 34.881115, z: 38.536175}
-  m_Center: {x: 174.91524, y: 73.48391, z: 210.09651}
 --- !u!1 &2203817400743723207
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,8 +452,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 156.70645, y: 30.655935, z: 87.32804}
-  m_Center: {x: 204.89836, y: 16.666935, z: 217.36122}
+  m_Size: {x: 156.70642, y: 140.9579, z: 87.32803}
+  m_Center: {x: 204.89832, y: 71.8179, z: 217.36122}
 --- !u!1 &2224444912964561222
 GameObject:
   m_ObjectHideFlags: 0
@@ -521,7 +465,6 @@ GameObject:
   - component: {fileID: 5281267038515516720}
   - component: {fileID: 8155739280426568650}
   - component: {fileID: 2453534471371720653}
-  - component: {fileID: 3051030820270095562}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane9
   m_TagString: Untagged
@@ -590,19 +533,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3051030820270095562
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2224444912964561222}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 44.92483, y: 8.479735, z: 45.03091}
-  m_Center: {x: 232.4, y: 130.4083, z: 231.48251}
 --- !u!1 &3762611077201539193
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,7 +544,6 @@ GameObject:
   - component: {fileID: 3701105705044505600}
   - component: {fileID: 8205620015753701558}
   - component: {fileID: 4916518332589292957}
-  - component: {fileID: 1399094433670202158}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane7
   m_TagString: Untagged
@@ -683,19 +612,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1399094433670202158
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3762611077201539193}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 44.373928, y: 21.59384, z: 41.26309}
-  m_Center: {x: 187.22633, y: 83.74647, z: 211.89862}
 --- !u!1 &5840363473986966354
 GameObject:
   m_ObjectHideFlags: 0
@@ -707,7 +623,6 @@ GameObject:
   - component: {fileID: 3667697840165903848}
   - component: {fileID: 2083500329865731747}
   - component: {fileID: 7209118062104955120}
-  - component: {fileID: 8136621624185977939}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane8
   m_TagString: Untagged
@@ -776,19 +691,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8136621624185977939
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5840363473986966354}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 38.6217, y: 27.514578, z: 39.125942}
-  m_Center: {x: 220.10973, y: 116.42631, z: 254.3642}
 --- !u!1 &5928504677658856396
 GameObject:
   m_ObjectHideFlags: 0
@@ -800,7 +702,6 @@ GameObject:
   - component: {fileID: 1735460240629891464}
   - component: {fileID: 9199678561929265454}
   - component: {fileID: 8508352257105370972}
-  - component: {fileID: 8317702803926761955}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane5
   m_TagString: Untagged
@@ -869,19 +770,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &8317702803926761955
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5928504677658856396}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 41.49275, y: 31.836493, z: 31.792433}
-  m_Center: {x: 220.50859, y: 111.86007, z: 213.41557}
 --- !u!1 &7475840083703418437
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +781,6 @@ GameObject:
   - component: {fileID: 5590825182136032060}
   - component: {fileID: 9080593109791880656}
   - component: {fileID: 1662290368269139055}
-  - component: {fileID: 1731332288475248060}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane11
   m_TagString: Untagged
@@ -962,19 +849,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &1731332288475248060
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7475840083703418437}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 50.858257, y: 31.373014, z: 59.587627}
-  m_Center: {x: 210.16057, y: 105.48115, z: 243.70305}
 --- !u!1 &7649411272496215715
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,7 +860,6 @@ GameObject:
   - component: {fileID: 8742513374003167837}
   - component: {fileID: 898904233263940790}
   - component: {fileID: 7681399094912610035}
-  - component: {fileID: 864545093240199031}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane12
   m_TagString: Untagged
@@ -1055,19 +928,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &864545093240199031
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7649411272496215715}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 44.19679, y: 21.019537, z: 45.4622}
-  m_Center: {x: 225.81194, y: 107.43499, z: 257.78613}
 --- !u!1 &8027601041706999921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,7 +939,6 @@ GameObject:
   - component: {fileID: 7618624831543711584}
   - component: {fileID: 7724226508978276344}
   - component: {fileID: 7021495784211001712}
-  - component: {fileID: 7029339154207408994}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pCube4
   m_TagString: Untagged
@@ -1148,19 +1007,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7029339154207408994
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8027601041706999921}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20.110167, y: 13.28704, z: 20.102873}
-  m_Center: {x: 167.27205, y: 31.078997, z: 231.35832}
 --- !u!1 &8161111746357092824
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,7 +1018,6 @@ GameObject:
   - component: {fileID: 4651033417306909527}
   - component: {fileID: 5179858221300681837}
   - component: {fileID: 1705833097535164481}
-  - component: {fileID: 9021372279577090500}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane2
   m_TagString: Untagged
@@ -1241,19 +1086,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &9021372279577090500
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8161111746357092824}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 56.631924, y: 24.51254, z: 57.112667}
-  m_Center: {x: 225.99689, y: 116.49197, z: 233.60701}
 --- !u!1 &8694179821565737858
 GameObject:
   m_ObjectHideFlags: 0
@@ -1265,7 +1097,6 @@ GameObject:
   - component: {fileID: 458962259001832317}
   - component: {fileID: 8470162234173571601}
   - component: {fileID: 7274686798608507019}
-  - component: {fileID: 80186190272725754}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pCylinder3
   m_TagString: Untagged
@@ -1334,19 +1165,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &80186190272725754
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8694179821565737858}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 99.34759, y: 96.77824, z: 33.04176}
-  m_Center: {x: 210.95363, y: 66.8739, z: 220.529}
 --- !u!1 &8848253677002379655
 GameObject:
   m_ObjectHideFlags: 0
@@ -1358,7 +1176,6 @@ GameObject:
   - component: {fileID: 5187937690701773972}
   - component: {fileID: 1974865565073194035}
   - component: {fileID: 3268678364266226657}
-  - component: {fileID: 7161492587093811024}
   m_Layer: 0
   m_Name: Bonsai_Tree_bonsaitree:group2pPlane6
   m_TagString: Untagged
@@ -1427,16 +1244,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7161492587093811024
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8848253677002379655}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 43.355526, y: 22.07173, z: 44.27731}
-  m_Center: {x: 247.09398, y: 117.07732, z: 243.16739}
