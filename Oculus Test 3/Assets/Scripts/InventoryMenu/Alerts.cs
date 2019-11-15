@@ -240,7 +240,7 @@ public class Alerts : MonoBehaviour
     {
         IsAlertActive = false;
         IsGameOver = true;
-        GameOverText.text = "Game Over!";
+        GameObject.Find("GameOverCanvas").GetComponent<Canvas>().enabled = true;
     }
 
     void FadeToTitleScreen()

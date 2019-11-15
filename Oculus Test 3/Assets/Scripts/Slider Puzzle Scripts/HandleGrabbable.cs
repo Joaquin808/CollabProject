@@ -9,6 +9,7 @@ public class HandleGrabbable : OVRGrabbable
 
     public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
+        base.GrabBegin(hand, grabPoint);
         lever.GetComponent<Rigidbody>().useGravity = false;
     }
 
@@ -16,12 +17,16 @@ public class HandleGrabbable : OVRGrabbable
     {
         base.GrabEnd(Vector3.zero, Vector3.zero);
 
+        //Resets velocity of grabbable handle after it is released
+        Rigidbody rbhandle = handle.GetComponent<Rigidbody>();
+        rbhandle.velocity = Vector3.zero;
+        rbhandle.angularVelocity = Vector3.zero;
+
         //Grabbable handle's position resets after it is released
         transform.position = handle.transform.position;
         transform.rotation = handle.transform.rotation;
 
         //Resets velocity of grabbable handle after it is released
-        Rigidbody rbhandle = handle.GetComponent<Rigidbody>();
         rbhandle.velocity = Vector3.zero;
         rbhandle.angularVelocity = Vector3.zero;
 

@@ -14,6 +14,8 @@ public class DogAi : MonoBehaviour
     public GameObject playerRef;                    //Reference to Player
     public bool boneHeld = true;					//Is Bone Attached
     public bool boneHeldPlayer = false;             //Is Bone Held by Player
+    public AudioSource dogAudio;
+    public AudioClip[] dogSounds;
 
     private int animState = 0;                      //AnimState Controller
     private float walkSpeed = 2.5f;                 //WalkSpeed
@@ -157,6 +159,13 @@ public class DogAi : MonoBehaviour
         animState = 2;
         anim.SetInteger("AnimState", animState);
 
+        //Play Sound
+        dogAudio.clip = dogSounds[0];
+        if (!dogAudio.isPlaying)
+        {
+            dogAudio.Play();
+        }
+
         agent.speed = runSpeed;
         MoveTo();
     }
@@ -167,6 +176,13 @@ public class DogAi : MonoBehaviour
         //Set Animation & MoveTo
         animState = 1;
         anim.SetInteger("AnimState", animState);
+
+        //Play Sound
+        dogAudio.clip = dogSounds[0];
+        if (!dogAudio.isPlaying)
+        {
+            dogAudio.Play();
+        }
 
         agent.speed = walkSpeed;
         MoveTo();
@@ -217,7 +233,7 @@ public class DogAi : MonoBehaviour
         bone.transform.SetParent(null);
         boneHeld = false;
         bone.GetComponent<Rigidbody>().useGravity = true;
-        //bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
+        bone.GetComponent<Rigidbody>().velocity = Vector3.zero;
 
         //drop bone from mouth
         //bone.GetComponent<Rigidbody>().AddForce(this.transform.forward * 0.1f);
