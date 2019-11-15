@@ -236,6 +236,7 @@ MonoBehaviour:
   correctValue1: -0.25
   correctValue2: 0.25
   speed: 2
+  sliderBreak: {fileID: 0}
   slider: {fileID: 0}
   lever: {fileID: 915694056}
   leverSwitch: {fileID: 0}
@@ -593,6 +594,7 @@ MonoBehaviour:
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
   handle: {fileID: 1437082339}
+  lever: {fileID: 6852298296151102862}
 --- !u!1 &620303937288122041
 GameObject:
   m_ObjectHideFlags: 0

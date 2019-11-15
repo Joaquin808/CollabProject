@@ -5,6 +5,12 @@ using UnityEngine;
 public class HandleGrabbable : OVRGrabbable
 {
     public Transform handle;
+    public GameObject lever;
+
+    public void GrabBegin()
+    {
+        lever.GetComponent<Rigidbody>().useGravity = false;
+    }
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
@@ -18,6 +24,8 @@ public class HandleGrabbable : OVRGrabbable
         Rigidbody rbhandle = handle.GetComponent<Rigidbody>();
         rbhandle.velocity = Vector3.zero;
         rbhandle.angularVelocity = Vector3.zero;
+
+        lever.GetComponent<Rigidbody>().useGravity = true;
     }
 
     private void Update()
