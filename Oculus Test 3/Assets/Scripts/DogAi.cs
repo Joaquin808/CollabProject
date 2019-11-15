@@ -46,7 +46,8 @@ public class DogAi : MonoBehaviour
         if (boneHeld == true)
         {
             AttachBone();
-        } else
+        }
+        else
         {
             //Drop();
         }
@@ -66,13 +67,13 @@ public class DogAi : MonoBehaviour
                 RunOrWalk();
             }
 
-        //If bone held by PLAYER
+            //If bone held by PLAYER
         }
         else if (boneHeldPlayer == true)
         {
             CurrentState = DogState.IDLE;
 
-        //If bone held
+            //If bone held
         }
         else
         {
@@ -168,9 +169,10 @@ public class DogAi : MonoBehaviour
         anim.SetInteger("AnimState", animState);
 
         //Play Sound
-        dogAudio.clip = dogSounds[0];
-        if (!dogAudio.isPlaying)
+        if (dogAudio.clip != dogSounds[0])
         {
+            dogAudio.Stop();
+            dogAudio.clip = dogSounds[0];
             dogAudio.Play();
         }
 
@@ -186,9 +188,11 @@ public class DogAi : MonoBehaviour
         anim.SetInteger("AnimState", animState);
 
         //Play Sound
-        dogAudio.clip = dogSounds[0];
-        if (!dogAudio.isPlaying)
+
+        if (dogAudio.clip != dogSounds[0])
         {
+            dogAudio.Stop();
+            dogAudio.clip = dogSounds[0];
             dogAudio.Play();
         }
 
@@ -205,11 +209,13 @@ public class DogAi : MonoBehaviour
 
         /*
         //Play Sound
-        dogAudio.clip = dogSounds[0];
-        if (!dogAudio.isPlaying)
+        if (dogAudio.clip != dogSounds[0])
         {
+            dogAudio.Stop();
+            dogAudio.clip = dogSounds[0];
             dogAudio.Play();
-        }*/
+        }
+        */
 
         agent.speed = crawlSpeed;
         MoveTo();
@@ -224,11 +230,13 @@ public class DogAi : MonoBehaviour
 
         /*
         //Play Sound
-        dogAudio.clip = dogSounds[0];
-        if (!dogAudio.isPlaying)
+        if (dogAudio.clip != dogSounds[0])
         {
+            dogAudio.Stop();
+            dogAudio.clip = dogSounds[0];
             dogAudio.Play();
-        }*/
+        }
+        */
 
         //Attach Bone to DogMouth
         AttachBone();
@@ -238,8 +246,8 @@ public class DogAi : MonoBehaviour
     {
         //Attach Bone to DogMouth
         bone.transform.SetParent(dogMouth);
-        bone.transform.localPosition = new Vector3(-.0201f,-.009f, -0.0278f);
-        bone.transform.localRotation = Quaternion.Euler(0,90,0);
+        bone.transform.localPosition = new Vector3(-.0201f, -.009f, -0.0278f);
+        bone.transform.localRotation = Quaternion.Euler(0, 90, 0);
         bone.GetComponent<Rigidbody>().useGravity = false;
 
         //Mark Bone as Held
@@ -254,11 +262,13 @@ public class DogAi : MonoBehaviour
 
         /*
         //Play Sound
-        dogAudio.clip = dogSounds[0];
-        if (!dogAudio.isPlaying)
+        if (dogAudio.clip != dogSounds[0])
         {
+            dogAudio.Stop();
+            dogAudio.clip = dogSounds[0];
             dogAudio.Play();
-        }*/
+        }
+        */
 
         agent.isStopped = true;
         agent.ResetPath();
