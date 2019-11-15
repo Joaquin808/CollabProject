@@ -135,6 +135,14 @@ public class DogAi : MonoBehaviour
         animState = 0;
         anim.SetInteger("AnimState", animState);
 
+        /*
+        //Play Sound
+        dogAudio.clip = dogSounds[0];
+        if (!dogAudio.isPlaying)
+        {
+            dogAudio.Play();
+        }*/
+
         agent.isStopped = true;
         agent.ResetPath();
     }
@@ -195,6 +203,14 @@ public class DogAi : MonoBehaviour
         animState = 3;
         anim.SetInteger("AnimState", animState);
 
+        /*
+        //Play Sound
+        dogAudio.clip = dogSounds[0];
+        if (!dogAudio.isPlaying)
+        {
+            dogAudio.Play();
+        }*/
+
         agent.speed = crawlSpeed;
         MoveTo();
     }
@@ -205,6 +221,14 @@ public class DogAi : MonoBehaviour
         //Set Animation
         animState = 4;
         anim.SetInteger("AnimState", animState);
+
+        /*
+        //Play Sound
+        dogAudio.clip = dogSounds[0];
+        if (!dogAudio.isPlaying)
+        {
+            dogAudio.Play();
+        }*/
 
         //Attach Bone to DogMouth
         AttachBone();
@@ -227,6 +251,14 @@ public class DogAi : MonoBehaviour
     {
         animState = 5;
         anim.SetInteger("AnimState", animState);
+
+        /*
+        //Play Sound
+        dogAudio.clip = dogSounds[0];
+        if (!dogAudio.isPlaying)
+        {
+            dogAudio.Play();
+        }*/
 
         agent.isStopped = true;
         agent.ResetPath();
