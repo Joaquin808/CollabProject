@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 5334780150904653565}
   - component: {fileID: 1603872243325690727}
   - component: {fileID: -4974989915254517489}
-  - component: {fileID: 7589353417615213640}
   m_Layer: 0
   m_Name: Watch Chip 4
   m_TagString: WatchChip
@@ -29,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 3780019399738654885}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.9713, y: 0.32122, z: -6.2742}
-  m_LocalScale: {x: 0.009447127, y: 0.009447127, z: 0.009447127}
+  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children:
   - {fileID: 2433248358626757611}
   m_Father: {fileID: 0}
@@ -82,19 +81,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryItemRef: {fileID: 11400000, guid: f0b44ff158dbde8408c54d03bd2e303e, type: 2}
   CanAddToInventory: 0
---- !u!65 &7589353417615213640
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3780019399738654885}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4133109660973211114
 GameObject:
   m_ObjectHideFlags: 0
