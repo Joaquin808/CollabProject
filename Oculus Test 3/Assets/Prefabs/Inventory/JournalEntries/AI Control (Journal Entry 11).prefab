@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 157074329313800886}
   - component: {fileID: 5334780150904653565}
   - component: {fileID: 1603872243325690727}
-  - component: {fileID: -3853739752751822818}
+  - component: {fileID: 469150884827183871}
   m_Layer: 0
-  m_Name: Watch Chip
+  m_Name: AI Control (Journal Entry 11)
   m_TagString: WatchChip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!114 &-3853739752751822818
+--- !u!114 &469150884827183871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10438b1b98278e048bfe56e612fef8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryItemRef: {fileID: 11400000, guid: 5e8036e8e3c7bbf4186d70160dd1e9e2, type: 2}
+  InventoryItemRef: {fileID: 11400000, guid: 4c1af438e3d563343bf28f2d57c43ad7, type: 2}
   CanAddToInventory: 0
 --- !u!1 &4133109660973211114
 GameObject:

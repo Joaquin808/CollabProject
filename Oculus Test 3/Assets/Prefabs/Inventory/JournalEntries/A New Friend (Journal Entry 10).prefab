@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 157074329313800886}
   - component: {fileID: 5334780150904653565}
   - component: {fileID: 1603872243325690727}
-  - component: {fileID: 214810572127267324}
+  - component: {fileID: -2411604470336324360}
   m_Layer: 0
-  m_Name: Watch Chip 3
+  m_Name: A New Friend (Journal Entry 10)
   m_TagString: WatchChip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3780019399738654885}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2.9713, y: 0.32122, z: -6.2742}
   m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
   m_Children:
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
---- !u!114 &214810572127267324
+--- !u!114 &-2411604470336324360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10438b1b98278e048bfe56e612fef8cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InventoryItemRef: {fileID: 11400000, guid: fac4f1be6695f3a4fac79a1db7dc4ff6, type: 2}
+  InventoryItemRef: {fileID: 11400000, guid: a2bd2826bfc294f43bb5ccd64a33b7f1, type: 2}
   CanAddToInventory: 0
 --- !u!1 &4133109660973211114
 GameObject:
