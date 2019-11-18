@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 5828563513066404281}
   - component: {fileID: 5580972488579945888}
   m_Layer: 0
-  m_Name: Area Light
+  m_Name: Point Light
   m_TagString: Lights
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -72,16 +72,16 @@ Light:
   m_GameObject: {fileID: 7007599177870829694}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9529412, g: 0.92941177, b: 0.8117647, a: 1}
-  m_Intensity: 2
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
