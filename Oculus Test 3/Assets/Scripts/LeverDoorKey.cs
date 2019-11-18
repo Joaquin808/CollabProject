@@ -7,6 +7,7 @@ public class LeverDoorKey : MonoBehaviour
     public GameObject target;
     public GameObject lever;
 
+
     void OnTriggerEnter(Collider other)
     {
 
@@ -14,6 +15,8 @@ public class LeverDoorKey : MonoBehaviour
         {
             target.GetComponent<SlidingDoor>().isLocked = false;
             lever.GetComponent<Rigidbody>().isKinematic = true;
+            GameObject.Find("OVRPlayerController").GetComponent<Objectives>().SetNextObjective();
+            
         }
     }
 }

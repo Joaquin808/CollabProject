@@ -65,7 +65,7 @@ public class PowerOn : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "CustomHandLeft" || other.gameObject.name == "CustomHandRight")
+        if (other.gameObject.name == "IndexColliderRight" || other.gameObject.name == "IndexColliderLeft")
         {
             leverClick.Play(0);
             isTriggered = true;

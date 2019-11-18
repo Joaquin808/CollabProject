@@ -58,7 +58,7 @@ public class AirFiltration : MonoBehaviour
         //solutionOne < dialPointed && dialPointed < solutionTwo is what I used to begin with
         if (80f < dialZ && dialZ < 100f)
         {
-            if (solutionTwo < dialPointed && dialPointed < solutionOne)
+            if (solutionOne < dialPointed && dialPointed < solutionTwo)
             {
                 SolutionFinder();
             }
@@ -73,7 +73,7 @@ public class AirFiltration : MonoBehaviour
         if (260f < dialZ && dialZ < 280f)
         {
             
-            if (solutionOne < dialPointed && dialPointed < solutionTwo)
+            if (solutionTwo < dialPointed && dialPointed < solutionOne)
             {
                 SolutionFinder();
             }

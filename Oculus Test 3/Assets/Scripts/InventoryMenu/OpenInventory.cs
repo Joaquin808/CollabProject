@@ -59,8 +59,8 @@ public class OpenInventory : MonoBehaviour
             IsActive = false;
             JournalCanvas.SetActive(false);
         }
-        /*
-        if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward), out Hit, 10000))
+        
+        /*if (Physics.Raycast(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward), out Hit, 10000))
         {
             Debug.DrawLine(PlayerCamera.transform.position, PlayerCamera.transform.TransformDirection(Vector3.forward) * 10000, Color.white, 2.5f);
             //Debug.Log("Rotation: " + LeftHand.transform.rotation.z);
