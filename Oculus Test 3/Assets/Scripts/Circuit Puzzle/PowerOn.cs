@@ -65,7 +65,7 @@ public class PowerOn : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Wrench" || other.gameObject.name == "Wrench(Clone)")
+        if (other.gameObject.name == "CustomHandLeft" || other.gameObject.name == "CustomHandRight")
         {
             leverClick.Play(0);
             isTriggered = true;

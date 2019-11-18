@@ -28710,16 +28710,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
-        type: 3}
-      propertyPath: m_Name
-      value: Sink
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7680530387332052566, guid: 0829889f1e24c0c41849b2506bc7f132,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -28789,6 +28779,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0040361183
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
+        type: 3}
+      propertyPath: m_Name
+      value: Sink
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6037961219135419623, guid: 0829889f1e24c0c41849b2506bc7f132,
         type: 3}
@@ -36918,16 +36918,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -36997,6 +36987,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.7793612
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -39894,21 +39894,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -39978,6 +39963,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 4.364631
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -41420,26 +41420,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967263
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41509,6 +41489,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.779361
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967263
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -43599,16 +43599,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43678,6 +43668,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.7793612
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -46975,11 +46975,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
-        type: 3}
-      propertyPath: m_Name
-      value: Locker (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 7855023712183507819, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47044,6 +47039,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0048173615
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
+        type: 3}
+      propertyPath: m_Name
+      value: Locker (1)
       objectReference: {fileID: 0}
     - target: {fileID: 2858987694641471345, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
@@ -47448,21 +47448,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (8)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47532,6 +47517,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.7793612
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -48121,11 +48121,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 3837268128367067246, guid: 5766a664b4b430c4da7a6ed9bb98e1ed,
-        type: 3}
-      propertyPath: m_Name
-      value: Power Station
-      objectReference: {fileID: 0}
     - target: {fileID: 2803456455634261183, guid: 5766a664b4b430c4da7a6ed9bb98e1ed,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -48145,6 +48140,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Spatialize
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3837268128367067246, guid: 5766a664b4b430c4da7a6ed9bb98e1ed,
+        type: 3}
+      propertyPath: m_Name
+      value: Power Station
       objectReference: {fileID: 0}
     - target: {fileID: 224035187307688573, guid: 5766a664b4b430c4da7a6ed9bb98e1ed,
         type: 3}
@@ -50397,15 +50397,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4228000929111607510, guid: 03b08c3f16fd8cf4fafe77801ee571db,
-        type: 3}
-      propertyPath: m_Name
-      value: PressurePlateDoor
-      objectReference: {fileID: 0}
     - target: {fileID: 7173108921070782615, guid: 03b08c3f16fd8cf4fafe77801ee571db,
         type: 3}
       propertyPath: m_Name
       value: PressurePlateDoorMesh
+      objectReference: {fileID: 0}
+    - target: {fileID: 4228000929111607510, guid: 03b08c3f16fd8cf4fafe77801ee571db,
+        type: 3}
+      propertyPath: m_Name
+      value: PressurePlateDoor
       objectReference: {fileID: 0}
     - target: {fileID: 4228000929111607506, guid: 03b08c3f16fd8cf4fafe77801ee571db,
         type: 3}
@@ -52682,11 +52682,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 1093502366856769998, guid: 53e818fcd1f088140b7afec1a143c7bb,
-        type: 3}
-      propertyPath: m_Name
-      value: Monitor
-      objectReference: {fileID: 0}
     - target: {fileID: 4140988676976739293, guid: 53e818fcd1f088140b7afec1a143c7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52751,6 +52746,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.39370075
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093502366856769998, guid: 53e818fcd1f088140b7afec1a143c7bb,
+        type: 3}
+      propertyPath: m_Name
+      value: Monitor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53e818fcd1f088140b7afec1a143c7bb, type: 3}
@@ -53026,6 +53026,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1894302466}
+    - target: {fileID: 4207874495757593079, guid: 257f256dc6e21fb498d4bfbc0daa5b99,
+        type: 3}
+      propertyPath: m_Type
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 257f256dc6e21fb498d4bfbc0daa5b99, type: 3}
 --- !u!1001 &1219213010
@@ -53652,11 +53657,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
-        type: 3}
-      propertyPath: m_Name
-      value: Locker (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 7855023712183507819, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -53721,6 +53721,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0048173615
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
+        type: 3}
+      propertyPath: m_Name
+      value: Locker (2)
       objectReference: {fileID: 0}
     - target: {fileID: 2858987694641471345, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
@@ -54273,11 +54278,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
-        type: 3}
-      propertyPath: m_Name
-      value: Locker
-      objectReference: {fileID: 0}
     - target: {fileID: 7855023712183507819, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -54342,6 +54342,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0048173615
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
+        type: 3}
+      propertyPath: m_Name
+      value: Locker
       objectReference: {fileID: 0}
     - target: {fileID: 2858987694641471345, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
@@ -56933,21 +56938,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -57017,6 +57007,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 5.7793612
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -57614,16 +57619,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -57693,6 +57688,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.779361
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -58280,11 +58285,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
-        type: 3}
-      propertyPath: m_Name
-      value: Locker (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 7855023712183507819, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -58349,6 +58349,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0048173615
+      objectReference: {fileID: 0}
+    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
+        type: 3}
+      propertyPath: m_Name
+      value: Locker (4)
       objectReference: {fileID: 0}
     - target: {fileID: 2858987694641471345, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
@@ -61925,21 +61930,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62009,6 +61999,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.7793612
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -62396,11 +62401,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 1451532494414577122, guid: 4f04a271569d69241ab3829f65a4bf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Bonsai Tree
-      objectReference: {fileID: 0}
     - target: {fileID: 2485908671722328049, guid: 4f04a271569d69241ab3829f65a4bf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62470,6 +62470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0037747743
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451532494414577122, guid: 4f04a271569d69241ab3829f65a4bf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Bonsai Tree
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f04a271569d69241ab3829f65a4bf8e, type: 3}
@@ -64630,11 +64635,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 7235893625963701980, guid: 184440a00f8c5be46bf28091eb17d2b4,
-        type: 3}
-      propertyPath: m_Name
-      value: Cigar Box
-      objectReference: {fileID: 0}
     - target: {fileID: 5922329385330971855, guid: 184440a00f8c5be46bf28091eb17d2b4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -64699,6 +64699,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.011812347
+      objectReference: {fileID: 0}
+    - target: {fileID: 7235893625963701980, guid: 184440a00f8c5be46bf28091eb17d2b4,
+        type: 3}
+      propertyPath: m_Name
+      value: Cigar Box
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 184440a00f8c5be46bf28091eb17d2b4, type: 3}
@@ -66087,11 +66092,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
-        type: 3}
-      propertyPath: m_Name
-      value: Locker (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 7855023712183507819, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66157,6 +66157,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.0048173615
       objectReference: {fileID: 0}
+    - target: {fileID: 6582573437017991544, guid: c39dc4ca06ff09147b56b042b9119624,
+        type: 3}
+      propertyPath: m_Name
+      value: Locker (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 2858987694641471345, guid: c39dc4ca06ff09147b56b042b9119624,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -66198,11 +66203,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 261085145118148322, guid: 07ad792fac4b30146991474612d9286f,
-        type: 3}
-      propertyPath: m_Name
-      value: Potted Plant
-      objectReference: {fileID: 0}
     - target: {fileID: 3874457246673990897, guid: 07ad792fac4b30146991474612d9286f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66272,6 +66272,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0048194905
+      objectReference: {fileID: 0}
+    - target: {fileID: 261085145118148322, guid: 07ad792fac4b30146991474612d9286f,
+        type: 3}
+      propertyPath: m_Name
+      value: Potted Plant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 07ad792fac4b30146991474612d9286f, type: 3}
@@ -67546,21 +67551,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 155003476}
     m_Modifications:
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_Name
-      value: Tall Table (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
-        type: 3}
-      propertyPath: m_NavMeshLayer
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3554150984050980691, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67630,6 +67620,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.y
       value: 5.0579524
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_Name
+      value: Tall Table (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 507139454782162240, guid: f17737bd67cd7f848a44fa9e0b8f6ec6,
+        type: 3}
+      propertyPath: m_NavMeshLayer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f17737bd67cd7f848a44fa9e0b8f6ec6, type: 3}
@@ -69461,16 +69466,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
-        type: 3}
-      propertyPath: m_Name
-      value: Sink (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7680530387332052566, guid: 0829889f1e24c0c41849b2506bc7f132,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -69540,6 +69535,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0036678577
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
+        type: 3}
+      propertyPath: m_Name
+      value: Sink (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6687247764366279749, guid: 0829889f1e24c0c41849b2506bc7f132,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6037961219135419623, guid: 0829889f1e24c0c41849b2506bc7f132,
         type: 3}
@@ -73244,11 +73249,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1451532494414577122, guid: 4f04a271569d69241ab3829f65a4bf8e,
-        type: 3}
-      propertyPath: m_Name
-      value: Bonsai Tree (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 2485908671722328049, guid: 4f04a271569d69241ab3829f65a4bf8e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -73318,6 +73318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0059037996
+      objectReference: {fileID: 0}
+    - target: {fileID: 1451532494414577122, guid: 4f04a271569d69241ab3829f65a4bf8e,
+        type: 3}
+      propertyPath: m_Name
+      value: Bonsai Tree (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f04a271569d69241ab3829f65a4bf8e, type: 3}
