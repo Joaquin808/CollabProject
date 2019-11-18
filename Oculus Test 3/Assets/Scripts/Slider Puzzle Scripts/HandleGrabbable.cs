@@ -10,7 +10,7 @@ public class HandleGrabbable : OVRGrabbable
     public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
     {
         base.GrabBegin(hand, grabPoint);
-        lever.GetComponent<Rigidbody>().useGravity = false;
+        //lever.GetComponent<Rigidbody>().useGravity = false;
     }
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
@@ -30,7 +30,7 @@ public class HandleGrabbable : OVRGrabbable
         rbhandle.velocity = Vector3.zero;
         rbhandle.angularVelocity = Vector3.zero;
 
-        lever.GetComponent<Rigidbody>().useGravity = true;
+        //lever.GetComponent<Rigidbody>().useGravity = true;
     }
 
     private void Update()
