@@ -20,6 +20,14 @@ public class Objectives : MonoBehaviour
         ObjectiveText.text = ObjectivesList[ObjectiveNumber];
     }
 
+    void Update()
+    {
+        if (ObjectiveNumber == 6)
+        {
+            SetNextObjective();
+        }
+    }
+
     public void SetNextObjective()
     {
         ObjectiveNumber++;
@@ -34,6 +42,11 @@ public class Objectives : MonoBehaviour
         }
 
         if (ObjectiveNumber == 5 && other.gameObject.name == "EnterHouseObjective")
+        {
+            SetNextObjective();
+        }
+
+        if (ObjectiveNumber == 9 && other.gameObject.name == "GetIntoLockedRoomObjective")
         {
             SetNextObjective();
         }

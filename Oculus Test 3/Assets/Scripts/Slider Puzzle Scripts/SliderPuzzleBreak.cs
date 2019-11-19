@@ -34,7 +34,7 @@ public class SliderPuzzleBreak : MonoBehaviour
                 alerts.DeactivateAlert(AlertType);
                 broken = false;
                 Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-                if (ObjectiveScript.ObjectiveNumber == 12)
+                if (ObjectiveScript.ObjectiveNumber == 11)
                 {
                     ObjectiveScript.SetNextObjective();
                 }
@@ -61,9 +61,9 @@ public class SliderPuzzleBreak : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-            if (other.gameObject == needle2)
-            {
-                 OnFix();
-            }
+        if (other.gameObject == needle2)
+        {
+            OnFix();
+        }
     }
 }

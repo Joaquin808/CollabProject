@@ -71,7 +71,7 @@ public class TemperatureSlider : MonoBehaviour
             leverClick.Play(0);
             stoppedValue = slider.transform.localPosition.x;
             Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-            if (ObjectiveScript.ObjectiveNumber == 12 || SolvedFirstTime)
+            if (ObjectiveScript.ObjectiveNumber == 11 || SolvedFirstTime)
             {
                 if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
                 {
