@@ -6,6 +6,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
 {
     public GameObject grabbableCircuit;
     Renderer rend;
+    public bool SolvedFirstTime = false;
 
     public PowerOn powerScript;
 
@@ -18,12 +19,21 @@ public class ObjectVisibilityCircuit : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == grabbableCircuit)
+        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+        if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
         {
-            rend.enabled = true;
-            Destroy(other.gameObject);
-            powerScript.circuitsConnected++;
-            Debug.Log(powerScript.circuitsConnected);
+            if (other.gameObject == grabbableCircuit)
+            {
+                rend.enabled = true;
+                Destroy(other.gameObject);
+                powerScript.circuitsConnected++;
+                Debug.Log(powerScript.circuitsConnected);
+                if (powerScript.powerEnabled)
+                {
+                    SolvedFirstTime = true;
+                }
+            }
         }
+        
     }
 }

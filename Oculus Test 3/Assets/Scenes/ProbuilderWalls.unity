@@ -51136,6 +51136,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: InventoryItemRef
+      value: 
+      objectReference: {fileID: 11400000, guid: fac4f1be6695f3a4fac79a1db7dc4ff6,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9efdc8f7ca624be41ab268879ffd0759, type: 3}
 --- !u!1 &1321685225
@@ -57475,7 +57481,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-912178
+  m_Name: pb_Mesh-105454
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

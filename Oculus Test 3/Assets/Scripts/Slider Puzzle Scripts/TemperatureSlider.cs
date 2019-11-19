@@ -8,6 +8,7 @@ public class TemperatureSlider : MonoBehaviour
 {
     private bool isStopped;
     public bool puzzleComplete = false;
+    bool SolvedFirstTime;
 
     float x, y, z;
     //float maxNeedleRotation = 0f;
@@ -69,17 +70,22 @@ public class TemperatureSlider : MonoBehaviour
         {
             leverClick.Play(0);
             stoppedValue = slider.transform.localPosition.x;
-            if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
+            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+            if (ObjectiveScript.ObjectiveNumber == 12 || SolvedFirstTime)
             {
-                isStopped = true;
-                sliderBreak.puzzleCompleteCheck++;
-                needle.transform.Rotate(rotation, Space.Self);
-                leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
+                if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
+                {
+                    isStopped = true;
+                    sliderBreak.puzzleCompleteCheck++;
+                    needle.transform.Rotate(rotation, Space.Self);
+                    leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
+                }
+                else
+                {
+                    Debug.Log("Incorrect value");
+                }
             }
-            else
-            {
-                Debug.Log("Incorrect value");
-            }
+           
             //Use to check if lever is working
         }
     }

@@ -15,6 +15,7 @@ public class ObjectVisibility : MonoBehaviour
     public Alerts AlertSystem;
     int TypeOfAlert = 1;
     public Pickup InventoryItemRef;
+    bool SolvedFirstTime = false;
 
     void Start()
     {
@@ -38,25 +39,35 @@ public class ObjectVisibility : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        if (!collisionList.Contains(collision.gameObject.name))
+        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+        if (ObjectiveScript.ObjectiveNumber == 7 || SolvedFirstTime)
         {
-            collisionList.Add(collision.gameObject.name);
-        }
-
-        if (collisionList.Contains(String) && collisionList.Contains("Welder"))
-        {
-
-            isVisible = true;
-            collisionList.Remove(String);
-            collisionList.Remove("Welder");
-            destroyedPipe = GameObject.Find(String);
-            Destroy(destroyedPipe);
-            pipesFixed++;
-            if (pipesFixed == 7)
+            if (!collisionList.Contains(collision.gameObject.name))
             {
-                AlertSystem.DeactivateAlert(TypeOfAlert);
+                collisionList.Add(collision.gameObject.name);
+            }
+
+            if (collisionList.Contains(String) && collisionList.Contains("Welder"))
+            {
+
+                isVisible = true;
+                collisionList.Remove(String);
+                collisionList.Remove("Welder");
+                destroyedPipe = GameObject.Find(String);
+                Destroy(destroyedPipe);
+                pipesFixed++;
+                if (pipesFixed == 7)
+                {
+                    AlertSystem.DeactivateAlert(TypeOfAlert);
+                    SolvedFirstTime = true;
+                    if (ObjectiveScript.ObjectiveNumber == 8)
+                    {
+                        ObjectiveScript.SetNextObjective();
+                    }
+                }
             }
         }
+       
     }
 
 

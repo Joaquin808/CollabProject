@@ -6,6 +6,7 @@ public class SliderPuzzleBreak : MonoBehaviour
 {
     public int AlertType = 3;
     public int puzzleCompleteCheck = 0;
+    public bool SolvedFirstTime = false;
 
     public Alerts alerts; //call to alerts script
     public GameObject needle, needle2;
@@ -29,9 +30,16 @@ public class SliderPuzzleBreak : MonoBehaviour
         {
             OnBreak();
             if (puzzleCompleteCheck >= 3)
+            {
+                alerts.DeactivateAlert(AlertType);
+                broken = false;
+                Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+                if (ObjectiveScript.ObjectiveNumber == 12)
                 {
-                    alerts.DeactivateAlert(AlertType);
+                    ObjectiveScript.SetNextObjective();
                 }
+            }
+                
         }
     }
 
