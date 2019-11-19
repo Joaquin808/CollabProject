@@ -12,6 +12,10 @@ public class BoneLeavePlayer : MonoBehaviour
         {
             GameObject.Find("Dog").GetComponent<DogAi>().boneHeldPlayer = false;
         }
+
+        if (this.transform.position.y <= -2) {
+            GameObject.Find("Dog").GetComponent<DogAi>().CurrentState = DogAi.DogState.GRAB;
+        }
     }
 
 }
