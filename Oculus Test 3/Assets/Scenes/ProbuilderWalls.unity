@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AlertType: 3
   puzzleCompleteCheck: 0
+  SolvedFirstTime: 0
   alerts: {fileID: 1166617186}
   needle: {fileID: 2925613647945582291}
   needle2: {fileID: 1303865762}
@@ -38751,8 +38752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dial: {fileID: 457152340}
   airFilt: {fileID: 668764986}
-  solved: 0
   AlertSystem: {fileID: 1166617186}
+  solved: 0
 --- !u!54 &668764991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -52994,6 +52995,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1468036499 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7620599146787371031, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 1936586986078158282}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1468036500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1468036499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd432cedfc11ce44b3ae4f64a3dc0e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1472922500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -66383,6 +66402,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDoorKey
       objectReference: {fileID: 0}
+    - target: {fileID: 6804454541594897833, guid: 3dc618395b63b1342b1d88cd3fe810b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7508941498706583482, guid: 3dc618395b63b1342b1d88cd3fe810b9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66447,6 +66471,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6106241057871641493, guid: 3dc618395b63b1342b1d88cd3fe810b9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3453335700425630505, guid: 3dc618395b63b1342b1d88cd3fe810b9,
         type: 3}
@@ -66936,6 +66965,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrandpasDoorKey
       objectReference: {fileID: 0}
+    - target: {fileID: 8812763852927155955, guid: 0d73bd5d8dcac024080f51086ab1365b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 5482679344876145888, guid: 0d73bd5d8dcac024080f51086ab1365b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -66996,6 +67030,11 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 41364310}
+    - target: {fileID: 8115139844439976143, guid: 0d73bd5d8dcac024080f51086ab1365b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d73bd5d8dcac024080f51086ab1365b, type: 3}
 --- !u!1 &3650959581104395011
@@ -68658,6 +68697,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: HouseBathroomKey
       objectReference: {fileID: 0}
+    - target: {fileID: 2703027585543881747, guid: 50dd1cbef15f1f340a0329180880aaa8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1429977116232529408, guid: 50dd1cbef15f1f340a0329180880aaa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -68712,6 +68756,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3409484393590968879, guid: 50dd1cbef15f1f340a0329180880aaa8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50dd1cbef15f1f340a0329180880aaa8, type: 3}

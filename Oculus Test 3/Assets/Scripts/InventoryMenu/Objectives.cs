@@ -32,5 +32,10 @@ public class Objectives : MonoBehaviour
         {
             SetNextObjective();
         }
+
+        if (ObjectiveNumber == 5 && other.gameObject.name == "EnterHouseObjective")
+        {
+            SetNextObjective();
+        }
     }
 }
