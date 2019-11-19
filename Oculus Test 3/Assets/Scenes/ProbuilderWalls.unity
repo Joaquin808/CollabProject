@@ -986,7 +986,7 @@ PrefabInstance:
     - target: {fileID: 4680728736078033332, guid: a08cafe89448bb440bb1a60fb8568d05,
         type: 3}
       propertyPath: m_RootOrder
-      value: 123
+      value: 124
       objectReference: {fileID: 0}
     - target: {fileID: 4680728736078033332, guid: a08cafe89448bb440bb1a60fb8568d05,
         type: 3}
@@ -29352,7 +29352,7 @@ GameObject:
   - component: {fileID: 65031016}
   - component: {fileID: 65031020}
   - component: {fileID: 65031021}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Power Puzzle Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29743,11 +29743,6 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Switch Two
-      objectReference: {fileID: 0}
     - target: {fileID: 7724070798053947392, guid: cc316456bdf3a0d48ac65867f73e19ad,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -29832,6 +29827,11 @@ PrefabInstance:
     - target: {fileID: 1599275665, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Switch Two
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1206722445, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
@@ -30048,6 +30048,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: The Dome (Journal Entry 1)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30102,11 +30107,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: The Dome (Journal Entry 1)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -31296,6 +31296,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: The Idea (Journal Entry 2)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31350,11 +31355,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: The Idea (Journal Entry 2)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -33925,11 +33925,6 @@ PrefabInstance:
       propertyPath: speed
       value: 0.75
       objectReference: {fileID: 0}
-    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Switch One
-      objectReference: {fileID: 0}
     - target: {fileID: 7724070798053947392, guid: cc316456bdf3a0d48ac65867f73e19ad,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -34014,6 +34009,11 @@ PrefabInstance:
     - target: {fileID: 1599275665, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Switch One
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1206722445, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
@@ -35099,6 +35099,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Inhospitable (Journal Entry 8)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35153,11 +35158,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Inhospitable (Journal Entry 8)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -35383,6 +35383,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Goodbye (Journal Entry 12)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35437,11 +35442,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Goodbye (Journal Entry 12)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -46379,32 +46379,32 @@ PrefabInstance:
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 80.218
+      value: 71.985
       objectReference: {fileID: 0}
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.3366953
+      value: -0.222
       objectReference: {fileID: 0}
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 45.207
+      value: 36.73
       objectReference: {fileID: 0}
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.52581334
       objectReference: {fileID: 0}
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -1
+      value: -0.8506
       objectReference: {fileID: 0}
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
@@ -46424,12 +46424,12 @@ PrefabInstance:
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -63.446003
       objectReference: {fileID: 0}
     - target: {fileID: 6888984970009840132, guid: 7bd18f8ec573dbb4ba954e0171feb6e8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -180
+      value: -180.00002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd18f8ec573dbb4ba954e0171feb6e8, type: 3}
@@ -48354,6 +48354,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Dome Completion (Journal Entry 6)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48408,11 +48413,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Dome Completion (Journal Entry 6)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -51490,6 +51490,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: The Computer (Journal Entry 3)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51544,11 +51549,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: The Computer (Journal Entry 3)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -54008,7 +54008,7 @@ PrefabInstance:
     - target: {fileID: 1916326286626862496, guid: 0e542322f5579084da778b04e68f0061,
         type: 3}
       propertyPath: m_RootOrder
-      value: 124
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 1916326286626862496, guid: 0e542322f5579084da778b04e68f0061,
         type: 3}
@@ -56427,6 +56427,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Survival (Journal Entry 5)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56481,11 +56486,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Survival (Journal Entry 5)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -57135,6 +57135,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Losing the Fight (Journal Entry 4)
+      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -57189,11 +57194,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Losing the Fight (Journal Entry 4)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -63861,11 +63861,6 @@ PrefabInstance:
       propertyPath: speed
       value: 1.25
       objectReference: {fileID: 0}
-    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Switch Three
-      objectReference: {fileID: 0}
     - target: {fileID: 7724070798053947392, guid: cc316456bdf3a0d48ac65867f73e19ad,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -63950,6 +63945,11 @@ PrefabInstance:
     - target: {fileID: 1599275665, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Constraints
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Switch Three
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1206722445, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
