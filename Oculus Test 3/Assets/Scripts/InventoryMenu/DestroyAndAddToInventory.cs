@@ -5,7 +5,7 @@ using UnityEngine;
 public class DestroyAndAddToInventory : MonoBehaviour
 {
     public Pickup InventoryItemRef;
-    public bool CanAddToInventory;
+    //public bool CanAddToInventory;
 
     private void OnTriggerEnter(Collider other)
     {
