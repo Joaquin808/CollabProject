@@ -151,6 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AlertType: 3
   puzzleCompleteCheck: 0
+  SolvedFirstTime: 0
   alerts: {fileID: 1166617186}
   needle: {fileID: 2925613647945582291}
   needle2: {fileID: 1303865762}
@@ -29742,6 +29743,11 @@ PrefabInstance:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Switch Two
+      objectReference: {fileID: 0}
     - target: {fileID: 7724070798053947392, guid: cc316456bdf3a0d48ac65867f73e19ad,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -29826,11 +29832,6 @@ PrefabInstance:
     - target: {fileID: 1599275665, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Constraints
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Switch Two
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1206722445, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
@@ -30047,11 +30048,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: The Dome (Journal Entry 1)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30106,6 +30102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: The Dome (Journal Entry 1)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -31295,11 +31296,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: The Idea (Journal Entry 2)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -31354,6 +31350,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: The Idea (Journal Entry 2)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -32280,7 +32281,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-917136
+  m_Name: pb_Mesh-91662
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33924,6 +33925,11 @@ PrefabInstance:
       propertyPath: speed
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Switch One
+      objectReference: {fileID: 0}
     - target: {fileID: 7724070798053947392, guid: cc316456bdf3a0d48ac65867f73e19ad,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -34008,11 +34014,6 @@ PrefabInstance:
     - target: {fileID: 1599275665, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Constraints
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Switch One
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1206722445, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
@@ -35098,11 +35099,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Inhospitable (Journal Entry 8)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35157,6 +35153,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Inhospitable (Journal Entry 8)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -35382,11 +35383,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Goodbye (Journal Entry 12)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -35441,6 +35437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Goodbye (Journal Entry 12)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -38751,8 +38752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dial: {fileID: 457152340}
   airFilt: {fileID: 668764986}
-  solved: 0
   AlertSystem: {fileID: 1166617186}
+  solved: 0
 --- !u!54 &668764991
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -47953,11 +47954,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Dome Completion (Journal Entry 6)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -48012,6 +48008,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Dome Completion (Journal Entry 6)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -51076,11 +51077,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: The Computer (Journal Entry 3)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -51135,6 +51131,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: The Computer (Journal Entry 3)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -52837,7 +52838,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-918956
+  m_Name: pb_Mesh-93502
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -55951,11 +55952,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Survival (Journal Entry 5)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56010,6 +56006,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Survival (Journal Entry 5)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -56659,11 +56660,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1242963067}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Losing the Fight (Journal Entry 4)
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -56718,6 +56714,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Losing the Fight (Journal Entry 4)
       objectReference: {fileID: 0}
     - target: {fileID: 6298572962011497817, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
@@ -57481,7 +57482,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-105454
+  m_Name: pb_Mesh-87484
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -63306,6 +63307,11 @@ PrefabInstance:
       propertyPath: speed
       value: 1.25
       objectReference: {fileID: 0}
+    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
+        type: 3}
+      propertyPath: m_Name
+      value: Switch Three
+      objectReference: {fileID: 0}
     - target: {fileID: 7724070798053947392, guid: cc316456bdf3a0d48ac65867f73e19ad,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -63390,11 +63396,6 @@ PrefabInstance:
     - target: {fileID: 1599275665, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
       propertyPath: m_Constraints
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6852298296151102862, guid: cc316456bdf3a0d48ac65867f73e19ad,
-        type: 3}
-      propertyPath: m_Name
-      value: Switch Three
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1206722445, guid: cc316456bdf3a0d48ac65867f73e19ad, type: 3}
@@ -63666,6 +63667,137 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 747226380}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1983415510
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983415508}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 1
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 10
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1983415511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983415508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ad5f65a81a54e4e87bf3055bbd8fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  genAudio: {fileID: 1983415510}
+  genSounds:
+  - {fileID: 8300000, guid: a916771cdc3479144b5e8f24f397fc01, type: 3}
+  - {fileID: 8300000, guid: 29c650efec4d5f14b86848a1db85353d, type: 3}
+  - {fileID: 8300000, guid: 24cde808d5fd17a49bc793bfbecee161, type: 3}
+  - {fileID: 8300000, guid: b217046b34debbd4db486ab5dcd9ddc1, type: 3}
+  - {fileID: 8300000, guid: 61e62df597f47ed409591698d577b199, type: 3}
+  - {fileID: 8300000, guid: 1f0d0b44e33ccc84eafd81ec88f0e5d1, type: 3}
+  - {fileID: 8300000, guid: c7403e84d61eb8d4eaafe3c6cdae8623, type: 3}
+  - {fileID: 8300000, guid: b3d5852e83037514eb1baaf5a108f2b9, type: 3}
+  - {fileID: 8300000, guid: aef1649fb66dbab45bca713270f26e51, type: 3}
+  - {fileID: 8300000, guid: da8d8358aa1aef84e9cc9b2c11974ce6, type: 3}
+  - {fileID: 8300000, guid: a61730818ef33eb45bd532f166d8902d, type: 3}
+  - {fileID: 8300000, guid: 182cff26b8dd9284fa51f00ec7991f89, type: 3}
+  - {fileID: 8300000, guid: ffd33d679cb959749a2c4af5818f4424, type: 3}
+  - {fileID: 8300000, guid: 4bbfd422aabb8424898e4b00bed90f6c, type: 3}
+  - {fileID: 8300000, guid: 8c504b8e3dd7fa14cae930248da52650, type: 3}
+  - {fileID: 8300000, guid: 89dc8e0dda314484895df526ae844a4a, type: 3}
+  - {fileID: 8300000, guid: 59e10876fe92d904f9d329dfdcfaf6f4, type: 3}
+  - {fileID: 8300000, guid: 8abd06591a82abe468d33f2ef2e8b641, type: 3}
+  - {fileID: 8300000, guid: 01b85e1c4e41679438d2c9de81b02fdc, type: 3}
+  - {fileID: 8300000, guid: 557a85f24c110fb41868ccb769d40d15, type: 3}
+  - {fileID: 8300000, guid: d5a71f4bbb39f22429b129898a854a8c, type: 3}
 --- !u!114 &1983415514
 MonoBehaviour:
   m_ObjectHideFlags: 0
