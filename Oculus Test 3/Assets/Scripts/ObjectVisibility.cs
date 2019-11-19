@@ -42,17 +42,17 @@ public class ObjectVisibility : MonoBehaviour
         Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
         if (ObjectiveScript.ObjectiveNumber == 7 || SolvedFirstTime)
         {
+            PrintList();
             if (!collisionList.Contains(collision.gameObject.name))
             {
                 collisionList.Add(collision.gameObject.name);
             }
 
-            if (collisionList.Contains(String) && collisionList.Contains("Welder"))
+            if (collisionList.Contains(String) && collisionList.Contains("Wrench"))
             {
-
                 isVisible = true;
                 collisionList.Remove(String);
-                collisionList.Remove("Welder");
+                collisionList.Remove("Wrench");
                 destroyedPipe = GameObject.Find(String);
                 Destroy(destroyedPipe);
                 pipesFixed++;
@@ -60,7 +60,7 @@ public class ObjectVisibility : MonoBehaviour
                 {
                     AlertSystem.DeactivateAlert(TypeOfAlert);
                     SolvedFirstTime = true;
-                    if (ObjectiveScript.ObjectiveNumber == 8)
+                    if (ObjectiveScript.ObjectiveNumber == 7)
                     {
                         ObjectiveScript.SetNextObjective();
                     }
