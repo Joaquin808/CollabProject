@@ -23,7 +23,9 @@ public class DogAi : MonoBehaviour
     private float runSpeed;                         //RunSpeed based on WalkSpeed
     private float crawlSpeed;		                //CrawlSpeed based on WalkSpeed
     private Vector3 boneLocation;                   //Bone Location
-    private Vector3 playerLocation;                 //Player Location
+    private Vector3 playerLocation;                 //Player Location\
+
+    float timer = 0;
 
     void Start()
     {
@@ -57,9 +59,18 @@ public class DogAi : MonoBehaviour
         if (boneHeld == false && boneHeldPlayer == false)
         {
             //If near bone grab bone
-            if (Vector3.Distance(this.transform.position, boneLocation) <= agent.stoppingDistance && boneHeldPlayer == false)
+
+            if (Vector3.Distance(this.transform.position, boneLocation) <= agent.stoppingDistance)
             {
-                CurrentState = DogState.GRAB;
+                if (boneHeldPlayer == false)
+                {
+                    timer += Time.deltaTime;
+                    if (timer >= 15)
+                    {
+                        timer = 0;
+                        CurrentState = DogState.GRAB;
+                    }
+                }
             }
             else
             {
@@ -71,7 +82,8 @@ public class DogAi : MonoBehaviour
         }
         else if (boneHeldPlayer == true)
         {
-            CurrentState = DogState.IDLE;
+            //CurrentState = DogState.IDLE;
+            RunOrWalk();
 
             //If bone held
         }
@@ -279,7 +291,7 @@ public class DogAi : MonoBehaviour
 
         //drop bone from mouth
         //bone.GetComponent<Rigidbody>().AddForce(this.transform.forward * 0.1f);
-        boneHeldPlayer = true;
+        //boneHeldPlayer = true;
     }
 
     //Crawl Back Trigger
