@@ -11,12 +11,14 @@ public class SlidingDoor : MonoBehaviour
     public bool isLocked = false;           //Is Key Owned by Player
     Vector3 startPos;
     Vector3 endPos;
+    SoundEffects soundFX;
 
     // Start is called before the first frame update
     void Start()
     {
         startPos = this.transform.position;
         endPos = startPos - new Vector3(0, 8, 0);
+        
     }
 
     // Update is called once per frame
@@ -45,6 +47,12 @@ public class SlidingDoor : MonoBehaviour
                 {
                     moveDirection = Vector3.down;
                     isMoving = true;
+                    if (soundFX.genAudio.clip != soundFX.genSounds[0])
+                    {
+                        soundFX.genAudio.Stop();
+                        soundFX.genAudio.clip = soundFX.genSounds[5];
+                        soundFX.genAudio.Play();
+                    }
                 }
                 else
                 {
@@ -58,6 +66,12 @@ public class SlidingDoor : MonoBehaviour
                 {
                     moveDirection = Vector3.up;
                     isMoving = true;
+                    if (soundFX.genAudio.clip != soundFX.genSounds[0])
+                    {
+                        soundFX.genAudio.Stop();
+                        soundFX.genAudio.clip = soundFX.genSounds[4];
+                        soundFX.genAudio.Play();
+                    }
                 }
                 else
                 {

@@ -14,6 +14,7 @@ public class PowerOn : MonoBehaviour
     bool isMoving;
     public Alerts AlertSystem;
     public GameObject button;
+    SoundEffects soundFX;
 
     Vector3 moveDirection = Vector3.down;
     Vector3 startPos;
