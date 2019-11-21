@@ -47,12 +47,12 @@ public class SlidingDoor : MonoBehaviour
                 {
                     moveDirection = Vector3.down;
                     isMoving = true;
-                    if (soundFX.genAudio.clip != soundFX.genSounds[0])
+                    /*if (soundFX.genAudio.clip != soundFX.genSounds[0])
                     {
                         soundFX.genAudio.Stop();
                         soundFX.genAudio.clip = soundFX.genSounds[5];
                         soundFX.genAudio.Play();
-                    }
+                    }*/
                 }
                 else
                 {
@@ -66,12 +66,12 @@ public class SlidingDoor : MonoBehaviour
                 {
                     moveDirection = Vector3.up;
                     isMoving = true;
-                    if (soundFX.genAudio.clip != soundFX.genSounds[0])
+                   /*( if (soundFX.genAudio.clip != soundFX.genSounds[0])
                     {
                         soundFX.genAudio.Stop();
                         soundFX.genAudio.clip = soundFX.genSounds[4];
                         soundFX.genAudio.Play();
-                    }
+                    }*/
                 }
                 else
                 {
@@ -83,6 +83,7 @@ public class SlidingDoor : MonoBehaviour
             //Move Door
             if (isMoving)
             {
+                Debug.Log("Moving:" + isMoving);
                 transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
             }
 
@@ -92,9 +93,12 @@ public class SlidingDoor : MonoBehaviour
     //Player Detection Trigger
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
         {
             isOpen = true;
+            Debug.Log(isOpen);
+
         }
     }
 

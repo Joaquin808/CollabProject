@@ -39,10 +39,11 @@ public class ObjectVisibility : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
+        Debug.Log(collision);
         Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
         if (ObjectiveScript.ObjectiveNumber == 7 || SolvedFirstTime)
         {
-            PrintList();
+            //PrintList();
             if (!collisionList.Contains(collision.gameObject.name))
             {
                 collisionList.Add(collision.gameObject.name);
@@ -50,6 +51,7 @@ public class ObjectVisibility : MonoBehaviour
 
             if (collisionList.Contains(String) && collisionList.Contains("Wrench"))
             {
+                Debug.Log("Made collision.");
                 isVisible = true;
                 collisionList.Remove(String);
                 collisionList.Remove("Wrench");
@@ -80,9 +82,9 @@ public class ObjectVisibility : MonoBehaviour
 
         }
 
-        if (collision.gameObject.tag == "Welder")
+        if (collision.gameObject.tag == "Wrench")
         {
-            collisionList.Remove("Welder");
+            collisionList.Remove("Wrench");
         }
 
     }
