@@ -27,7 +27,7 @@ public class AICore : MonoBehaviour
         {
             if (TalkedToAIFirstTime == false && ObjScript.ObjectiveNumber == 6)
             {
-                SFXScript.genAudio.Play(SFXScript.genSounds[22]);
+                //SFXScript.genAudio.Play(SFXScript.genSounds[22]);
                 ObjScript.SetNextObjective();
             }
         }
