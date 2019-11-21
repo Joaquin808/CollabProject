@@ -5,11 +5,12 @@ using UnityEngine.UI;
 
 public class Objectives : MonoBehaviour
 {
-    string[] ObjectivesList = {"Find a key to get out of the room", "Find the Power Switch and activate it", "Find the wrench", "Use the wrench to get access to the Power Station",
-        "Fix the Power Station", "Exit the Bunker and find an entrance to the House", "Talk to the AI",  "Fix the Water Station (Dome)", "Fix Air Filtration (Dome)",
-        "Find a way to access the locked room (House)", "Pick up the Temperature Needle", "Fix the Temperature Station (House)", "Find a way to open the main locker (Bunker)",
-        "Pick up the key and get access to Grandpa's room", "Use the Radio", "Find a way to open Grandpa's safe", "Listen to Grandpa's message",
-        "Find all the components for the Suit", "Destroy AI Core", "Escape the Dome"};
+    string[] ObjectivesList = {"Find a key to get out of the room" /*0, done*/, "Find the Power Switch and activate it"/*1, done*/, "Find the wrench"/*2, done*/,
+        "Use the wrench to get access to the Power Station"/*3, done*/, "Fix the Power Station"/*4, done*/, "Exit the Bunker and find an entrance to the House"/*5 done*/,
+        "Talk to the AI"/*6, done*/,  "Fix the Water Station (Dome)"/*7, done*/, "Fix Air Filtration (Dome)"/*8, done*/, "Find a way to access the locked room (House)"/*9, need to fix pressure plate*/,
+        "Pick up the Temperature Needle"/*10, done*/, "Fix the Temperature Station (House)"/*11, done*/, "Find a way to open the main locker (Bunker)"/*12, need to do*/,
+        "Pick up the key and get access to Grandpa's room"/*13, need to do*/, "Use the Radio"/*14, need to do*/, "Find a way to open Grandpa's safe"/*15, Need to do*/,
+        "Listen to Grandpa's message"/*16, need to do*/,"Find all the components for the Suit"/*17, need to do*/, "Destroy AI Core"/*18, need to do*/, "Escape the Dome"/*19, need to do*/};
 
     public Text ObjectiveText;
     public int ObjectiveNumber = 0;

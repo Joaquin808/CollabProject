@@ -4,7 +4,6 @@ using System.Collections;
 
 public class DogAi : MonoBehaviour
 {
-
     public enum DogState { IDLE, WALK, RUN, CRAWL, GRAB, DROP };    //All possible states for dog 
     public DogState CurrentState = DogState.IDLE;   //Current state of dog
     public Transform dogMouth;                      //Reference to Mouth Bone
@@ -14,8 +13,8 @@ public class DogAi : MonoBehaviour
     public GameObject playerRef;                    //Reference to Player
     public bool boneHeld = true;					//Is Bone Attached
     public bool boneHeldPlayer = false;             //Is Bone Held by Player
-    public AudioSource dogAudio;
-    public AudioClip[] dogSounds;
+    public AudioSource dogAudio;                    //Reference to Audio Source Component
+    public AudioClip[] dogSounds;                   //Reference to List of Audio Clips
 
     private int animState = 0;                      //AnimState Controller
     private float walkSpeed = 2.5f;                 //WalkSpeed
@@ -23,7 +22,7 @@ public class DogAi : MonoBehaviour
     private float runSpeed;                         //RunSpeed based on WalkSpeed
     private float crawlSpeed;		                //CrawlSpeed based on WalkSpeed
     private Vector3 boneLocation;                   //Bone Location
-    private Vector3 playerLocation;                 //Player Location\
+    private Vector3 playerLocation;                 //Player Location
 
     float timer = 0;
 
@@ -150,11 +149,13 @@ public class DogAi : MonoBehaviour
 
         /*
         //Play Sound
-        dogAudio.clip = dogSounds[0];
-        if (!dogAudio.isPlaying)
+        if (dogAudio.clip != dogSounds[0])
         {
+            dogAudio.Stop();
+            dogAudio.clip = dogSounds[0];
             dogAudio.Play();
-        }*/
+        }
+        */
 
         agent.isStopped = true;
         agent.ResetPath();
