@@ -5,7 +5,7 @@ using UnityEngine;
 public class SlidingDoor : MonoBehaviour
 {
     Vector3 moveDirection = Vector3.down;   //Door starts up
-    float moveSpeed = 4.5f;
+    float moveSpeed = 6f;
     bool isOpen = false;                    //door starts closed
     bool isMoving = false;                  //is door in motion
     public bool isLocked = false;           //Is Key Owned by Player
