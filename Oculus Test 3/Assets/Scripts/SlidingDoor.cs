@@ -83,7 +83,7 @@ public class SlidingDoor : MonoBehaviour
             //Move Door
             if (isMoving)
             {
-                Debug.Log("Moving:" + isMoving);
+                //Debug.Log("Moving:" + isMoving);
                 transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
             }
 
@@ -97,8 +97,6 @@ public class SlidingDoor : MonoBehaviour
         if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
         {
             isOpen = true;
-            Debug.Log(isOpen);
-
         }
     }
 
