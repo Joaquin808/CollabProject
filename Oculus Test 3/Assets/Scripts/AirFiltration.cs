@@ -5,14 +5,13 @@ using UnityEngine;
 public class AirFiltration : MonoBehaviour
 {
     public GameObject dial, airFilt;
-    public Alerts AlertSystem;
     Rigidbody rb;
-    AudioSource wind;
     float solutionOne, solutionTwo, dialPointed, timer, dialZ;
+    AudioSource wind;
     bool inSpot;
-    bool SolvedFirstTime = false;
     public bool solved;
-    
+    //int seconds;
+    public Alerts AlertSystem;
 
     
     // Start is called before the first frame update
@@ -29,12 +28,12 @@ public class AirFiltration : MonoBehaviour
     {
         dialPointed = rb.transform.rotation.eulerAngles.x;
         dialZ = rb.transform.rotation.eulerAngles.z;
-        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-        if (ObjectiveScript.ObjectiveNumber == 8 || SolvedFirstTime)
-        {
-            CheckIfSolved();
-        }
-            
+        //Debug.Log("Solution One: " + solutionOne);
+        //Debug.Log("Solution Two: " + solutionTwo);
+        //Debug.Log("Dial: " + dialPointed);
+        //Debug.Log("Dialz: " + dialZ);
+        //Debug.Log(solved);
+        CheckIfSolved();
         
     }
 
@@ -54,16 +53,23 @@ public class AirFiltration : MonoBehaviour
 
     void CheckIfSolved()
     {
-        //Checks if the z is in the 1 and 4 quadrants
+        
+       
+        //solutionOne < dialPointed && dialPointed < solutionTwo is what I used to begin with
         if (80f < dialZ && dialZ < 100f)
         {
             if (solutionOne < dialPointed && dialPointed < solutionTwo)
             {
                 SolutionFinder();
             }
-         
+            /*
+            else if (timer < 5)
+            {
+                timer = 0;
+                wind.Stop();
+            }
+            */
         }
-        //Checks if the z is in the 2 and 3 quadrants
         if (260f < dialZ && dialZ < 280f)
         {
             
@@ -125,12 +131,6 @@ public class AirFiltration : MonoBehaviour
             rb.freezeRotation = true;
             solved = true;
             AlertSystem.DeactivateAlert(2);
-            if (!SolvedFirstTime)
-            {
-                SolvedFirstTime = true;
-                Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-                ObjectiveScript.SetNextObjective();
-            }
         }
         Debug.Log("Seconds: " +timer);
     }
@@ -146,3 +146,26 @@ public class AirFiltration : MonoBehaviour
         solved = false;
     }
 }
+/*
+           if (dialPointed == .5 || dialPointed == -.5)
+           {
+               if (timer == 0)
+               {
+                   wind.Play(0);
+               }
+               timer += Time.deltaTime;
+               if (timer >= 5)
+               {
+                   rb.freezeRotation = true;
+                   solved = true;
+               }
+               Debug.Log("Wind is working");
+               Debug.Log(timer);
+           }
+           else if (timer < 5)
+           {
+               timer = 0;
+               wind.Stop();
+           }
+       }
+       */

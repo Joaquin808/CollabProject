@@ -8,7 +8,6 @@ public class TemperatureSlider : MonoBehaviour
 {
     private bool isStopped;
     public bool puzzleComplete = false;
-    bool SolvedFirstTime;
 
     float x, y, z;
     //float maxNeedleRotation = 0f;
@@ -27,7 +26,6 @@ public class TemperatureSlider : MonoBehaviour
     Vector3 pos1, pos2, rotation;
     public AudioSource leverClick; //Used to get audio source for lever click
     public Alerts alerts;
-    SoundEffects soundFX;
 
     // Start is called before the first frame update
     void Start()
@@ -70,31 +68,18 @@ public class TemperatureSlider : MonoBehaviour
         if (other.gameObject.tag == "Lever")
         {
             leverClick.Play(0);
-            /*                                      For if you'd prefer to go through the Player Controller for the sound.
-               if (soundFX.genAudio.clip != soundFX.genSounds[0])
-                    {
-                        soundFX.genAudio.Stop();
-                        soundFX.genAudio.clip = soundFX.genSounds[17];
-                        soundFX.genAudio.Play();
-                    }
-              */
             stoppedValue = slider.transform.localPosition.x;
-            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-            if (ObjectiveScript.ObjectiveNumber == 11 || SolvedFirstTime)
+            if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
             {
-                if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
-                {
-                    isStopped = true;
-                    sliderBreak.puzzleCompleteCheck++;
-                    needle.transform.Rotate(rotation, Space.Self);
-                    leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
-                }
-                else
-                {
-                    Debug.Log("Incorrect value");
-                }
+                isStopped = true;
+                sliderBreak.puzzleCompleteCheck++;
+                needle.transform.Rotate(rotation, Space.Self);
+                leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
             }
-           
+            else
+            {
+                Debug.Log("Incorrect value");
+            }
             //Use to check if lever is working
         }
     }

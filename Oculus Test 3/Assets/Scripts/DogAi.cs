@@ -4,6 +4,7 @@ using System.Collections;
 
 public class DogAi : MonoBehaviour
 {
+
     public enum DogState { IDLE, WALK, RUN, CRAWL, GRAB, DROP };    //All possible states for dog 
     public DogState CurrentState = DogState.IDLE;   //Current state of dog
     public Transform dogMouth;                      //Reference to Mouth Bone
@@ -13,8 +14,8 @@ public class DogAi : MonoBehaviour
     public GameObject playerRef;                    //Reference to Player
     public bool boneHeld = true;					//Is Bone Attached
     public bool boneHeldPlayer = false;             //Is Bone Held by Player
-    public AudioSource dogAudio;                    //Reference to Audio Source Component
-    public AudioClip[] dogSounds;                   //Reference to List of Audio Clips
+    public AudioSource dogAudio;
+    public AudioClip[] dogSounds;
 
     private int animState = 0;                      //AnimState Controller
     private float walkSpeed = 2.5f;                 //WalkSpeed
@@ -23,8 +24,6 @@ public class DogAi : MonoBehaviour
     private float crawlSpeed;		                //CrawlSpeed based on WalkSpeed
     private Vector3 boneLocation;                   //Bone Location
     private Vector3 playerLocation;                 //Player Location
-
-    float timer = 0;
 
     void Start()
     {
@@ -58,18 +57,9 @@ public class DogAi : MonoBehaviour
         if (boneHeld == false && boneHeldPlayer == false)
         {
             //If near bone grab bone
-
-            if (Vector3.Distance(this.transform.position, boneLocation) <= agent.stoppingDistance)
+            if (Vector3.Distance(this.transform.position, boneLocation) <= agent.stoppingDistance && boneHeldPlayer == false)
             {
-                if (boneHeldPlayer == false)
-                {
-                    timer += Time.deltaTime;
-                    if (timer >= 15)
-                    {
-                        timer = 0;
-                        CurrentState = DogState.GRAB;
-                    }
-                }
+                CurrentState = DogState.GRAB;
             }
             else
             {
@@ -81,8 +71,7 @@ public class DogAi : MonoBehaviour
         }
         else if (boneHeldPlayer == true)
         {
-            //CurrentState = DogState.IDLE;
-            RunOrWalk();
+            CurrentState = DogState.IDLE;
 
             //If bone held
         }
@@ -149,13 +138,11 @@ public class DogAi : MonoBehaviour
 
         /*
         //Play Sound
-        if (dogAudio.clip != dogSounds[0])
+        dogAudio.clip = dogSounds[0];
+        if (!dogAudio.isPlaying)
         {
-            dogAudio.Stop();
-            dogAudio.clip = dogSounds[0];
             dogAudio.Play();
-        }
-        */
+        }*/
 
         agent.isStopped = true;
         agent.ResetPath();
@@ -292,7 +279,7 @@ public class DogAi : MonoBehaviour
 
         //drop bone from mouth
         //bone.GetComponent<Rigidbody>().AddForce(this.transform.forward * 0.1f);
-        //boneHeldPlayer = true;
+        boneHeldPlayer = true;
     }
 
     //Crawl Back Trigger

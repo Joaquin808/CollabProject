@@ -25,7 +25,6 @@ public class GateDoorScript : MonoBehaviour
     void Update()
     {
         isLocked = GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().powerEnabled;
-       
 
         /*if (!IsDoorOpen)
         {

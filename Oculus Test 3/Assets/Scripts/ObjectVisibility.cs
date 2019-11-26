@@ -15,7 +15,6 @@ public class ObjectVisibility : MonoBehaviour
     public Alerts AlertSystem;
     int TypeOfAlert = 1;
     public Pickup InventoryItemRef;
-    bool SolvedFirstTime = false;
 
     void Start()
     {
@@ -39,37 +38,25 @@ public class ObjectVisibility : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision);
-        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-        if (ObjectiveScript.ObjectiveNumber == 7 || SolvedFirstTime)
+        if (!collisionList.Contains(collision.gameObject.name))
         {
-            //PrintList();
-            if (!collisionList.Contains(collision.gameObject.name))
-            {
-                collisionList.Add(collision.gameObject.name);
-            }
+            collisionList.Add(collision.gameObject.name);
+        }
 
-            if (collisionList.Contains(String) && collisionList.Contains("Wrench"))
+        if (collisionList.Contains(String) && collisionList.Contains("Welder"))
+        {
+
+            isVisible = true;
+            collisionList.Remove(String);
+            collisionList.Remove("Welder");
+            destroyedPipe = GameObject.Find(String);
+            Destroy(destroyedPipe);
+            pipesFixed++;
+            if (pipesFixed == 7)
             {
-                Debug.Log("Made collision.");
-                isVisible = true;
-                collisionList.Remove(String);
-                collisionList.Remove("Wrench");
-                destroyedPipe = GameObject.Find(String);
-                Destroy(destroyedPipe);
-                pipesFixed++;
-                if (pipesFixed == 7)
-                {
-                    AlertSystem.DeactivateAlert(TypeOfAlert);
-                    SolvedFirstTime = true;
-                    if (ObjectiveScript.ObjectiveNumber == 7)
-                    {
-                        ObjectiveScript.SetNextObjective();
-                    }
-                }
+                AlertSystem.DeactivateAlert(TypeOfAlert);
             }
         }
-       
     }
 
 
@@ -82,9 +69,9 @@ public class ObjectVisibility : MonoBehaviour
 
         }
 
-        if (collision.gameObject.tag == "Wrench")
+        if (collision.gameObject.tag == "Welder")
         {
-            collisionList.Remove("Wrench");
+            collisionList.Remove("Welder");
         }
 
     }

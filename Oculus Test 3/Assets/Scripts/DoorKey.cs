@@ -10,7 +10,7 @@ public class DoorKey : MonoBehaviour
     {
         if (this.gameObject.name == "PlayerDoorKey Variant(Clone)")
         {
-            target = GameObject.Find("PlayerBedoomDoor");
+            target = GameObject.Find("PlayerBedroomDoor");
         }
         else if (this.gameObject.name == "GrandpasDoorKey Variant(Clone)")
         {

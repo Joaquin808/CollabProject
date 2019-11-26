@@ -21,7 +21,6 @@ public class PowerPuzzlePanel : MonoBehaviour
     {
         if(other.gameObject.name == "Wrench" || other.gameObject.name == "Wrench(Clone)")
         {
-            GameObject.Find("OVRPlayerController").GetComponent<Objectives>().SetNextObjective();
             Destroy(gameObject);
         }
     }
