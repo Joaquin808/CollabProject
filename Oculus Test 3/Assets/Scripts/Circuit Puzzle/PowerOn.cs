@@ -14,6 +14,7 @@ public class PowerOn : MonoBehaviour
     bool isMoving;
     public Alerts AlertSystem;
     public GameObject button;
+    SoundEffects soundFX;
 
     Vector3 moveDirection = Vector3.down;
     Vector3 startPos;
@@ -75,6 +76,11 @@ public class PowerOn : MonoBehaviour
                 isBroken = false;
                 powerEnabled = true;
                 AlertSystem.DeactivateAlert(0);
+                Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+                if (ObjectiveScript.ObjectiveNumber == 4)
+                {
+                    ObjectiveScript.SetNextObjective();
+                }
             }
         }
     }

@@ -62,6 +62,7 @@ public class PressurePlate : MonoBehaviour
     //Player/Dog Detection Trigger
     void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other);
         if (other.gameObject.tag == "Player" || other.gameObject.tag == "Dog")
         {
             if (target.GetComponent<Rigidbody>().isKinematic == true)
