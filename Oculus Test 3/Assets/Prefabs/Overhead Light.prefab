@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 2912998656865164807}
   - component: {fileID: 7080430713756202109}
   m_Layer: 0
-  m_Name: Area Light
+  m_Name: Overhead-Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,7 +166,7 @@ Light:
   m_GameObject: {fileID: 6480901771456509169}
   m_Enabled: 1
   serializedVersion: 10
-  m_Type: 3
+  m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9529412, g: 0.92941177, b: 0.8117647, a: 1}
   m_Intensity: 2
@@ -175,7 +175,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -208,7 +208,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 2
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1

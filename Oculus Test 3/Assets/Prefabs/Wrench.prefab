@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1236418301976430837}
   m_Layer: 9
   m_Name: Wrench
-  m_TagString: Welder
+  m_TagString: Wrench
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   InventoryItemRef: {fileID: 11400000, guid: e3751d99efeb8a94883790ba353edfee, type: 2}
-  CanAddToInventory: 1
 --- !u!64 &6505591797957243342
 MeshCollider:
   m_ObjectHideFlags: 0

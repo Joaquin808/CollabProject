@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3268104476723124631}
   - component: {fileID: 5765070467916178337}
   - component: {fileID: 233391548903382872}
-  - component: {fileID: 2073024798131698938}
-  - component: {fileID: -5386878970804982131}
   - component: {fileID: 3839977135793732658}
   - component: {fileID: 4950884265563516127}
+  - component: {fileID: 6123063607279229647}
+  - component: {fileID: 921079493018369196}
   m_Layer: 0
   m_Name: Sliding Door
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_GameObject: {fileID: 1946111856710314884}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -13.42, y: 0.24, z: -2.21}
-  m_LocalScale: {x: 13.285324, y: 19.795456, z: 19.795456}
+  m_LocalScale: {x: 15, y: 11.5, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,32 +83,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2073024798131698938
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946111856710314884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.115626276, y: 0.48534906, z: 0.16653235}
-  m_Center: {x: -0.0060195136, y: 0.23767449, z: -0.0040205694}
---- !u!114 &-5386878970804982131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946111856710314884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ac0101519a6a164d9184b2d3e97a933, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocked: 0
 --- !u!65 &3839977135793732658
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -138,3 +112,29 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.003, y: 0.119, z: -0.003}
   m_TimeToStationary: 0.5
+--- !u!65 &6123063607279229647
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946111856710314884}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.1095782, y: 0.4865056, z: 0.09415886}
+  m_Center: {x: -0.003031242, y: 0.23901393, z: -0.0029152723}
+--- !u!114 &921079493018369196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1946111856710314884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac0101519a6a164d9184b2d3e97a933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
