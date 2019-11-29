@@ -17,6 +17,6 @@ public class FollowPhysics : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb.MoveRotation(target.transform.rotation);
+        rb.MovePosition(target.transform.position);
     }
 }

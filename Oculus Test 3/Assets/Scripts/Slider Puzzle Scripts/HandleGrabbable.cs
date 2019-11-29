@@ -5,13 +5,6 @@ using UnityEngine;
 public class HandleGrabbable : OVRGrabbable
 {
     public Transform handle;
-    public GameObject lever;
-
-    public override void GrabBegin(OVRGrabber hand, Collider grabPoint)
-    {
-        base.GrabBegin(hand, grabPoint);
-        //lever.GetComponent<Rigidbody>().useGravity = false;
-    }
 
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
@@ -26,17 +19,18 @@ public class HandleGrabbable : OVRGrabbable
         transform.position = handle.transform.position;
         transform.rotation = handle.transform.rotation;
 
-        //Resets velocity of grabbable handle after it is released
+        //Resets velocity of grabbable handle after it is released 
+        /*
         rbhandle.velocity = Vector3.zero;
         rbhandle.angularVelocity = Vector3.zero;
-
+        */
         //lever.GetComponent<Rigidbody>().useGravity = true;
     }
 
     private void Update()
     {
         //If statement causes grabbable handle to snap back to handle if it gets too far away
-        if (Vector3.Distance(handle.position,transform.position) > 0.1f)
+        if (Vector3.Distance(handle.position,transform.position) > 0.5f)
         {
             grabbedBy.ForceRelease(this);
         }
