@@ -32,6 +32,11 @@ public class ObjectVisibilityCircuit : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.name == "Screwdriver" && isBrokenPiece)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
+        }
         if (!isBrokenPiece)
         {
             Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
@@ -49,14 +54,5 @@ public class ObjectVisibilityCircuit : MonoBehaviour
                 }
             }
         }        
-    }
-
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.name == "Screwdriver" && isBrokenPiece)
-        {
-            rb.isKinematic = false;
-            rb.useGravity = true;
-        }
     }
 }

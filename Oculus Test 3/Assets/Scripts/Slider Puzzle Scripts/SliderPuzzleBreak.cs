@@ -48,7 +48,7 @@ public class SliderPuzzleBreak : MonoBehaviour
     {
         alerts.ActivateAlert("Temperature critical!", AlertType);
         needle1Rend.enabled = false;
-        needle2Rend.enabled = true;
+        //needle2Rend.enabled = true;
         broken = false;
     }
 
