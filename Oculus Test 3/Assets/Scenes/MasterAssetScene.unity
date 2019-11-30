@@ -378,7 +378,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6c5d089f0ac23f24f9e60ff7a661d051,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.28526744
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c5d089f0ac23f24f9e60ff7a661d051,
         type: 3}
@@ -408,7 +408,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 6c5d089f0ac23f24f9e60ff7a661d051,
         type: 3}
       propertyPath: m_RootOrder
-      value: 50
+      value: 49
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 6c5d089f0ac23f24f9e60ff7a661d051,
         type: 3}
@@ -5491,11 +5491,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
-        type: 3}
-      propertyPath: m_Name
-      value: Watch Chip
-      objectReference: {fileID: 0}
     - target: {fileID: 157074329313800886, guid: 9efdc8f7ca624be41ab268879ffd0759,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5550,6 +5545,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3780019399738654885, guid: 9efdc8f7ca624be41ab268879ffd0759,
+        type: 3}
+      propertyPath: m_Name
+      value: Watch Chip
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9efdc8f7ca624be41ab268879ffd0759, type: 3}
@@ -8696,6 +8696,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1093502366856769998, guid: 53e818fcd1f088140b7afec1a143c7bb,
+        type: 3}
+      propertyPath: m_Name
+      value: Monitor
+      objectReference: {fileID: 0}
     - target: {fileID: 4140988676976739293, guid: 53e818fcd1f088140b7afec1a143c7bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8750,11 +8755,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1093502366856769998, guid: 53e818fcd1f088140b7afec1a143c7bb,
-        type: 3}
-      propertyPath: m_Name
-      value: Monitor
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53e818fcd1f088140b7afec1a143c7bb, type: 3}
