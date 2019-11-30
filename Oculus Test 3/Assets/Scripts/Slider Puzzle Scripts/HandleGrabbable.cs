@@ -20,10 +20,10 @@ public class HandleGrabbable : OVRGrabbable
         transform.rotation = handle.transform.rotation;
 
         //Resets velocity of grabbable handle after it is released 
-        /*
+   
         rbhandle.velocity = Vector3.zero;
         rbhandle.angularVelocity = Vector3.zero;
-        */
+        
         //lever.GetComponent<Rigidbody>().useGravity = true;
     }
 
