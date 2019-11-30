@@ -6,34 +6,57 @@ public class ObjectVisibilityCircuit : MonoBehaviour
 {
     public GameObject grabbableCircuit;
     Renderer rend;
+    Rigidbody rb;
     public bool SolvedFirstTime = false;
+    public bool isBrokenPiece;
 
     public PowerOn powerScript;
 
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>();
-        rend.enabled = false;
+        if (!isBrokenPiece)
+        {
+            rend = GetComponent<Renderer>();
+            rend.enabled = false;
+        }
+
+        if (isBrokenPiece)
+        {
+            rb = GetComponent<Rigidbody>();
+            rb.isKinematic = true;
+            rb.useGravity = false;
+        }
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
-        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-        if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
+        if (!isBrokenPiece)
         {
-            if (other.gameObject == grabbableCircuit)
+            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+            if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
             {
-                rend.enabled = true;
-                Destroy(other.gameObject);
-                powerScript.circuitsConnected++;
-                Debug.Log(powerScript.circuitsConnected);
-                if (powerScript.powerEnabled)
+                if (other.gameObject == grabbableCircuit)
                 {
-                    SolvedFirstTime = true;
+                    rend.enabled = true;
+                    Destroy(other.gameObject);
+                    powerScript.circuitsConnected++;
+                    if (powerScript.powerEnabled)
+                    {
+                        SolvedFirstTime = true;
+                    }
                 }
             }
+        }        
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "Screwdriver" && isBrokenPiece)
+        {
+            rb.isKinematic = false;
+            rb.useGravity = true;
         }
-        
     }
 }
