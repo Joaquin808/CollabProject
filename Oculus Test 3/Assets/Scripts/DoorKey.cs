@@ -4,38 +4,23 @@ using UnityEngine;
 
 public class DoorKey : MonoBehaviour
 {
-    public GameObject target;
+    public GameObject door, keycard, keypadLight;
+    Renderer rend;
+    public Material mat;
 
     void Start()
     {
-        if (this.gameObject.name == "PlayerDoorKey Variant(Clone)")
-        {
-            target = GameObject.Find("PlayerBedoomDoor");
-        }
-        else if (this.gameObject.name == "GrandpasDoorKey Variant(Clone)")
-        {
-            target = GameObject.Find("GrandpasDoor");
-        }
-        else if (this.gameObject.name == "HouseBathroomKey Variant(Clone)")
-        {
-            target = GameObject.Find("HouseBathroomDoor");
-        }
-
+        rend = keypadLight.GetComponent<Renderer>();
     }
+
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == target)
+        if (other.gameObject == keycard)
         {
-            if (target == GameObject.Find("HouseBathroomDoor"))
-            {
-                if (target.GetComponent<Rigidbody>().isKinematic == true)
-                {
-                    target.GetComponent<Rigidbody>().isKinematic = false;
-                }
-            }
-            target.GetComponent<SlidingDoor>().isLocked = false;
-            Destroy(gameObject);
+            rend.material = mat;
+            door.GetComponent<SlidingDoor>().isLocked = false;
+            //Destroy(gameObject);
         }
     }
 }
