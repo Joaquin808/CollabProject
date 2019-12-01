@@ -92,7 +92,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}
 --- !u!1 &1559800835601839814
 GameObject:
   m_ObjectHideFlags: 0
@@ -185,7 +188,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}
 --- !u!1 &1641495489208540048
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,7 +284,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}
 --- !u!1 &2199954627031044936
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +380,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}
 --- !u!1 &2876520224246159029
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,7 +476,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}
 --- !u!1 &3906396525395263412
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +572,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}
 --- !u!1 &5340595578199924252
 GameObject:
   m_ObjectHideFlags: 0
@@ -650,7 +668,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}
 --- !u!1 &6079680618617831005
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,4 +882,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78faad6c95d6ecb4caff45c06c7f4209, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grabbableCircuit: {fileID: 0}
+  grabbableCircuitName: 
+  SolvedFirstTime: 0
+  isBrokenPiece: 0
+  powerScript: {fileID: 0}

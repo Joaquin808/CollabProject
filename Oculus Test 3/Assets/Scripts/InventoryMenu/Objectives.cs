@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Objectives : MonoBehaviour
 {
-    string[] ObjectivesList = {"Find a key to get out of the room" /*0, done*/, "Find the Power Switch and activate it"/*1, done*/, "Find the wrench"/*2, done*/,
+    public string[] ObjectivesList = {"Find a key to get out of the room" /*0, done*/, "Find the Power Switch and activate it"/*1, done*/, "Find the wrench"/*2, done*/,
         "Use the wrench to get access to the Power Station"/*3, done*/, "Fix the Power Station"/*4, done*/, "Exit the Bunker and find an entrance to the House"/*5 done*/,
         "Talk to the AI"/*6, done*/,  "Fix the Water Station (Dome)"/*7, done*/, "Fix Air Filtration (Dome)"/*8, done*/, "Find a way to access the locked room (House)"/*9, need to fix pressure plate*/,
         "Pick up the Temperature Needle"/*10, done*/, "Fix the Temperature Station (House)"/*11, done*/, "Find a way to open the main locker (Bunker)"/*12, need to do*/,

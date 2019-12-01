@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ObjectVisibilityCircuit : MonoBehaviour
 {
-    public GameObject grabbableCircuit;
+    public string grabbableCircuitName;
     Renderer rend;
     Rigidbody rb;
     public bool SolvedFirstTime = false;
@@ -39,10 +39,10 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         }
         if (!isBrokenPiece)
         {
-            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-            if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
-            {
-                if (other.gameObject == grabbableCircuit)
+            //Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+            //if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
+            //{
+                if (other.gameObject.name == grabbableCircuitName)
                 {
                     rend.enabled = true;
                     Destroy(other.gameObject);
@@ -52,7 +52,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
                         SolvedFirstTime = true;
                     }
                 }
-            }
+            //}
         }        
     }
 }
