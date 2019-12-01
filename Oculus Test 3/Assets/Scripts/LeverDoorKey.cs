@@ -6,7 +6,7 @@ public class LeverDoorKey : MonoBehaviour
 {
     public GameObject target;
     public GameObject lever;
-    SoundEffects soundFX;
+    public SoundEffects soundFX;
 
 
     void OnTriggerEnter(Collider other)
@@ -17,7 +17,7 @@ public class LeverDoorKey : MonoBehaviour
             target.GetComponent<SlidingDoor>().isLocked = false;
             lever.GetComponent<Rigidbody>().isKinematic = true;
             GameObject.Find("OVRPlayerController").GetComponent<Objectives>().SetNextObjective();
-            if (soundFX.genAudio.clip != soundFX.genSounds[0])
+            if (soundFX.genAudio.clip != soundFX.genSounds[15])
             {
                 soundFX.genAudio.Stop();
                 soundFX.genAudio.clip = soundFX.genSounds[15];

@@ -19,6 +19,6 @@ public class FollowPhysicsSlider : MonoBehaviour
     void FixedUpdate()
     {
         rb.MovePosition(target.transform.position); //Allows handle to follow position of grabbable handle
-        //trans.position = target.transform.position;
+                                                    //trans.position = target.transform.position;
     }
 }

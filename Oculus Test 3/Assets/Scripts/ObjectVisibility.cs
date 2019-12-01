@@ -16,6 +16,7 @@ public class ObjectVisibility : MonoBehaviour
     int TypeOfAlert = 1;
     public Pickup InventoryItemRef;
     bool SolvedFirstTime = false;
+    public SoundEffects soundFX;
 
     void Start()
     {
@@ -57,6 +58,12 @@ public class ObjectVisibility : MonoBehaviour
                 collisionList.Remove("Wrench");
                 destroyedPipe = GameObject.Find(String);
                 Destroy(destroyedPipe);
+                if (soundFX.genAudio.clip != soundFX.genSounds[15])
+                {
+                    soundFX.genAudio.Stop();
+                    soundFX.genAudio.clip = soundFX.genSounds[15];
+                    soundFX.genAudio.Play();
+                }
                 pipesFixed++;
                 if (pipesFixed == 7)
                 {
@@ -69,7 +76,7 @@ public class ObjectVisibility : MonoBehaviour
                 }
             }
         }
-       
+
     }
 
 

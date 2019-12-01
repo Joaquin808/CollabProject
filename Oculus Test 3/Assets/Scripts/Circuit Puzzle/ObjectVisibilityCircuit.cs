@@ -9,6 +9,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
     Rigidbody rb;
     public bool SolvedFirstTime = false;
     public bool isBrokenPiece;
+    public SoundEffects soundFX;
 
     public PowerOn powerScript;
 
@@ -47,7 +48,13 @@ public class ObjectVisibilityCircuit : MonoBehaviour
                     rend.enabled = true;
                     Destroy(other.gameObject);
                     powerScript.circuitsConnected++;
-                    if (powerScript.powerEnabled)
+                if (soundFX.genAudio.clip != soundFX.genSounds[12])
+                {
+                    soundFX.genAudio.Stop();
+                    soundFX.genAudio.clip = soundFX.genSounds[12];
+                    soundFX.genAudio.Play();
+                }
+                if (powerScript.powerEnabled)
                     {
                         SolvedFirstTime = true;
                     }
