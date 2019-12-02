@@ -12,27 +12,26 @@ public class SliderPuzzleBreak : MonoBehaviour
     public GameObject needle, needle2;
     Renderer needle1Rend, needle2Rend;
 
-    bool broken = true;
+    //bool broken = true;
     //public GameObject player;
 
     //public bool powerBroken = true;
 
     void Start()
     {
-        needle1Rend = needle.GetComponent<Renderer>();
-        needle2Rend = needle2.GetComponent<Renderer>();
+
     }
 
     void Update()
     {
         //powerBroken = GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().isBroken;
-        if (broken)
-        {
-            OnBreak();
+        //if (broken)
+        //{
+            //OnBreak();
             if (puzzleCompleteCheck >= 3)
             {
                 alerts.DeactivateAlert(AlertType);
-                broken = false;
+                //broken = false;
                 Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
                 if (ObjectiveScript.ObjectiveNumber == 11)
                 {
@@ -40,16 +39,15 @@ public class SliderPuzzleBreak : MonoBehaviour
                 }
             }
                 
-        }
+        //}
     }
 
     //Function used to break temperature puzzle
     void OnBreak()
     {
         alerts.ActivateAlert("Temperature critical!", AlertType);
-        needle1Rend.enabled = false;
         //needle2Rend.enabled = true;
-        broken = false;
+        //broken = false;
     }
 
     //Function to fix temperature puzzle
