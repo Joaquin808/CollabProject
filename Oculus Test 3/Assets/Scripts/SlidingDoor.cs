@@ -96,7 +96,6 @@ public class SlidingDoor : MonoBehaviour
     //Player Detection Trigger
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
         {
             isOpen = true;
