@@ -13,13 +13,21 @@ public class DoorKey : MonoBehaviour
         rend = keypadLight.GetComponent<Renderer>();
     }
 
+    void Update()
+    {
+        if (!door.GetComponent<SlidingDoor>().isLocked)
+        {
+            rend.material = mat;
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject == keycard)
         {
-            rend.material = mat;
             door.GetComponent<SlidingDoor>().isLocked = false;
+            Debug.Log(door.GetComponent<SlidingDoor>().isLocked);
+           
             //Destroy(gameObject);
         }
     }

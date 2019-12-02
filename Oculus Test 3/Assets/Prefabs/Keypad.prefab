@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 137400776269778272}
   - component: {fileID: 8600883120078616803}
+  - component: {fileID: 2029837139}
   m_Layer: 0
   m_Name: Keypad
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4013688718530101107}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: -5.204945, y: 0.936, z: 1.7975247}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalScale: {x: 2.6992, y: 2.6992, z: 2.6992}
   m_Children:
   - {fileID: 2621702433746226967}
   - {fileID: 1323966886186727747}
@@ -46,6 +47,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.033940554, y: 0.057479262, z: 0.014129579}
   m_Center: {x: -0.0005656481, y: 0.032485485, z: 0.011755973}
+--- !u!114 &2029837139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4013688718530101107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbfde4949e855e644802d59523281ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
+  keycard: {fileID: 779611054874566539, guid: d67a19c355b4461449ad1d92f5837eec, type: 3}
+  keypadLight: {fileID: 4241361062564779927}
+  mat: {fileID: 2100000, guid: ae03df6e49f98a34ab9a84398d03b736, type: 2}
 --- !u!1 &4241361062564779927
 GameObject:
   m_ObjectHideFlags: 0
