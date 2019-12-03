@@ -33,7 +33,7 @@ public class SliderPuzzleBreak : MonoBehaviour
                 alerts.DeactivateAlert(AlertType);
                 //broken = false;
                 Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-                if (ObjectiveScript.ObjectiveNumber == 11)
+                if (ObjectiveScript.ObjectiveNumber == 1)
                 {
                     ObjectiveScript.SetNextObjective();
                 }

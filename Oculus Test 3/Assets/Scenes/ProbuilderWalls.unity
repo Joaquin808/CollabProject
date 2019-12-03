@@ -5232,16 +5232,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1641495489208540048, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559800835601839814, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6079680618617831005, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Name
@@ -5337,132 +5327,12 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 6045271960352087705, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045271960352087705, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6045271960352087705, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 935530446876541775, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 935530446876541775, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 935530446876541775, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3596117386570257994, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3596117386570257994, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3596117386570257994, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3306265061762061812, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 3306265061762061812, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3306265061762061812, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111877006260814135, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111877006260814135, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4111877006260814135, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703020058810269515, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703020058810269515, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6703020058810269515, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421415805041686949, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421415805041686949, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2421415805041686949, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2338309606105419400, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuit
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2338309606105419400, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: isBrokenPiece
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2338309606105419400, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: grabbableCircuitName
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5340595578199924252, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+    - target: {fileID: 6398217506111326029, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 6398217506111326029, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+    - target: {fileID: 5340595578199924252, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Layer
       value: 9
@@ -5472,7 +5342,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8739322798532738857, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559800835601839814, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1148274947152783648, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641495489208540048, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Layer
       value: 9
@@ -5482,46 +5367,146 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 8739322798532738857, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 1096904539314893802, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 6045271960352087705, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045271960352087705, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6045271960352087705, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6662040668449650689, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 935530446876541775, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 935530446876541775, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 935530446876541775, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3375291281979358001, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 3596117386570257994, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3596117386570257994, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3596117386570257994, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7293272932782703265, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 3306265061762061812, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306265061762061812, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3306265061762061812, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 2529648180888844285, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 4111877006260814135, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111877006260814135, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4111877006260814135, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8258137390291890283, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 6703020058810269515, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703020058810269515, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6703020058810269515, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 1915677175802709564, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 2421415805041686949, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421415805041686949, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421415805041686949, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3653737019350939405, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -5532,6 +5517,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 76042a8e4f83f8e4db7ec6119c76d7ed, type: 2}
+    - target: {fileID: 2338309606105419400, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuit
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338309606105419400, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: isBrokenPiece
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338309606105419400, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: grabbableCircuitName
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acb3a466ba6bb0488bd3269fe9b30e8, type: 3}
 --- !u!1 &380351837 stripped
@@ -47228,25 +47228,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ObjectivesList:
   - Find a key to get out of the room
-  - Find the Power Switch and activate it
+  - ower Switch and activate itFixctivate it
   - Find the wrench
   - Use the wrench to get access to the Power Station
   - Fix the Power Station
   - Exit the Bunker and find an entrance to the House
   - Talk to the AI
-  - Fix the Water Station (Dome)
-  - Fix Air Filtration (Dome)
-  - Find a way to access the locked room (House)
-  - Pick up the Temperature Needle
-  - Fix the Temperature Station (House)
-  - Find a way to open the main locker (Bunker)
-  - Pick up the key and get access to Grandpa's room
-  - Use the Radio
-  - Find a way to open Grandpa's safe
-  - Listen to Grandpa's message
-  - Find all the components for the Suit
-  - Destroy AI Core
-  - Escape the Dome
   ObjectiveText: {fileID: 1520239370}
   ObjectiveNumber: 0
 --- !u!1001 &1989073608

@@ -41,7 +41,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         if (!isBrokenPiece)
         {
             //Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-            //if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
+            //if (ObjectiveScript.ObjectiveNumber == 3 || SolvedFirstTime)
             //{
                 if (other.gameObject.name == grabbableCircuitName)
                 {

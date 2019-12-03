@@ -42,7 +42,7 @@ public class ObjectVisibility : MonoBehaviour
     {
         Debug.Log(collision);
         Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-        if (ObjectiveScript.ObjectiveNumber == 7 || SolvedFirstTime)
+        if (ObjectiveScript.ObjectiveNumber == 3 || SolvedFirstTime)
         {
             //PrintList();
             if (!collisionList.Contains(collision.gameObject.name))
@@ -69,7 +69,7 @@ public class ObjectVisibility : MonoBehaviour
                 {
                     AlertSystem.DeactivateAlert(TypeOfAlert);
                     SolvedFirstTime = true;
-                    if (ObjectiveScript.ObjectiveNumber == 7)
+                    if (ObjectiveScript.ObjectiveNumber == 3)
                     {
                         ObjectiveScript.SetNextObjective();
                     }

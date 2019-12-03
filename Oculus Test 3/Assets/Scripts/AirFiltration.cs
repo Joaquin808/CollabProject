@@ -12,6 +12,7 @@ public class AirFiltration : MonoBehaviour
     bool inSpot;
     bool SolvedFirstTime = false;
     public bool solved;
+    Objectives ObjectiveScript;
     
 
     
@@ -29,8 +30,9 @@ public class AirFiltration : MonoBehaviour
     {
         dialPointed = rb.transform.rotation.eulerAngles.x;
         dialZ = rb.transform.rotation.eulerAngles.z;
-        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-        if (ObjectiveScript.ObjectiveNumber == 8 || SolvedFirstTime)
+
+        ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+        if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
         {
             CheckIfSolved();
         }
