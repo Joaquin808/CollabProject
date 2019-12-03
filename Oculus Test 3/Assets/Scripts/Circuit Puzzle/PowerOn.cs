@@ -11,9 +11,9 @@ public class PowerOn : MonoBehaviour
     public bool isBroken = true;
     bool isTriggered = false;
     public bool powerEnabled = false;
-    bool isMoving;
+    public bool isMoving;
     public Alerts AlertSystem;
-    public GameObject button, panel;
+    public GameObject panel;
     SoundEffects soundFX;
 
     Vector3 moveDirection = Vector3.down;
@@ -23,35 +23,35 @@ public class PowerOn : MonoBehaviour
     void Start()
     {
         leverClick.GetComponent<AudioSource>();
-        startPos = this.transform.position;
-        endPos = startPos - new Vector3(0, 0.05f, 0);
+        startPos = this.transform.localPosition;
+        endPos = startPos - new Vector3(0, 0.1f, 0);
     }
 
     void Update()
     {
         if (isTriggered)
         {
-            if (this.transform.position.y > endPos.y)
+            if (this.transform.localPosition.y > endPos.y)
             {
                 moveDirection = Vector3.down;
                 isMoving = true;
             }
             else
             {
-                this.transform.position = endPos;
+                this.transform.localPosition = endPos;
                 isMoving = false;
             }
         }
         else
         {
-            if (this.transform.position.y < startPos.y)
+            if (this.transform.localPosition.y < startPos.y)
             {
                 moveDirection = Vector3.up;
                 isMoving = true;
             }
             else
             {
-                this.transform.position = startPos;
+                this.transform.localPosition = startPos;
                 isMoving = false;
             }
         }
@@ -66,14 +66,10 @@ public class PowerOn : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "IndexColliderRight" || other.gameObject.name == "IndexColliderLeft")
+        if (other.gameObject.name == "Index Finger Left" || other.gameObject.name == "Index Finger Right")
         {
             leverClick.Play(0);
             isTriggered = true;
-            if (panel.GetComponent<Renderer>().enabled)
-            {
-                panel.GetComponent<Renderer>().enabled = false;
-            }
             if (circuitsConnected >= 8)
             {
                 //Lights come on
