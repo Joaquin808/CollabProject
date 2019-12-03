@@ -23,12 +23,13 @@ public class DestroyAndAddToInventory : MonoBehaviour
             Timer += Time.deltaTime;
             if (Timer >= 5)
             {
-                ItemAddedText.text = InventoryItemRef.name + " was added to the inventory";
+                ItemAddedText.text = "";
                 ItemWasAdded = false;
+                Timer = 0;
             }
             else
             {
-                ItemAddedText.text = "";
+                ItemAddedText.text = InventoryItemRef.name + " was added to the inventory";
             }
         }
    
