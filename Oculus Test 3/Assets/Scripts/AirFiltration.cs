@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirFiltration : MonoBehaviour
 {
-    public GameObject dial, airFilt;
+    public GameObject dial;
     public Alerts AlertSystem;
     Rigidbody rb;
     AudioSource wind;
@@ -20,7 +20,7 @@ public class AirFiltration : MonoBehaviour
     {
         rb = dial.GetComponent<Rigidbody>();
         RandomSolution();
-        wind = airFilt.GetComponent<AudioSource>();
+        wind = this.gameObject.GetComponent<AudioSource>();
         timer = 0;
     }
 
