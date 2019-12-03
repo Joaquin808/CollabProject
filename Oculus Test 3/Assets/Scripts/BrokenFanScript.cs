@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FanScript : MonoBehaviour
+public class BrokenFanScript : MonoBehaviour
 {
     Rigidbody rb;
     
@@ -11,8 +11,7 @@ public class FanScript : MonoBehaviour
     {
         rb = this.gameObject.GetComponent<Rigidbody>();
     }
-
-
+    
     void OnCollisionEnter(Collision other)
     {
         if(other.gameObject.name == "Welder")
