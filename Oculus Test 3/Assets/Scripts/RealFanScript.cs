@@ -4,15 +4,25 @@ using UnityEngine;
 
 public class RealFanScript : MonoBehaviour
 {
+
+    Renderer rend;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        rend = GetComponent<MeshRenderer>();
+        rend.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collision other)
     {
-        
+        if (other.gameObject.name == "Welder" && other.gameObject.name == "RealBlade")
+        {
+            rend.enabled = true;
+            if (other.gameObject.name == "RealBlade")
+            {
+                Destroy(other.gameObject);
+            }
+        }
     }
 }
