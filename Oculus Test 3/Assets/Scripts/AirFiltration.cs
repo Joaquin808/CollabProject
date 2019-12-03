@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AirFiltration : MonoBehaviour
 {
-    public GameObject dial;
+    public GameObject dial, fanOne, fanTwo, fanThree;
     public Alerts AlertSystem;
     Rigidbody rb;
     AudioSource wind;

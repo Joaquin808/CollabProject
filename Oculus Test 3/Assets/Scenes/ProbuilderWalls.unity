@@ -13506,6 +13506,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5636163e762fb9044ad598b4dcd23492, type: 3}
+--- !u!1 &614880833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2712925889031321886, guid: 9a39ad8512de0bf4dabc030cf8246e29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1564717831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &615259374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4690298182917150535, guid: 21adab3bc28a3e44db62c916b6efa12a,
@@ -14480,6 +14486,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dial: {fileID: 457152340}
+  fanOne: {fileID: 0}
+  fanTwo: {fileID: 0}
+  fanThree: {fileID: 0}
   AlertSystem: {fileID: 1166617186}
   solved: 0
 --- !u!54 &668764991
@@ -33357,6 +33366,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.7628627, y: 32.568165, z: 32.80171}
   m_Center: {x: 0, y: 33.000004, z: 31.883226}
+--- !u!1 &1160500859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3147816281613922625, guid: 9a39ad8512de0bf4dabc030cf8246e29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1564717831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1162865980
 GameObject:
   m_ObjectHideFlags: 0
@@ -36691,7 +36706,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh42736
+  m_Name: pb_Mesh87522
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -38022,6 +38037,12 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &1415561861 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1444138512717073877, guid: 9a39ad8512de0bf4dabc030cf8246e29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1564717831}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1424712751
 GameObject:
   m_ObjectHideFlags: 0
@@ -39783,6 +39804,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dial: {fileID: 1564717833}
+  fanOne: {fileID: 614880833}
+  fanTwo: {fileID: 1415561861}
+  fanThree: {fileID: 1160500859}
   AlertSystem: {fileID: 1166617186}
   solved: 0
 --- !u!136 &1564717837
@@ -49986,7 +50010,7 @@ PrefabInstance:
     - target: {fileID: 4455876895596857407, guid: 71a6c17f44b7ad64b80ad8599a08aced,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.9389555
+      value: -1.65
       objectReference: {fileID: 0}
     - target: {fileID: 4455876895596857407, guid: 71a6c17f44b7ad64b80ad8599a08aced,
         type: 3}
@@ -50042,17 +50066,17 @@ PrefabInstance:
     - target: {fileID: 4332849015959853300, guid: 71a6c17f44b7ad64b80ad8599a08aced,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -22.962
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4332849015959853300, guid: 71a6c17f44b7ad64b80ad8599a08aced,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.045
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4332849015959853300, guid: 71a6c17f44b7ad64b80ad8599a08aced,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.019
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71a6c17f44b7ad64b80ad8599a08aced, type: 3}
