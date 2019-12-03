@@ -16,10 +16,10 @@ public class RealFanScript : MonoBehaviour
 
     void OnTriggerEnter(Collision other)
     {
-        if (other.gameObject.name == "Welder" && other.gameObject.name == "RealBlade")
+        if (other.gameObject.name == "Welder" && other.gameObject.name == "ReplaceBlade")
         {
             rend.enabled = true;
-            if (other.gameObject.name == "RealBlade")
+            if (other.gameObject.name == "ReplaceBlade")
             {
                 Destroy(other.gameObject);
             }
