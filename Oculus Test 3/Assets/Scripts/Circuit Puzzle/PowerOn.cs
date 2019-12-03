@@ -13,7 +13,7 @@ public class PowerOn : MonoBehaviour
     public bool powerEnabled = false;
     bool isMoving;
     public Alerts AlertSystem;
-    public GameObject button;
+    public GameObject button, panel;
     SoundEffects soundFX;
 
     Vector3 moveDirection = Vector3.down;
@@ -70,6 +70,10 @@ public class PowerOn : MonoBehaviour
         {
             leverClick.Play(0);
             isTriggered = true;
+            if (panel.GetComponent<Renderer>().enabled)
+            {
+                panel.GetComponent<Renderer>().enabled = false;
+            }
             if (circuitsConnected >= 8)
             {
                 //Lights come on
@@ -85,12 +89,5 @@ public class PowerOn : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.name == "Wrench" || other.gameObject.name == "Wrench(Clone)")
-        {
-            leverClick.Play(0);
-            isTriggered = false;
-        }
-    }
+
 }
