@@ -5,6 +5,8 @@ using UnityEngine;
 public class BrokenFanScript : MonoBehaviour
 {
     Rigidbody rb;
+
+    public bool removed;
     
     // Start is called before the first frame update
     void Start()
@@ -18,6 +20,7 @@ public class BrokenFanScript : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+            removed = true;
         }
     }
 }

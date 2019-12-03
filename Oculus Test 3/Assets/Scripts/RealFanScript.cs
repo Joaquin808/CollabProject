@@ -4,24 +4,34 @@ using UnityEngine;
 
 public class RealFanScript : MonoBehaviour
 {
-
+    
     Renderer rend;
+    BrokenFanScript bfscrp;
+
+    public GameObject brokeFan;
+    public bool fanIn;
 
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<MeshRenderer>();
         rend.enabled = false;
+        bfscrp = brokeFan.gameObject.GetComponent<BrokenFanScript>();
+        fanIn = false;
     }
 
     void OnTriggerEnter(Collision other)
     {
-        if (other.gameObject.name == "Welder" && other.gameObject.name == "ReplaceBlade")
+        if (bfscrp.removed)
         {
-            rend.enabled = true;
-            if (other.gameObject.name == "ReplaceBlade")
+            if (other.gameObject.name == "Welder" && other.gameObject.name == "ReplaceBlade")
             {
-                Destroy(other.gameObject);
+                rend.enabled = true;
+                if (other.gameObject.name == "ReplaceBlade")
+                {
+                    Destroy(other.gameObject);
+                    fanIn = true;
+                }
             }
         }
     }
