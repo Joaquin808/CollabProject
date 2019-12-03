@@ -6,7 +6,7 @@ public class Audio_Manager : MonoBehaviour
 {
     public AudioClip[] music;
     public AudioSource manager;
-    int track = 0;
+    public int track = 1;
 
     // Update is called once per frame
 
@@ -14,14 +14,14 @@ public class Audio_Manager : MonoBehaviour
     {
         if(manager.isPlaying == false)
         {
-            if (track <= music.Length)
+            if (track < music.Length)
             {
                 manager.clip = music[track];
                 track++;
                 manager.Play(0);
 
             }
-            else if (track > music.Length) 
+            else if (track == music.Length) 
             {
                 track = 0;
                 manager.clip = music[track];
