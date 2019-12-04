@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &8408348928613357522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6455669522799260627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 61.729557, y: 61.729553, z: 53.18297}
+  m_Center: {x: -41.297817, y: 30.338154, z: -55.980705}
 --- !u!1001 &1095796798364332985
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7,11 +20,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: a09ff16b98b2cca48a1007fdba76bd85,
-        type: 3}
-      propertyPath: m_Name
-      value: kitchencountersingle
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a09ff16b98b2cca48a1007fdba76bd85,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,6 +90,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.01723327
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: a09ff16b98b2cca48a1007fdba76bd85,
+        type: 3}
+      propertyPath: m_Name
+      value: kitchencountersingle
+      objectReference: {fileID: 0}
     - target: {fileID: -1328352276335583660, guid: a09ff16b98b2cca48a1007fdba76bd85,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -89,3 +102,9 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 3cf8b77916041a24c88aa6e77518e6bb, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a09ff16b98b2cca48a1007fdba76bd85, type: 3}
+--- !u!1 &6455669522799260627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -2980775628480462742, guid: a09ff16b98b2cca48a1007fdba76bd85,
+    type: 3}
+  m_PrefabInstance: {fileID: 1095796798364332985}
+  m_PrefabAsset: {fileID: 0}
