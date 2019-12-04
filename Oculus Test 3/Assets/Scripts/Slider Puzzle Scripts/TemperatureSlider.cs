@@ -17,6 +17,7 @@ public class TemperatureSlider : MonoBehaviour
     public float speed;
 
     int alertType = 3;
+    int puzzleCompleteCheck;
 
     private Renderer sliderRenderer;
     public SliderPuzzleBreak sliderBreak;
@@ -79,19 +80,22 @@ public class TemperatureSlider : MonoBehaviour
                     }
               */
             stoppedValue = slider.transform.localPosition.x;
-            //Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-            //if (ObjectiveScript.ObjectiveNumber == 2 || SolvedFirstTime)
-            //{
-                if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
+            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+            if (ObjectiveScript.ObjectiveNumber == 2 || SolvedFirstTime)
+            {
+                if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1 && !isStopped)
                 {
                     isStopped = true;
-                    sliderBreak.puzzleCompleteCheck++;
+                    puzzleCompleteCheck++;
                     needle.transform.Rotate(rotation, Space.Self);
                     leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
+                    if (puzzleCompleteCheck >= 3)
+                    {
+                        alerts.DeactivateAlert(alertType);
+                        ObjectiveScript.SetNextObjective();
+                    }
                 }
-            //}
-           
-            //Use to check if lever is working
+            }
         }
     }
 }
