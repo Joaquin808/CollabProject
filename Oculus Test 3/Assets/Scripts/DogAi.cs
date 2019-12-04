@@ -4,7 +4,7 @@ using System.Collections;
 
 public class DogAi : MonoBehaviour
 {
-    public enum DogState { IDLE, WALK, RUN, CRAWL, GRAB, DROP };    //All possible states for dog 
+    public enum DogState { IDLE, WALK, RUN, GRAB, DROP };    //All possible states for dog 
     public DogState CurrentState = DogState.IDLE;   //Current state of dog
     public Transform dogMouth;                      //Reference to Mouth Bone
     public GameObject bone;                         //Reference to Bone
@@ -20,7 +20,6 @@ public class DogAi : MonoBehaviour
     private float walkSpeed = 2.5f;                 //WalkSpeed
     private float runDistance = 10f;                //Distance to Run instead of Walk
     private float runSpeed;                         //RunSpeed based on WalkSpeed
-    private float crawlSpeed;		                //CrawlSpeed based on WalkSpeed
     private Vector3 boneLocation;                   //Bone Location
     private Vector3 playerLocation;                 //Player Location
 
@@ -31,7 +30,6 @@ public class DogAi : MonoBehaviour
         boneLocation = bone.transform.position;             //Set Bone Location
         playerLocation = playerRef.transform.position;      //Set Player Location
         runSpeed = walkSpeed * 2;
-        crawlSpeed = walkSpeed / 2;
         boneHeld = true;
         boneHeldPlayer = false;
         AttachBone();                                       //Force Bone to Start in DogMouth
@@ -112,9 +110,6 @@ public class DogAi : MonoBehaviour
             case DogState.WALK:
                 Walk();
                 break;
-            case DogState.CRAWL:
-                Crawl();
-                break;
             case DogState.GRAB:
                 Grab();
                 break;
@@ -144,8 +139,12 @@ public class DogAi : MonoBehaviour
     //Idle State
     void Idle()
     {
-        animState = 0;
-        anim.SetInteger("AnimState", animState);
+        if (animState != 0)
+        {
+            animState = 0;
+            anim.SetInteger("AnimState", animState);
+        }
+
 
         /*
         //Play Sound
@@ -178,8 +177,11 @@ public class DogAi : MonoBehaviour
     void Run()
     {
         //Set Animation & MoveTo
-        animState = 2;
-        anim.SetInteger("AnimState", animState);
+        if (animState != 2)
+        {
+            animState = 2;
+            anim.SetInteger("AnimState", animState);
+        }
 
         //Play Sound
         if (dogAudio.clip != dogSounds[0])
@@ -197,8 +199,11 @@ public class DogAi : MonoBehaviour
     void Walk()
     {
         //Set Animation & MoveTo
-        animState = 1;
-        anim.SetInteger("AnimState", animState);
+        if (animState != 1)
+        {
+            animState = 1;
+            anim.SetInteger("AnimState", animState);
+        }
 
         //Play Sound
 
@@ -213,33 +218,15 @@ public class DogAi : MonoBehaviour
         MoveTo();
     }
 
-    //Crawl State
-    void Crawl()
-    {
-        //Set Animation & MoveTo
-        animState = 3;
-        anim.SetInteger("AnimState", animState);
-
-        /*
-        //Play Sound
-        if (dogAudio.clip != dogSounds[0])
-        {
-            dogAudio.Stop();
-            dogAudio.clip = dogSounds[0];
-            dogAudio.Play();
-        }
-        */
-
-        agent.speed = crawlSpeed;
-        MoveTo();
-    }
-
     //Grab State
     void Grab()
     {
         //Set Animation
-        animState = 4;
-        anim.SetInteger("AnimState", animState);
+        if (animState != 3)
+        {
+            animState = 3;
+            anim.SetInteger("AnimState", animState);
+        }
 
         /*
         //Play Sound
@@ -270,8 +257,11 @@ public class DogAi : MonoBehaviour
 
     void Drop()
     {
-        animState = 5;
-        anim.SetInteger("AnimState", animState);
+        if (animState != 4)
+        {
+            animState = 4;
+            anim.SetInteger("AnimState", animState);
+        }
 
         /*
         //Play Sound
@@ -293,24 +283,6 @@ public class DogAi : MonoBehaviour
         //drop bone from mouth
         //bone.GetComponent<Rigidbody>().AddForce(this.transform.forward * 0.1f);
         //boneHeldPlayer = true;
-    }
-
-    //Crawl Back Trigger
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.name == "CrouchWall")
-        {
-            CurrentState = DogState.CRAWL;
-        }
-    }
-
-    //Crawl Back Trigger Exit
-    void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.name == "CrouchWall")
-        {
-            RunOrWalk();
-        }
     }
 
 }
