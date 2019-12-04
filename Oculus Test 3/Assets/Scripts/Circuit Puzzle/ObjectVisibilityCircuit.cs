@@ -42,9 +42,9 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         }
         if (!isBrokenPiece)
         {
-            //Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-            //if (ObjectiveScript.ObjectiveNumber == 3 || SolvedFirstTime)
-            //{
+            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+            if (ObjectiveScript.ObjectiveNumber == 1 || SolvedFirstTime)
+            {
                 if (other.gameObject.name == grabbableCircuitName && !objectPlaced)
                 {
                     rend.enabled = true;
@@ -62,7 +62,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
                         SolvedFirstTime = true;
                     }
                 }
-            //}
+            }
         }        
     }
 }

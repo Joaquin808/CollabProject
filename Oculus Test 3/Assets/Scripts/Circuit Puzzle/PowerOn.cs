@@ -66,17 +66,19 @@ public class PowerOn : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
         if (other.gameObject.name == "Index Finger Left" || other.gameObject.name == "Index Finger Right")
         {
             leverClick.Play(0);
             isTriggered = true;
-            if (circuitsConnected >= 8)
+            if (circuitsConnected >= 8 && ObjectiveScript.ObjectiveNumber == 1)
             {
                 //Lights come on
                 isBroken = false;
                 powerEnabled = true;
                 AlertSystem.DeactivateAlert(0);
                 door.GetComponent<SlidingDoor>().isLocked = false;
+                ObjectiveScript.SetNextObjective();
             }
         }
     }

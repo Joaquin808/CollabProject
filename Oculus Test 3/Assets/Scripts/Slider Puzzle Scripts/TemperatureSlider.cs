@@ -79,9 +79,9 @@ public class TemperatureSlider : MonoBehaviour
                     }
               */
             stoppedValue = slider.transform.localPosition.x;
-            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-            if (ObjectiveScript.ObjectiveNumber == 5 || SolvedFirstTime)
-            {
+            //Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+            //if (ObjectiveScript.ObjectiveNumber == 2 || SolvedFirstTime)
+            //{
                 if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1)
                 {
                     isStopped = true;
@@ -89,11 +89,7 @@ public class TemperatureSlider : MonoBehaviour
                     needle.transform.Rotate(rotation, Space.Self);
                     leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
                 }
-                else
-                {
-                    Debug.Log("Incorrect value");
-                }
-            }
+            //}
            
             //Use to check if lever is working
         }
