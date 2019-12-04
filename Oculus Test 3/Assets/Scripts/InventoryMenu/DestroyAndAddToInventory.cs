@@ -40,6 +40,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
         if (other.gameObject.tag == "ChipCollider")
         {
             Inventory.Instance.Add(InventoryItemRef);
+            gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
             Renderer rend = gameObject.GetComponentInChildren<Renderer>();
             rend.enabled = false;
             Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
