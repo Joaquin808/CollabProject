@@ -39,12 +39,14 @@ public class DestroyAndAddToInventory : MonoBehaviour
     {
         if (other.gameObject.tag == "ChipCollider")
         {
-            Inventory.Instance.Add(InventoryItemRef);
+            //Play Animation
             gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
+            //Wait 3 seconds for animation to end, then addtoinventory
             spawnTimer = 0;
             spawnTimer += Time.deltaTime;
             if(spawnTimer >= 3)
             {
+                Inventory.Instance.Add(InventoryItemRef);
                 Renderer rend = gameObject.GetComponentInChildren<Renderer>();
                 rend.enabled = false;
                 Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
