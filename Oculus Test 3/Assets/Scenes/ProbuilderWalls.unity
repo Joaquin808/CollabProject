@@ -4856,16 +4856,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1641495489208540048, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559800835601839814, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 6079680618617831005, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Name
@@ -4981,7 +4971,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 1559800835601839814, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 1148274947152783648, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1641495489208540048, guid: 2acb3a466ba6bb0488bd3269fe9b30e8,
         type: 3}
       propertyPath: m_Layer
       value: 9
@@ -11839,6 +11839,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1122517243}
     m_Modifications:
+    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
+        type: 3}
+      propertyPath: m_Name
+      value: Book 2 (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 3538014019659816001, guid: a3ce9b846b5544845adda9edf1e67459,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11908,11 +11913,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 9.4735155
-      objectReference: {fileID: 0}
-    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
-        type: 3}
-      propertyPath: m_Name
-      value: Book 2 (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ce9b846b5544845adda9edf1e67459, type: 3}
@@ -29360,6 +29360,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
+        type: 3}
+      propertyPath: m_Name
+      value: Book 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3538014019659816001, guid: a3ce9b846b5544845adda9edf1e67459,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -29429,21 +29444,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.965443
-      objectReference: {fileID: 0}
-    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
-        type: 3}
-      propertyPath: m_Name
-      value: Book 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
-        type: 3}
-      propertyPath: m_Layer
-      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ce9b846b5544845adda9edf1e67459, type: 3}
@@ -31943,7 +31943,7 @@ PrefabInstance:
     - target: {fileID: -927199367670048503, guid: e634f44abf7872a43941cd43d9886588,
         type: 3}
       propertyPath: m_Name
-      value: doganimationbakedwalk
+      value: DogRigAnimated
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: e634f44abf7872a43941cd43d9886588,
         type: 3}
@@ -32014,6 +32014,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7718179548625958663, guid: e634f44abf7872a43941cd43d9886588,
+        type: 3}
+      propertyPath: m_Name
+      value: MouthJoint
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e634f44abf7872a43941cd43d9886588, type: 3}
@@ -42215,9 +42220,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788112166}
   - component: {fileID: 1788112165}
-  - component: {fileID: 1788112164}
   - component: {fileID: 1788112167}
-  - component: {fileID: 1788112168}
   - component: {fileID: 1788112170}
   - component: {fileID: 1788112171}
   m_Layer: 15
@@ -42227,25 +42230,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!95 &1788112164
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788112163}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 954204ec9d2e3a84d9f5d0e61ce7d2fb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &1788112165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42307,19 +42291,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 3
   m_ObstacleAvoidanceType: 4
---- !u!65 &1788112168
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788112163}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.101777606, y: 0.13641287, z: 0.38444847}
-  m_Center: {x: 0.0054780785, y: 0.20234185, z: 0.014430941}
 --- !u!82 &1788112170
 AudioSource:
   m_ObjectHideFlags: 0
@@ -44797,6 +44768,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1122517243}
     m_Modifications:
+    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
+        type: 3}
+      propertyPath: m_Name
+      value: Book 2 (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 3538014019659816001, guid: a3ce9b846b5544845adda9edf1e67459,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -44866,11 +44842,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 9.473513
-      objectReference: {fileID: 0}
-    - target: {fileID: 523214537814060626, guid: a3ce9b846b5544845adda9edf1e67459,
-        type: 3}
-      propertyPath: m_Name
-      value: Book 2 (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3ce9b846b5544845adda9edf1e67459, type: 3}
