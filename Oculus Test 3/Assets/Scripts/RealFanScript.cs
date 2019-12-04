@@ -20,7 +20,7 @@ public class RealFanScript : MonoBehaviour
         fanIn = false;
     }
 
-    void OnTriggerEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         if (bfscrp.removed)
         {
