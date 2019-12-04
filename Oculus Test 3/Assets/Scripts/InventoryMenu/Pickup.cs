@@ -33,6 +33,7 @@ public class Pickup : InventoryItem
         //Object.transform.position = Object.transform.position + offset;
         Renderer rend = Object.GetComponentInChildren<Renderer>();
         rend.enabled = true;
+        Object.GetComponentInChildren<SpawnEffect>().Despawn();
         Rigidbody rigidBody = Object.GetComponent<Rigidbody>();
         rigidBody.detectCollisions = true;
         rigidBody.velocity = new Vector3(0, 0, 0);
