@@ -9,7 +9,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
     //public bool CanAddToInventory;
     bool ItemWasAdded = false;
     public Text ItemAddedText;
-    float Timer;
+    float Timer, spawnTimer;
 
     void Start()
     {
@@ -41,11 +41,17 @@ public class DestroyAndAddToInventory : MonoBehaviour
         {
             Inventory.Instance.Add(InventoryItemRef);
             gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
-            Renderer rend = gameObject.GetComponentInChildren<Renderer>();
-            rend.enabled = false;
-            Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
-            rigid.detectCollisions = false;
-            ItemWasAdded = true;
+            spawnTimer = 0;
+            spawnTimer += Time.deltaTime;
+            if(spawnTimer >= 3)
+            {
+                Renderer rend = gameObject.GetComponentInChildren<Renderer>();
+                rend.enabled = false;
+                Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
+                rigid.detectCollisions = false;
+                ItemWasAdded = true;
+            }
         }
     }
+
 }
