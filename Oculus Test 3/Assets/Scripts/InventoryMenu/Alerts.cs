@@ -49,7 +49,7 @@ public class Alerts : MonoBehaviour
        
         AlertSection.SetActive(false);*/
 
-        ActivateAlert("Power critical", 3); 
+        ActivateAlert("Power critical", 4); 
     }
 
     // Update is called once per frame

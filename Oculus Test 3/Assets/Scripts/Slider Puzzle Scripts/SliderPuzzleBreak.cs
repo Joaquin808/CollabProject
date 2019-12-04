@@ -28,16 +28,7 @@ public class SliderPuzzleBreak : MonoBehaviour
         //if (broken)
         //{
             //OnBreak();
-            if (puzzleCompleteCheck >= 3)
-            {
-                alerts.DeactivateAlert(AlertType);
-                //broken = false;
-                Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-                if (ObjectiveScript.ObjectiveNumber == 1)
-                {
-                    ObjectiveScript.SetNextObjective();
-                }
-            }
+           
                 
         //}
     }
