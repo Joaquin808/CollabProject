@@ -44,7 +44,7 @@ public class SpawnEffect : MonoBehaviour {
         
     }
     */
-    public void Deespawn()
+    public void Despawn()
     {
         ps.Play();
 
