@@ -13,7 +13,7 @@ public class PowerOn : MonoBehaviour
     public bool powerEnabled = false;
     public bool isMoving;
     public Alerts AlertSystem;
-    public GameObject panel;
+    public GameObject panel, door;
     SoundEffects soundFX;
 
     Vector3 moveDirection = Vector3.down;
@@ -24,7 +24,7 @@ public class PowerOn : MonoBehaviour
     {
         leverClick.GetComponent<AudioSource>();
         startPos = this.transform.localPosition;
-        endPos = startPos - new Vector3(0, 0.1f, 0);
+        endPos = startPos - new Vector3(0, 0.5f, 0);
     }
 
     void Update()
@@ -76,7 +76,16 @@ public class PowerOn : MonoBehaviour
                 isBroken = false;
                 powerEnabled = true;
                 AlertSystem.DeactivateAlert(0);
+                door.GetComponent<SlidingDoor>().isLocked = false;
             }
+        }
+    }
+
+    void OnTriggerExit (Collider other)
+    {
+        if (other.gameObject.name == "Index Finger Left" || other.gameObject.name == "Index Finger Right")
+        {
+            isTriggered = false;
         }
     }
 
