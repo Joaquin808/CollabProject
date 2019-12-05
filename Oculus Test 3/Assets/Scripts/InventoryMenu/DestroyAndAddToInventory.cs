@@ -8,12 +8,12 @@ public class DestroyAndAddToInventory : MonoBehaviour
     public Pickup InventoryItemRef;
     //public bool CanAddToInventory;
     bool ItemWasAdded = false;
-    public Text ItemAddedText;
+    //public Text ItemAddedText;
     float Timer, spawnTimer = 0;
 
     void Start()
     {
-        ItemAddedText = GameObject.Find("ItemAddedTextParent").GetComponentInChildren<Text>();
+        //ItemAddedText = GameObject.Find("ItemAddedTextParent").GetComponentInChildren<Text>();
 
     }
 
