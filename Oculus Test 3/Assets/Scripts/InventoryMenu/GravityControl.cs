@@ -20,7 +20,7 @@ public class GravityControl : MonoBehaviour
         GetComponent<Rigidbody>().useGravity = UseGravity;
 
         // gives player enough time to grab the object before gravity is enabled and the object falls to the floor
-        if (GravityTimer >= 10f)
+        if (GravityTimer >= 5f)
         {
             UseGravity = true;
             GravityTimer = 0f;

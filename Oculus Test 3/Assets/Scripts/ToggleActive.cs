@@ -32,10 +32,10 @@ public class ToggleActive : MonoBehaviour
 
     void OnToggleValueChanged(bool IsOn)
     {
-        ColorBlock cb = Self.colors;
+        /*ColorBlock cb = Self.colors;
         cb.normalColor = IsOn ? Color.white : Color.gray;
         cb.highlightedColor = IsOn ? Color.white : Color.gray;
-        Self.colors = cb;
+        Self.colors = cb;*/
 
         CurrentSprite = IsOn ? ActiveSprite : InActiveSprite;
         Image.sprite = CurrentSprite;
