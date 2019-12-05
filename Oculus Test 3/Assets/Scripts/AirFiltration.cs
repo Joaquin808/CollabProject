@@ -32,6 +32,8 @@ public class AirFiltration : MonoBehaviour
     {
         dialPointed = rb.transform.rotation.eulerAngles.x;
         dialZ = rb.transform.rotation.eulerAngles.z;
+        Debug.Log(dialZ);
+
         FansIn();
         if (fanOneIn && fanTwoIn && fanThreeIn)
         {
