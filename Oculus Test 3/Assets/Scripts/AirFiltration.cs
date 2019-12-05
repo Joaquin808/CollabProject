@@ -12,6 +12,8 @@ public class AirFiltration : MonoBehaviour
     bool inSpot;
     bool SolvedFirstTime = false;
     public bool solved;
+    bool fanOneIn, fanTwoIn, fanThreeIn;
+    RealFanScript rfscrp;
     Objectives ObjectiveScript;
     
 
@@ -30,16 +32,29 @@ public class AirFiltration : MonoBehaviour
     {
         dialPointed = rb.transform.rotation.eulerAngles.x;
         dialZ = rb.transform.rotation.eulerAngles.z;
-
-        ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-        if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
+        FansIn();
+        if (fanOneIn && fanTwoIn && fanThreeIn)
         {
-            CheckIfSolved();
+            ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+            if (ObjectiveScript.ObjectiveNumber == 4 || SolvedFirstTime)
+            {
+                CheckIfSolved();
+            }
         }
-            
         
     }
 
+    //Sets each bool to each fan's fanIn bool, asks if all fans are in
+    void FansIn()
+    {
+        rfscrp = fanOne.GetComponent<RealFanScript>();
+        fanOneIn = rfscrp.fanIn;
+        rfscrp = fanTwo.GetComponent<RealFanScript>();
+        fanTwoIn = rfscrp.fanIn;
+        rfscrp = fanThree.GetComponent<RealFanScript>();
+        fanThreeIn = rfscrp.fanIn;
+    }
+    
     //creates a random solution for the air filtration puzzle
     void RandomSolution()
     {
