@@ -9,8 +9,8 @@ public class SliderPuzzleBreak : MonoBehaviour
     public bool SolvedFirstTime = false;
 
     public Alerts alerts; //call to alerts script
-    public GameObject needle, needle2;
-    Renderer needle1Rend, needle2Rend;
+    Objectives objectives;
+    public GameObject Player;
 
     //bool broken = true;
     //public GameObject player;
@@ -19,40 +19,15 @@ public class SliderPuzzleBreak : MonoBehaviour
 
     void Start()
     {
-
+        objectives = Player.GetComponent<Objectives>();
     }
 
     void Update()
     {
-        //powerBroken = GameObject.Find("Power Puzzle Pieces").GetComponent<PowerOn>().isBroken;
-        //if (broken)
-        //{
-            //OnBreak();
-           
-                
-        //}
-    }
-
-    //Function used to break temperature puzzle
-    void OnBreak()
-    {
-        alerts.ActivateAlert("Temperature critical!", AlertType);
-        //needle2Rend.enabled = true;
-        //broken = false;
-    }
-
-    //Function to fix temperature puzzle
-    void OnFix()
-    {
-        Destroy(needle2.gameObject);
-        needle1Rend.enabled = true;
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject == needle2)
+        if (puzzleCompleteCheck == 3)
         {
-            OnFix();
+            objectives.SetNextObjective();
         }
     }
+
 }

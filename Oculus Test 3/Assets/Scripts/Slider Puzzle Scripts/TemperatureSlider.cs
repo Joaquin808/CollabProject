@@ -17,7 +17,7 @@ public class TemperatureSlider : MonoBehaviour
     public float speed;
 
     int alertType = 3;
-    int puzzleCompleteCheck;
+    public int puzzleCompleteCheck;
 
     private Renderer sliderRenderer;
     public SliderPuzzleBreak sliderBreak;
@@ -86,7 +86,7 @@ public class TemperatureSlider : MonoBehaviour
                 if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1 && !isStopped)
                 {
                     isStopped = true;
-                    puzzleCompleteCheck++;
+                    sliderBreak.puzzleCompleteCheck++;
                     needle.transform.Rotate(rotation, Space.Self);
                     leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
                     if (puzzleCompleteCheck == 3)

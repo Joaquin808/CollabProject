@@ -256,10 +256,10 @@ public class Alerts : MonoBehaviour
         AlertTypeText.text = "";
         AlertSection.SetActive(false);
         AnyAlertsActive = false;
-        for (int i = 0; i < Indicator.Length; i++)
+       /* for (int i = 0; i < Indicator.Length; i++)
         {
             Indicator[i].SetActive(false);
-        }
+        }*/
 
         switch (TypeOfAlert)
         {
