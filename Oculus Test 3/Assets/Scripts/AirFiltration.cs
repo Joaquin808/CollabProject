@@ -22,7 +22,7 @@ public class AirFiltration : MonoBehaviour
     void Start()
     {
         rb = dial.GetComponent<Rigidbody>();
-        RandomSolution();
+        //RandomSolution();
         wind = this.gameObject.GetComponent<AudioSource>();
         timer = 0;
     }
@@ -33,8 +33,12 @@ public class AirFiltration : MonoBehaviour
         dialPointed = rb.transform.rotation.eulerAngles.x;
         dialZ = rb.transform.rotation.eulerAngles.z;
         Debug.Log(dialZ);
+        Debug.Log("The dial is pointed at " + dialZ);
 
         FansIn();
+        Debug.Log("Fan1: " + fanOneIn);
+        Debug.Log("Fan2: " + fanTwoIn);
+        Debug.Log("Fan3: " + fanThreeIn);
         if (fanOneIn && fanTwoIn && fanThreeIn)
         {
             ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
@@ -74,23 +78,23 @@ public class AirFiltration : MonoBehaviour
     void CheckIfSolved()
     {
         //Checks if the z is in the 1 and 4 quadrants
-        if (80f < dialZ && dialZ < 100f)
-        {
-            if (solutionOne < dialPointed && dialPointed < solutionTwo)
+        //if (80f < dialZ && dialZ < 100f)
+        //{
+            if (30f < dialPointed && dialPointed < 60f)
             {
                 SolutionFinder();
             }
          
-        }
+       // }
         //Checks if the z is in the 2 and 3 quadrants
-        if (260f < dialZ && dialZ < 280f)
-        {
+        //if (260f < dialZ && dialZ < 280f)
+        //{
             
-            if (solutionTwo < dialPointed && dialPointed < solutionOne)
-            {
-                SolutionFinder();
-            }
-        }
+        //    if (solutionTwo < dialPointed && dialPointed < solutionOne)
+        //    {
+        //        SolutionFinder();
+        //    }
+        //}
 
     }
 

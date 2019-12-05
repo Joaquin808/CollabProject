@@ -7,7 +7,8 @@ public class ToggleActive : MonoBehaviour
 {
     Toggle Self;
     public GameObject Content;
-    public Image Image;
+    public GameObject Object;
+    Image Image;
     public Sprite ActiveSprite;
     public Sprite InActiveSprite;
     Sprite CurrentSprite;
@@ -17,6 +18,8 @@ public class ToggleActive : MonoBehaviour
     {
         Self = GetComponent<Toggle>();
         Self.onValueChanged.AddListener(OnToggleValueChanged);
+
+        Image = Object.GetComponent<Image>();
 
         ColorBlock cb = Self.colors;
         cb.normalColor = Content.activeInHierarchy ? Color.white : Color.gray;
