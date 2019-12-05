@@ -12,6 +12,8 @@ public class ObjectVisibilityCircuit : MonoBehaviour
     bool objectPlaced = false;
     public SoundEffects soundFX;
     public PowerOn powerScript;
+    OVRGrabbable grabbable;
+
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         {
             rend = GetComponent<Renderer>();
             rend.enabled = false;
+
         }
 
         if (isBrokenPiece)
@@ -29,6 +32,8 @@ public class ObjectVisibilityCircuit : MonoBehaviour
             rb = GetComponent<Rigidbody>();
             rb.isKinematic = true;
             rb.useGravity = false;
+            grabbable = GetComponent<OVRGrabbable>();
+            grabbable.enabled = false;
         }
         
     }
@@ -39,7 +44,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = true;
-            OVRGrabbable grabbable = gameObject.AddComponent<OVRGrabbable>() as OVRGrabbable;
+
         }
         if (!isBrokenPiece)
         {
