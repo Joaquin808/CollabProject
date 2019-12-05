@@ -14,6 +14,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
     void Start()
     {
         ItemAddedText = GameObject.Find("ItemAddedTextParent").GetComponentInChildren<Text>();
+
     }
 
     void Update()
@@ -48,17 +49,20 @@ public class DestroyAndAddToInventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "ChipCollider")
-        {
-            //Play Animation
-            gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
-            ItemWasAdded = true;
-            Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
-            rigid.isKinematic = true;
-            rigid.detectCollisions = false;
-            rigid.useGravity = false;
-            rigid.velocity = new Vector3(0, 0, 0);
-            GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
+        if (this.GetComponent<OVRGrabbable>().isGrabbed == false) { 
+            if (other.gameObject.tag == "ChipCollider")
+            {
+                //Play Animation
+                gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
+                ItemWasAdded = true;
+                Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
+                rigid.isKinematic = true;
+                rigid.detectCollisions = false;
+                rigid.useGravity = false;
+                rigid.velocity = new Vector3(0, 0, 0);
+                GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
+                //GameObject.Find("CustomHandLeft").GetComponent<OVRGrabber>().m_grabbedObj = null;
+            }
         }
     }
 

@@ -55,7 +55,7 @@ public class Alerts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        /*
         if (IsAlertActive)
         {
             time += Time.deltaTime;
@@ -83,7 +83,7 @@ public class Alerts : MonoBehaviour
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
             }*/
-        }
+        //}
 
         /*if (!AnyAlertsActive)
         {

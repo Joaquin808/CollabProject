@@ -55,7 +55,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
                 {
                     rend.enabled = true;
                     other.gameObject.GetComponent<Renderer>().enabled = false;
-                    other.gameObject.GetComponent<RigidBody>().enabled = false;
+                    other.gameObject.GetComponent<Rigidbody>().detectCollisions = false;
                     //Destroy(other.gameObject);
                     powerScript.circuitsConnected++;
                     objectPlaced = true;
