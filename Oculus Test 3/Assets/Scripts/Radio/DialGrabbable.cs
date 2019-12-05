@@ -11,11 +11,14 @@ public class DialGrabbable : OVRGrabbable
     public override void GrabEnd(Vector3 linearVelocity, Vector3 angularVelocity)
     {
         base.GrabEnd(Vector3.zero, Vector3.zero);
-        /*
-        x = transform.eulerAngles.x;
-        transform.rotation = Quaternion.Euler(x, 0, 0);
-        */
+
+        Rigidbody rbDial = dial.gameObject.GetComponent<Rigidbody>();
+        
         transform.position = dial.transform.position;
         transform.rotation = dial.transform.rotation;
+
+        rbDial.velocity = Vector3.zero;
+        rbDial.angularVelocity = Vector3.zero;
+
     }
 }
