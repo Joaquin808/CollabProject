@@ -89,7 +89,7 @@ public class TemperatureSlider : MonoBehaviour
                     sliderBreak.puzzleCompleteCheck++;
                     needle.transform.Rotate(rotation, Space.Self);
                     leverSwitch.GetComponent<Rigidbody>().isKinematic = true;
-                    if (puzzleCompleteCheck == 3)
+                    if (sliderBreak.puzzleCompleteCheck == 3)
                     {
                         alerts.DeactivateAlert(alertType);
                         ObjectiveScript.SetNextObjective();

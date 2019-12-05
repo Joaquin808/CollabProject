@@ -9,18 +9,20 @@ public class ObjectVisibility : MonoBehaviour
     Renderer rend;
     public string String;
     private GameObject destroyedPipe;
-    public GameObject PipeSetPrefab;
-    public GameObject spawnLoc;
     public int pipesFixed = 0;
     public Alerts AlertSystem;
     int TypeOfAlert = 1;
     public Pickup InventoryItemRef;
     bool SolvedFirstTime = false;
     public SoundEffects soundFX;
+    Objectives ObjectiveScript;
+    PipeCheck PipeCheck;
 
     void Start()
     {
         rend = GetComponent<Renderer>();
+        ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+        PipeCheck = GameObject.Find("Water Filter").GetComponent<PipeCheck>();
     }
 
     void Update()
@@ -40,7 +42,7 @@ public class ObjectVisibility : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-        Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+
         if (ObjectiveScript.ObjectiveNumber == 3 || SolvedFirstTime)
         {
             if (!collisionList.Contains(collision.gameObject.name))
@@ -55,14 +57,9 @@ public class ObjectVisibility : MonoBehaviour
                 collisionList.Remove("Wrench");
                 destroyedPipe = GameObject.Find(String);
                 Destroy(destroyedPipe);
-                if (soundFX.genAudio.clip != soundFX.genSounds[15])
-                {
-                    soundFX.genAudio.Stop();
-                    soundFX.genAudio.clip = soundFX.genSounds[15];
-                    soundFX.genAudio.Play();
-                }
-                pipesFixed++;
-                if (pipesFixed == 7)
+                PipeCheck.pipesFixed++;
+
+                if (PipeCheck.pipesFixed == 7)
                 {
                     AlertSystem.DeactivateAlert(TypeOfAlert);
                     SolvedFirstTime = true;
@@ -70,6 +67,13 @@ public class ObjectVisibility : MonoBehaviour
                     {
                         ObjectiveScript.SetNextObjective();
                     }
+                }
+
+                if (soundFX.genAudio.clip != soundFX.genSounds[15])
+                {
+                    soundFX.genAudio.Stop();
+                    soundFX.genAudio.clip = soundFX.genSounds[15];
+                    soundFX.genAudio.Play();
                 }
             }
         }
@@ -93,8 +97,4 @@ public class ObjectVisibility : MonoBehaviour
 
     }
 
-    public void spawnPipes()
-    {
-        Instantiate(PipeSetPrefab, spawnLoc.transform);
-    }
 }

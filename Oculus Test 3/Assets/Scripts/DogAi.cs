@@ -221,7 +221,7 @@ public class DogAi : MonoBehaviour
     //Grab State
     void Grab()
     {
-        //Set Animation
+      /*  //Set Animation
         if (animState != 3)
         {
             animState = 3;
@@ -237,7 +237,7 @@ public class DogAi : MonoBehaviour
             dogAudio.Play();
         }
         */
-
+        
         //Attach Bone to DogMouth
         AttachBone();
     }
@@ -257,7 +257,7 @@ public class DogAi : MonoBehaviour
 
     void Drop()
     {
-        if (animState != 4)
+      /*  if (animState != 4)
         {
             animState = 4;
             anim.SetInteger("AnimState", animState);
