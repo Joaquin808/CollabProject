@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3482724019279725606}
   - component: {fileID: 1687951796759761027}
   - component: {fileID: 4383852276997806203}
+  - component: {fileID: 2578247371054833622}
   m_Layer: 0
   m_Name: BrokenFan
   m_TagString: Untagged
@@ -109,3 +110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f9fca5acb543674e984da82d86e3366, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  removed: 0
+--- !u!65 &2578247371054833622
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7602132841963173861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6419859, y: 0.2316045, z: 1.6831725}
+  m_Center: {x: -0.25698403, y: -0.07503142, z: 0.08895154}

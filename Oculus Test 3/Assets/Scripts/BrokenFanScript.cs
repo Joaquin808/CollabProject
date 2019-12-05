@@ -11,12 +11,13 @@ public class BrokenFanScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = this.gameObject.GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody>();
     }
     
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Welder")
+        Debug.Log(other.gameObject.name);
+        if (other.gameObject.name == "Welder")
         {
             rb.isKinematic = false;
             rb.useGravity = true;
