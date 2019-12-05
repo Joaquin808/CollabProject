@@ -4,12 +4,15 @@ using UnityEngine;
 
 public class RealFanScript : MonoBehaviour
 {
-    
+
     Renderer rend;
     BrokenFanScript bfscrp;
 
     public GameObject brokeFan;
     public bool fanIn;
+
+    List<string> collisionList = new List<string>();
+    private GameObject destroyedFan;
 
     // Start is called before the first frame update
     void Start()
@@ -24,15 +27,43 @@ public class RealFanScript : MonoBehaviour
     {
         if (bfscrp.removed)
         {
-            if (other.gameObject.name == "Welder" && other.gameObject.name == "ReplaceBlade")
+            // if (other.gameObject.name == "Welder" && other.gameObject.name == "ReplaceBlade")
+            // {
+
+
+
+            if (!collisionList.Contains(other.gameObject.name))
+            {
+                collisionList.Add(other.gameObject.name);
+            }
+
+            if (collisionList.Contains("ReplaceBlade") && collisionList.Contains("Welder"))
             {
                 rend.enabled = true;
-                if (other.gameObject.name == "ReplaceBlade")
-                {
-                    Destroy(other.gameObject);
-                    fanIn = true;
-                }
+                collisionList.Remove("ReplaceBlade");
+                collisionList.Remove("Wrench");
+                destroyedFan = GameObject.Find("ReplaceBlade");
+                Destroy(destroyedFan);
+
+
+
+
             }
+            // }
         }
+    }
+    void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.tag == "ReplaceBlade")
+        {
+            collisionList.Remove("ReplaceBlade");
+
+        }
+
+        if (collision.gameObject.tag == "Welder")
+        {
+            collisionList.Remove("Welder");
+        }
+
     }
 }
