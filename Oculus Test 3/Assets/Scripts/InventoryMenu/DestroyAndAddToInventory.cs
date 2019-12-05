@@ -9,7 +9,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
     //public bool CanAddToInventory;
     bool ItemWasAdded = false;
     public Text ItemAddedText;
-    float Timer, spawnTimer;
+    float Timer, spawnTimer = 0;
 
     void Start()
     {
@@ -20,18 +20,17 @@ public class DestroyAndAddToInventory : MonoBehaviour
     {
         if (ItemWasAdded)
         {
-            //Play Animation
-            gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
+          
             //Wait 3 seconds for animation to end, then addtoinventory
-            spawnTimer = 0;
+         
             spawnTimer += Time.deltaTime;
             if (spawnTimer >= 3)
             {
                 Inventory.Instance.Add(InventoryItemRef);
                 Renderer rend = gameObject.GetComponentInChildren<Renderer>();
                 rend.enabled = false;
-                Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
-                rigid.detectCollisions = false;
+                ItemWasAdded = false;
+                spawnTimer = 0;
             }
 
             /*Timer += Time.deltaTime;
@@ -53,7 +52,13 @@ public class DestroyAndAddToInventory : MonoBehaviour
     {
         if (other.gameObject.tag == "ChipCollider")
         {
+            //Play Animation
+            gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
             ItemWasAdded = true;
+            Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
+            rigid.isKinematic = true;
+            //Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
+            rigid.detectCollisions = false;
         }
     }
 

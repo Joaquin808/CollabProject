@@ -36,6 +36,7 @@ public class Pickup : InventoryItem
         Object.GetComponentInChildren<SpawnEffect>().Despawn();
         Rigidbody rigidBody = Object.GetComponent<Rigidbody>();
         rigidBody.detectCollisions = true;
+        rigidBody.isKinematic = false;
         rigidBody.velocity = new Vector3(0, 0, 0);
         //GameObject spawned = Instantiate(ObjectToSpawn, watch.transform.position, Quaternion.identity);
         Inventory.Instance.Remove(this);
