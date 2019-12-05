@@ -40953,6 +40953,25 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1564717831}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1564717833 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2475343402938236188, guid: 9a39ad8512de0bf4dabc030cf8246e29,
+    type: 3}
+  m_PrefabInstance: {fileID: 1564717831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1564717834
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1564717833}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.096308, y: 1.832614, z: 8.742149}
+  m_Center: {x: -2.1917562, y: -4.481715, z: 0.000007641129}
 --- !u!82 &1564717835
 AudioSource:
   m_ObjectHideFlags: 0
