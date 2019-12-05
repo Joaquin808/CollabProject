@@ -39,6 +39,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+            OVRGrabbable grabbable = gameObject.AddComponent<OVRGrabbable>() as OVRGrabbable;
         }
         if (!isBrokenPiece)
         {
