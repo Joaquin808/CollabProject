@@ -1021,7 +1021,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22634
+  m_Name: pb_Mesh19486
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1866,11 +1866,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564577721479398073, guid: d6487a58d1833a9408aba3ada80a8568,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2564577721479398073, guid: d6487a58d1833a9408aba3ada80a8568,
         type: 3}
@@ -6373,11 +6368,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.006848667
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564577721479398073, guid: d6487a58d1833a9408aba3ada80a8568,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2564577721479398073, guid: d6487a58d1833a9408aba3ada80a8568,
         type: 3}
@@ -15065,7 +15055,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -23175,16 +23165,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpotLight
       objectReference: {fileID: 0}
-    - target: {fileID: 1798064543190935440, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697329601493393137, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966ed20b914aa014290479d25fd3d28f, type: 3}
 --- !u!1001 &995934979
@@ -24008,11 +23988,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.006254732
-      objectReference: {fileID: 0}
-    - target: {fileID: 2564577721479398073, guid: d6487a58d1833a9408aba3ada80a8568,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2564577721479398073, guid: d6487a58d1833a9408aba3ada80a8568,
         type: 3}
@@ -33226,16 +33201,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpotLight
       objectReference: {fileID: 0}
-    - target: {fileID: 1798064543190935440, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697329601493393137, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966ed20b914aa014290479d25fd3d28f, type: 3}
 --- !u!4 &1132096751 stripped
@@ -33852,7 +33817,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22858
+  m_Name: pb_Mesh19720
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -34913,16 +34878,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpotLight
       objectReference: {fileID: 0}
-    - target: {fileID: 1798064543190935440, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697329601493393137, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966ed20b914aa014290479d25fd3d28f, type: 3}
 --- !u!1001 &1220647698
@@ -35427,16 +35382,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpotLight
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798064543190935440, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697329601493393137, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966ed20b914aa014290479d25fd3d28f, type: 3}
@@ -40827,16 +40772,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: SpotLight
       objectReference: {fileID: 0}
-    - target: {fileID: 1798064543190935440, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697329601493393137, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966ed20b914aa014290479d25fd3d28f, type: 3}
 --- !u!1001 &1561116529
@@ -41451,6 +41386,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 548302195}
+    - target: {fileID: 5398208033212557277, guid: 257f256dc6e21fb498d4bfbc0daa5b99,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 257f256dc6e21fb498d4bfbc0daa5b99, type: 3}
 --- !u!4 &1571610767 stripped
@@ -43007,16 +42947,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpotLight
-      objectReference: {fileID: 0}
-    - target: {fileID: 1798064543190935440, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8697329601493393137, guid: 966ed20b914aa014290479d25fd3d28f,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 966ed20b914aa014290479d25fd3d28f, type: 3}
@@ -46045,11 +45975,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4334906213707343571, guid: ad4e17c2499833a4d9fa6d27133af51b,
-        type: 3}
-      propertyPath: m_Shadows.m_Type
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad4e17c2499833a4d9fa6d27133af51b, type: 3}
