@@ -7,6 +7,10 @@ public class ToggleActive : MonoBehaviour
 {
     Toggle Self;
     public GameObject Content;
+    public Image Image;
+    public Sprite ActiveSprite;
+    public Sprite InActiveSprite;
+    Sprite CurrentSprite;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +22,9 @@ public class ToggleActive : MonoBehaviour
         cb.normalColor = Content.activeInHierarchy ? Color.white : Color.gray;
         cb.highlightedColor = Content.activeInHierarchy ? Color.white : Color.gray;
         Self.colors = cb;
+
+        CurrentSprite = Content.activeInHierarchy ? ActiveSprite : InActiveSprite;
+        Image.sprite = CurrentSprite;
     }
 
     void OnToggleValueChanged(bool IsOn)
@@ -26,5 +33,8 @@ public class ToggleActive : MonoBehaviour
         cb.normalColor = IsOn ? Color.white : Color.gray;
         cb.highlightedColor = IsOn ? Color.white : Color.gray;
         Self.colors = cb;
+
+        CurrentSprite = IsOn ? ActiveSprite : InActiveSprite;
+        Image.sprite = CurrentSprite;
     }
 }
