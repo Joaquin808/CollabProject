@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5557822404033796181}
   - component: {fileID: 2544413071523378791}
   - component: {fileID: 1968062722080452927}
-  - component: {fileID: 4043441242008713851}
+  - component: {fileID: 1348156818588128610}
   m_Layer: 0
   m_Name: ReplaceBlade
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8097393318581960490}
-  m_LocalRotation: {x: 0.8049321, y: 0, z: 0, w: 0.5933669}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.6856596, y: -0.8635614, z: 2.381448}
   m_LocalScale: {x: 0.68708086, y: 0.68708086, z: 0.68708086}
   m_Children: []
@@ -115,8 +115,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &4043441242008713851
-MeshCollider:
+--- !u!65 &1348156818588128610
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -125,7 +125,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -6204784743808233696, guid: 14f4f97a3a11df04aac8ff0107b26fe8, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.03, y: 0.8, z: 0.8}
+  m_Center: {x: 0, y: 0.08, z: 0}
