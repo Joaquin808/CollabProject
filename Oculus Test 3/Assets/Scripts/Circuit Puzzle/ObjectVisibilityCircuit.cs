@@ -59,12 +59,12 @@ public class ObjectVisibilityCircuit : MonoBehaviour
                     //Destroy(other.gameObject);
                     powerScript.circuitsConnected++;
                     objectPlaced = true;
-                if (soundFX.genAudio.clip != soundFX.genSounds[12])
+                /*if (soundFX.genAudio.clip != soundFX.genSounds[12])
                 {
                     soundFX.genAudio.Stop();
                     soundFX.genAudio.clip = soundFX.genSounds[12];
                     soundFX.genAudio.Play();
-                }
+                }*/
                 if (powerScript.powerEnabled)
                     {
                         SolvedFirstTime = true;
