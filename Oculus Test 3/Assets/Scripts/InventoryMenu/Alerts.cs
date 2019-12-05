@@ -13,7 +13,7 @@ public class Alerts : MonoBehaviour
     float TimerSeconds = 0f;
     float TimerMinutes = 5f;
     public int AlertType;
-    public GameObject FoodBar;
+    public GameObject PowerBar;
     public GameObject WaterBar;
     public GameObject AirBar;
     public GameObject TempBar;
@@ -36,7 +36,7 @@ public class Alerts : MonoBehaviour
     void Start()
     {
         // sets the color of each status bar to green at the beginning
-        FoodBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+        PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
         WaterBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
         AirBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
         TempBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
@@ -49,7 +49,7 @@ public class Alerts : MonoBehaviour
        
         AlertSection.SetActive(false);*/
 
-        ActivateAlert("Power critical", 4); 
+        ActivateAlert("Power critical", 0); 
     }
 
     // Update is called once per frame
@@ -64,12 +64,12 @@ public class Alerts : MonoBehaviour
                 time = 0;
             }
 
-            TimerSeconds -= Time.deltaTime;
-            Timer.text = "Time Left: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
-            ReduceTimer();
+            //TimerSeconds -= Time.deltaTime;
+            //Timer.text = "Time Left: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
+            //ReduceTimer();
 
             FlashTimer += Time.deltaTime;
-            if (FlashTimer >= 3f)
+            if (FlashTimer >= 1.5f)
             {
                 FlashIndicator();
                 FlashTimer = 0f;
@@ -85,7 +85,7 @@ public class Alerts : MonoBehaviour
             }*/
         }
 
-        if (!AnyAlertsActive)
+        /*if (!AnyAlertsActive)
         {
             BreakTimerSeconds -= Time.deltaTime;
             if (BreakTimerSeconds <= 0)
@@ -122,16 +122,16 @@ public class Alerts : MonoBehaviour
             {
                 FadeToTitleScreen();
             }
-        }
+        }*/
     }
 
     public void ActivateAlert(string AlertText, int TypeOfAlert)
     {
         AlertType = TypeOfAlert;
 
-        switch (AlertType)
+        /*switch (AlertType)
         {
-            case 0://food
+            case 0://power
             case 1://water
                 TimerMinutes = 10;
                 break;
@@ -145,7 +145,7 @@ public class Alerts : MonoBehaviour
                 // Set two minute timer for player to go to bed, if they don't, they die 
                 TimerMinutes = 2;
                 break;
-        }
+        }*/
 
         IsAlertActive = true;
         AlertTypeText.text = AlertText;
@@ -166,7 +166,7 @@ public class Alerts : MonoBehaviour
                 {
                     // changes the corresponding status bar to red when the timer gets to 2 minutes to indicate that the player has little time to fix the issue
                     case 0:
-                        FoodBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                        PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
                         break;
                     case 1:
                         WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
@@ -222,16 +222,16 @@ public class Alerts : MonoBehaviour
         switch (AlertType)
         {
             case 0:
-                FoodBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
                 break;
             case 1:
-                WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
                 break;
             case 2:
-                AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
                 break;
             case 3:
-                TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 0f, 1f);
+                TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
                 break;
         }
     }
@@ -264,7 +264,7 @@ public class Alerts : MonoBehaviour
         switch (TypeOfAlert)
         {
             case 0:
-                FoodBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                PowerBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
                 break;
             case 1:
                 WaterBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
