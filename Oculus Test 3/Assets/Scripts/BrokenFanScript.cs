@@ -14,7 +14,7 @@ public class BrokenFanScript : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
     }
     
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
         Debug.Log(other.gameObject.name);
         if (other.gameObject.name == "Welder")
