@@ -20,9 +20,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
     {
         if (ItemWasAdded)
         {
-          
             //Wait 3 seconds for animation to end, then addtoinventory
-         
             spawnTimer += Time.deltaTime;
             if (spawnTimer >= 3)
             {
@@ -57,7 +55,6 @@ public class DestroyAndAddToInventory : MonoBehaviour
             ItemWasAdded = true;
             Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
             rigid.isKinematic = true;
-            //Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
             rigid.detectCollisions = false;
         }
     }
