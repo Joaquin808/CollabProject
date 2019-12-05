@@ -56,7 +56,9 @@ public class ObjectVisibility : MonoBehaviour
                 collisionList.Remove(String);
                 collisionList.Remove("Wrench");
                 destroyedPipe = GameObject.Find(String);
-                Destroy(destroyedPipe);
+                destroyedPipe.GetComponent<Renderer>().enabled = false;
+                destroyedPipe.GetComponent<RigidBody>().enabled = false;
+                //Destroy(destroyedPipe);
                 PipeCheck.pipesFixed++;
 
                 if (PipeCheck.pipesFixed == 7)

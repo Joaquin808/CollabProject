@@ -54,7 +54,9 @@ public class ObjectVisibilityCircuit : MonoBehaviour
                 if (other.gameObject.name == grabbableCircuitName && !objectPlaced)
                 {
                     rend.enabled = true;
-                    Destroy(other.gameObject);
+                    other.gameObject.GetComponent<Renderer>().enabled = false;
+                    other.gameObject.GetComponent<RigidBody>().enabled = false;
+                    //Destroy(other.gameObject);
                     powerScript.circuitsConnected++;
                     objectPlaced = true;
                 if (soundFX.genAudio.clip != soundFX.genSounds[12])
