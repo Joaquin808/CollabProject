@@ -9,18 +9,18 @@ public class Inventory : MonoBehaviour
     public List<InventoryItem> JournalList = new List<InventoryItem>();
     public List<InventoryItem> KeysList = new List<InventoryItem>();
 
-    public GameObject InventoryPanelTools;
-    //public GameObject InventoryPanelResources;
-    public GameObject InventoryPanelJournalEntries;
-    public GameObject InventoryPanelKeys;
+    public GameObject InventoryContentTools;
+    //public GameObject InventoryContentResources;
+    public GameObject InventoryContentJournalEntries;
+    public GameObject InventoryContentKeys;
 
     public static Inventory Instance;
     public GameObject InventoryPrefab;
 
-    void UpdatePanelSlots()
+    void UpdateContentSlots()
     {
         int ToolIndex = 0;
-        foreach (Transform child in InventoryPanelTools.transform)
+        foreach (Transform child in InventoryContentTools.transform)
         {
             InventorySlotController Slot = child.GetComponent<InventorySlotController>();
 
@@ -39,7 +39,7 @@ public class Inventory : MonoBehaviour
         }
 
         /*int ResourceIndex = 0;
-        foreach (Transform child in InventoryPanelResources.transform)
+        foreach (Transform child in InventoryContentResources.transform)
         {
             InventorySlotController Slot = child.GetComponent<InventorySlotController>();
 
@@ -58,7 +58,7 @@ public class Inventory : MonoBehaviour
         }*/
 
         int JournalIndex = 0;
-        foreach (Transform child in InventoryPanelJournalEntries.transform)
+        foreach (Transform child in InventoryContentJournalEntries.transform)
         {
             InventorySlotController Slot = child.GetComponent<InventorySlotController>();
 
@@ -77,7 +77,7 @@ public class Inventory : MonoBehaviour
         }
 
         int KeysIndex = 0;
-        foreach (Transform child in InventoryPanelKeys.transform)
+        foreach (Transform child in InventoryContentKeys.transform)
         {
             InventorySlotController Slot = child.GetComponent<InventorySlotController>();
 
@@ -100,7 +100,7 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         Instance = this;
-        UpdatePanelSlots();
+        UpdateContentSlots();
     }
 
     public void Add(InventoryItem Item)
@@ -113,8 +113,8 @@ public class Inventory : MonoBehaviour
             }
 
             ToolList.Add(Item);
-            Instantiate(InventoryPrefab, InventoryPanelTools.transform);
-            UpdatePanelSlots();
+            Instantiate(InventoryPrefab, InventoryContentTools.transform);
+            UpdateContentSlots();
         }
 
         /*if (Item.ItemType == "Resource")
@@ -125,8 +125,8 @@ public class Inventory : MonoBehaviour
             }
 
             ResourceList.Add(Item);
-            Instantiate(InventoryPrefab, InventoryPanelResources.transform);
-            UpdatePanelSlots();
+            Instantiate(InventoryPrefab, InventoryContentResources.transform);
+            UpdateContentSlots();
         }*/
 
         if (Item.ItemType == "Journal")
@@ -137,8 +137,8 @@ public class Inventory : MonoBehaviour
             }
 
             JournalList.Add(Item);
-            Instantiate(InventoryPrefab, InventoryPanelJournalEntries.transform);
-            UpdatePanelSlots();
+            Instantiate(InventoryPrefab, InventoryContentJournalEntries.transform);
+            UpdateContentSlots();
         }
 
         if (Item.ItemType == "Key")
@@ -149,8 +149,8 @@ public class Inventory : MonoBehaviour
             }
 
             KeysList.Add(Item);
-            Instantiate(InventoryPrefab, InventoryPanelKeys.transform);
-            UpdatePanelSlots();
+            Instantiate(InventoryPrefab, InventoryContentKeys.transform);
+            UpdateContentSlots();
         }
     }
 
@@ -176,6 +176,6 @@ public class Inventory : MonoBehaviour
             KeysList.Remove(Item);
         }
 
-        UpdatePanelSlots();
+        UpdateContentSlots();
     }
 }
