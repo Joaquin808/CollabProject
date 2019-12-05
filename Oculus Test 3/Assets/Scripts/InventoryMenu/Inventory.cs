@@ -5,12 +5,12 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     public List<InventoryItem> ToolList = new List<InventoryItem>();
-    public List<InventoryItem> ResourceList = new List<InventoryItem>();
+    //public List<InventoryItem> ResourceList = new List<InventoryItem>();
     public List<InventoryItem> JournalList = new List<InventoryItem>();
     public List<InventoryItem> KeysList = new List<InventoryItem>();
 
     public GameObject InventoryPanelTools;
-    public GameObject InventoryPanelResources;
+    //public GameObject InventoryPanelResources;
     public GameObject InventoryPanelJournalEntries;
     public GameObject InventoryPanelKeys;
 
@@ -38,7 +38,7 @@ public class Inventory : MonoBehaviour
             ToolIndex++;
         }
 
-        int ResourceIndex = 0;
+        /*int ResourceIndex = 0;
         foreach (Transform child in InventoryPanelResources.transform)
         {
             InventorySlotController Slot = child.GetComponent<InventorySlotController>();
@@ -55,7 +55,7 @@ public class Inventory : MonoBehaviour
 
             Slot.UpdateInfo();
             ResourceIndex++;
-        }
+        }*/
 
         int JournalIndex = 0;
         foreach (Transform child in InventoryPanelJournalEntries.transform)
@@ -117,7 +117,7 @@ public class Inventory : MonoBehaviour
             UpdatePanelSlots();
         }
 
-        if (Item.ItemType == "Resource")
+        /*if (Item.ItemType == "Resource")
         {
             if (ResourceList.Contains(Item))
             {
@@ -127,7 +127,7 @@ public class Inventory : MonoBehaviour
             ResourceList.Add(Item);
             Instantiate(InventoryPrefab, InventoryPanelResources.transform);
             UpdatePanelSlots();
-        }
+        }*/
 
         if (Item.ItemType == "Journal")
         {
@@ -161,10 +161,10 @@ public class Inventory : MonoBehaviour
             ToolList.Remove(Item);
         }
 
-        if (Item.ItemType == "Resource")
+        /*if (Item.ItemType == "Resource")
         {
             ResourceList.Remove(Item);
-        }
+        }*/
 
         if (Item.ItemType == "Journal")
         {
