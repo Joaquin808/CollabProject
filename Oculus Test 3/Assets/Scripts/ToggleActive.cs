@@ -26,8 +26,8 @@ public class ToggleActive : MonoBehaviour
         cb.highlightedColor = Content.activeInHierarchy ? Color.white : Color.gray;
         Self.colors = cb;
 
-        CurrentSprite = Content.activeInHierarchy ? ActiveSprite : InActiveSprite;
-        Image.sprite = CurrentSprite;
+        //CurrentSprite = Content.activeInHierarchy ? ActiveSprite : InActiveSprite;
+        //Image.sprite = CurrentSprite;
     }
 
     void OnToggleValueChanged(bool IsOn)
@@ -37,7 +37,7 @@ public class ToggleActive : MonoBehaviour
         cb.highlightedColor = IsOn ? Color.white : Color.gray;
         Self.colors = cb;
 
-        CurrentSprite = IsOn ? ActiveSprite : InActiveSprite;
-        Image.sprite = CurrentSprite;
+        //CurrentSprite = IsOn ? ActiveSprite : InActiveSprite;
+        //Image.sprite = CurrentSprite;
     }
 }
