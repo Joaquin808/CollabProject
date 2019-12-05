@@ -56,6 +56,9 @@ public class DestroyAndAddToInventory : MonoBehaviour
             Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
             rigid.isKinematic = true;
             rigid.detectCollisions = false;
+            rigid.useGravity = false;
+            rigid.velocity = new Vector3(0, 0, 0);
+            GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
         }
     }
 
