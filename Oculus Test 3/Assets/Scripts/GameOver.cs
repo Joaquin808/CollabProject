@@ -6,36 +6,27 @@ using UnityEngine.SceneManagement;
 public class GameOver : MonoBehaviour
 {
     public GameObject keycard;
-    bool spaceHelmetOn;
     Objectives objectives;
+    PutOnHelmet PutOnHelmet;
+
 
 
     // Start is called before the first frame update
     void Start()
     {
         objectives = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+        PutOnHelmet = GameObject.Find("OVRPlayerController").GetComponent<PutOnHelmet>();
     }
 
 
     void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject == keycard && objectives.ObjectiveNumber == 7)
+       if(other.gameObject == keycard && objectives.ObjectiveNumber == 7 && PutOnHelmet.isHelmetOn)
         {
-            OVR
             SceneManager.LoadScene("TitleScene");
         }
     }
 
-    IEnumerator Fade(float startAlpha, float endAlpha)
-    {
-        float elapsedTime = 0.0f;
-        while (elapsedTime < fadeTime)
-        {
-            elapsedTime += Time.deltaTime;
-            currentAlpha = Mathf.Lerp(startAlpha, endAlpha, Mathf.Clamp01(elapsedTime / fadeTime));
-            SetMaterialAlpha();
-            yield return new WaitForEndOfFrame();
-        }
-    }
+
 
 }
