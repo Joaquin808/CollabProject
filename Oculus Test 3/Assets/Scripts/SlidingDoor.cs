@@ -96,7 +96,7 @@ public class SlidingDoor : MonoBehaviour
     //Player Detection Trigger
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
+        if (other.gameObject.tag == "Player")
         {
             isOpen = true;
         }
@@ -104,7 +104,7 @@ public class SlidingDoor : MonoBehaviour
 
     void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.name == "Dog")
+        if (other.gameObject.tag == "Player")
         {
             isOpen = false;
         }
