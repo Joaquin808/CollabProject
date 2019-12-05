@@ -26,7 +26,7 @@ public class DoorKey : MonoBehaviour
         if (other.gameObject == keycard)
         {
             door.GetComponent<SlidingDoor>().isLocked = false;
-            Debug.Log(door.GetComponent<SlidingDoor>().isLocked);
+
            
             //Destroy(gameObject);
         }
