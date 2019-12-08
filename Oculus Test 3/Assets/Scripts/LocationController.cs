@@ -16,7 +16,6 @@ public class LocationController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        print(other);
         CollidingWithAnything = true;
     }
 
