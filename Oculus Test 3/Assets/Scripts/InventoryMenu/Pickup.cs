@@ -10,9 +10,17 @@ public class Pickup : InventoryItem
     public AudioSource JournalAudio;
     public String ObjectName;
     GameObject Object;
+    LocationController LC;
 
     public override void Use()
     {
+        LC = GameObject.Find("ObjectTeleportLocation").GetComponent<LocationController>();
+        // prevents the spawning of objects if they will be colliding with any other object
+        if (LC.CollidingWithAnything)
+        {
+            return;
+        }
+
         base.Use();
         if (ItemType == "Journal")
         {
