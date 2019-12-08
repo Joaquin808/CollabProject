@@ -10,6 +10,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
     bool ItemWasAdded = false;
     //public Text ItemAddedText;
     float Timer, spawnTimer = 0;
+    public SoundEffects SoundFX;
 
     void Start()
     {
@@ -62,7 +63,12 @@ public class DestroyAndAddToInventory : MonoBehaviour
                 rigid.velocity = new Vector3(0, 0, 0);
                 GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
                 //GameObject.Find("CustomHandLeft").GetComponent<OVRGrabber>().m_grabbedObj = null;
-            }
+                if (SoundFX.genAudio.clip != SoundFX.genSounds[21])
+                {
+                    SoundFX.genAudio.Stop();
+                    SoundFX.genAudio.clip = SoundFX.genSounds[21];
+                    SoundFX.genAudio.Play();
+                }
         }
     }
 
