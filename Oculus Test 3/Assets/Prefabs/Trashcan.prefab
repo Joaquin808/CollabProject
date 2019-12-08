@@ -141,7 +141,7 @@ GameObject:
   - component: {fileID: 1592168748095695869}
   - component: {fileID: 731952932808452671}
   - component: {fileID: 7752280513845517075}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trashcan:TrashcanCanTopLid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: 4655910248087715327}
   - component: {fileID: 8567767815771209819}
   - component: {fileID: 1234741596934804528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Trashcan:TrashcanHandleCanTop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,11 +342,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2864001047582300905}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 046e544baa990fd4594e4df6367a7062,
-        type: 3}
-      propertyPath: m_Name
-      value: trash
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 046e544baa990fd4594e4df6367a7062,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -416,6 +411,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 2.2813861
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 046e544baa990fd4594e4df6367a7062,
+        type: 3}
+      propertyPath: m_Name
+      value: trash
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 046e544baa990fd4594e4df6367a7062, type: 3}

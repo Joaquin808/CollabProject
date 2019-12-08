@@ -41,7 +41,7 @@ public class RealFanScript : MonoBehaviour
             {
                 rend.enabled = true;
                 collisionList.Remove("ReplaceBlade");
-                collisionList.Remove("Wrench");
+                collisionList.Remove("Welder");
                 destroyedFan = GameObject.Find("ReplaceBlade");
                 destroyedFan.GetComponent<Renderer>().enabled = false;
                 destroyedFan.GetComponent<Rigidbody>().detectCollisions = false;
