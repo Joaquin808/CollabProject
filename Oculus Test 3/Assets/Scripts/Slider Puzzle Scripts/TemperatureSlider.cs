@@ -29,6 +29,7 @@ public class TemperatureSlider : MonoBehaviour
     public AudioSource leverClick; //Used to get audio source for lever click
     public Alerts alerts;
     SoundEffects soundFX;
+    Objectives ObjectiveScript;
 
     // Start is called before the first frame update
     void Start()
@@ -41,6 +42,8 @@ public class TemperatureSlider : MonoBehaviour
         rotation = new Vector3(0, 0, -40);
 
         leverClick.GetComponent<AudioSource>();
+
+        ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
 
         //GameObject statusAlert = GameObject.Find("Inventory/MenuCanvas"); //GameObject to access Alerts script
         //alerts = statusAlert.GetComponent<Alerts>();
@@ -80,7 +83,6 @@ public class TemperatureSlider : MonoBehaviour
                     }
               */
             stoppedValue = slider.transform.localPosition.x;
-            Objectives ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
             if (ObjectiveScript.ObjectiveNumber == 2 || SolvedFirstTime)
             {
                 if (stoppedValue >= correctValue2 && stoppedValue <= correctValue1 && !isStopped)
@@ -93,6 +95,7 @@ public class TemperatureSlider : MonoBehaviour
                     {
                         alerts.DeactivateAlert(alertType);
                         ObjectiveScript.SetNextObjective();
+                        GameObject.Find("Main Bunker Door").GetComponent<SlidingDoor>().isLocked = false;
                     }
                 }
             }
