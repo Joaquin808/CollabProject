@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoundEffects : MonoBehaviour
+public class SoundEffectsSpeech : MonoBehaviour
 {
 
     public AudioSource dialogueAudio;
@@ -25,9 +25,9 @@ public class SoundEffects : MonoBehaviour
     {
         if (dialogueAudio.clip != dialogueSounds[0])
         {
-            soundFXD.dialogueAudio.Stop();
-            soundFXD.dialogueAudio.clip = soundFX.genSounds[15];
-            soundFXD.dialogueAudio.Play();
+            dialogueAudio.Stop();
+            dialogueAudio.clip = dialogueSounds[0];
+            dialogueAudio.Play();
         }
     }
 }

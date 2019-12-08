@@ -15651,6 +15651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 635427349}
   - component: {fileID: 635427350}
+  - component: {fileID: 635427351}
   m_Layer: 0
   m_Name: SoundEffectsManager
   m_TagString: Untagged
@@ -15768,6 +15769,42 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &635427351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635427348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ad5f65a81a54e4e87bf3055bbd8fc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  genAudio: {fileID: 635427350}
+  genSounds:
+  - {fileID: 8300000, guid: a916771cdc3479144b5e8f24f397fc01, type: 3}
+  - {fileID: 8300000, guid: 29c650efec4d5f14b86848a1db85353d, type: 3}
+  - {fileID: 8300000, guid: 24cde808d5fd17a49bc793bfbecee161, type: 3}
+  - {fileID: 8300000, guid: b217046b34debbd4db486ab5dcd9ddc1, type: 3}
+  - {fileID: 8300000, guid: 61e62df597f47ed409591698d577b199, type: 3}
+  - {fileID: 8300000, guid: 1f0d0b44e33ccc84eafd81ec88f0e5d1, type: 3}
+  - {fileID: 8300000, guid: c7403e84d61eb8d4eaafe3c6cdae8623, type: 3}
+  - {fileID: 8300000, guid: b3d5852e83037514eb1baaf5a108f2b9, type: 3}
+  - {fileID: 8300000, guid: aef1649fb66dbab45bca713270f26e51, type: 3}
+  - {fileID: 8300000, guid: da8d8358aa1aef84e9cc9b2c11974ce6, type: 3}
+  - {fileID: 8300000, guid: a61730818ef33eb45bd532f166d8902d, type: 3}
+  - {fileID: 8300000, guid: 182cff26b8dd9284fa51f00ec7991f89, type: 3}
+  - {fileID: 8300000, guid: ffd33d679cb959749a2c4af5818f4424, type: 3}
+  - {fileID: 8300000, guid: 4bbfd422aabb8424898e4b00bed90f6c, type: 3}
+  - {fileID: 8300000, guid: 8c504b8e3dd7fa14cae930248da52650, type: 3}
+  - {fileID: 8300000, guid: 89dc8e0dda314484895df526ae844a4a, type: 3}
+  - {fileID: 8300000, guid: 59e10876fe92d904f9d329dfdcfaf6f4, type: 3}
+  - {fileID: 8300000, guid: 8abd06591a82abe468d33f2ef2e8b641, type: 3}
+  - {fileID: 8300000, guid: 01b85e1c4e41679438d2c9de81b02fdc, type: 3}
+  - {fileID: 8300000, guid: 557a85f24c110fb41868ccb769d40d15, type: 3}
+  - {fileID: 8300000, guid: d5a71f4bbb39f22429b129898a854a8c, type: 3}
+  - {fileID: 8300000, guid: dc42b36d02140ad4da3f79f71053374f, type: 3}
 --- !u!1001 &638380060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24415,8 +24452,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 898533992}
-  - component: {fileID: 898533994}
   - component: {fileID: 898533993}
+  - component: {fileID: 898533994}
   m_Layer: 0
   m_Name: DialogueSoundManager
   m_TagString: Untagged
@@ -24543,9 +24580,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 898533991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e56e84dbaf0378145bdb6beabfb5e525, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a3694bd87fbdba4b99ab89f774c5e2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueAudio: {fileID: 898533993}
+  dialogueSounds:
+  - {fileID: 8300000, guid: 3b79a93af51ecd643b4e6079eced70b3, type: 3}
+  - {fileID: 8300000, guid: 16c29fb72099fdc4b9eba19f995f65a7, type: 3}
+  - {fileID: 8300000, guid: ee1da0bf4dec7a544870980a9182de40, type: 3}
+  - {fileID: 8300000, guid: c04979761f5abee42b7407e32b34cf2d, type: 3}
+  - {fileID: 8300000, guid: ad8a92190f446e941a0f71f8915ab7e4, type: 3}
+  - {fileID: 8300000, guid: 66c639d93daccd544a5fcd320c60d226, type: 3}
+  - {fileID: 8300000, guid: 64b38a9a91ecd3b4f83fee1b8bc73d38, type: 3}
+  - {fileID: 8300000, guid: 38acc387c62f822498e183f94dc9f194, type: 3}
+  - {fileID: 8300000, guid: 930a5686d44dc124daf0f7ba3325d47b, type: 3}
+  - {fileID: 8300000, guid: e366af65a8cf3e44d88d8a5361de061a, type: 3}
+  - {fileID: 8300000, guid: 2b3683a7dc3b93542b950459f49784f7, type: 3}
 --- !u!1001 &898553489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41872,21 +41922,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.757315
       objectReference: {fileID: 0}
-    - target: {fileID: 6635927088404655955, guid: cfbe026a5f93a394c8547a4c0ac7f3e1,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: 31.139902
-      objectReference: {fileID: 0}
-    - target: {fileID: 6635927088404655955, guid: cfbe026a5f93a394c8547a4c0ac7f3e1,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.5240178
-      objectReference: {fileID: 0}
-    - target: {fileID: 6635927088404655955, guid: cfbe026a5f93a394c8547a4c0ac7f3e1,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 14.969002
-      objectReference: {fileID: 0}
     - target: {fileID: 953664579658137686, guid: cfbe026a5f93a394c8547a4c0ac7f3e1,
         type: 3}
       propertyPath: m_ConnectedAnchor.x
@@ -41901,6 +41936,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: 14.952286
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635927088404655955, guid: cfbe026a5f93a394c8547a4c0ac7f3e1,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: 31.139902
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635927088404655955, guid: cfbe026a5f93a394c8547a4c0ac7f3e1,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.5240178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6635927088404655955, guid: cfbe026a5f93a394c8547a4c0ac7f3e1,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 14.969002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cfbe026a5f93a394c8547a4c0ac7f3e1, type: 3}
