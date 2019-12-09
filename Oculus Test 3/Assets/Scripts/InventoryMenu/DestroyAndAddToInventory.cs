@@ -75,7 +75,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
                     rend.enabled = false;
                     //Play Animation
                     gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
-                    GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
+                    //GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
                     //GameObject.Find("CustomHandLeft").GetComponent<OVRGrabber>().m_grabbedObj = null;
                     if (SoundFX.genAudio.clip != SoundFX.genSounds[21])
                     {
