@@ -9,11 +9,11 @@ public class DestroyAndAddToInventory : MonoBehaviour
     //public bool CanAddToInventory;
     bool ItemWasAdded = false;
     //public Text ItemAddedText;
-    float Timer, spawnTimer, AddedTimer = 0;
+    public float Timer, spawnTimer, AddedTimer = 0;
     SoundEffects SoundFX;
     Renderer rend;
     Rigidbody rigid;
-    bool CanBeAdded = false;
+    public bool CanBeAdded = false;
 
     void Start()
     {

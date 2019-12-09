@@ -34,6 +34,8 @@ public class Pickup : InventoryItem
         }
         GameObject watch = GameObject.FindGameObjectWithTag("Watch");
         Object = GameObject.Find(ObjectName);
+        Object.GetComponent<DestroyAndAddToInventory>().CanBeAdded = false;
+        Object.GetComponent<DestroyAndAddToInventory>().AddedTimer = 0;
         GravityControl grav = Object.GetComponent<GravityControl>();
         grav.GravityTimer = 0.0f;
         grav.UseGravity = false;
