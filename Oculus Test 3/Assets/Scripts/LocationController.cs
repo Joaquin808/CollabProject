@@ -25,14 +25,4 @@ public class LocationController : MonoBehaviour
         CollidingWithAnything = false;
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        print("colliding with " + other);
-        CollidingWithAnything = true;
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        CollidingWithAnything = false;
-    }
 }

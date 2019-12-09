@@ -15,12 +15,12 @@ public class Pickup : InventoryItem
 
     public override void Use()
     {
-        LC = GameObject.Find("ObjectTeleportLocation").GetComponent<LocationController>();
+        /*LC = GameObject.Find("ObjectTeleportLocation").GetComponent<LocationController>();
         // prevents the spawning of objects if they will be colliding with any other object
         if (LC.CollidingWithAnything)
         {
             return;
-        }
+        }*/
 
         base.Use();
         if (ItemType == "Journal")
