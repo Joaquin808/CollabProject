@@ -7955,7 +7955,7 @@ PrefabInstance:
     - target: {fileID: 11438496, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
       propertyPath: m_parentTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 258788676}
     - target: {fileID: 135332, guid: e6ba3498ffa1e534b91a07264266e6b8, type: 3}
       propertyPath: m_Layer
       value: 9
@@ -8617,6 +8617,12 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!4 &258788676 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 462066, guid: ce816f2e6abb0504092c23ed9b970dfd,
+    type: 3}
+  m_PrefabInstance: {fileID: 258788664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &307579208
 Mesh:
   m_ObjectHideFlags: 0
@@ -9370,6 +9376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransform: {fileID: 258788667}
   distanceFromCamera: 1
+  CollidingWithAnything: 0
 --- !u!1 &576030607
 GameObject:
   m_ObjectHideFlags: 0
@@ -13672,7 +13679,7 @@ PrefabInstance:
     - target: {fileID: 11477634, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_parentTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 258788676}
     - target: {fileID: 123794, guid: ba1fa4a8c66106b4988c88fe4b8e8502, type: 3}
       propertyPath: m_Layer
       value: 9
