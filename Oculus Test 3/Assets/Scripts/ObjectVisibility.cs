@@ -17,12 +17,15 @@ public class ObjectVisibility : MonoBehaviour
     public SoundEffects soundFX;
     Objectives ObjectiveScript;
     PipeCheck PipeCheck;
+    SoundEffectsSpeech soundFX_S;
 
     void Start()
     {
         rend = GetComponent<Renderer>();
         ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
         PipeCheck = GameObject.Find("Water Filter").GetComponent<PipeCheck>();
+        soundFX_S = GameObject.Find("DialogueSoundManager").GetComponent<SoundEffectsSpeech>();
+        soundFX = GameObject.Find("SoundEffectsManager").GetComponent<SoundEffects>();
     }
 
     void Update()
@@ -65,6 +68,12 @@ public class ObjectVisibility : MonoBehaviour
                 {
                     AlertSystem.DeactivateAlert(TypeOfAlert);
                     SolvedFirstTime = true;
+                    if (soundFX_S.dialogueAudio.clip != soundFX_S.dialogueSounds[3])
+                    {
+                        soundFX_S.dialogueAudio.Stop();
+                        soundFX_S.dialogueAudio.clip = soundFX_S.dialogueSounds[3];
+                        soundFX_S.dialogueAudio.Play();
+                    }
                     if (ObjectiveScript.ObjectiveNumber == 3)
                     {
                         ObjectiveScript.SetNextObjective();
@@ -77,9 +86,12 @@ public class ObjectVisibility : MonoBehaviour
                     soundFX.genAudio.clip = soundFX.genSounds[15];
                     soundFX.genAudio.Play();
                 }
+                else
+                {
+                    soundFX.genAudio.Play();
+                }
             }
         }
-
     }
 
 
