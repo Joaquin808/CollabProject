@@ -7,6 +7,7 @@ public class PutOnHelmet : MonoBehaviour
 {
     public GameObject helmet;
     public bool isHelmetOn;
+    public GameObject helmetPP;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,7 +20,7 @@ public class PutOnHelmet : MonoBehaviour
         {
             isHelmetOn = true;
             Destroy(other.gameObject);
-            GameObject.Find("SpaceHelmet_PP").GetComponent<PostProcessLayer>().enabled = true;
+            helmetPP.GetComponent<PostProcessLayer>().enabled = true;
         }
     }
 }
