@@ -27,7 +27,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
     void Update()
     {
         AddedTimer += Time.deltaTime;
-        if (AddedTimer >= 0)
+        if (AddedTimer >= 10)
         {
             CanBeAdded = true;
         }
