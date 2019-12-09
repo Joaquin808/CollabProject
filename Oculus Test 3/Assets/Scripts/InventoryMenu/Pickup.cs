@@ -11,6 +11,7 @@ public class Pickup : InventoryItem
     public String ObjectName;
     GameObject Object;
     LocationController LC;
+    SoundEffects SoundFX;
 
     public override void Use()
     {
@@ -42,6 +43,17 @@ public class Pickup : InventoryItem
         Renderer rend = Object.GetComponentInChildren<Renderer>();
         rend.enabled = true;
         Object.GetComponentInChildren<SpawnEffect>().Despawn();
+        SoundFX = GameObject.Find("SoundEffectsManager").GetComponent<SoundEffects>();
+        if (SoundFX.genAudio.clip != SoundFX.genSounds[21])
+        {
+            SoundFX.genAudio.Stop();
+            SoundFX.genAudio.clip = SoundFX.genSounds[21];
+            SoundFX.genAudio.Play();
+        }
+        else
+        {
+            SoundFX.genAudio.Play();
+        }
         Rigidbody rigidBody = Object.GetComponent<Rigidbody>();
         rigidBody.detectCollisions = true;
         rigidBody.isKinematic = false;

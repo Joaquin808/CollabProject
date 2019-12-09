@@ -10,12 +10,17 @@ public class DestroyAndAddToInventory : MonoBehaviour
     bool ItemWasAdded = false;
     //public Text ItemAddedText;
     float Timer, spawnTimer = 0;
-    public SoundEffects SoundFX;
+    SoundEffects SoundFX;
+    Renderer rend;
+    Rigidbody rigid;
+
 
     void Start()
     {
         //ItemAddedText = GameObject.Find("ItemAddedTextParent").GetComponentInChildren<Text>();
-
+        SoundFX = GameObject.Find("SoundEffectsManager").GetComponent<SoundEffects>();
+        rend = gameObject.GetComponentInChildren<Renderer>();
+        rigid = gameObject.GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -27,8 +32,6 @@ public class DestroyAndAddToInventory : MonoBehaviour
             if (spawnTimer >= 3)
             {
                 Inventory.Instance.Add(InventoryItemRef);
-                Renderer rend = gameObject.GetComponentInChildren<Renderer>();
-                rend.enabled = false;
                 ItemWasAdded = false;
                 spawnTimer = 0;
             }
@@ -50,17 +53,19 @@ public class DestroyAndAddToInventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (this.GetComponent<OVRGrabbable>().isGrabbed == false) { 
+        if (this.GetComponent<OVRGrabbable>().isGrabbed == false)
+        {
             if (other.gameObject.tag == "ChipCollider")
             {
-                //Play Animation
-                gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
+                
                 ItemWasAdded = true;
-                Rigidbody rigid = gameObject.GetComponent<Rigidbody>();
                 rigid.isKinematic = true;
                 rigid.detectCollisions = false;
                 rigid.useGravity = false;
                 rigid.velocity = new Vector3(0, 0, 0);
+                rend.enabled = false;
+                //Play Animation
+                gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
                 GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
                 //GameObject.Find("CustomHandLeft").GetComponent<OVRGrabber>().m_grabbedObj = null;
                 if (SoundFX.genAudio.clip != SoundFX.genSounds[21])
@@ -68,8 +73,11 @@ public class DestroyAndAddToInventory : MonoBehaviour
                     SoundFX.genAudio.Stop();
                     SoundFX.genAudio.clip = SoundFX.genSounds[21];
                     SoundFX.genAudio.Play();
+                }else
+                {
+                    SoundFX.genAudio.Play();
                 }
+            }
         }
     }
-
 }
