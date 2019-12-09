@@ -19,8 +19,8 @@ public class PutOnHelmet : MonoBehaviour
        if(other.gameObject == helmet)
         {
             isHelmetOn = true;
-            Destroy(other.gameObject);
             helmetPP.GetComponent<PostProcessLayer>().enabled = true;
+            Destroy(other.gameObject);
         }
     }
 }
