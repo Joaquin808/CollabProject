@@ -6,8 +6,12 @@ public class LeverDoorKey : MonoBehaviour
 {
     public GameObject target;
     public GameObject lever;
-    public SoundEffects soundFX;
+    SoundEffects soundFX;
 
+    void Start()
+    {
+        soundFX = GameObject.Find("SoundEffectsManager").GetComponent<SoundEffects>();
+    }
 
     void OnTriggerEnter(Collider other)
     {
