@@ -9,11 +9,11 @@ public class DestroyAndAddToInventory : MonoBehaviour
     //public bool CanAddToInventory;
     bool ItemWasAdded = false;
     //public Text ItemAddedText;
-    float Timer, spawnTimer = 0;
+    float Timer, spawnTimer, AddedTimer = 0;
     SoundEffects SoundFX;
     Renderer rend;
     Rigidbody rigid;
-
+    bool CanBeAdded = false;
 
     void Start()
     {
@@ -21,10 +21,17 @@ public class DestroyAndAddToInventory : MonoBehaviour
         SoundFX = GameObject.Find("SoundEffectsManager").GetComponent<SoundEffects>();
         rend = gameObject.GetComponentInChildren<Renderer>();
         rigid = gameObject.GetComponent<Rigidbody>();
+        AddedTimer = 0;
     }
 
     void Update()
     {
+        AddedTimer += Time.deltaTime;
+        if (AddedTimer >= 10)
+        {
+            CanBeAdded = true;
+        }
+
         if (ItemWasAdded)
         {
             //Wait 3 seconds for animation to end, then addtoinventory
@@ -53,29 +60,33 @@ public class DestroyAndAddToInventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (this.GetComponent<OVRGrabbable>().isGrabbed == false)
+        if (CanBeAdded)
         {
-            if (other.gameObject.tag == "ChipCollider")
+            if (this.GetComponent<OVRGrabbable>().isGrabbed == false)
             {
-                
-                ItemWasAdded = true;
-                rigid.isKinematic = true;
-                rigid.detectCollisions = false;
-                rigid.useGravity = false;
-                rigid.velocity = new Vector3(0, 0, 0);
-                rend.enabled = false;
-                //Play Animation
-                gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
-                GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
-                //GameObject.Find("CustomHandLeft").GetComponent<OVRGrabber>().m_grabbedObj = null;
-                if (SoundFX.genAudio.clip != SoundFX.genSounds[21])
+                if (other.gameObject.tag == "ChipCollider")
                 {
-                    SoundFX.genAudio.Stop();
-                    SoundFX.genAudio.clip = SoundFX.genSounds[21];
-                    SoundFX.genAudio.Play();
-                }else
-                {
-                    SoundFX.genAudio.Play();
+
+                    ItemWasAdded = true;
+                    rigid.isKinematic = true;
+                    rigid.detectCollisions = false;
+                    rigid.useGravity = false;
+                    rigid.velocity = new Vector3(0, 0, 0);
+                    rend.enabled = false;
+                    //Play Animation
+                    gameObject.GetComponentInChildren<SpawnEffect>().Despawn();
+                    GameObject.Find("CustomHandRight").GetComponent<OVRGrabber>().m_grabbedObj = null;
+                    //GameObject.Find("CustomHandLeft").GetComponent<OVRGrabber>().m_grabbedObj = null;
+                    if (SoundFX.genAudio.clip != SoundFX.genSounds[21])
+                    {
+                        SoundFX.genAudio.Stop();
+                        SoundFX.genAudio.clip = SoundFX.genSounds[21];
+                        SoundFX.genAudio.Play();
+                    }
+                    else
+                    {
+                        SoundFX.genAudio.Play();
+                    }
                 }
             }
         }
