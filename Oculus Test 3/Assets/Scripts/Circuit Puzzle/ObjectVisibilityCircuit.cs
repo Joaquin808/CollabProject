@@ -33,7 +33,6 @@ public class ObjectVisibilityCircuit : MonoBehaviour
             rb.isKinematic = true;
             rb.useGravity = false;
             grabbable = GetComponent<OVRGrabbable>();
-            grabbable.enabled = false;
         }
         
     }
@@ -44,6 +43,7 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         {
             rb.isKinematic = false;
             rb.useGravity = true;
+            grabbable.enabled = true;
 
         }
         if (!isBrokenPiece)

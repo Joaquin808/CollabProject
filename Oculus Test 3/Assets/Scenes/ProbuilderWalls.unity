@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.836
+      value: 3.693
       objectReference: {fileID: 0}
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
@@ -971,7 +971,7 @@ PrefabInstance:
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.282
+      value: 18.129
       objectReference: {fileID: 0}
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
@@ -50098,7 +50098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1754717068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50106,7 +50106,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1754717067}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
@@ -61999,11 +61999,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 401914952544842913, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_Name
-      value: Radio
-      objectReference: {fileID: 0}
     - target: {fileID: 3731437204028556978, guid: 9fd688a107802a742bdbbccc0f225a57,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62058,6 +62053,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 401914952544842913, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_Name
+      value: Radio
       objectReference: {fileID: 0}
     - target: {fileID: 2250173087531247659, guid: 9fd688a107802a742bdbbccc0f225a57,
         type: 3}

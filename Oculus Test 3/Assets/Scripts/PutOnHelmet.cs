@@ -11,7 +11,7 @@ public class PutOnHelmet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        helmetPP = GameObject.Find("SpaceHelmet_PP");
+
     }
 
    void OnTriggerEnter(Collider other)
@@ -19,7 +19,8 @@ public class PutOnHelmet : MonoBehaviour
        if(other.gameObject == helmet)
         {
             isHelmetOn = true;
-            helmetPP.GetComponent<PostProcessLayer>().enabled = true;
+            helmetPP.SetActive(true);
+
             Destroy(other.gameObject);
         }
     }
