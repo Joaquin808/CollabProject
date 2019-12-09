@@ -61,13 +61,14 @@ public class Objectives : MonoBehaviour
             SoundEffectsDialogue.dialogueAudio.clip = SoundEffectsDialogue.dialogueSounds[3];
             SoundEffectsDialogue.dialogueAudio.Play();
         }
-    }
 
-    void OnTriggerEnter(Collider other)
-    {
-        if (ObjectiveNumber == 0 && other.gameObject.name == "FirstObjective")
+        //AI Message after hearing Grandpa's message
+        if (ObjectiveNumber == 6)
         {
-            SetNextObjective();
+            SoundEffectsDialogue.dialogueAudio.Stop();
+            SoundEffectsDialogue.dialogueAudio.clip = SoundEffectsDialogue.dialogueSounds[4];
+            SoundEffectsDialogue.dialogueAudio.Play();
         }
     }
+    
 }
