@@ -41,6 +41,9 @@ public class AirFiltration : MonoBehaviour
         if (fanOneIn && fanTwoIn && fanThreeIn && ObjectiveScript.ObjectiveNumber == 4 && tcscrp.itIn)
         {
             SolutionFinder();
+        }else
+        {
+            wind.Stop();
         }
 
     }
@@ -56,7 +59,7 @@ public class AirFiltration : MonoBehaviour
             }
         }
         timer += Time.deltaTime;
-        if (timer >= 5)
+        if (timer >= 2)
         {
             rb.freezeRotation = true;
             solved = true;
