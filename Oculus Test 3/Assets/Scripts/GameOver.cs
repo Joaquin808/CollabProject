@@ -16,7 +16,7 @@ public class GameOver : MonoBehaviour
     void Start()
     {
         objectives = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
-        PutOnHelmet = GameObject.Find("OVRPlayerController").GetComponent<PutOnHelmet>();
+        PutOnHelmet = GameObject.Find("OVRPlayerController").GetComponentInChildren<PutOnHelmet>();
         OVRScreenFade = GameObject.Find("CenterEyeAnchor").GetComponent<OVRScreenFade>();
     }
 
