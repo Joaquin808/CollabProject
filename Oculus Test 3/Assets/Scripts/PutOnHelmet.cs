@@ -13,8 +13,7 @@ public class PutOnHelmet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        helmetPP = GameObject.Find("SpaceHelmet_PP");
-        soundFX = helmetPP.GetComponent<SoundEffects>();
+        soundFX = GameObject.Find("Helmet").GetComponent<SoundEffects>();
     }
 
    void OnTriggerEnter(Collider other)
@@ -22,14 +21,14 @@ public class PutOnHelmet : MonoBehaviour
        if(other.gameObject == helmet)
         {
             isHelmetOn = true;
-            helmetPP.GetComponent<PostProcessLayer>().enabled = true;
+            helmetPP.SetActive(true);
             if (soundFX.genAudio.clip != soundFX.genSounds[1])
             {
                 soundFX.genAudio.Stop();
                 soundFX.genAudio.clip = soundFX.genSounds[1];
                 soundFX.genAudio.Play();
 
-            }            
+            }        
             Destroy(other.gameObject);
         }
     }

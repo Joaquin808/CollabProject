@@ -20,12 +20,4 @@ public class SoundEffects : MonoBehaviour
     {
 
     }
-
-    public void findAmbientAudio()
-    {
-        if (genAudio.clip != genSounds[0])
-        {
-
-        }
-    }
 }
