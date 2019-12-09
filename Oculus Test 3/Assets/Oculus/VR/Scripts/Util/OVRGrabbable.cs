@@ -146,12 +146,13 @@ public class OVRGrabbable : MonoBehaviour
 
             // Create a default grab point
             m_grabPoints = new Collider[1] { collider };
+            m_grabbedKinematic = GetComponent<Rigidbody>().isKinematic;
         }
     }
 
     protected virtual void Start()
     {
-        m_grabbedKinematic = GetComponent<Rigidbody>().isKinematic;
+       
     }
 
     void OnDestroy()

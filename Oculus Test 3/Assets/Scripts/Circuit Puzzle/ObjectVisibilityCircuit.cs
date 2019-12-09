@@ -30,10 +30,10 @@ public class ObjectVisibilityCircuit : MonoBehaviour
         if (isBrokenPiece)
         {
             rb = GetComponent<Rigidbody>();
-            rb.isKinematic = true;
-            rb.useGravity = false;
             grabbable = GetComponent<OVRGrabbable>();
             grabbable.allowOffhandGrab = false;
+            rb.isKinematic = true;
+            rb.useGravity = false;
         }
         
     }
@@ -42,10 +42,9 @@ public class ObjectVisibilityCircuit : MonoBehaviour
     {
         if (other.gameObject.name == "Screwdriver" && isBrokenPiece)
         {
+            grabbable.allowOffhandGrab = true;
             rb.isKinematic = false;
             rb.useGravity = true;
-            grabbable.allowOffhandGrab = true;
-
         }
         if (!isBrokenPiece)
         {
