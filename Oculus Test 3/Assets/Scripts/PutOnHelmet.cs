@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.PostProcessing;
 
 public class PutOnHelmet : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class PutOnHelmet : MonoBehaviour
         {
             isHelmetOn = true;
             Destroy(other.gameObject);
+            GameObject.Find("SpaceHelmet_PP").GetComponent<PostProcessLayer>().enabled = true;
         }
     }
 }
