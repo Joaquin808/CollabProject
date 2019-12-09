@@ -36,7 +36,6 @@ public class Objectives : MonoBehaviour
             SoundEffectsDialogue.dialogueAudio.Stop();
             SoundEffectsDialogue.dialogueAudio.clip = SoundEffectsDialogue.dialogueSounds[0];
             SoundEffectsDialogue.dialogueAudio.Play();
-            print(2);
         }
 
         // AI message after temperature is restored
@@ -45,7 +44,6 @@ public class Objectives : MonoBehaviour
             SoundEffectsDialogue.dialogueAudio.Stop();
             SoundEffectsDialogue.dialogueAudio.clip = SoundEffectsDialogue.dialogueSounds[1];
             SoundEffectsDialogue.dialogueAudio.Play();
-            print(3);
         }
 
         // AI message after water is restored
@@ -54,7 +52,6 @@ public class Objectives : MonoBehaviour
             SoundEffectsDialogue.dialogueAudio.Stop();
             SoundEffectsDialogue.dialogueAudio.clip = SoundEffectsDialogue.dialogueSounds[2];
             SoundEffectsDialogue.dialogueAudio.Play();
-            print(4);
         }
 
         //AI Message after air is restored
@@ -63,7 +60,6 @@ public class Objectives : MonoBehaviour
             SoundEffectsDialogue.dialogueAudio.Stop();
             SoundEffectsDialogue.dialogueAudio.clip = SoundEffectsDialogue.dialogueSounds[3];
             SoundEffectsDialogue.dialogueAudio.Play();
-            print(5);
         }
 
         //AI Message after hearing Grandpa's message
@@ -72,7 +68,6 @@ public class Objectives : MonoBehaviour
             SoundEffectsDialogue.dialogueAudio.Stop();
             SoundEffectsDialogue.dialogueAudio.clip = SoundEffectsDialogue.dialogueSounds[4];
             SoundEffectsDialogue.dialogueAudio.Play();
-            print(6);
         }
     }
     
