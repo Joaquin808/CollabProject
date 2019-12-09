@@ -74,6 +74,14 @@ public class TemperatureSlider : MonoBehaviour
         if (other.gameObject.tag == "Lever")
         {
             leverClick.Play(0);
+            /*                                      For if you'd prefer to go through the Player Controller for the sound.
+               if (soundFX.genAudio.clip != soundFX.genSounds[0])
+                    {
+                        soundFX.genAudio.Stop();
+                        soundFX.genAudio.clip = soundFX.genSounds[17];
+                        soundFX.genAudio.Play();
+                    }
+              */
             stoppedValue = slider.transform.localPosition.x;
             if (ObjectiveScript.ObjectiveNumber == 2 || SolvedFirstTime)
             {

@@ -23,10 +23,7 @@ public class LeverDoorKey : MonoBehaviour
                 soundFX.genAudio.clip = soundFX.genSounds[15];
                 soundFX.genAudio.Play();
             }
-            else
-            {
-                soundFX.genAudio.Play();
-            }
+
         }
     }
 }

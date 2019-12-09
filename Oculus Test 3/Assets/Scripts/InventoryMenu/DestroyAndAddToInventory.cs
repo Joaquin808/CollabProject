@@ -50,7 +50,7 @@ public class DestroyAndAddToInventory : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (this.GetComponent<OVRGrabbable>().isGrabbed == false) {
+        if (this.GetComponent<OVRGrabbable>().isGrabbed == false) { 
             if (other.gameObject.tag == "ChipCollider")
             {
                 //Play Animation
@@ -69,7 +69,6 @@ public class DestroyAndAddToInventory : MonoBehaviour
                     SoundFX.genAudio.clip = SoundFX.genSounds[21];
                     SoundFX.genAudio.Play();
                 }
-            }
         }
     }
 
