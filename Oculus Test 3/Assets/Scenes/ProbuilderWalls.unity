@@ -961,7 +961,7 @@ PrefabInstance:
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3.6616373
+      value: 2.836
       objectReference: {fileID: 0}
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
@@ -971,7 +971,7 @@ PrefabInstance:
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 18.106358
+      value: 1.282
       objectReference: {fileID: 0}
     - target: {fileID: 7722320586298395150, guid: 47e9f46bfc1e54648b832850daaebd49,
         type: 3}
@@ -62074,6 +62074,26 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -0.71747434
       objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.4190387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 15.100591
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.71241534
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 496806703209562797, guid: 9fd688a107802a742bdbbccc0f225a57,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -62103,26 +62123,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RadioDial
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.4190387
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 15.100591
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.71241534
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1894637399941271815, guid: 9fd688a107802a742bdbbccc0f225a57,
         type: 3}
@@ -62373,11 +62373,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4448806876249584200}
     m_Modifications:
-    - target: {fileID: 3378262152051410001, guid: 749b6eef5c6a0a44d809bc2d24913860,
-        type: 3}
-      propertyPath: m_Name
-      value: Crooked Pipe 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4695814350688174638, guid: 749b6eef5c6a0a44d809bc2d24913860,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62432,6 +62427,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378262152051410001, guid: 749b6eef5c6a0a44d809bc2d24913860,
+        type: 3}
+      propertyPath: m_Name
+      value: Crooked Pipe 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 749b6eef5c6a0a44d809bc2d24913860, type: 3}
