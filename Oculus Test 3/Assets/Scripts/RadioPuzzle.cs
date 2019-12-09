@@ -22,12 +22,7 @@ public class RadioPuzzle : MonoBehaviour
         {
             rb.freezeRotation = true;
             message.Play(0);
-                if (!message.isPlaying)
-                {
-                    objectives.SetNextObjective();
-                }
-            
-            
+            objectives.SetNextObjective();            
         }
       
     }
