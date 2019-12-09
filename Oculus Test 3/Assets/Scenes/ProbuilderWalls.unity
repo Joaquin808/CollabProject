@@ -45056,7 +45056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17666
+  m_Name: pb_Mesh64618
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -50331,7 +50331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1788112165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57546,7 +57546,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh17300
+  m_Name: pb_Mesh64252
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -59770,6 +59770,50 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: f0a3c835cc3b6df4992107e366c1efde, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf15ed5cda8c90468f510cdf4c4eb52, type: 3}
+--- !u!1 &2114189323 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6722689759219536056, guid: 7cf15ed5cda8c90468f510cdf4c4eb52,
+    type: 3}
+  m_PrefabInstance: {fileID: 2114189322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2114189324 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2154691093860300070, guid: 7cf15ed5cda8c90468f510cdf4c4eb52,
+    type: 3}
+  m_PrefabInstance: {fileID: 2114189322}
+  m_PrefabAsset: {fileID: 0}
+--- !u!208 &2114189325
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114189323}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.25300002, y: 0.11800001, z: 0.15}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.089, y: 0.023000002, z: -0.349}
+  m_TimeToStationary: 0.5
+--- !u!208 &2114189326
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2114189324}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.39800003, y: 0.10300001, z: 0.34}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.049000002, y: 0.008, z: 0.10300001}
+  m_TimeToStationary: 0.5
 --- !u!4 &2121162739 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5093228864235818371, guid: ca4b0688c98fb9d42890b9a406171f74,
@@ -61961,6 +62005,26 @@ PrefabInstance:
       propertyPath: m_ConnectedAnchor.y
       value: -0.71747434
       objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.4190387
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.z
+      value: 15.100591
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: -0.71241534
+      objectReference: {fileID: 0}
+    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
+        type: 3}
+      propertyPath: m_UseLimits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 496806703209562797, guid: 9fd688a107802a742bdbbccc0f225a57,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -61990,26 +62054,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RadioDial
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.x
-      value: -0.4190387
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.z
-      value: 15.100591
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_ConnectedAnchor.y
-      value: -0.71241534
-      objectReference: {fileID: 0}
-    - target: {fileID: 1929641409613302831, guid: 9fd688a107802a742bdbbccc0f225a57,
-        type: 3}
-      propertyPath: m_UseLimits
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1894637399941271815, guid: 9fd688a107802a742bdbbccc0f225a57,
         type: 3}
@@ -62260,11 +62304,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4448806876249584200}
     m_Modifications:
-    - target: {fileID: 3378262152051410001, guid: 749b6eef5c6a0a44d809bc2d24913860,
-        type: 3}
-      propertyPath: m_Name
-      value: Crooked Pipe 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4695814350688174638, guid: 749b6eef5c6a0a44d809bc2d24913860,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62319,6 +62358,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3378262152051410001, guid: 749b6eef5c6a0a44d809bc2d24913860,
+        type: 3}
+      propertyPath: m_Name
+      value: Crooked Pipe 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 749b6eef5c6a0a44d809bc2d24913860, type: 3}
