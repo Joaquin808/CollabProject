@@ -55238,7 +55238,7 @@ MonoBehaviour:
   - Listen to Grandpa's Message
   - Escape the Dome
   ObjectiveText: {fileID: 1520239370}
-  ObjectiveNumber: 0
+  ObjectiveNumber: 5
 --- !u!1 &1985524453 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2518507645994259923, guid: 9a39ad8512de0bf4dabc030cf8246e29,
@@ -56734,13 +56734,13 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 1
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.1
   MaxDistance: 2
   Pan2D: 0
   rolloffMode: 0
