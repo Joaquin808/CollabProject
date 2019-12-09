@@ -11,7 +11,7 @@ public class SlidingDoor : MonoBehaviour
     public bool isLocked = false;           //Is Key Owned by Player
     Vector3 startPos;
     Vector3 endPos;
-    public SoundEffects soundFX;
+    SoundEffects soundFX;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class SlidingDoor : MonoBehaviour
         startPos = this.transform.position;
         endPos = startPos - new Vector3(0, 5, 0);
 
-        soundFX = GameObject.FindGameObjectWithTag("Player").GetComponent<SoundEffects>();    
+        soundFX = GameObject.Find("SoundEffectsManager").GetComponent<SoundEffects>();    
     }
 
     // Update is called once per frame
