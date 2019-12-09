@@ -14,6 +14,16 @@ public class LocationController : MonoBehaviour
         transform.position = new Vector3(resultingPosition.x, transform.position.y, resultingPosition.z);
     }
 
+    void OnCollisionEnter(Collision other)
+    {
+        CollidingWithAnything = true;
+    }
+
+    void OnCollisionExit(Collision other)
+    {
+        CollidingWithAnything = false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         CollidingWithAnything = true;
