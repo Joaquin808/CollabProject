@@ -9,6 +9,8 @@ public class PutOnHelmet : MonoBehaviour
     public bool isHelmetOn;
     public GameObject helmetPP;
     SoundEffects soundFX;
+    Rigidbody rigid;
+    Renderer rend;
 
     // Start is called before the first frame update
     void Start()
@@ -16,9 +18,9 @@ public class PutOnHelmet : MonoBehaviour
         soundFX = GameObject.Find("SoundEffectsManager").GetComponent<SoundEffects>();
     }
 
-   void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-       if(other.gameObject == helmet)
+        if (other.gameObject == helmet)
         {
             isHelmetOn = true;
             helmetPP.SetActive(true);
@@ -27,8 +29,16 @@ public class PutOnHelmet : MonoBehaviour
                 soundFX.genAudio.Stop();
                 soundFX.genAudio.clip = soundFX.genSounds[14];
                 soundFX.genAudio.Play();
-            }        
-            Destroy(other.gameObject);
+            }
+            //"Destroy"
+            rigid = other.gameObject.GetComponent<Rigidbody>();
+            rend = other.gameObject.GetComponentInChildren<Renderer>();
+            rigid.isKinematic = true;
+            rigid.detectCollisions = false;
+            rigid.useGravity = false;
+            rigid.velocity = new Vector3(0, 0, 0);
+           // other.gameObject.SetActive(false);
+            rend.enabled = false;
         }
     }
 }
