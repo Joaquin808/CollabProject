@@ -22,10 +22,6 @@ public class DayNightSystem : MonoBehaviour
 
     void Update()
     {
-
-        //Can Time Pass?
-        currentTime += Time.deltaTime;  //UpdateTime
-
         //Changes at 4-8-12-16-18-20 minutes
         if (currentTime < dayLength * 2 / 10)
         {
