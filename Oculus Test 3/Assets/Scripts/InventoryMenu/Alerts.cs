@@ -37,9 +37,9 @@ public class Alerts : MonoBehaviour
     {
         // sets the color of each status bar to green at the beginning
         PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
-        WaterBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
-        AirBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
-        TempBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+        WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+        AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+        TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
 
         Indicator = GameObject.FindGameObjectsWithTag("AlarmLight");
         /*for (int i = 0; i < Indicator.Length; i++ )
@@ -55,7 +55,7 @@ public class Alerts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
+        
         if (IsAlertActive)
         {
             time += Time.deltaTime;
@@ -69,7 +69,7 @@ public class Alerts : MonoBehaviour
             //ReduceTimer();
 
             FlashTimer += Time.deltaTime;
-            if (FlashTimer >= 1.5f)
+            if (FlashTimer >= 1.0f)
             {
                 FlashIndicator();
                 FlashTimer = 0f;
@@ -83,7 +83,7 @@ public class Alerts : MonoBehaviour
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
             }*/
-        //}
+        }
 
         /*if (!AnyAlertsActive)
         {
@@ -191,7 +191,7 @@ public class Alerts : MonoBehaviour
     void FlashIndicator()
     {
         // flashes the red light to indicate that something is wrong
-        if (!visible)
+        /*if (!visible)
         {
             for (int i = 0; i < Indicator.Length; i++)
             {
@@ -209,7 +209,48 @@ public class Alerts : MonoBehaviour
             }
 
             visible = false;
+        }*/
+        if (visible)
+        {
+            switch (AlertType)
+            {
+                case 0:
+                    PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                    break;
+                case 1:
+                    WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                    break;
+                case 2:
+                    AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                    break;
+                case 3:
+                    TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                    break;
+            }
+
+            visible = false;
         }
+        else
+        {
+            switch (AlertType)
+            {
+                case 0:
+                    PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                    break;
+                case 1:
+                    WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                    break;
+                case 2:
+                    AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                    break;
+                case 3:
+                    TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                    break;
+            }
+
+            visible = true;
+        }
+     
     }
 
     void SetAlertType()
@@ -264,16 +305,16 @@ public class Alerts : MonoBehaviour
         switch (TypeOfAlert)
         {
             case 0:
-                PowerBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                PowerBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 1:
-                WaterBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 2:
-                AirBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
                 break;
             case 3:
-                TempBar.GetComponent<Image>().material.color = new Color(0f, 1f, 0f, 1f);
+                TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
                 break;
         }
     }
