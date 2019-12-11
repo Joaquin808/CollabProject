@@ -41,7 +41,7 @@ public class Alerts : MonoBehaviour
         AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
         TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
 
-        Indicator = GameObject.FindGameObjectsWithTag("AlarmLight");
+        //Indicator = GameObject.FindGameObjectsWithTag("AlarmLight");
         /*for (int i = 0; i < Indicator.Length; i++ )
         {
             Indicator[i].SetActive(false);
