@@ -28,17 +28,10 @@ public class SlidingDoor : MonoBehaviour
         if (!isLocked)
         {
             //Lever Activated Bunker Door lock open
-            if(this.gameObject.name == "BunkerPowerDoor") {
-                if (this.transform.position.y > endPos.y)
-                {
-                    moveDirection = Vector3.down;
-                    isMoving = true;
-                }
-                else
-                {
+            if(this.gameObject.name == "Bunker Power Door")
+            {
                     this.transform.position = endPos;
                     isMoving = false;
-                }
             }
 
             //All  Basic Doors
