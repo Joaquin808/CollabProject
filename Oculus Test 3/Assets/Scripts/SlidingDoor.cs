@@ -28,61 +28,65 @@ public class SlidingDoor : MonoBehaviour
         if (!isLocked)
         {
             //Lever Activated Bunker Door lock open
-            if(this.gameObject.name == "Bunker Power Door")
+            if (this.gameObject.name == "Bunker Power Door")
             {
-                    this.transform.position = endPos;
-                    isMoving = false;
-            }
-
-            //All  Basic Doors
-            if (isOpen)
-            {
-                if (this.transform.position.y > endPos.y)
-                {
-                    moveDirection = Vector3.down;
-                    isMoving = true;
-                    if (soundFX.genAudio.clip != soundFX.genSounds[5])
-                    {
-                        soundFX.genAudio.Stop();
-                        soundFX.genAudio.clip = soundFX.genSounds[5];
-                        soundFX.genAudio.Play();
-
-                    }
-                }
-                else
-                {
-                    this.transform.position = endPos;
-                    isMoving = false;
-                }
+                this.transform.position = endPos;
+                isMoving = false;
             }
             else
             {
-                if (this.transform.position.y < startPos.y)
+
+
+                //All  Basic Doors
+                if (isOpen)
                 {
-                    moveDirection = Vector3.up;
-                    isMoving = true;
-                    if (soundFX.genAudio.clip != soundFX.genSounds[4])
+                    if (this.transform.position.y > endPos.y)
                     {
-                        soundFX.genAudio.Stop();
-                        soundFX.genAudio.clip = soundFX.genSounds[4];
-                        soundFX.genAudio.Play();
-                        
+                        moveDirection = Vector3.down;
+                        isMoving = true;
+                        if (soundFX.genAudio.clip != soundFX.genSounds[5])
+                        {
+                            soundFX.genAudio.Stop();
+                            soundFX.genAudio.clip = soundFX.genSounds[5];
+                            soundFX.genAudio.Play();
+
+                        }
+                    }
+                    else
+                    {
+                        this.transform.position = endPos;
+                        isMoving = false;
                     }
                 }
                 else
                 {
-                    this.transform.position = startPos;
-                    isMoving = false;
+                    if (this.transform.position.y < startPos.y)
+                    {
+                        moveDirection = Vector3.up;
+                        isMoving = true;
+                        if (soundFX.genAudio.clip != soundFX.genSounds[4])
+                        {
+                            soundFX.genAudio.Stop();
+                            soundFX.genAudio.clip = soundFX.genSounds[4];
+                            soundFX.genAudio.Play();
+
+                        }
+                    }
+                    else
+                    {
+                        this.transform.position = startPos;
+                        isMoving = false;
+                    }
                 }
-            }
 
-            //Move Door
-            if (isMoving)
-            {
-                //Debug.Log("Moving:" + isMoving);
-                transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
-            }
+                //Move Door
+                if (isMoving)
+                {
+                    //Debug.Log("Moving:" + isMoving);
+                    transform.Translate(moveDirection * Time.deltaTime * moveSpeed);
+                }
 
+            }
         }
     }
 

@@ -11,4 +11,9 @@ public class NextLevel : MonoBehaviour
         SceneManager.LoadScene("ProbuilderWalls");
     }
 
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }
