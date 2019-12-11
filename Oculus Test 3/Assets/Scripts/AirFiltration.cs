@@ -16,6 +16,8 @@ public class AirFiltration : MonoBehaviour
     RealFanScript rfscrp3;
     ThatCollider tcscrp;
     Objectives ObjectiveScript;
+     public GameObject[] FanList;
+    float rotationSpeed = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -59,6 +61,12 @@ public class AirFiltration : MonoBehaviour
             }
         }
         timer += Time.deltaTime;
+
+        for (int i = 0; i < 10; i++)
+        {
+
+        }
+
         if (timer >= 2)
         {
             rb.freezeRotation = true;
