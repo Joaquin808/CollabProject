@@ -79,7 +79,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &858664489922918868
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +158,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4309183307447551780
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +237,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5030867514063362054
 GameObject:
   m_ObjectHideFlags: 0
@@ -287,6 +284,7 @@ GameObject:
   - component: {fileID: 5766664110442589409}
   - component: {fileID: 147968786980542587}
   - component: {fileID: 7074148704450433860}
+  - component: {fileID: 4027923935202354691}
   m_Layer: 0
   m_Name: lavalamp:pCylinder9
   m_TagString: Untagged
@@ -355,7 +353,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &4027923935202354691
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5181191330206455520}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.022465104
+  m_Height: 0.064066865
+  m_Direction: 1
+  m_Center: {x: 0.013292404, y: 0.025917202, z: -0.004319124}
 --- !u!1 &5345319254433127638
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +446,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8128636450411698792
 GameObject:
   m_ObjectHideFlags: 0
@@ -515,4 +525,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
