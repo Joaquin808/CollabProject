@@ -18,6 +18,7 @@ public class AirFiltration : MonoBehaviour
     Objectives ObjectiveScript;
      public GameObject[] FanList;
     float rotationSpeed = 1;
+    float fanX = 107;
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +49,15 @@ public class AirFiltration : MonoBehaviour
             wind.Stop();
         }
 
+        if(solved)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                fanX = fanX + (10 * rotationSpeed);
+                FanList[i].gameObject.transform.Rotate(new Vector3(fanX, 0f, 0f));
+            }
+        }
+
     }
 
 
@@ -64,7 +74,8 @@ public class AirFiltration : MonoBehaviour
 
         for (int i = 0; i < 10; i++)
         {
-
+            fanX = fanX + rotationSpeed;
+            FanList[i].gameObject.transform.Rotate(new Vector3(fanX, 0f, 0f));
         }
 
         if (timer >= 2)
