@@ -20,6 +20,7 @@ public class PowerOn : MonoBehaviour
     Vector3 moveDirection = Vector3.down;
     Vector3 startPos;
     Vector3 endPos;
+    public Material m_circuitfix;
 
     void Start()
     {
@@ -82,6 +83,8 @@ public class PowerOn : MonoBehaviour
                 AlertSystem.DeactivateAlert(0);
                 door.GetComponent<SlidingDoor>().isLocked = false;
                 ObjectiveScript.SetNextObjective();
+                m_circuitfix.EnableKeyword("_EMISSION");
+                
             }
         }
     }
