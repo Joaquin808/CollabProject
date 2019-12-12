@@ -1577,6 +1577,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4129256603554887370, guid: 9daf50cd045fc634e88db19a6555ec4f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 426065767220786316, guid: 9daf50cd045fc634e88db19a6555ec4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2787,6 +2792,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 1 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -4890,6 +4900,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2881849735185734695, guid: d0826fdf2d538fb479dec991773b86f0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 423731863870591604, guid: d0826fdf2d538fb479dec991773b86f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6415,6 +6430,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6470,6 +6490,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.34100002
       objectReference: {fileID: 0}
+    - target: {fileID: 3818611436386235095, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8dc3d2d8ec7b8d7479fb775c544a896a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49d1e1969fa65546b40e2a7ab7df3ca, type: 3}
 --- !u!1001 &237027302
@@ -6993,6 +7018,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff3 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
@@ -8622,6 +8652,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2881849735185734695, guid: d0826fdf2d538fb479dec991773b86f0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 423731863870591604, guid: d0826fdf2d538fb479dec991773b86f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8886,20 +8921,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.37
+      value: 23.39
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.54
+      value: 4.92
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.77
+      value: 15.5
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -8949,12 +8989,12 @@ PrefabInstance:
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 249.31349
+      value: 432.20987
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 71.35656
+      value: 105.16529
       objectReference: {fileID: 0}
     - target: {fileID: 3818611436386235095, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -8986,6 +9026,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 1 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -9078,6 +9123,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff3 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9116,7 +9166,7 @@ PrefabInstance:
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 422
+      value: 421
       objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
@@ -10694,6 +10744,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff3 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11973,6 +12028,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff3 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
@@ -14483,95 +14543,6 @@ Transform:
   m_Father: {fileID: 699984941}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &493182190
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_Name
-      value: Cliff 1 (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 23.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 5.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 16.94
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.07193942
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.71374583
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.12612782
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.68518853
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 419
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 16.178001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 91.743004
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -4.189
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 53.114414
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 249.31349
-      objectReference: {fileID: 0}
-    - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 71.35656
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818611436386235095, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 8dc3d2d8ec7b8d7479fb775c544a896a, type: 2}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a49d1e1969fa65546b40e2a7ab7df3ca, type: 3}
 --- !u!1001 &498649797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14935,6 +14906,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff3 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14973,7 +14949,7 @@ PrefabInstance:
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 421
+      value: 420
       objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
@@ -18997,6 +18973,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff3 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19085,6 +19066,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
@@ -20771,20 +20757,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 26.414827
+      value: 25.95
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.579115
+      value: 9.55
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.80961
+      value: 26.99
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -23558,6 +23549,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24065,6 +24061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff2 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129256603554887370, guid: 9daf50cd045fc634e88db19a6555ec4f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 426065767220786316, guid: 9daf50cd045fc634e88db19a6555ec4f,
         type: 3}
@@ -32722,6 +32723,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -41734,6 +41740,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4129256603554887370, guid: 9daf50cd045fc634e88db19a6555ec4f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 426065767220786316, guid: 9daf50cd045fc634e88db19a6555ec4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -43623,6 +43634,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2881849735185734695, guid: d0826fdf2d538fb479dec991773b86f0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 423731863870591604, guid: d0826fdf2d538fb479dec991773b86f0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45026,20 +45042,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.273
+      value: 23.32
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.773
+      value: 5.95
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 17.632
+      value: 17.62
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -45094,7 +45115,7 @@ PrefabInstance:
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 117.3261
+      value: 183.26338
       objectReference: {fileID: 0}
     - target: {fileID: 3818611436386235095, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -46851,6 +46872,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4129256603554887370, guid: 9daf50cd045fc634e88db19a6555ec4f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 426065767220786316, guid: 9daf50cd045fc634e88db19a6555ec4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47084,6 +47110,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5608366770232493048, guid: 317dae1294588d946899d878facc4fa8,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -47122,7 +47153,7 @@ PrefabInstance:
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 420
+      value: 419
       objectReference: {fileID: 0}
     - target: {fileID: 8068377427592146174, guid: 317dae1294588d946899d878facc4fa8,
         type: 3}
@@ -47757,6 +47788,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -48975,6 +49011,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4129256603554887370, guid: 9daf50cd045fc634e88db19a6555ec4f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 426065767220786316, guid: 9daf50cd045fc634e88db19a6555ec4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -49072,6 +49113,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -50953,7 +50999,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh875774
+  m_Name: pb_Mesh17456
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -51741,6 +51787,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2881849735185734695, guid: d0826fdf2d538fb479dec991773b86f0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 423731863870591604, guid: d0826fdf2d538fb479dec991773b86f0,
         type: 3}
@@ -55165,6 +55216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -59021,6 +59077,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4129256603554887370, guid: 9daf50cd045fc634e88db19a6555ec4f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 426065767220786316, guid: 9daf50cd045fc634e88db19a6555ec4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -59100,6 +59161,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -59138,7 +59204,7 @@ PrefabInstance:
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 424
+      value: 423
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -60906,6 +60972,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff2 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4129256603554887370, guid: 9daf50cd045fc634e88db19a6555ec4f,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 426065767220786316, guid: 9daf50cd045fc634e88db19a6555ec4f,
         type: 3}
@@ -62848,6 +62919,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 1 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -62886,7 +62962,7 @@ PrefabInstance:
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
       propertyPath: m_RootOrder
-      value: 423
+      value: 422
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -63079,6 +63155,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Cliff 1 (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050936426538288443, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8140481676088065500, guid: a49d1e1969fa65546b40e2a7ab7df3ca,
         type: 3}
@@ -66424,7 +66505,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh875342
+  m_Name: pb_Mesh17022
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
