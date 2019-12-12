@@ -31,6 +31,9 @@ public class Alerts : MonoBehaviour
     float BreakTimerSeconds = 60f;
     float BreakTimerMinutes = 1f;
     float FlashTimer = 0f;
+    bool[] AllAlerts = new bool[] {true, true, true, true};
+    string[] AlertText = new string[] { "Power Critical", "Temperature Destabalized", "Water Pipes Missing", "Air Filtration Damaged" };
+    int ActiveAlert = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -49,14 +52,22 @@ public class Alerts : MonoBehaviour
        
         AlertSection.SetActive(false);*/
 
-        ActivateAlert("Power critical", 0); 
+        ActiveAlert = 0;
+        ActivateAlert("", 0); 
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (IsAlertActive)
+        FlashTimer += Time.deltaTime;
+        if (FlashTimer >= 1.0f)
+        {
+            FlashIndicator();
+            FlashTimer = 0f;
+        }
+
+
+        /*if (IsAlertActive)
         {
             time += Time.deltaTime;
             if (time >= 1)
@@ -68,13 +79,6 @@ public class Alerts : MonoBehaviour
             //Timer.text = "Time Left: " + TimerMinutes.ToString("0:") + TimerSeconds.ToString("00");
             //ReduceTimer();
 
-            FlashTimer += Time.deltaTime;
-            if (FlashTimer >= 1.0f)
-            {
-                FlashIndicator();
-                FlashTimer = 0f;
-            }
-
             /*if (Inventory.IsActive)
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 1f);
@@ -83,7 +87,7 @@ public class Alerts : MonoBehaviour
             {
                 Timer.GetComponent<Text>().material.color = new Color(1f, 1f, 1f, 0f);
             }*/
-        }
+        //}
 
         /*if (!AnyAlertsActive)
         {
@@ -125,7 +129,7 @@ public class Alerts : MonoBehaviour
         }*/
     }
 
-    public void ActivateAlert(string AlertText, int TypeOfAlert)
+    public void ActivateAlert(string AlertMessage, int TypeOfAlert)
     {
         AlertType = TypeOfAlert;
 
@@ -148,7 +152,7 @@ public class Alerts : MonoBehaviour
         }*/
 
         IsAlertActive = true;
-        AlertTypeText.text = AlertText;
+        AlertTypeText.text = AlertText[ActiveAlert];
         AlertSection.SetActive(true);
         SetAlertType();
         AnyAlertsActive = true;
@@ -212,41 +216,91 @@ public class Alerts : MonoBehaviour
         }*/
         if (visible)
         {
-            switch (AlertType)
+            for (int i = 0; i < AllAlerts.Length; i++)
             {
-                case 0:
-                    PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
-                    break;
-                case 1:
-                    WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
-                    break;
-                case 2:
-                    AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
-                    break;
-                case 3:
-                    TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
-                    break;
+                if (AllAlerts[i] == false)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            PowerBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                        case 1:
+                            WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                        case 2:
+                            AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                        case 3:
+                            TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                            break;
+                        case 1:
+                            WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                            break;
+                        case 2:
+                            AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                            break;
+                        case 3:
+                            TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 0f);
+                            break;
+                    }
+                }
             }
 
             visible = false;
         }
         else
         {
-            switch (AlertType)
+
+            for (int i = 0; i < AllAlerts.Length; i++)
             {
-                case 0:
-                    PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
-                    break;
-                case 1:
-                    WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
-                    break;
-                case 2:
-                    AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
-                    break;
-                case 3:
-                    TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
-                    break;
+                if (AllAlerts[i] == false)
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            PowerBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                        case 1:
+                            WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                        case 2:
+                            AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                        case 3:
+                            TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                            break;
+                    }
+                }
+                else
+                {
+                    switch (i)
+                    {
+                        case 0:
+                            PowerBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                            break;
+                        case 1:
+                            WaterBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                            break;
+                        case 2:
+                            AirBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                            break;
+                        case 3:
+                            TempBar.GetComponent<Image>().material.color = new Color(1f, 0f, 0f, 1f);
+                            break;
+                    }
+                }
             }
+      
 
             visible = true;
         }
@@ -259,7 +313,7 @@ public class Alerts : MonoBehaviour
         AlertSound.GetComponent<AudioSource>();
         AlertSound.Play(0);
 
-        // when an alert becomes active, the corresponding bar turns yellow
+        // when an alert becomes active, the corresponding bar turns red
         switch (AlertType)
         {
             case 0:
@@ -293,29 +347,37 @@ public class Alerts : MonoBehaviour
     public void DeactivateAlert(int TypeOfAlert)
     {
         // stop the flashing lights and alert sounds
-        IsAlertActive = false;
-        AlertTypeText.text = "";
-        AlertSection.SetActive(false);
-        AnyAlertsActive = false;
-       /* for (int i = 0; i < Indicator.Length; i++)
+        //IsAlertActive = false;
+        ActiveAlert++;
+        if (ActiveAlert >= 4)
         {
-            Indicator[i].SetActive(false);
-        }*/
+            AlertTypeText.text = AlertText[ActiveAlert];
+            AlertSection.SetActive(false);
+            AnyAlertsActive = false;
+        }
+        /* for (int i = 0; i < Indicator.Length; i++)
+         {
+             Indicator[i].SetActive(false);
+         }*/
 
-        switch (TypeOfAlert)
+        for (int i = 0; i < AllAlerts.Length; i++)
         {
-            case 0:
-                PowerBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
-                break;
-            case 1:
-                WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
-                break;
-            case 2:
-                AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
-                break;
-            case 3:
-                TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
-                break;
+            AllAlerts[TypeOfAlert] = false;
+            switch (i)
+            {
+                case 0:
+                    PowerBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                    break;
+                case 1:
+                    WaterBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                    break;
+                case 2:
+                    AirBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                    break;
+                case 3:
+                    TempBar.GetComponent<Image>().material.color = new Color(1f, 1f, 1f, 1f);
+                    break;
+            }
         }
     }
 }
