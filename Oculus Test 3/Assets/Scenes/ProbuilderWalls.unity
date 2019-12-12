@@ -6428,7 +6428,7 @@ PrefabInstance:
     - target: {fileID: 2331832138993859178, guid: e583fedade2fc8841b3654667fd184f5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.509
+      value: 0.044
       objectReference: {fileID: 0}
     - target: {fileID: 2331832138993859178, guid: e583fedade2fc8841b3654667fd184f5,
         type: 3}
@@ -20624,6 +20624,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PowerCircuitInstructions
       objectReference: {fileID: 0}
+    - target: {fileID: 6977087810173012466, guid: f5f42a27364fef242b43adbedb84634a,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7662373807163533850, guid: f5f42a27364fef242b43adbedb84634a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20693,6 +20698,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.08411871
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445670185598478513, guid: f5f42a27364fef242b43adbedb84634a,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5445670185598478513, guid: f5f42a27364fef242b43adbedb84634a,
+        type: 3}
+      propertyPath: m_ReceiveGI
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f42a27364fef242b43adbedb84634a, type: 3}
@@ -24385,6 +24400,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.07780937
       objectReference: {fileID: 0}
+    - target: {fileID: 6966353488910645397, guid: 09eadae0aaa3dd34695f4034cd9fd742,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09eadae0aaa3dd34695f4034cd9fd742, type: 3}
 --- !u!4 &847412139 stripped
@@ -27827,7 +27847,7 @@ AudioSource:
   Mute: 0
   Spatialize: 1
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 1
   DopplerLevel: 1
   MinDistance: 10
   MaxDistance: 10.1
@@ -28630,6 +28650,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sculpture (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5392357739733263984, guid: cd91af011f22f0243950e52af9a05b7e,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd91af011f22f0243950e52af9a05b7e, type: 3}
@@ -61404,6 +61429,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Big Monitor (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 76229975404673955, guid: 82d207ffedfa8594d915cf588451285e,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 104766784520361945, guid: 82d207ffedfa8594d915cf588451285e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 271285239876502429, guid: 82d207ffedfa8594d915cf588451285e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3cc72aec4f4770c419067731725e4824, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d207ffedfa8594d915cf588451285e, type: 3}
 --- !u!1001 &1846846152
@@ -62303,6 +62343,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PairedSmallCabinet (1) 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2769883809395121495, guid: 77c4163dd5726c84699ddad9ce4d5780,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77c4163dd5726c84699ddad9ce4d5780, type: 3}
@@ -64026,6 +64071,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.019904202
+      objectReference: {fileID: 0}
+    - target: {fileID: 3466148256434253437, guid: 67639f1d459b20640bef3b95bd836c5a,
+        type: 3}
+      propertyPath: m_ReceiveShadows
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67639f1d459b20640bef3b95bd836c5a, type: 3}
