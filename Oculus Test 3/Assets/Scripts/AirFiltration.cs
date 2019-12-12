@@ -7,7 +7,7 @@ public class AirFiltration : MonoBehaviour
     public GameObject dial, fanOne, fanTwo, fanThree, solution;
     public Alerts AlertSystem;
     Rigidbody rb;
-    AudioSource wind;
+    public AudioSource wind;
     float timer = 0;
     public bool solved;
     bool fanOneIn, fanTwoIn, fanThreeIn, canSolve;
@@ -21,10 +21,6 @@ public class AirFiltration : MonoBehaviour
     ThatCollider tcscrp;
     Objectives ObjectiveScript;
     public GameObject[] FanList;
-    public GameObject grabbable;
-    Rigidbody rbGrab;
-    public GameObject middle;
-    Rigidbody rbMid;
     float rotationSpeed = 0;
     float fanX = 107;
 
@@ -32,10 +28,7 @@ public class AirFiltration : MonoBehaviour
     void Start()
     {
         rb = dial.GetComponent<Rigidbody>();
-        rbGrab = grabbable.GetComponent<Rigidbody>();
-        rbMid = grabbable.GetComponent<Rigidbody>();
         tcscrp = solution.GetComponent<ThatCollider>();
-        wind = gameObject.GetComponent<AudioSource>();
         ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
         rfscrp1 = fanOne.GetComponent<RealFanScript>();
         rfscrp2 = fanTwo.GetComponent<RealFanScript>();
