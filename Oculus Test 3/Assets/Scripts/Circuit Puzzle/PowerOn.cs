@@ -29,6 +29,7 @@ public class PowerOn : MonoBehaviour
         endPos = startPos - new Vector3(0, 0.5f, 0);
 
         ObjectiveScript = GameObject.Find("OVRPlayerController").GetComponent<Objectives>();
+        m_circuitfix.DisableKeyword("_EMISSION");
     }
 
     void Update()
