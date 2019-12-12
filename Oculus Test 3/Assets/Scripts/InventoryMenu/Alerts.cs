@@ -348,7 +348,8 @@ public class Alerts : MonoBehaviour
     {
         // stop the flashing lights and alert sounds
         //IsAlertActive = false;
-        ActiveAlert++;
+        //ActiveAlert++;
+        ActiveAlert = TypeOfAlert;
         if (ActiveAlert >= 4)
         {
             AlertTypeText.text = AlertText[ActiveAlert];
