@@ -102,11 +102,11 @@ public class AirFiltration : MonoBehaviour
             rb.detectCollisions = false;
             rb.useGravity = false;
             rb.velocity = new Vector3(0, 0, 0);
-            AlertSystem.DeactivateAlert(2);
             ObjectiveScript.SetNextObjective();
             solved = true;
-            canSolve = false;
             rotationSpeed = 10;
+            AlertSystem.DeactivateAlert(2);
+            canSolve = false;
         }
 
     }
