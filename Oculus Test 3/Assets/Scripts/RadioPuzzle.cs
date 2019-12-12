@@ -34,7 +34,7 @@ public class RadioPuzzle : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.name == "Sphere" && objectives.ObjectiveNumber == 5)
+        if(other.gameObject.name == "Sphere" && objectives.ObjectiveNumber >= 4)
         {
             rb.freezeRotation = true;
             message.Play(0);
