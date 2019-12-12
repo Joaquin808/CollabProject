@@ -32,7 +32,7 @@ public class Alerts : MonoBehaviour
     float BreakTimerMinutes = 1f;
     float FlashTimer = 0f;
     bool[] AllAlerts = new bool[] {true, true, true, true};
-    string[] AlertText = new string[] { "Power Critical", "Temperature Destabalized", "Water Pipes Missing", "Air Filtration Damaged" };
+    string[] AlertText = new string[] { "Systems Critical", "Temperature Destabalized", "Water Pipes Missing", "Air Filtration Damaged" };
     int ActiveAlert = 0;
 
     // Start is called before the first frame update
@@ -350,7 +350,7 @@ public class Alerts : MonoBehaviour
         //IsAlertActive = false;
         //ActiveAlert++;
         ActiveAlert = TypeOfAlert;
-        if (ActiveAlert >= 4)
+        if (ActiveAlert == 2)
         {
             AlertTypeText.text = AlertText[ActiveAlert];
             AlertSection.SetActive(false);
